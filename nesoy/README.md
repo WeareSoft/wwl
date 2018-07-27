@@ -3,7 +3,7 @@
 
 ## 2018-07-29
 - Spring Vol 1
-    - [Chapter 1 : Object와 의존관계](/nesoy/Spring/180729-Chapter-1.md)
+    - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
         - 1.1 초난감 DAO
         - 1.2 DAO의 분리
         - 1.3 DAO의 확장
