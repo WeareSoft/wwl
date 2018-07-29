@@ -5,7 +5,7 @@
 
 ### 5장 정리
 - HttpRequestSetvlet, HttpResponseSevlet의 구조 알기.
-### [6장 학습](https://github.com/T-WWL/WWL/blob/master/delf/contents/20180729.md)
+### [6장 학습](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180729_Chapter6.md)
 - HttpRequest & HttpResponse
 - Forward & Redirect
 - DispatcherServlet
