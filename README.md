@@ -12,15 +12,19 @@
 ## WWL Rule
 - Github를 통한 스터디 기록 및 피드백
   - Centralized Workflow 방식을 이용한다.
-- 해당 주 목요일 전까지 모임 불참 여부를 통보한다.
+- Commit Message 규칙
+  - 영어로 작성한다.
+  - "동사(대문자)"로 시작한다.
+- 해당 주 **목요일** 전까지 모임 불참 여부를 통보한다.
 - 각자가 목표를 달성하기 위해 최선을 다한다.
 
 
 ## 개인이 해야 할 일
 1. 구체적인 Weekly 목표를 정해서 README.md에 정리한다.
+- **월요일** 에 해당 Weekly의 목표를 정리한다.
 2. 각자가 목표에 맞게 학습한다.
 3. 학습한 내용을 자신의 디렉터리에 정리한다.
-  - 디렉터리 이름 규칙: "YYYYMMDD-" 로 시작한다.
+- 디렉터리 이름 규칙: "YYYYMMDD-" 로 시작한다.
 4. 모임 전까지 다른 사람의 Weekly README.md(Weekly 목표 목록)를 확인한다.
 
 
@@ -37,5 +41,8 @@
 
 ---
 
-### 2018.07.29
-참석자: Delf, Doy, Hee, Nesoy
+**2018.07.29**
+- 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/180729.md)
+
+**2018.08.05**
+- 참석자: Delf, Doy, Hee :arrow_forward: [회고 및 피드백](/feedback/180805.md)
