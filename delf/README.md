@@ -1,14 +1,14 @@
 # Delf
-
-
 ## 2018-07-29
 ### 학습 도서
 - [자바 웹 프로그래밍 Next Step(로드북 출판, 박재성 저)](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933)
 
 ### 5장 정리
-### 6장 학습
-주로 책을 통하여 실습한 내용을 바탕으로 한 개념 정리와 깨달은 것 정리하기
-- 서블릿과 세션에 대한 이해 및 구현
-- MVC 프레임워크 및 구현
-- 쉘 스크립트를 활용한 배포
-
+- HttpRequestSetvlet, HttpResponseSevlet의 구조 알기.
+### [6장 학습](https://github.com/T-WWL/WWL/blob/master/delf/contents/20180729.md)
+- HttpRequest & HttpResponse
+- Forward & Redirect
+- DispatcherServlet
+- Session
+- MVC Framework
+- ResourceFilter
