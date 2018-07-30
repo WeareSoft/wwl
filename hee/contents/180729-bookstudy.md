@@ -22,29 +22,5 @@
 **Reference**
 > - [https://gmlwjd9405.github.io/2018/07/09/decorator-pattern.html](https://gmlwjd9405.github.io/2018/07/09/decorator-pattern.html)
 
-### 템플릿 메서드 패턴
-* 템플릿 메서드 패턴이란
-
-**Reference**
-> - []()
-
-### 팩토리 메서드 패턴
-* 팩토리 메서드 패턴이란
-
-**Reference**
-> - []()
-
-### 추상팩토리 메서드 패턴
-* 추상팩토리 메서드 패턴이란
-
-**Reference**
-> - []()
-
-### 컴퍼지트 패턴
-* 컴퍼지트 패턴이란
-
-**Reference**
-> - []()
-
 
 ### :house: [Hee Home](https://github.com/T-WWL/WWL/tree/master/hee)
