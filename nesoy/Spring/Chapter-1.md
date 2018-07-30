@@ -81,3 +81,50 @@
     - 단지 동작하는 중에 필요한 기능이 있을 때 능동적으로 라이브러리를 사용할 뿐이다.
 - 프레임워크는 애플리케이션 코드가 프레임워크에 의해 사용된다.
     - 프레임워크가 흐름을 주도하면서 개발자가 만든 어플리케이션 코드를 사용하도록 만드는 방식
+
+
+## 1.5 스프링의 IoC
+### Bean
+- 스프링이 제어권을 가지고 직접 만들고 관계를 부여하는 오브젝트
+- 모든 오브젝트가 다 Bean은 아니라는 사실.
+
+### Bean Factory[Spring Container]
+![No Image](/nesoy/Images/Spring/1.png)
+- Bean의 생성과 관계설정 같은 제어를 담당하는 IoC 오브젝트
+- Bean을 등록, 생성, 조회, 돌려주고 관리하는 기능을 담당
+- `@Configuration` : Object 설정을 담당하는 클래스라고 인식하는 Annotation
+- `@Bean` : 오브젝트를 만들어 주는 메소드에 사용
+- `@Configuration`이 붙은 DaoFactory를 사용하기 위해선 AnnotationConfigApplicationContext를 이용하면 된다.
+
+
+### Application Context
+- Bean Factory를 확장한 IoC
+- 스프링이 제공하는 애플리케이션 지원 기능을 모두 포함해서 이야기하는 것.
+
+
+```java
+ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
+UserDao dao = context.getBean("userDao", UserDao.class) // Method-Name, Return-Type
+```
+
+- getBean() : Return Object Type -> Not Type-Safe
+- 매번 Return하는 Object를 다시 Casting하는 비용이 있다.
+- Java generic Method 방식을 사용하면 편해진다.
+
+
+### Spring Container를 사용하면 무엇이 좋을까?
+#### 구체적인 팩토리 클래스를 알 필요가 없다.
+- 필요한 오브젝트를 가져오려면 팩토리 클래스를 알아야 하는 번거로움이 있지만, 이를 일관된 방식으로 원하는 오브젝트를 가져올 수 있다.
+
+#### Application Context는 종합 IoC 서비스를 제공해준다.
+- Object생성과 관계설정만 하는게 아니다.
+    - Object가 만들어지는 방식
+    - 시점과 전략을 다르게 가져갈수도 있고
+    - 이에 부가적인 자동생성
+    - 오브젝트에 대한 후처리
+    - 정보의 조합
+    - 설정 방식의 다변화
+    - 인터셉팅등 다양한 기능
+
+#### Application Context는 빈을 검색하는 다양한 방법을 제공한다.
+- getBean() Method는 빈의 이름을 이용해 빈을 찾아준다.
