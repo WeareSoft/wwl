@@ -1,4 +1,19 @@
 # Nesoy
+
+
+## 2018-08-12
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
+        - 1.7 의존관계 주입
+        - 1.8 XML을 이용한 설정
+        - 1.9 정리
+- Book
+    - [실용주의 프로그래머](/nesoy/Book/PragmaticProgrammer.md)
+        - ~ 35 사악한 마법사
+- [Blog](nesoy.github.io)
+    - DDD Chapter 2 정리하기.
+    - HashMap에 대해 정리하기.
+
 ## 2018-08-05
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
@@ -24,9 +39,9 @@
 ## 2018-07-29
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
-        - 1.1 초난감 DAO
-        - 1.2 DAO의 분리
-        - 1.3 DAO의 확장
-        - 1.4 제어의 역전(IoC)
+        - ~~1.1 초난감 DAO~~
+        - ~~1.2 DAO의 분리~~
+        - ~~1.3 DAO의 확장~~
+        - ~~1.4 제어의 역전(IoC)~~
 - Book
     - [실용주의 프로그래머](/nesoy/Book/PragmaticProgrammer.md)
