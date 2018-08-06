@@ -2,8 +2,8 @@
 ## 2018-08-05
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
-        - 1.5 스프링의 IoC
-        - 1.6 싱글톤 레지스트리와 오브젝트 스코프
+        - ~~1.5 스프링의 IoC~~
+        - ~~1.6 싱글톤 레지스트리와 오브젝트 스코프~~
         - 1.7 의존관계 주입
         - 1.8 XML을 이용한 설정
         - 1.9 정리
@@ -19,7 +19,7 @@
     - 선형 시간 정렬
     - 중앙값과 순서 통계량
 - [Blog](nesoy.github.io)
-    - DDD Chapter 1 정리하기.
+    - ~~DDD Chapter 1 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/DDD-Domain)
 
 ## 2018-07-29
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
