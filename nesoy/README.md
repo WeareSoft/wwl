@@ -4,15 +4,15 @@
 ## 2018-08-12
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
-        - 1.7 의존관계 주입
-        - 1.8 XML을 이용한 설정
-        - 1.9 정리
+        - ~~1.7 의존관계 주입~~
+        - ~~1.8 XML을 이용한 설정~~
+        - ~~1.9 정리~~
 - Book
     - [실용주의 프로그래머](/nesoy/Book/PragmaticProgrammer.md)
         - ~ 35 사악한 마법사
 - [Blog](nesoy.github.io)
     - DDD Chapter 2 정리하기.
-    - HashMap에 대해 정리하기.
+    - ~~HashMap에 대해 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/Algorithm-HashTable)
 
 ## 2018-08-05
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)

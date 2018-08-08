@@ -184,3 +184,51 @@ UserDao dao = context.getBean("userDao", UserDao.class) // Method-Name, Return-T
     - 그러기 위해서는 인터페이스에만 의존하고 있어야 한다.
     - 런타임 시점의 의존관계는 컨테이너나 팩토리 같은 제3의 존재가 결정한다.
     - 의존관계는 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공해줌으로써 만들어진다.
+#### 의존관계 주입(DI)
+- DI를 원하는 Bean은 자기 자신이 컨테이너가 관리하는 Bean이여야 하는 사실을 잊지 말자.
+
+#### 의존관계 검색(DL)
+```java
+public UserDAO(){
+    DaoFactory daoFactory = new DaoFactory();
+    this.connectionMaker = daoFactory.connectionMaker();
+}
+```
+
+- 의존성 주입 대신 스스로 컨테이너에게 요청을 하는 방법이다.
+- 코드상으로는 의존성 주입이 훨씬 깔끔하다. 대게는 의존성 주입이 적당한 방법이다.
+- 의존성 검색
+    - 검색하는 오브젝트는 자신이 스프링의 빈일 필요가 없다는 점이다.
+
+
+### 1.8 XML를 이용한 설정
+- `@Configuration` : `<beans>`
+- `@Bean` : `<bean>`
+- getBean()으로 얻을 수 있는 정보
+    - Bean의 이름
+    - Bean의 클래스
+    - Bean의 의존 Object
+
+![No Image](/nesoy/Images/Spring/3.png)
+
+![No Image](/nesoy/Images/Spring/4.png)
+
+- `<property>`
+    - name : setter Name
+    - ref : Dependency Injection Object
+    - 설정값을 주입할 수도 있다.
+
+#### Example
+![No Image](/nesoy/Images/Spring/5.png)
+![No Image](/nesoy/Images/Spring/6.png)
+
+#### Naming 변경하는 경우 id, ref를 동시에 변경해줘야 한다.
+![No Image](/nesoy/Images/Spring/7.png)
+
+- ApplicaionContext를 `GenericXmlApplicationContext`으로 변경해줘야 한다.
+```java
+GenericXmlApplicationContext("XML.location");
+```
+
+
+> 스프링을 사용한다고 객체지향적인 설계와 유연한 코드가 작성되는 건 아니다. 학습과 노력하고 경험하자.
