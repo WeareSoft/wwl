@@ -21,7 +21,7 @@
 - NoSQL: 빅 데이터 세상으로 떠나는 간결한 안내서(프라모드 사달게이, 마틴파울러 공저/윤성윤 역, 인사이트/2013)
     - #DB #NoSQL
     - NoSQL에 대한 특징을 알 살펴보기 위한 안내서
-- GoF의 디자인패턴: 재사용성을 지난 객체지향 소프트웨어의 핵심요소(*에릭 감마 저/김정아 역, 프로텍미디어/2015)
+- GoF의 디자인패턴: 재사용성을 지난 객체지향 소프트웨어의 핵심요소(에릭 감마 저/김정아 역, 프로텍미디어/2015)
     - #디자인패턴
     - 개발 과정에서 자주 나타나는 패턴을 정리한 책(초보 개발자에게는 어려운 내용)
 - Head First Design PAtterns: 스토리가 있는 디자인 패턴 학습법(에릭프리먼자/사환수 역, 한빛미디어/2015)
@@ -31,13 +31,7 @@
     - #디자인패턴
     - 소스코드를 통해 디자인패턴 학습 가능
 
----
-    UserDao userDao = new UserDao();
-        List<User> users = (List<User>) userDao.findAll();
-        assertEquals(1, users.size());
-        userDao.removeUser(users.get(0).getUserId());
-        users = (List<User>) userDao.findAll();
-        assertEquals(0, users.size());
-
-
-
+## 8장 
+- https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf
+- 일관성 있는 웹 서비스 인터페이스 설계를 위한 REST API 디자인 규칙(마크 메세 저/권원상, 김관래 역, 한빛미디어/2015)
+    - #REST_API
