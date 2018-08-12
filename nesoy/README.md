@@ -11,7 +11,7 @@
     - [실용주의 프로그래머](/nesoy/Book/PragmaticProgrammer.md)
         - ~ 35 사악한 마법사
 - [Blog](nesoy.github.io)
-    - DDD Chapter 2 정리하기.
+    - ~~DDD Chapter 2 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/DDD-Architecture)
     - ~~HashMap에 대해 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/Algorithm-HashTable)
 
 ## 2018-08-05
