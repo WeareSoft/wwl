@@ -46,3 +46,6 @@
 
 **2018.08.05**
 - 참석자: Delf, Doy, Hee :arrow_forward: [회고 및 피드백](/feedback/180805.md)
+
+**2018.08.12**
+- 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/180812.md)
