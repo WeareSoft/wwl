@@ -6,7 +6,7 @@
 * [JAVA 객체지향 디자인 패턴, 한빛미디어](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788968480911&orderClick=JAj) 학습
   * 템플릿 메서드 패턴 정리
   * 팩토리 메서드 패턴 정리
-  * 추상팩토리 패턴 정리
+  * 추상 팩토리 패턴 정리
   * 컴퍼지트 패턴 정리
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
   * java static 멤버와 메서드
