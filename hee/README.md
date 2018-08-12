@@ -1,5 +1,26 @@
 # Hee
 
+## 2018-08-19
+### 책 학습
+:heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
+* [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
+  * java 상속이란
+  * **(추가할 예정)**
+
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](/hee/contents/180819-algorithm.md)
+* 트리, 이진 탐색
+  * 백준 문제 풀기 및 이론 정리
+* 그래프, 이분 그래프
+  * 백준 문제 풀기 및 이론 정리
+* DFS, BFS
+  * 백준 문제 풀기 및 이론 정리
+* 사이클, 플러드 필
+  * 백준 문제 풀기 및 이론 정리
+
+### 기타 개발 관련 학습
+* 
+
 ## 2018-08-12
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180812-bookstudy.md)
@@ -16,13 +37,9 @@
 
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](/hee/contents/180812-algorithm.md)
-* 그래프, 이분 그래프
-  * 백준 문제 풀기 및 이론 정리
-* DFS, BFS
-  * 백준 문제 풀기 및 이론 정리
-* 사이클, 플러드 필
-  * 백준 문제 풀기 및 이론 정리
-* **(추가할 예정)**
+* ~~그래프, 이분 그래프~~
+* ~~DFS, BFS~~
+* ~~사이클, 플러드 필~~
 
 
 ## 2018-08-05
