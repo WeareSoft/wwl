@@ -2,7 +2,7 @@
 
 ## 2018-08-19
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
-    - [Chapter 1 : Object와 의존관계](/nesoy/Spring/Chapter-1.md)
+    - [Chapter 2 : 테스트](/nesoy/Spring/Chapter-2.md)
         - 2.1 UserDaoTest 다시보기
         - 2.2 UserDaoTest 개선
         - 2.3 개발자를 위한 테스트프레임워크 JUnit
