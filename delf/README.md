@@ -2,14 +2,16 @@
 [자바 웹 프로그래밍 Next Step(로드북 출판, 박재성 저)](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933)
 
 ## 2018-08-19
-### 카카오 코드페스티벌 예선 문제 2문제 푸리
+### 카카오 코드페스티벌 예선 문제 2문제 풀기 
 ### 자바 웹 프로그래밍 Next Step 공부
+#### 9장 마무리 - [정리](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180812_Chapter09.md)
+두 번째 양파껍질 벗길 준비 완료!
 #### 10장
 #### 11장
 #### 12장
 
 ## 2018-08-12ch
-### 알고리즘 공부
+ ### 알고리즘 공부
 - 카카오 코드페스티벌 예선 문제 풀어보고, 무슨 개념이 적용되었는지 알기
 ### 자바 웹 프로그래밍 Next Step 공부
 #### 8장 학습 - [정리](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180812_Chapter08.md)
