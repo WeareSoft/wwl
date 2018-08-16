@@ -3,9 +3,9 @@
 ## 2018-08-19
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 2 : 테스트](/nesoy/Spring/Chapter-2.md)
-        - 2.1 UserDaoTest 다시보기
-        - 2.2 UserDaoTest 개선
-        - 2.3 개발자를 위한 테스트프레임워크 JUnit
+        - ~~2.1 UserDaoTest 다시보기~~
+        - ~~2.2 UserDaoTest 개선~~
+        - ~~2.3 개발자를 위한 테스트프레임워크 JUnit~~
 - Book
     - Effective Java
         - 1. 생성자 대신 static Factory 메소드 사용을 고려하자.
