@@ -34,8 +34,6 @@
             * spring.jpa.hibernate.ddl-auto = validate
             * logging.config = classpath:logback-prod.xml
                 * 로그레벨 : INFO
-    
-
 
 #### 4단계 - 베스트 반찬
     * 

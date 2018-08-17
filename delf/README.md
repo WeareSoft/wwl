@@ -1,19 +1,30 @@
 # Delf
 [자바 웹 프로그래밍 Next Step(로드북 출판, 박재성 저)](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933)
-## 2018-08-12
+
+## 2018-08-19
+### 카카오 코드페스티벌 예선 문제 2문제 푸리
+### 자바 웹 프로그래밍 Next Step 공부
+#### 10장
+#### 11장
+#### 12장
+
+## 2018-08-12ch
 ### 알고리즘 공부
 - 카카오 코드페스티벌 예선 문제 풀어보고, 무슨 개념이 적용되었는지 알기
 ### 자바 웹 프로그래밍 Next Step 공부
-#### 
+#### 8장 학습 - [정리](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180812_Chapter08.md)
 - AJAX로 게시판 구현하기, 다른 기술 알아보기
 - MVV 프레임워크 요구사항 2단계로 구현하기
+
+#### 9장 학습 - [정리](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180812_Chapter09.md)
+- 구현했던 개념들에 대학 복습 및 심화과정 진행
 
 ## 2018-08-05
 ### 알고리즘 공부
 - 하루에 2시간(최소 1시간) 백준 알고리즘 개념 보기 or 알고리즘 문제 풀기
 - 카카오 페스티벌 예선 준비를 위함
 ### JWPNS 공부
-#### [7장 학습](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180805_Chapter07.md)
+#### 7장 학습 - [정리](https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180805_Chapter07.md)
 - 클라이언트 데이터를 DB에 저장
 - DAO와 Java의 JDBC 학습
 - 깔끔한 코드가 무엇인가
