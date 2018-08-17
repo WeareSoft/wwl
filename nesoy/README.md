@@ -8,9 +8,9 @@
         - ~~2.3 개발자를 위한 테스트프레임워크 JUnit~~
 - Book
     - Effective Java
-        - 1. 생성자 대신 static Factory 메소드 사용을 고려하자.
-        - 2. 생성자의 매개변수가 많을 때는 빌더를 고려하자.
-        - 3. private 생성자나 enum 타입을 사용해서 싱글톤의 특성을 유지하자.
+        - ~~1. 생성자 대신 static Factory 메소드 사용을 고려하자.~~
+        - ~~2. 생성자의 매개변수가 많을 때는 빌더를 고려하자.~~
+        - ~~3. private 생성자나 enum 타입을 사용해서 싱글톤의 특성을 유지하자.~~
 
 - [Blog](nesoy.github.io)
     - RedBlack Tree 정리하기
