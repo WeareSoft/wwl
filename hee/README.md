@@ -19,7 +19,14 @@
   * 백준 문제 풀기 및 이론 정리
 
 ### 기타 개발 관련 학습
-* 
+*
+
+### 자료구조 공부
+* 그래프
+  * [블로그 정리](https://gmlwjd9405.github.io/2018/08/13/data-structure-graph.html)
+* 트리
+  * [블로그 정리](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
+
 
 ## 2018-08-12
 ### 책 학습
@@ -36,7 +43,6 @@
     * [블로그 정리](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
 ### 알고리즘 공부
-:heavy_check_mark: [관련 내용](/hee/contents/180812-algorithm.md)
 * ~~그래프, 이분 그래프~~
 * ~~DFS, BFS~~
 * ~~사이클, 플러드 필~~
