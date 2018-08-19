@@ -15,7 +15,7 @@
 
 #### 12장 - 세 번째 양파 껍질 벗기기 - [정리]((https://github.com/T-WWL/WWL/blob/master/delf/contents/JavaWebProgrammingNetxtStep/20180819_Chapter12.md))
 
-## 2018-08-12ch
+## 2018-08-12
  ### 알고리즘 공부
 - 카카오 코드페스티벌 예선 문제 풀어보고, 무슨 개념이 적용되었는지 알기
 ### 자바 웹 프로그래밍 Next Step 공부
