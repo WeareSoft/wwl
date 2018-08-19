@@ -1,14 +1,34 @@
 # Hee
 
+## 2018-08-26
+### 책 학습
+:heavy_check_mark: [관련 내용](/hee/contents/180826-bookstudy.md)
+* [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
+  * (추가할 예정)
+
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](/hee/contents/180826-algorithm.md)
+* 방향성이 있는 비순환 그래프(DAG, Directed Acyclic Graph)
+  * 백준 문제 풀기 및 이론 정리
+* 위상 정렬
+  * 백준 문제 풀기 및 이론 정리
+* 최소 비용 신장 트리(MST, Minimum Spanning Tree)
+  * Prim MST 알고리즘
+  * 백준 문제 풀기 및 이론 정리
+* 최단 경로(Shortest Path)
+  * 벨만포드(Bellman-Ford) 알고리즘
+  * 백준 문제 풀기 및 이론 정리
+
+
 ## 2018-08-19
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
   * java 상속이란
-  * **(추가할 예정)**
+
 
 ### 알고리즘 공부
-:heavy_check_mark: [관련 내용](/hee/contents/180819-algorithm.md)
+:heavy_check_mark: [관련 내용](/hee/contents/180812-algorithm.md)
 * 트리, 이진 탐색
   * 백준 문제 풀기 및 이론 정리
 * 그래프, 이분 그래프
@@ -18,8 +38,6 @@
 * 사이클, 플러드 필
   * 백준 문제 풀기 및 이론 정리
 
-### 기타 개발 관련 학습
-*
 
 ### 자료구조 공부
 * 그래프
