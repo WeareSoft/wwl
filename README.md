@@ -49,3 +49,6 @@
 
 **2018.08.12**
 - 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/180812.md)
+
+**2018.08.19**
+- 개인 피드백 :arrow_forward: [회고 및 피드백](/feedback/180819.md)
