@@ -13,7 +13,7 @@
         - 6. 쓸모 없는 객체 참조를 제거하자.
         - 7. 파이널라이저(Finalizer)의 사용을 피하자.
 
-- [Blog](nesoy.github.io)
+- [Blog](https://nesoy.github.io)
     - RedBlack Tree 정리하기
 
 
@@ -29,7 +29,7 @@
         - ~~2. 생성자의 매개변수가 많을 때는 빌더를 고려하자.~~
         - ~~3. private 생성자나 enum 타입을 사용해서 싱글톤의 특성을 유지하자.~~
 
-- [Blog](nesoy.github.io)
+- [Blog](https://nesoy.github.io)
     - RedBlack Tree 정리하기
 
 ## 2018-08-12
@@ -41,7 +41,7 @@
 - Book
     - [실용주의 프로그래머](/nesoy/Book/PragmaticProgrammer.md)
         - ~ 35 사악한 마법사
-- [Blog](nesoy.github.io)
+- [Blog](https://nesoy.github.io)
     - ~~DDD Chapter 2 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/DDD-Architecture)
     - ~~HashMap에 대해 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/Algorithm-HashTable)
 
@@ -64,7 +64,7 @@
     - 퀵 정렬
     - 선형 시간 정렬
     - 중앙값과 순서 통계량
-- [Blog](nesoy.github.io)
+- [Blog](https://nesoy.github.io)
     - ~~DDD Chapter 1 정리하기.~~ -> [Link](https://nesoy.github.io/articles/2018-08/DDD-Domain)
 
 ## 2018-07-29
