@@ -173,3 +173,25 @@ public class Nesoy {
     - 그렇지 않으면 deSerializable을 할 때마다 새로운 Object를 생성한다.
 - `readResolve`는 stream에서 Object를 읽을 때 사용한다.
 - <https://stackoverflow.com/questions/1168348/java-serialization-readobject-vs-readresolve>
+
+
+
+--------
+## Private 생성자를 사용해서 인스턴스 생성을 못하게 하자.
+- `java.lang.Math`, `java.util.Arrays`와 같은 Utility 클래스들은 인스턴스를 생성하지 못하게 설계되었다.
+- 하지만 명시적으로 지정한 생성자가 없을 때는 컴파일러가 Default Constructor를 만들기 때문에 인스턴스를 생성할 수 있다.
+
+#### 이디엄(Idiom)
+- 프로그램을 작성할 때 공통적으로 흔히 발생하는 문제의 해결을 위해 만들어진 코드 형태
+- 프로그래밍 언어에 종속적이다.
+
+```java
+public class UtilityClass {
+    private UtilityClass() {
+        throw new AssertionError();
+    }
+}
+```
+
+
+--------
