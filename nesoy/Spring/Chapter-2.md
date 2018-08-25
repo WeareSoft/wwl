@@ -48,3 +48,21 @@
 ### Fixture
 - 테스트를 수행하는 데 필요한 정보나 오브젝트를 Fixture라고 한다.
 - 일반적으로 여러 테스트에서 반복적으로 사용되기 때문에 @Before 메소드를 이용해 생성해두면 편리하다.
+
+
+## 2.4 스프링 테스트 적용
+- 테스트는 가능한 독립적으로 매번 새로운 오브젝트를 만들어서 사용하는 것이 원칙이다.
+- 스프링은 JUnit을 이용하는 테스트 컨텍스트 프레임워크를 제공한다.
+
+```java
+@RunWith(SpringJUnit4ClassRunner.class) // Spring Framework Junit 확장 지정
+@ContextConfiguration(locations="/application.xml") // 테스트 컨텍스트가 자동으로 만들어줄 어플리케이션 컨텍스트의 위치 지정
+public class UserDaoTest {
+    @Autowired
+    private ApplicationContext context; // 테스트 오브젝트가 만들어지면 스프링 테스트 컨텍스트에 의해 자동으로 값이 주입된다.
+    @Before
+    public void setUp() {
+        this.dao = this.context.getBean("userDao", UserDao.class);
+    }
+}
+```
