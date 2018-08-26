@@ -1,6 +1,6 @@
 # Delf
 [자바 웹 프로그래밍 Next Step(로드북 출판, 박재성 저)](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933)
-## 2018-08-26
+## 2018-08-26 [(정리)](https://github.com/T-WWL/WWL/blob/master/delf/contents/Summary_20180826.md)
 ### 알고리즘 문제 풀기
 #### 백준 알고리즘 공부
 ### 블로그 만들기
