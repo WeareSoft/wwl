@@ -14,6 +14,7 @@
   * 백준 문제 풀기 및 이론 정리
 * 최소 비용 신장 트리(MST, Minimum Spanning Tree)
   * Prim MST 알고리즘
+  * Kruskal MST 알고리즘
   * 백준 문제 풀기 및 이론 정리
 * 최단 경로(Shortest Path)
   * 벨만포드(Bellman-Ford) 알고리즘
@@ -28,7 +29,7 @@
 
 
 ### 알고리즘 공부
-:heavy_check_mark: [관련 내용](/hee/contents/180812-algorithm.md)
+:heavy_check_mark: [관련 내용](/hee/contents/180819-algorithm.md)
 * 트리, 이진 탐색
   * 백준 문제 풀기 및 이론 정리
 * 그래프, 이분 그래프
