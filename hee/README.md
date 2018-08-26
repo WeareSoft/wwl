@@ -1,11 +1,22 @@
 # Hee
 
-## 2018-08-26
+## 2018-09-02
 ### 책 학습
-:heavy_check_mark: [관련 내용](/hee/contents/180826-bookstudy.md)
+:heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
-  * (추가할 예정)
+  * java 상속이란
 
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
+* 최단 경로(Shortest Path)
+  * 다익스트라(Dijkstra) 알고리즘
+  * 플로이드(Floyd-Warshall) 알고리즘
+  * 백준 문제 풀기 및 이론 정리
+* SPFA(Shortest Path Faster)
+  * 백준 문제 풀기 및 이론 정리
+
+
+## 2018-08-26
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](/hee/contents/180826-algorithm.md)
 * 방향성이 있는 비순환 그래프(DAG, Directed Acyclic Graph)
@@ -25,7 +36,7 @@
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
-  * java 상속이란
+  * ~~~java 상속이란~~~
 
 
 ### 알고리즘 공부
