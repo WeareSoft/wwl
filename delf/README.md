@@ -1,5 +1,14 @@
 # Delf
-[자바 웹 프로그래밍 Next Step(로드북 출판, 박재성 저)](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=91501933)
+## 2018-09-02
+### 블로그 만들기 - delf-lee.github.io
+- 
+### 백준 알고리즘 공부
+- 개념 공부
+- 백준 알고리즘 repo 파서 풀어보기(기존 DailyProgramming repo랑 통합 생각)
+### 자바 공부
+- 스프링으로 무언기 만들어보기
+- Spring(Web + Java) + DB
+
 ## 2018-08-26 [(정리)](https://github.com/T-WWL/WWL/blob/master/delf/contents/Summary_20180826.md)
 ### 알고리즘 문제 풀기
 #### 백준 알고리즘 공부
