@@ -1,16 +1,16 @@
 # Nesoy
 
 ## 2018-09-02
-### ~2018-08-29
-- [Blog](https://nesoy.github.io)
-    - RedBlack Tree 정리하기
-
-### Etc
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 2 : 테스트](/nesoy/Spring/Chapter-2.md)
         - 2.4 스프링 테스트 적용
         - 2.5 학습 테스트로 배우는 스프링
         - 2.6 정리
+### ~2018-08-29
+- [Blog](https://nesoy.github.io)
+    - ~~[RedBlack Tree 정리하기](https://nesoy.github.io/articles/2018-08/Algorithm-RedblackTree)~~
+
+### Etc
 - Book
     - Effective Java
         - 5. 불필요한 객체의 생성을 피하자.
