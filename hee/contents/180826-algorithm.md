@@ -31,14 +31,32 @@
 > - [https://gmlwjd9405.github.io/2018/08/27/algorithm-topological-sort.html](https://gmlwjd9405.github.io/2018/08/27/algorithm-topological-sort.html)
 
 ### 최소 비용 신장 트리(MST, Minimum Spanning Tree)
-* MST
+* Spanning Tree란
+  * 그래프 내의 모든 정점을 포함하는 트리
+  * **Spanning Tree = 신장 트리 = 스패닝 트리**
+  * Spanning Tree는 그래프의 **최소 연결 부분 그래프** 이다.
+    * 최소 연결 = 간선의 수가 가장 적다.
+    * n개의 정점을 가지는 그래프의 최소 간선의 수는 (n-1)개이고, (n-1)개의 간선으로 연결되어 있으면 필연적으로 트리 형태가 되고 이것이 바로 Spanning Tree가 된다.
+  * 즉, 그래프에서 일부 간선을 선택해서 만든 트리
+
+* MST란
+  * Spanning Tree 중에서 사용된 간선들의 가중치 합이 최소인 트리
+  * **MST = Minimum Spanning Tree = 최소 신장 트리**
+  * 각 간선의 가중치가 동일하지 않을 때 단순히 가장 적은 간선을 사용한다고 해서 최소  비용이 얻어지는 것은 아니다.
+  * MST는 간선에 가중치를 고려하여 최소 비용의 Spanning Tree를 선택하는 것을 말한다.
+  * 즉, 네트워크(가중치를 간선에 할당한 그래프)에 있는 모든 정점들을 가장 적은 수의 간선과 비용으로 연결하는 것이다.
 
 * Prim MST 알고리즘
+  *
 
 * Kruskal MST 알고리즘
+  *
 
 **Reference**
-> - []()
+> - [https://gmlwjd9405.github.io/2018/08/28/algorithm-mst.html](https://gmlwjd9405.github.io/2018/08/28/algorithm-mst.html)
+> - [https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.html](https://gmlwjd9405.github.io/2018/08/29/algorithm-kruskal-mst.htm])
+> - [https://gmlwjd9405.github.io/2018/08/30/algorithm-prim-mst.html](https://gmlwjd9405.github.io/2018/08/30/algorithm-prim-mst.html)
+
 
 ### 최단 경로(Shortest Path)
 * 최단 경로(Shortest Path)
