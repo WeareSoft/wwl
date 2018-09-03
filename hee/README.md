@@ -1,6 +1,6 @@
 # Hee
 
-## 2018-09-02
+## 2018-09-09
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
