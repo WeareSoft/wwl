@@ -1,18 +1,18 @@
 # Nesoy
 
 ## 2018-09-09
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 3 : 템플릿](/nesoy/Spring/Chapter-3.md)
+        - 3.1 다시보는 초난감 DAO
+        - 3.2 변하는 것과 변하지 않는 것
+        - 3.3 JDBC 전략 패턴의 최적화
+
 ### ~2018-09-05
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 2 : 테스트](/nesoy/Spring/Chapter-2.md)
         - ~~2.4 스프링 테스트 적용~~
         - ~~2.5 학습 테스트로 배우는 스프링~~
         - ~~2.6 정리~~
-- Book
-    - Effective Java
-        - 5. 불필요한 객체의 생성을 피하자.
-        - 6. 쓸모 없는 객체 참조를 제거하자.
-        - 7. 파이널라이저(Finalizer)의 사용을 피하자.
-
 
 ## 2018-09-02
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
