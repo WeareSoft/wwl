@@ -6,7 +6,7 @@
         - ~~3.1 다시보는 초난감 DAO~~
         - ~~3.2 변하는 것과 변하지 않는 것~~
         - ~~3.3 JDBC 전략 패턴의 최적화~~
-        - 3.4 컨텍스트와 DI
+        - ~~3.4 컨텍스트와 DI~~
 
 ### ~2018-09-05
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
