@@ -1,5 +1,20 @@
 # Hee
 
+## 2019-09-16
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/180916-study.md)
+* 하루에 하나씩 면접 대비 질문에 대한 내용 정리
+* 목차
+  * 프로세스와 스레드의 차이(Process vs Thread)
+
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기
+  * 치킨 배달 - 15686번
+  * 드래곤 커브 - 15685번
+  * 사다리 조작 - 15684번
+  * 감시 - 15683번
+
 ## 2018-09-09
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
