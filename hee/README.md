@@ -6,6 +6,8 @@
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
 * 목차
   * 프로세스와 스레드의 차이(Process vs Thread)
+  * java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
+  * 교착 상태(데드락)의 개념과 조건
 
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
