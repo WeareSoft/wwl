@@ -1,5 +1,11 @@
 # Nesoy
 ## 2018-09-16
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 3 : 템플릿](/nesoy/Spring/Chapter-3.md)
+        - 3.5 템플릿과 콜백
+        - 3.6 스프링의 JdbcTemplate
+        - 3.7 정리
+
 ### ~2018-09-12
 - 알고리즘 스터디 자료 만들기
     - 동적 스레딩 기본
