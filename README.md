@@ -61,3 +61,9 @@
 
 **2018.09.09**
 - 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/180909.md)
+
+**2018.09.16**
+- 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/180916.md)
+
+**2018.09.23**
+- 개인 피드백 :arrow_forward: [회고 및 피드백](/feedback/180923.md)
