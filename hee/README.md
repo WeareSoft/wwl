@@ -1,5 +1,40 @@
 # Hee
 
+## 2019-09-23
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/180923-study.md)
+* 하루에 하나씩 면접 대비 질문에 대한 내용 정리
+* 목차
+  * 클래스와 인스턴스의 차이(Class vs Instance)
+
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기
+  * 톱니바퀴 - 14891번
+  * 경사로 - 14890번
+  * 스타트와 링크 - 14889번
+  * 연산자 끼워넣기 - 14888번
+  * 로봇 청소기 - 14503번
+  * 연구소 - 14502번
+
+## 2019-09-16
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/180916-study.md)
+* 하루에 하나씩 면접 대비 질문에 대한 내용 정리
+* 목차
+  * 프로세스와 스레드의 차이(Process vs Thread)
+  * java의 제네릭(Generic)과 c++의 템플릿(Template)의 차이
+  * 교착 상태(데드락)의 개념과 조건
+  * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
+
+### 알고리즘 공부
+:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기
+  * 치킨 배달 - 15686번
+  * 드래곤 커브 - 15685번
+  * 사다리 조작 - 15684번
+  * 감시 - 15683번
+
 ## 2018-09-09
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
