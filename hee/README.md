@@ -6,6 +6,11 @@
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
 * 목차
   * 클래스와 인스턴스의 차이(Class vs Instance)
+  * TCP의 3-way-handshake, 4-way-handshake
+  * GET, POST
+  * REST와 RESTful의 개념
+  * DB 파티셔닝(Partitioning)
+  * 객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
