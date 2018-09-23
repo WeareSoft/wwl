@@ -36,3 +36,32 @@ try{
         - 초기 설계자들은 체크 예외를 발생 가능한 예외에 모두 적용하려고 했던 것 같다.
     - unChecked Exception
         - RunTime Exception
+
+### 예외 복구
+- 예외상황을 파악하고 문제를 해결해서 정상 상태로 돌려놓는 것.
+- 네트워크가 불안해서 가끔 서버에 접속이 잘 안되는 열악한 환경에 있는 시스템
+
+```java
+int maxretry = MAX_RETRY;
+while(maxretry --> 0){
+    try{
+        // process
+        return ;
+    }catch(SomeException e){
+        // 로그 출력. 정해진 시간만큼 대기
+    }finally{
+        // return Resource
+    }
+}
+throw new RetryFailedException(); // 최대 재시도 횟수를 넘기면 직접 예외 발생
+```
+
+### 예외처리 회피
+- 자신이 담당하지 않고 자신을 호출한 쪽으로 던져버리는 것이다.
+- 콜백 오브젝트의 메소드는 모두 throws SQLException이 붙어 있다.
+- 콜백 오브젝트의 역할이 아니라고 보기 때문.
+- 예외를 회피하는 것은 예외를 복구하는 것처럼 의도가 분명해야 한다.
+
+### 예외 전환
+- 내부에서 발생한 예외를 그대로 던지는 것이 그 예외상황에 대한 적절한 의미를 부여해주지 못하는 경우에 의미를 분명하게 해줄 수 있는 예외로 바꿔주기 위해서다.
+- 아이디 중복 체크 과정에서 SQLException이 발생하면 SQLException보다는 DuplicateUserIdException이 더 적절한 예외라고 할 수 있다.
