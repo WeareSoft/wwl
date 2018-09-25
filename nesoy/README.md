@@ -1,4 +1,12 @@
 # Nesoy
+## 2018-09-30
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 4 : 예외](/nesoy/Spring/Chapter-4.md)
+        - 4.1 사라진 SQLException
+        - 4.2 예외 전환
+        - 4.3 정리
+
+
 ## 2018-09-23
 ### ~2018-09-19
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
