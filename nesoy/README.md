@@ -2,10 +2,15 @@
 ## 2018-09-30
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 4 : 예외](/nesoy/Spring/Chapter-4.md)
-        - 4.1 사라진 SQLException
-        - 4.2 예외 전환
-        - 4.3 정리
-
+        - ~~4.1 사라진 SQLException~~
+        - ~~4.2 예외 전환~~
+        - ~~4.3 정리~~
+    - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
+        - 5.1 사용자 레벨 관리 기능 추가
+        - 5.2 트랜잭션 서비스 추상화
+        - 5.3 서비스 추상화와 단일 책임 원칙
+        - 5.4 메일 서비스 추상화
+        - 5.5 정리
 
 ## 2018-09-23
 ### ~2018-09-19
