@@ -1,16 +1,20 @@
 # Hee
 
 ## 2019-09-30
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/180930-study.md)
+* 목차
+  * java의 데이터 타입
+  * java의 Call By Value 이해하기
+
 ### 알고리즘 공부
 * 하루에 세개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
-* 삼성 SW 역량 테스트 기출 문제 풀기
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
   * 치킨 배달 - 15686번
   * 드래곤 커브 - 15685번
   * 사다리 조작 - 15684번
   * 감시 - 15683번
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
-* 삼성 SW 역량 테스트 기출 문제 풀기
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
   * 톱니바퀴 - 14891번
   * 경사로 - 14890번
   * 스타트와 링크 - 14889번
