@@ -1,4 +1,14 @@
 # Nesoy
+## 2018-10-07
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
+        - ~~5.1 사용자 레벨 관리 기능 추가~~
+        - 5.2 트랜잭션 서비스 추상화
+        - 5.3 서비스 추상화와 단일 책임 원칙
+        - 5.4 메일 서비스 추상화
+        - 5.5 정리
+- TCP관련 내용 정리하기
+
 ## 2018-09-30
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 4 : 예외](/nesoy/Spring/Chapter-4.md)
