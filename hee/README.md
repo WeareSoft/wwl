@@ -1,5 +1,26 @@
 # Hee
 
+## 2019-10-07
+### 학교 수업
+* 사강 과제 끝내기
+
+### 알고리즘 공부
+* 하루에 두개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+  * 톱니바퀴 - 14891번
+  * 경사로 - 14890번
+  * 스타트와 링크 - 14889번
+  * 연산자 끼워넣기 - 14888번
+  * 로봇 청소기 - 14503번
+  * 연구소 - 14502번
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
+  * 퇴사 - 14501번
+  * 테트로미노 - 14500번
+  * 주사위 굴리기 - 14499번
+  * 시험 감독 - 13458번
+  * 뱀 - 3190번
+  * 구슬 탈출 2 - 13460번
+
 ## 2019-09-30
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/180930-study.md)
@@ -8,19 +29,12 @@
   * java의 Call By Value 이해하기
 
 ### 알고리즘 공부
-* 하루에 세개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
+* 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
   * 치킨 배달 - 15686번
   * 드래곤 커브 - 15685번
   * 사다리 조작 - 15684번
   * 감시 - 15683번
-* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
-  * 톱니바퀴 - 14891번
-  * 경사로 - 14890번
-  * 스타트와 링크 - 14889번
-  * 연산자 끼워넣기 - 14888번
-  * 로봇 청소기 - 14503번
-  * 연구소 - 14502번
 
 ## 2019-09-23
 ### 면접 대비
