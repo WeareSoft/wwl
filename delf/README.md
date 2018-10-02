@@ -1,4 +1,30 @@
 # Delf
+## 2018-09-30
+- 알고리즘 문제 풀이
+    - 프로그래머스 - 전화번호부 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_023.java)
+    - 프로그래머스 - 완주하지 못한 선수 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_022.java)
+    - 프로그래머스 - 위장 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_024.java)
+    - 프로그래머스 - 베스트 앨범 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_025.java)
+    - 프로그래머스 - 탑 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_026.java)
+    - 프로그래머스 - 다리를 지나는 트릭 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_027.java)
+    - 프로그래머스 - 프린터 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_027.java)
+    - NHN pre-test 01 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/NHN_pretest01.java)
+    - NHN pre-test 03 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/NHN_pretest02.java)
+    - NHN pre-test 04 (완벽 파악했다 곧 푼다)
+    - NHN pre-test 모의1 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_029.java)
+    - NHN pre-test 모의2 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_030.java)
+    - 프로그래머스 - 주식가격 [#](https://github.com/Delf-Lee/Daily-Programing/commit/733e17f3a7e12e3d3eacf4d30884993bf9bcb7d7)
+- 자소서 작성
+- 포트폴리오 수정
+
+## 2018-09-16
+- 알고리즘 문제 풀이
+    - 카카오 블라인드 01[#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/dailyprogramming/Solution_021.java)
+    - 괄호 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/backjoon/Q10422.java)
+    - 단어길이 재기 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/backjoon/Q2743.java)
+    - 문자열 분석 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/backjoon/Q10820.java)
+    - ROT13 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/backjoon/Q11655.java)
+    - 접미사 배열 [#](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/backjoon/Q11656.java)
 
 ## 2018-09-09
 ### 백준 알고리즘 공부
