@@ -1,19 +1,34 @@
 # Doy
 
+## 2019-10-07
+### 알고리즘 공부
+* 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+  * 드래곤 커브 - 15685번
+  * 사다리 조작 - 15684번
+  * 톱니바퀴 - 14891번
+  * 경사로 - 14890번
+  * 연산자 끼워넣기 - 14888번
+* 카카오 2차 코딩테스트 준비
+  * REST API 요청, 응답
+  * Gson 라이브러리 사용법 익히기
+
+## 2019-09-30
+### 면접 대비
+### 알고리즘 공부
+* 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+  * 치킨 배달 - 15686번
+  * 감시 - 15683번
+  * 스타트와 링크 - 14889번
+
+## 2019-09-23
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/doy/contents/180923-study.md)
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
 * 목차
   * 트랜잭션 격리 수준(Transaction Isolation Level)
   * 쿠키(Cookie)와 세션(Session)
-
-### 알고리즘 공부
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
-* 삼성 SW 역량 테스트 기출 문제 풀기
-  * 치킨 배달 - 15686번
-  * 드래곤 커브 - 15685번
-  * 사다리 조작 - 15684번
-  * 감시 - 15683번
 
 ## 2019-09-16
 ### 면접 대비
@@ -24,14 +39,6 @@
   * TCP와 UDP
   * Call by Reference와 Call by Value의 차이
   * java의 리플렉션(Reflection) 이란?
-
-### 알고리즘 공부
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
-* 삼성 SW 역량 테스트 기출 문제 풀기
-  * 치킨 배달 - 15686번
-  * 드래곤 커브 - 15685번
-  * 사다리 조작 - 15684번
-  * 감시 - 15683번
 
 ## 2018-08-19
 ### 우아한테크캠프
