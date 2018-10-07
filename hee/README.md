@@ -4,6 +4,11 @@
 ### 학교 수업
 * 사강 과제 끝내기
 
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/181007-study.md)
+* 목차
+  * java의 ==와 equals()의 차이
+
 ### 알고리즘 공부
 * 하루에 두개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
