@@ -70,3 +70,6 @@
 
 **2018.09.30**
 - 참석자: Delf, Doy, Hee :arrow_forward: [회고 및 피드백](/feedback/180930.md)
+
+**2018.10.07**
+- 개인 피드백 :arrow_forward: [회고 및 피드백](/feedback/181007.md)
