@@ -1,4 +1,8 @@
 # Nesoy
+## 2018-10-14
+- TCP관련 내용 정리하기
+- Deview 후기.
+
 ## 2018-10-07
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
