@@ -1,13 +1,20 @@
 # Nesoy
 ## 2018-10-14
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
+        - ~~5.1 사용자 레벨 관리 기능 추가~~
+        - 5.2 트랜잭션 서비스 추상화
+        - 5.3 서비스 추상화와 단일 책임 원칙
+        - 5.4 메일 서비스 추상화
+        - 5.5 정리
 - Book
     - Effective Java
         - ~~5 불필요한 객체의 생성을 피하자.~~
         - ~~6 쓸모 없는 객체 참조를 제거하자.~~
-        - 7 파이널라이저(Finalizer)의 사용을 피하자.
+        - ~~7 파이널라이저(Finalizer)의 사용을 피하자.~~
 - [Blog](https://nesoy.github.io)
-    - [TCP 내용 정리하기](https://nesoy.github.io/articles/2018-10/TCP)
-    - [Deview 후기](https://nesoy.github.io/articles/2018-10/Deview-2018)
+    - [TCP에 대해](https://nesoy.github.io/articles/2018-10/TCP)
+    - [Deview 2018 후기](https://nesoy.github.io/articles/2018-10/Deview-2018)
 
 ## 2018-10-07
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
