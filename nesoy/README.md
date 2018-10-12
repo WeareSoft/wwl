@@ -6,8 +6,8 @@
         - ~~6 쓸모 없는 객체 참조를 제거하자.~~
         - 7 파이널라이저(Finalizer)의 사용을 피하자.
 - [Blog](https://nesoy.github.io)
-    - TCP 내용 정리하기
-    - Deview 후기. ( ~ 2018.10.11)
+    - [TCP 내용 정리하기](https://nesoy.github.io/articles/2018-10/TCP)
+    - [Deview 후기](https://nesoy.github.io/articles/2018-10/Deview-2018)
 
 ## 2018-10-07
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
