@@ -1,4 +1,12 @@
 # Delf
+## 2018-10-14
+- 블로그
+    - https://delf-lee.github.io/raid/
+    - https://delf-lee.github.io/restful/
+    - https://delf-lee.github.io/connection-pool/
+- 알고리즘 문제 풀이 [#](https://github.com/Delf-Lee/Daily-Programing/commits/master)
+- 적성 준비
+
 ## 2018-10-07
 - 알고리즘 문제 풀이 [#](https://github.com/Delf-Lee/Daily-Programing/commits/master)
 - 면접 이론 공부
