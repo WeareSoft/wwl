@@ -1,5 +1,24 @@
 # Hee
 
+## 2019-10-21
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제(2) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+  * 톱니바퀴 - 14891번
+  * 경사로 - 14890번
+  * 스타트와 링크 - 14889번
+  * 연산자 끼워넣기 - 14888번
+  * 로봇 청소기 - 14503번
+  * 연구소 - 14502번
+* 삼성 SW 역량 테스트 기출 문제(3) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
+  * 퇴사 - 14501번
+  * 테트로미노 - 14500번
+  * 주사위 굴리기 - 14499번
+  * 시험 감독 - 13458번
+* 백준 알고리즘 또는 SWexpert 추가 문제 풀이
+  * DFS/BFS
+  * 백트래킹
+  * 시뮬레이션
+
 ## 2019-10-14
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제(1) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
