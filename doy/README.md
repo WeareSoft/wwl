@@ -1,5 +1,21 @@
 # Doy
 
+## 2019-10-14
+### 알고리즘 공부
+* 하루에 1~2개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+  * 로봇 청소기 - 14503번
+  * 연구소 - 14502번
+  * 퇴사 - 14501번
+  * 테트로미노 - 14500번
+  * 주사위 굴리기 - 14499번
+  * 시험 감독 - 13458번
+  * 뱀 - 3190번
+  * 구슬 탈출 2 - 13460번
+### 과제
+* 회의실 예약 웹 어플리케이션
+  * [repository](https://github.com/doooyeon/conference-room-reservation)
+
 ## 2019-10-07
 ### 알고리즘 공부
 * 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
@@ -14,7 +30,6 @@
   * Gson 라이브러리 사용법 익히기
 
 ## 2019-09-30
-### 면접 대비
 ### 알고리즘 공부
 * 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
