@@ -1,4 +1,15 @@
 # Nesoy
+## 2018-10-21
+- [Blog](https://nesoy.github.io)
+    - TDD 후기
+- Algorithm - 다음주 스터디 자료
+    - String Matching
+- Book
+    - Effective Java
+        - 8 equals 메소드를 오버라이딩 할 때는 보편적 계약을 따르자.
+        - 9 equals 메소드를 오버라이드 할 때는 hashCode 메소드도 항상 같이 오버라이드 하자.
+        - 10 toString 메소드는 항상 오버라이드 하자
+
 ## 2018-10-14
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
