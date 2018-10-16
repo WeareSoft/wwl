@@ -5,10 +5,10 @@
 - Algorithm - 다음주 스터디 자료
     - String Matching
 - Book
-    - Effective Java
-        - 8 equals 메소드를 오버라이딩 할 때는 보편적 계약을 따르자.
-        - 9 equals 메소드를 오버라이드 할 때는 hashCode 메소드도 항상 같이 오버라이드 하자.
-        - 10 toString 메소드는 항상 오버라이드 하자
+    - [Effective Java](/nesoy/Java/EffectiveJava/Chapter-3.md)
+        - ~~8 equals 메소드를 오버라이딩 할 때는 보편적 계약을 따르자.~~
+        - ~~9 equals 메소드를 오버라이드 할 때는 hashCode 메소드도 항상 같이 오버라이드 하자.~~
+        - ~~10 toString 메소드는 항상 오버라이드 하자~~
 
 ## 2018-10-14
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
@@ -19,7 +19,7 @@
         - 5.4 메일 서비스 추상화
         - 5.5 정리
 - Book
-    - Effective Java
+    - [Effective Java](/nesoy/Java/EffectiveJava/Chapter-2.md)
         - ~~5 불필요한 객체의 생성을 피하자.~~
         - ~~6 쓸모 없는 객체 참조를 제거하자.~~
         - ~~7 파이널라이저(Finalizer)의 사용을 피하자.~~
@@ -99,7 +99,7 @@
 
 ### Etc
 - Book
-    - Effective Java
+    - [Effective Java](/nesoy/Java/EffectiveJava/Chapter-2.md)
         - 5. 불필요한 객체의 생성을 피하자.
         - 6. 쓸모 없는 객체 참조를 제거하자.
         - 7. 파이널라이저(Finalizer)의 사용을 피하자.
@@ -112,7 +112,7 @@
         - 2.5 학습 테스트로 배우는 스프링
         - 2.6 정리
 - Book
-    - Effective Java
+    - [Effective Java](/nesoy/Java/EffectiveJava/Chapter-2.md)
         - ~~4. private 생성자를 사용해서 인스턴스 생성을 못하게 하자.~~
         - 5. 불필요한 객체의 생성을 피하자.
         - 6. 쓸모 없는 객체 참조를 제거하자.
