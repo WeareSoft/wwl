@@ -1,7 +1,7 @@
 # Nesoy
 ## 2018-10-21
 - [Blog](https://nesoy.github.io)
-    - TDD 후기
+    - [TDD 후기](https://nesoy.github.io/articles/2018-10/OKKYCON2018-Real-TDD)
 - Algorithm - 다음주 스터디 자료
     - String Matching
 - Book
