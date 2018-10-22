@@ -1,5 +1,26 @@
 # Hee
 
+## 2019-10-28
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * 큐빙 - 5373번
+  * 인구 이동 - 16234번
+  * 나무 재테크 - 16235번
+  * 아기 상어 - 16236번
+* 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
+  * 최단 경로(Shortest Path)
+    * 다익스트라(Dijkstra) 알고리즘
+    * 플로이드(Floyd-Warshall) 알고리즘
+  * SPFA(Shortest Path Faster)
+
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/181028-study.md)
+* 목차
+  * Socket.io와 WebSocket의 차이
+  * 동기화 객체의 종류
+  * 뮤텍스와 세마포어의 차이
+
+
 ## 2019-10-21
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제(2) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
@@ -87,12 +108,12 @@
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
 * 삼성 SW 역량 테스트 기출 문제 풀기
-  * ~~~톱니바퀴 - 14891번~~~
-  * ~~~경사로 - 14890번~~~
-  * ~~~스타트와 링크 - 14889번~~~
-  * ~~~연산자 끼워넣기 - 14888번~~~
-  * ~~~로봇 청소기 - 14503번~~~
-  * ~~~연구소 - 14502번~~~
+  * ~~톱니바퀴 - 14891번~~
+  * ~~경사로 - 14890번~~
+  * ~~스타트와 링크 - 14889번~~
+  * ~~연산자 끼워넣기 - 14888번~~
+  * ~~로봇 청소기 - 14503번~~
+  * ~~연구소 - 14502번~~
 
 ## 2019-09-16
 ### 면접 대비
@@ -107,10 +128,10 @@
 ### 알고리즘 공부
 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
 * 삼성 SW 역량 테스트 기출 문제 풀기
-  * ~~~치킨 배달 - 15686번~~~
-  * ~~~드래곤 커브 - 15685번~~~
-  * ~~~사다리 조작 - 15684번~~~
-  * ~~~감시 - 15683번~~~
+  * ~~치킨 배달 - 15686번~~
+  * ~~드래곤 커브 - 15685번~~
+  * ~~사다리 조작 - 15684번~~
+  * ~~감시 - 15683번~~
 
 ## 2018-09-09
 ### 책 학습
@@ -148,7 +169,7 @@
 ### 책 학습
 :heavy_check_mark: [관련 내용](/hee/contents/180819-bookstudy.md)
 * [명품 Java Programming](https://www.booksr.co.kr/html/book/book.asp?seq=696811) 학습
-  * ~~~java 상속이란~~~
+  * ~~java 상속이란~~
 
 
 ### 알고리즘 공부
