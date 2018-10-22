@@ -76,3 +76,6 @@
 
 **2018.10.14**
 - 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/181014.md)
+
+**2018.10.21**
+- 개인 피드백 :arrow_forward: [회고 및 피드백](/feedback/181021.md)
