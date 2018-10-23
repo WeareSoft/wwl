@@ -1,9 +1,17 @@
 # Nesoy
 ## 2018-10-21
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
+        - ~~5.1 사용자 레벨 관리 기능 추가~~
+        - 5.2 트랜잭션 서비스 추상화
+        - 5.3 서비스 추상화와 단일 책임 원칙
+        - 5.4 메일 서비스 추상화
+        - 5.5 정리
+
 - [Blog](https://nesoy.github.io)
     - [TDD 후기](https://nesoy.github.io/articles/2018-10/OKKYCON2018-Real-TDD)
 - Algorithm - 다음주 스터디 자료
-    - String Matching
+    - [String Matching](https://nesoy.github.io/articles/2018-10/Algorithm-String-Matching)
 - Book
     - [Effective Java](/nesoy/Java/EffectiveJava/Chapter-3.md)
         - ~~8 equals 메소드를 오버라이딩 할 때는 보편적 계약을 따르자.~~
