@@ -16,10 +16,11 @@
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/181028-study.md)
 * 목차
-  * Socket.io와 WebSocket의 차이
-  * 동기화 객체의 종류
-  * 뮤텍스와 세마포어의 차이
-
+  * ~~Socket.io와 WebSocket의 차이~~
+  * ~~동기화 객체의 종류~~
+  * ~~뮤텍스와 세마포어의 차이~~
+  * 스프링 프레임워크란
+  * 웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이
 
 ## 2019-10-21
 ### 알고리즘 공부
