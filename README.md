@@ -79,3 +79,6 @@
 
 **2018.10.21**
 - 개인 피드백 :arrow_forward: [회고 및 피드백](/feedback/181021.md)
+
+**2018.10.28**
+- 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/181028.md)
