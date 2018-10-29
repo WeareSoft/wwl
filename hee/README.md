@@ -1,12 +1,30 @@
 # Hee
 
-## 2019-10-28
+## 2018-11-04
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
   * 큐빙 - 5373번
+  * 아기 상어 - 16236번
+* 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
+  * 최단 경로(Shortest Path)
+    * 다익스트라(Dijkstra) 알고리즘
+    * 플로이드(Floyd-Warshall) 알고리즘
+  * SPFA(Shortest Path Faster)
+
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/181028-study.md)
+* 목차
+  * Socket.io와 WebSocket의 차이
+  * 동기화 객체의 종류
+  * 뮤텍스와 세마포어의 차이
+
+## 2018-10-28
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * ~~큐빙 - 5373번~~
   * 인구 이동 - 16234번
   * 나무 재테크 - 16235번
-  * 아기 상어 - 16236번
+  * ~~아기 상어 - 16236번~~
 * 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
   * 최단 경로(Shortest Path)
     * 다익스트라(Dijkstra) 알고리즘
@@ -22,7 +40,7 @@
   * 스프링 프레임워크란
   * 웹 서버(Web Server)와 웹 어플리케이션 서버(WAS)의 차이
 
-## 2019-10-21
+## 2018-10-21
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제(2) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
   * 톱니바퀴 - 14891번
@@ -41,7 +59,7 @@
   * 백트래킹
   * 시뮬레이션
 
-## 2019-10-14
+## 2018-10-14
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제(1) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
   * 치킨 배달 - 15686번
@@ -53,7 +71,7 @@
   * 백트래킹
   * 시뮬레이션
 
-## 2019-10-07
+## 2018-10-07
 ### 학교 수업
 * 사강 과제 끝내기
 
@@ -79,7 +97,7 @@
   * 뱀 - 3190번
   * 구슬 탈출 2 - 13460번
 
-## 2019-09-30
+## 2018-09-30
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/180930-study.md)
 * 목차
@@ -94,7 +112,7 @@
   * 사다리 조작 - 15684번
   * 감시 - 15683번
 
-## 2019-09-23
+## 2018-09-23
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/180923-study.md)
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
@@ -116,7 +134,7 @@
   * ~~로봇 청소기 - 14503번~~
   * ~~연구소 - 14502번~~
 
-## 2019-09-16
+## 2018-09-16
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/180916-study.md)
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
