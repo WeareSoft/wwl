@@ -1,4 +1,15 @@
 # Delf
+## 2018-10-28
+
+## 2018-10-21
+- NHN pre-test 2차
+    - 기본 프로그래밍 문제(함수형 프로그래밍, 파이썬)
+    - 운영체제(부동소수점, 스케쥴링, 가상메모리, 페이징)
+    - 자료구조/알고리즘(이진트리, 스택, 큐, 시간 복잡도)
+    - 네트워크(OSI 7 layer, 라우팅)
+    - 데이터베이스(SQL, 트랜잭션)
+- 알고리즘 문제 풀이 [#](https://github.com/Delf-Lee/Daily-Programing/commits/master)
+
 ## 2018-10-14
 - 블로그
     - https://delf-lee.github.io/raid/

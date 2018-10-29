@@ -1,14 +1,22 @@
 # Doy
+## 2019-10-28
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * 인구 이동 - 16234번
+  * 나무 재테크 - 16235번
+### 면접 준비
+* [회의실 예약 웹 어플리케이션](https://github.com/doooyeon/conference-room-reservation)
+    * 사용 기술 정리
 
 ## 2019-10-21
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
   * 연구소 - 14502번
   * 퇴사 - 14501번
-  * 테트로미노 - 14500번
-  * 주사위 굴리기 - 14499번
-  * 시험 감독 - 13458번
-  * 뱀 - 3190번
+  * ~~테트로미노 - 14500번~~
+  * ~~주사위 굴리기 - 14499번~~
+  * ~~시험 감독 - 13458번~~
+  * ~~뱀 - 3190번~~
 ### 과제
 * [포인트 관리 서비스](https://github.com/doooyeon/point-management-service)
 
