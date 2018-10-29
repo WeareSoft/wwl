@@ -1,5 +1,19 @@
 # Delf
+
+## 2018-11-05
+- 클라우드 컴퓨팅 중간고사
+- CAMPUS HACKDAY 작성
+- 블로깅 및 개념 공부
+- 알고리즘 문제 풀이
+
 ## 2018-10-28
+- 블로그 포스트 정리
+    - Oauth, String
+- 2018 EDAILY Coding Challenge 참가 [#](https://github.com/Delf-Lee/Daily-Programing/tree/master/codingtest/edailycoding2018challange)
+    - 난이도 자체는 많이 어렵지 않은 듯함
+    - 120문제(20문제?) 48시간이라는 특이한 형식...
+        - 숙지하지 않은 상태에서 문제를 풀어서 다 못풀었음
+- 그 밖의 알고리즘 문제 풀이 [#](https://github.com/Delf-Lee/Daily-Programing/commits/master)
 
 ## 2018-10-21
 - NHN pre-test 2차
