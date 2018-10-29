@@ -1,14 +1,23 @@
 # Doy
-## 2019-10-28
+## 2018-11-04
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
-  * 인구 이동 - 16234번
+  * 아기 상어 - 16236번
   * 나무 재테크 - 16235번
+### 면접 준비
+* [포인트 관리 서비스](https://github.com/doooyeon/point-management-service)
+    * 사용 기술 정리
+
+## 2018-10-28
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * ~~인구 이동 - 16234번~~
+  * ~~나무 재테크 - 16235번~~
 ### 면접 준비
 * [회의실 예약 웹 어플리케이션](https://github.com/doooyeon/conference-room-reservation)
     * 사용 기술 정리
 
-## 2019-10-21
+## 2018-10-21
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
   * 연구소 - 14502번
@@ -20,7 +29,7 @@
 ### 과제
 * [포인트 관리 서비스](https://github.com/doooyeon/point-management-service)
 
-## 2019-10-14
+## 2018-10-14
 ### 알고리즘 공부
 * 하루에 1~2개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
@@ -35,7 +44,7 @@
 ### 과제
 * [회의실 예약 웹 어플리케이션](https://github.com/doooyeon/conference-room-reservation)
 
-## 2019-10-07
+## 2018-10-07
 ### 알고리즘 공부
 * 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
@@ -48,7 +57,7 @@
   * REST API 요청, 응답
   * Gson 라이브러리 사용법 익히기
 
-## 2019-09-30
+## 2018-09-30
 ### 알고리즘 공부
 * 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
@@ -56,7 +65,7 @@
   * 감시 - 15683번
   * 스타트와 링크 - 14889번
 
-## 2019-09-23
+## 2018-09-23
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/doy/contents/180923-study.md)
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
@@ -64,7 +73,7 @@
   * 트랜잭션 격리 수준(Transaction Isolation Level)
   * 쿠키(Cookie)와 세션(Session)
 
-## 2019-09-16
+## 2018-09-16
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/doy/contents/180916-study.md)
 * 하루에 하나씩 면접 대비 질문에 대한 내용 정리
