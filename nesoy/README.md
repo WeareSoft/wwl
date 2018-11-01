@@ -8,6 +8,7 @@
         - ~~6.1 트랜잭션 코드의 분리~~
         - ~~6.2 고립된 단위 테스트~~
         - 6.3 다이내믹 프록시와 팩토리 빈
+- [nGrinder](https://nesoy.github.io/articles/2018-10/nGrinder-Start)
 
 ## 2018-10-28
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)

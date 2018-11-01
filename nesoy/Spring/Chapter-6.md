@@ -45,3 +45,46 @@
 - <https://nesoy.github.io/articles/2018-09/Mockito>
 
 ## 6.3 다이내믹 프록시와 팩토리 빈
+- 부가기능과 핵심기능 코드를 완전히 분리한다.
+- 분리된 부가기능은 원래 핵심기능을 가진 클래스로 위임해줘야 한다.
+- 핵심기능은 부가기능을 가진 클래스의 존재 자체를 몰라야 한다.
+
+
+### Proxy Pattern
+![No Image](/nesoy/Images/Spring/24.png)
+
+- 마치 자신이 클라이언트가 사용하려고 하는 실제 대상인 것처럼 위장해서 클라이언트의 요청을 받아주는 것을 대리자
+- 대리인과 같은 역할을 한다고 해서 Proxy Pattern
+    - Proxy를 통해 최종적으로 요청을 위임받아 처리하는 실제 Object를 Target 또는 실체라고 부른다.
+- 클라이언트가 타깃에 접근하는 방법을 제어하기 위해서다.
+- 타깃에 부가적인 기능을 부여해주기 위해서다.
+
+
+### Decorator Pattern
+- Target에 부가적인 기능을 Runtime시 다이내믹하게 부여해주기 위해 Proxy를 사용하는 Pattern을 말한다.
+- 다이내믹하게 기능을 부가한다는 의미는 컴파일 시점, 즉 코드상에서는 어떤 방법과 순서로 Proxy와 타깃이 연결되어 사용되는지 정해져 있지 않다는 뜻이다.
+
+![No Image](/nesoy/Images/Spring/25.png)
+
+- 각 Proxy는 인터페이스로 접근하기 때문에 자신이 최종 타깃으로 위임하는지, 아니면 다음 단계의 Decorator Proxy로 위임하는지 알지 못한다.
+- `InputStream`, `OutputStream`이 대표적인 예다.
+
+
+### Proxy Pattern
+- 원격 Object를 실행하고 결과를 받을 때 Proxy Pattern을 사용하면 관리하기 편하다.
+- 타깃에 대한 접근권한을 제어하기 위해 Proxy Pattern을 사용할 수 있다.
+
+
+### Proxy VS Decorator
+- 프록시는 코드에서 자신이 만들거나 접근할 타깃 클래스 정보를 알고 있는 경우가 많다.
+    - 항상 그런건 아니다.
+- 사용의 목적이 기능의 부가인지, 아니면 접근 제어인지를 구분해보면 각각 어떤 목적으로 Proxy가 사용됐는지 이해할 수 있다.
+
+### Dynamic Proxy
+- 항상 Proxy를 만들기에는 비용이 많이 든다.
+- 그래서 java.lang.reflect를 사용하여 손쉽게 Proxy를 만들 수 있도록 지원해주는 클래스들이 있다.
+
+
+#### Reflection
+- 클래스 Object를 이용하여 Meta정보를 가져오거나 Object를 조작할 수 있다.
+- Method를 실행하기위해선 `invoke`를 사용하자.
