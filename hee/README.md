@@ -1,10 +1,9 @@
 # Hee
 
-## 2018-11-04
+## 2018-11-11
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
-  * 큐빙 - 5373번
-  * 아기 상어 - 16236번
+* 알고리즘 공부 계획 다시 세우기
+  * 백준 자료 또는 여러 기업의 기출 문제 
 * 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
   * 최단 경로(Shortest Path)
     * 다익스트라(Dijkstra) 알고리즘
@@ -17,6 +16,27 @@
   * Socket.io와 WebSocket의 차이
   * 동기화 객체의 종류
   * 뮤텍스와 세마포어의 차이
+  
+### 개인 공부
+* 목차
+  * 추가 예정
+
+## 2018-11-04
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * 큐빙 - 5373번
+  * 아기 상어 - 16236번
+* 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
+  * 최단 경로(Shortest Path)
+    * 다익스트라(Dijkstra) 알고리즘
+    * 플로이드(Floyd-Warshall) 알고리즘
+  * SPFA(Shortest Path Faster)
+
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/181104-study.md)
+* 목차
+  * Servlet이란
+  * JSP란
 
 ## 2018-10-28
 ### 알고리즘 공부
