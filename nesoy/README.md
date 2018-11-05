@@ -1,4 +1,13 @@
 # Nesoy
+## 2018-11-11
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - 6.3 다이내믹 프록시와 팩토리 빈
+- TDD - 로또
+    - 코드 완성하기
+    - 다름 사람 리뷰 확인하고 차이점 이해하기
+- Tech Interview
+    - context-switching
+
 ## 2018-11-04
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - [Chapter 5 : 서비스 추상화](/nesoy/Spring/Chapter-5.md)
