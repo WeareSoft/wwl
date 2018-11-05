@@ -83,8 +83,44 @@
 ### Dynamic Proxy
 - 항상 Proxy를 만들기에는 비용이 많이 든다.
 - 그래서 java.lang.reflect를 사용하여 손쉽게 Proxy를 만들 수 있도록 지원해주는 클래스들이 있다.
-
+- 유연한 설계
 
 #### Reflection
 - 클래스 Object를 이용하여 Meta정보를 가져오거나 Object를 조작할 수 있다.
 - Method를 실행하기위해선 `invoke`를 사용하자.
+
+#### 다이내믹 프록시를 위한 팩토리 빈
+- 스프링은 내부적으로 리플렉션 API를 이용해서 빈 정의에 나오는 클래스 이름을 가지고 빈 오브젝트를 생성한다.
+- 팩토리 빈
+    - 스프링을 대신해어 오브젝트의 생성로직을 담당하도록 만들어진 특별한 Bean
+    - <https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html>
+    - T	getObject()
+        - Return an instance (possibly shared or independent) of the object managed by this factory.
+    - java.lang.Class<?>	getObjectType()
+        - Return the type of object that this FactoryBean creates, or null if not known in advance.
+    - default boolean	isSingleton()
+        - Is the object managed by this factory a singleton? That is, will getObject() always return the same object (a reference that can be cached)?
+
+
+- ApplicationContext로 가져오게 된다면 FactoryBean을 사용하여 Bean을 얻는다.
+- 실제 FactoryBean을 가져오고 싶은 경우 `&`을 사용한다면 실제 FactoryBean을 얻을 수 있다.
+
+![No Image](/nesoy/Images/Spring/26.png)
+
+#### 프록시 팩토리 빈 방식의 장점과 한계
+- 한번 부가기능을 가진 프록시를 생성하는 팩토리 빈을 만들어두면 타깃의 타입에 상관없이 재사용할 수 있기 때문
+- 데코레이터 패턴이 적용된 프록시 문제점
+    - 프록시를 적용할 대상이 구현하고 있는 인터페이스를 구현하는 프록시 클래스를 일일이 만들어야 한다는 번거로움
+    - 부가적인 기능이 여러 메소드에 반복적으로 나타나게 돼서 코드 중복 문제 발생
+- 다이내믹 프록시의 장점
+    - 다양한 타깃 오브젝트에 적용이 가능
+- 프록시 팩토리 빈의 한계
+    - 메소드 단위로 발생
+    - 한 번에 여러 개의 클래스에 공통적인 부가기능을 제공하는 일은 지금까지 살펴본 방법으론 불가능
+    - 적용 대상인 서비스 클래스가 200개쯤 된다면..?
+        - 매번 XML 설정이 4000라인 정도..
+        - 너무 힘들고 실수가능성도 높다.
+    - 이를 해결하기 위해 Spring은 어떤 해결방법을 사용했을까?
+
+## 6.4 스프링의 프록시 팩토리 빈
+
