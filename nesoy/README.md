@@ -1,4 +1,17 @@
 # Nesoy
+
+## 2018-11-18
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - ~~6.3 다이내믹 프록시와 팩토리 빈~~
+    - 6.4 스프링의 프록시 팩토리 빈
+- TDD - 로또
+    - 코드 완성하기
+    - 다름 사람 리뷰 확인하고 차이점 이해하기
+- Tech Interview
+    - context-switching
+- Book
+    - 켄트 벡의 구현 패턴
+
 ## 2018-11-11
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - ~~6.3 다이내믹 프록시와 팩토리 빈~~
