@@ -87,3 +87,6 @@
 
 **2018.11.04**
 - 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/181104.md)
+
+**2018.11.11**
+- 참석자: Delf, Doy, Hee, Nesoy :arrow_forward: [회고 및 피드백](/feedback/181111.md)

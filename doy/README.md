@@ -1,9 +1,21 @@
 # Doy
-## 2018-11-04
+
+## 2018-11-11
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
   * 아기 상어 - 16236번
   * 나무 재테크 - 16235번
+  * 인구 이동 - 16234번
+### 면접 대비
+* 목차
+    * Ioc/DI
+    * DB Join
+
+## 2018-11-04
+### 알고리즘 공부
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+  * ~~아기 상어 - 16236번~~
+  * ~~나무 재테크 - 16235번~~
 ### 면접 준비
 * [포인트 관리 서비스](https://github.com/doooyeon/point-management-service)
     * 사용 기술 정리

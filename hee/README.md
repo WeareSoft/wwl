@@ -18,8 +18,10 @@
   * 뮤텍스와 세마포어의 차이
   
 ### 개인 공부
+:heavy_check_mark: [관련 내용](/hee/contents/181111-study.md)
 * 목차
-  * 추가 예정
+  * MVC Architecture
+  * DI란 
 
 ## 2018-11-04
 ### 알고리즘 공부
