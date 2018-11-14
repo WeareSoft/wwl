@@ -8,7 +8,7 @@
     - 코드 완성하기
     - 다름 사람 리뷰 확인하고 차이점 이해하기
 - Tech Interview
-    - context-switching
+    - ~~context-switching~~
 - Book
     - 켄트 벡의 구현 패턴
 
