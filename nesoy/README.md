@@ -6,7 +6,18 @@
     - 6.4 스프링의 프록시 팩토리 빈
 - TDD - 로또
     - ~~코드 완성하기~~
-    - 다름 사람 리뷰 확인하고 차이점 이해하기
+    - ~~다름 사람 리뷰 확인하고 차이점 이해하기~~
+    - Check List & Advanced Point
+        - LottoResult
+        - LottoGenerator
+        - List -> Set
+        - containsExactly
+        - indent Depth Check
+        - 중복 값 처리나 이런 걸 고려한다면 Collections의 shuffle을 쓰는 것도 좋은 방법
+        - production 코드 같은데 이처럼 하드코딩해도 되는 건가요?
+        - 인터페이스 추가와 구현 클래스 추가 👍
+        - 로또 생성할 때마다 45개의 값을 생성하기 보다 45개의 값 하나를 만들어 놓은 후 재사용하는 구조면 성능상 더 좋지 않을까?
+        - InputView, ResultView의 경우 굳이 인스턴스를 생성할 필요가 있나?
 - [Blog](https://nesoy.github.io)
     - Couchbase는 어떻게 동작하는가?
 
