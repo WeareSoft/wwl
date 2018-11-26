@@ -1,5 +1,20 @@
 # Hee
 
+## 2018-12-02
+### 면접 대비
+:heavy_check_mark: [관련 내용](/hee/contents/181125-study.md)
+* 목차
+  * 객체 관계 매핑(Object-relational mapping, ORM)이란
+  * Spring, Spring MVC, Spring Boot의 차이
+  
+### 개인 공부
+* 목차
+  * Spring Boot, JPA를 이용한 토이 프로젝트 2차 학습 
+  * Open API 사용법 익히기
+  * 로그 데이터 읽고 분석하기 (목적지별 최저가 추천 방법 생각)
+* 사강 과제 마무리
+* 회고 
+
 ## 2018-11-25
 ### 알고리즘 공부
 * 알고리즘 공부 계획 다시 세우기
@@ -9,13 +24,11 @@
 ### 면접 대비
 :heavy_check_mark: [관련 내용](/hee/contents/181125-study.md)
 * 목차
-  * 객체 관계 매핑(Object-relational mapping, ORM)이란
+  * ~~객체 관계 매핑(Object-relational mapping, ORM)이란~~
   
 ### 개인 공부
 * 목차
   * Spring Boot, JPA를 이용한 토이 프로젝트 1차 학습 
-  <!-- * Open API 사용법 익히기
-  * 로그 데이터 읽고 분석하기 (목적지별 최저가 추천 방법 생각) -->
 
 ## 2018-11-11
 ### 알고리즘 공부
