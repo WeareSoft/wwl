@@ -1,4 +1,7 @@
 # Nesoy
+## 2018-12-02
+- Couchbase는 어떻게 동작하는가 - 번역 하기
+- 회고 작성 시작하기.
 
 ## 2018-11-25
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
