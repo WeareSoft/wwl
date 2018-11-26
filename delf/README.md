@@ -1,5 +1,15 @@
 # Delf
 
+## 2018-11-25
+- Spring 공부 및 프로젝트 진행
+    - 게시판, todo 관리 사이트 생각 중
+    - 관련된 것 공부, 정리, 블로깅
+- tech-interview
+    - [java의 main 메서드가 static인 이유](https://github.com/WeareSoft/tech-interview/issues/14)
+    - (+욕심) 하나 더 올리기
+- 내가 진짜로 가고싶은 기업 생각해보기
+    - 업무, 사람, 개발문화, 연봉, 복지 등등 여러 것들을 고려해서
+
 ## 2018-11-18
 - 동북아 공개 sw활성화 포럼 참가
 - Spring 공부하기

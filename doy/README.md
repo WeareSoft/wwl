@@ -1,5 +1,15 @@
 # Doy
 
+## 2018-11-25
+### tech interview 정리
+* 목차
+  * [DB] Join 내용 추가
+  * [DB] Index란
+  
+### 개인 공부
+* 목차
+  * SNS 서비스 Entity 설계
+
 ## 2018-11-11
 ### 알고리즘 공부
 * 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
