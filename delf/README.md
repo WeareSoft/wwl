@@ -1,4 +1,13 @@
 # Delf
+## 2018-12-16
+- 클라우드 컴퓨팅 기말고사
+- T-acamedy 세미나
+- 웹프레임워크2 동영상 학습
+  - spring-store 개인 프로젝트 (본격적으로) 시작
+  - devist 프로젝트 계속
+  - 관련 내용 포스팅
+- 연간회고하며 돌아보기
+
 ## 2018-12-09
 - 클라우드 컴퓨팅 과제 및 발표 준비 [#](https://github.com/WeareSoft/wwl/blob/master/delf/contents/aws-webserver-rds.md)
 - 프로젝트
