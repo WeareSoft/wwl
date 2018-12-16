@@ -1,4 +1,14 @@
 # Delf
+
+## 2018-12-23
+- devist 프로젝트 진행
+  - DB 설계 완료, 구현
+- spring-store 프로젝트 진행
+- 연간 회고
+- tech interview
+  - JDBC란
+- 연간회고
+
 ## 2018-12-16
 - 클라우드 컴퓨팅 기말고사
 - T-acamedy 세미나
@@ -6,6 +16,8 @@
   - spring-store 개인 프로젝트 (본격적으로) 시작
   - devist 프로젝트 계속
   - 관련 내용 포스팅
+- tech interview 
+  - [ORM이란](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md#orm이란)
 - 연간회고하며 돌아보기
 
 ## 2018-12-09
