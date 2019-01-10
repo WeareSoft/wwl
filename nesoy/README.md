@@ -10,6 +10,22 @@
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기.
 
+## 2018-01-13
+- Edwith 강의 듣기
+- Springboot2 읽고 정리하기
+- Effective Java 9개 Item 읽고 정리
+- Elastic Search 공부하고 정리
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Intro>
+- 토비 스프링 1 Chapter 읽고 정리
+- 알고리즘 3개 풀고 정리하기
+    - [add_two_numbers](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/add_two_numbers.java)
+    - [longest_substring_without_repeating_characters](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/longest_substring_without_repeating_characters.java)
+    - [two_sum](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/two_sum.java)
+- 1개의 블로그 쓰기
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Intro>
+- 출근 길에 책읽기.
+    - TDD (136 Page ~ 2019.01.10)
+
 
 ---------------------------
 
