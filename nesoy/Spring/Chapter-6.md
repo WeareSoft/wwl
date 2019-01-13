@@ -123,4 +123,37 @@
     - 이를 해결하기 위해 Spring은 어떤 해결방법을 사용했을까?
 
 ## 6.4 스프링의 프록시 팩토리 빈
+- 스프링은 일관된 방법으로 프록시를 만들 수 있게 도와주는 추상 레이어를 제공.
+- 생성된 프록시는 스프링의 Bean으로 등록돼야 한다.
+- ProxyFactoryBean은 프록시를 생성해서 빈 오브젝트로 등록하게 해주는 팩토리 빈.
+- 기존의 TxProxyFactoryBean과 달리 ProxyFactoryBean은 순수하게 프록시를 생성하는 작업만을 담당하고 프록시를 통해 제공해줄 부가기능은 별도의 빈에 둘 수 있다.
+- ProxyFactoryBean이 생성하는 프록시에서 사용할 부가기능은 MethodInterceptor 인터페이스를 구현해서 만든다.
 
+### MethodInterceptor vs InvocationHandler의 차이점
+- InvocationHandler의 `invoke()` 메소드는 타깃 오브젝트에 대한 정보를 제공하지 않는다.
+- 따라서 Target은 InvocationHandler를 구현한 클래스가 직접 알고 있어야 한다.
+- MethodInterceptor는 ProxyFactoryBean으로부터 Target을 제공받기에 독립적으로 만들어질 수 있다.
+
+### 어드바이스 : Target이 필요 없는 순수한 부가기능
+- MethodInvocation은 일종의 Callback 오브젝트
+- MethodInterceptor는 Advice Interface를 상속하고 있는 [Sub-Interface](http://aopalliance.sourceforge.net/doc/org/aopalliance/intercept/MethodInterceptor.html)
+
+![No Image](/nesoy/Images/Spring/27.png)
+- InvocationHandler가 타깃과 메소드 선정 알고리즘에 의존하고 있다는 점.
+- 여러 프록시가 공유할 수 없는 문제점.
+- Target 변경고하 메소드 선정 알고리즘 변경 같은 확장이 필요하면 팩토리 Bean 내의 Proxy 생성코드를 직접 변경해야 한다.
+
+
+![No Image](/nesoy/Images/Spring/28.png)
+- Advice : 부가기능을 제공하는 오브젝트
+- 포인트컷 : 메소드 선정 알고리즘을 담은 Object
+- Advisor : 포인트컷과 Advice의 조합
+
+#### Flow
+- 프록시는 클라이언트로부터 요청을 받으면 pointcut에게 부가기능을 부여할 Method인지 판별
+- 판별후 MethodInteceptor 타입의 advice를 호출
+    - InvocationHandler와 달리 직접 Target을 호출하지 않는다.
+- 프록시로부터 전달받은 MethodInvocation 타입 Callback Object의 proceed() 메소르드를 호출해주기만 하면된다.
+- 재사용 가능한 기능을 만들어두고 바뀌는 부분(콜백 오브젝트와 메소드 호출정보)만 외부에서 주입해서 이를 작업 흐름(부가기능 부여) 중에 사용하도록 하는 전형적인 템플릿 콜백 구조.
+
+## 6.5 스프링 AOP

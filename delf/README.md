@@ -1,4 +1,25 @@
 # Delf
+
+## 2018-12-23
+- devist 프로젝트 진행
+  - DB 설계 완료, 구현
+- spring-store 프로젝트 진행
+- 연간 회고
+- tech interview
+  - JDBC란
+- 연간회고
+
+## 2018-12-16
+- 클라우드 컴퓨팅 기말고사
+- T-acamedy 세미나
+- 웹프레임워크2 동영상 학습
+  - spring-store 개인 프로젝트 (본격적으로) 시작
+  - devist 프로젝트 계속
+  - 관련 내용 포스팅
+- tech interview 
+  - [ORM이란](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md#orm이란)
+- 연간회고하며 돌아보기
+
 ## 2018-12-09
 - 클라우드 컴퓨팅 과제 및 발표 준비 [#](https://github.com/WeareSoft/wwl/blob/master/delf/contents/aws-webserver-rds.md)
 - 프로젝트
@@ -6,8 +27,9 @@
         - 선행사항은 웹프레임워크 동영상 보는 것
     - Spring Boot를 이용한 '반복 Toto 관리 도우미(가칭)' 프로젝트 진행 및 공부
 - 연간회고하며 돌아보기
-- 면접 준비
+- 면접 [#] (/contents/Summary_20181209.md)
 - 기타 사강 과제, 시험, 토론 마무리
+
 ## 2018-12-02
 - 면접 [#](/contents/Summary_20181202.md)
 - 김남윤 교수님 웹프레임워크 동영상 보기(일단 시청)

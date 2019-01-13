@@ -1,7 +1,48 @@
 # Nesoy
+## 1분기 목표(~2019. 03)
+#### 일주일 단위 WORK FLOW
+- Edwith 강의 듣기
+- Springboot2 읽고 정리하기
+- Effective Java 9개 Item 읽고 정리
+- Elastic Search 공부하고 정리
+- 토비 스프링 1 Chapter 읽고 정리
+- 알고리즘 3개 풀고 정리하기
+- 1개의 블로그 쓰기
+- 출근 길에 책읽기.
+
+## 2018-01-13
+- Edwith 강의 듣기
+- Springboot2 읽고 정리하기
+- Effective Java 9개 Item 읽고 정리
+- 토비 스프링 1 Chapter 읽고 정리
+- Elastic Search 공부하고 정리
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Intro>
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Install>
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Configuration>
+- 알고리즘 3개 풀고 정리하기
+    - [add_two_numbers](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/add_two_numbers.java)
+    - [longest_substring_without_repeating_characters](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/longest_substring_without_repeating_characters.java)
+    - [two_sum](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/two_sum.java)
+- 1개의 블로그 쓰기 - O
+- 출근 길에 책읽기.
+    - TDD (136 Page ~ 2019.01.10)
+
+
+---------------------------
+
+## 2018-12-09
+- [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
+    - ~~6.4 스프링의 프록시 팩토리 빈~~
+    - 6.5 스프링 AOP
+- [React Karbanboard](https://github.com/NESOY/React-Karban)
+- [Springboot2](https://github.com/NESOY/Springboot2)
+
+
 ## 2018-12-02
 - Couchbase는 어떻게 동작하는가 - 번역 하기
-- 회고 작성 시작하기.
+- [KOSSCON - 2018](https://nesoy.github.io/articles/2018-11/KOSSCON-2018)
+
+
 
 ## 2018-11-25
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
@@ -39,7 +80,7 @@
 ## 2018-11-11
 - [토비의 Spring](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19505561)
     - ~~6.3 다이내믹 프록시와 팩토리 빈~~
-    - 6.4 스프링의 프록시 팩토리 빈
+    - ~~6.4 스프링의 프록시 팩토리 빈~~
 - TDD - 로또
     - 코드 완성하기
     - 다름 사람 리뷰 확인하고 차이점 이해하기
