@@ -69,4 +69,4 @@ public int binarySearch(int[] data, int target) {
 > - [http://codepractice.tistory.com/101](http://codepractice.tistory.com/101)
 
 
-### :house: [Hee Home](https://github.com/T-WWL/WWL/tree/master/hee)
+### :house: [Hee Home](https://github.com/WeareSoft/WWL/tree/master/hee)
