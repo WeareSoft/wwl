@@ -14,12 +14,13 @@
 - Edwith 강의 듣기
 - Effective Java 4-9Item 읽고 정리
     - 8,9 정리하기
-- Elastic Search 공부하고 정리
-    - Chapter 3
 - 알고리즘 3개 풀고 정리하기
-- 1개의 블로그 쓰기
 - 출근 길에 책읽기.
-    - TDD 
+    - TDD
+- ~~Elastic Search 공부하고 정리~~
+    - [Elastic 데이터 처리](https://nesoy.github.io/articles/2019-01/ElasticSearch-Document)
+- ~~1개의 블로그 쓰기~~
+
 ### 우선순위 낮음
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
