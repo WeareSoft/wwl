@@ -15,6 +15,18 @@
 - Effective Java 4-9Item 읽고 정리
     - 8,9 정리하기
 - 알고리즘 3개 풀고 정리하기
+    - Stream Convert 비용이 생각보다 크다.
+    - Math.floor : 버림
+    - 한번에 통과하는 연습하기 // 처음 준 예제 빠르게 구현 // 문제 다시 읽어 테스트 케이스 생각하기
+        - 중복 입력 Case
+        - Boundary Case
+        - Empty Case
+        - Medium Case : 평균값, 중앙값
+        - Large Case
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/CyclicRotation.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/FrogJmp.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/PermMissingElem.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/TapeEquilibrium.java
 - 출근 길에 책읽기.
     - TDD
 - ~~Elastic Search 공부하고 정리~~
