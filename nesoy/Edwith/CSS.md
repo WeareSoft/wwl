@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ## CSS 우선순위
 - inline > internal > external
@@ -13,6 +14,8 @@
 - body > span (O)
 - span (X)
 
+=======
+>>>>>>> f9e8351f8e7eb596993759ac9e6ea78150648a14
 ## CSS Selector
 - HTML의 요소를 tag, id, class, html 태그 속성등을 통해 쉽게 찾아주는 방법
 
@@ -149,5 +152,9 @@ h1, span, div { color : red}
 - box-shadow속성도 box-modle에 포함지어 설명할 수 있습니다.
 - box-sizing
     - content-box : padding값에 따라 증가할 수 있음
+<<<<<<< HEAD
     - border-box : 박스 고정(padding값에 상관없이 유지하려고 하나 값이 크면 증가가됨)
 
+=======
+    - border-box : 박스 고정(padding값에 상관없이 유지하려고 하나 값이 크면 증가가됨)
+>>>>>>> f9e8351f8e7eb596993759ac9e6ea78150648a14
