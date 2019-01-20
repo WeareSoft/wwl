@@ -10,6 +10,58 @@
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기.
 
+## 2019-01-20
+- Edwith 강의 듣기
+- Effective Java 4-9Item 읽고 정리
+    - 8,9 정리하기
+- 알고리즘 3개 풀고 정리하기
+    - Stream Convert 비용이 생각보다 크다.
+    - Math.floor : 버림
+    - 한번에 통과하는 연습하기 // 처음 준 예제 빠르게 구현 // 문제 다시 읽어 테스트 케이스 생각하기
+        - 중복 입력 Case
+        - Boundary Case
+        - Empty Case
+        - Medium Case : 평균값, 중앙값
+        - Large Case
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/CyclicRotation.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/FrogJmp.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/PermMissingElem.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/TapeEquilibrium.java
+- 출근 길에 책읽기.
+    - TDD
+- ~~Elastic Search 공부하고 정리~~
+    - [Elastic 데이터 처리](https://nesoy.github.io/articles/2019-01/ElasticSearch-Document)
+- ~~1개의 블로그 쓰기~~
+
+### 우선순위 낮음
+- 토비 스프링 1 Chapter 읽고 정리
+- Springboot2 읽고 정리하기
+
+
+## 2019-01-13
+- Edwith 강의 듣기
+    - 기초 - Servlet이전까지 수강
+- Springboot2 읽고 정리하기
+    - 챙기지 못함. -> Edwith 완료되면 시작하기.
+- Effective Java 9개 Item 읽고 정리
+    - 6개로 줄이고 2개 발표
+- 토비 스프링 1 Chapter 읽고 정리
+    - 시작도 못함. 요일을 지정해서 공부해야 할듯.
+- Elastic Search 공부하고 정리
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Intro>
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Install>
+    - <https://nesoy.github.io/articles/2019-01/ElasticSearch-Configuration>
+- 알고리즘 3개 풀고 정리하기
+    - [add_two_numbers](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/add_two_numbers.java)
+    - [longest_substring_without_repeating_characters](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/longest_substring_without_repeating_characters.java)
+    - [two_sum](https://github.com/NESOY/Algorithm/blob/master/src/Leetcode/two_sum.java)
+- 1개의 블로그 쓰기 - O
+- 출근 길에 책읽기.
+    - TDD (136 Page ~ 2019.01.10)
+    - 이해하는 부분이 어렵다.
+    - 실제로 코드는 보이지만 어떠한 생각으로 진행하는지 의미를 이해하기 어려운 부분이 있다.
+    - 여러번 읽어봐야 이해할 듯.
+
 
 ---------------------------
 
