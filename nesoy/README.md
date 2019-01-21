@@ -10,11 +10,24 @@
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기.
 
+## 2019-01-27
+- Edwith 강의 듣기
+- Effective Java 6 Item 읽고 정리
+- Elastic Search 공부하고 정리
+    - Chapter4 Elastic System 구조
+- 알고리즘 3개 풀고 정리하기
+- 1개의 블로그 쓰기
+- 출근 길에 책읽기.
+    - TDD
+
+## 후순위
+- 토비 스프링 1 Chapter 읽고 정리
+
 ## 2019-01-20
 - Edwith 강의 듣기
-- Effective Java 4-9Item 읽고 정리
+- ~~Effective Java 4-9Item 읽고 정리~~
     - 8,9 정리하기
-- 알고리즘 3개 풀고 정리하기
+- ~~알고리즘 3개 풀고 정리하기~~
     - Stream Convert 비용이 생각보다 크다.
     - Math.floor : 버림
     - 한번에 통과하는 연습하기 // 처음 준 예제 빠르게 구현 // 문제 다시 읽어 테스트 케이스 생각하기
