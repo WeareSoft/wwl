@@ -68,7 +68,7 @@
 
 ## 2018-11-04
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/181028.md)
   * 큐빙 - 5373번
   * 아기 상어 - 16236번
 * 목차 :heavy_check_mark: [관련 내용](/hee/contents/180902-algorithm.md)
@@ -85,7 +85,7 @@
 
 ## 2018-10-28
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/181028.md)
+* 삼성 SW 역량 테스트 기출 문제(4) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/181028.md)
   * ~~큐빙 - 5373번~~
   * 인구 이동 - 16234번
   * 나무 재테크 - 16235번
@@ -107,14 +107,14 @@
 
 ## 2018-10-21
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제(2) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+* 삼성 SW 역량 테스트 기출 문제(2) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180923.md)
   * 톱니바퀴 - 14891번
   * 경사로 - 14890번
   * 스타트와 링크 - 14889번
   * 연산자 끼워넣기 - 14888번
   * 로봇 청소기 - 14503번
   * 연구소 - 14502번
-* 삼성 SW 역량 테스트 기출 문제(3) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
+* 삼성 SW 역량 테스트 기출 문제(3) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180930.md)
   * 퇴사 - 14501번
   * 테트로미노 - 14500번
   * 주사위 굴리기 - 14499번
@@ -126,7 +126,7 @@
 
 ## 2018-10-14
 ### 알고리즘 공부
-* 삼성 SW 역량 테스트 기출 문제(1) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+* 삼성 SW 역량 테스트 기출 문제(1) 관련 이론 및 풀이법 정리 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180916.md)
   * 치킨 배달 - 15686번
   * 드래곤 커브 - 15685번
   * 사다리 조작 - 15684번
@@ -147,14 +147,14 @@
 
 ### 알고리즘 공부
 * 하루에 두개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
-* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180923.md)
   * 톱니바퀴 - 14891번
   * 경사로 - 14890번
   * 스타트와 링크 - 14889번
   * 연산자 끼워넣기 - 14888번
   * 로봇 청소기 - 14503번
   * 연구소 - 14502번
-* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180930.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180930.md)
   * 퇴사 - 14501번
   * 테트로미노 - 14500번
   * 주사위 굴리기 - 14499번
@@ -171,7 +171,7 @@
 
 ### 알고리즘 공부
 * 하루에 한개씩 삼성 알고리즘 문제 풀고 관련 이론 정리
-* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+* 삼성 SW 역량 테스트 기출 문제 풀기 :heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180916.md)
   * 치킨 배달 - 15686번
   * 드래곤 커브 - 15685번
   * 사다리 조작 - 15684번
@@ -190,7 +190,7 @@
   * 객체 직렬화(Serialization)와 역직렬화(Deserialization)란 무엇인가
 
 ### 알고리즘 공부
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180923.md)
+:heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180923.md)
 * 삼성 SW 역량 테스트 기출 문제 풀기
   * ~~톱니바퀴 - 14891번~~
   * ~~경사로 - 14890번~~
@@ -210,7 +210,7 @@
   * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class)
 
 ### 알고리즘 공부
-:heavy_check_mark: [관련 내용](https://github.com/Do-Hee/algorithm-study/blob/master/contents/180916.md)
+:heavy_check_mark: [관련 내용](https://github.com/WeareSoft/algorithm-study/blob/master/contents/180916.md)
 * 삼성 SW 역량 테스트 기출 문제 풀기
   * ~~치킨 배달 - 15686번~~
   * ~~드래곤 커브 - 15685번~~
