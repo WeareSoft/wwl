@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+
+## CSS 우선순위
+- inline > internal > external
+- id > class > element
+- css specificity
+## CSS 상속
+- padding과 배치와 같은 속성은 상속되지 않는다.
+- box-model이라고 불리는 속성들(width, height, margin, padding, border)과 같이 크기와 배치 관련된 속성들은 하위엘리먼트로 상속이 되지 않습니다.
+
+## 선언방식에 따른 차이
+- 같은 선택자(selector)라면 나중에 선언한 것이 반영됩니다.
+- 선택자의 표현이 구체적인 것이 있다면 먼저 적용됩니다.
+- body > span (O)
+- span (X)
+
+=======
+>>>>>>> f9e8351f8e7eb596993759ac9e6ea78150648a14
 ## CSS Selector
 - HTML의 요소를 tag, id, class, html 태그 속성등을 통해 쉽게 찾아주는 방법
 
@@ -135,3 +153,4 @@ h1, span, div { color : red}
 - box-sizing
     - content-box : padding값에 따라 증가할 수 있음
     - border-box : 박스 고정(padding값에 상관없이 유지하려고 하나 값이 크면 증가가됨)
+
