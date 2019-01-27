@@ -1,6 +1,6 @@
 ## Chapter 6. 함수
 ### 1. 반환 값
-- 함수 호출은 표현식이고, 포현식은 값이 된다.
+- 함수 호출은 표현식이고, 표현식은 값이 된다.
 - 함수 호출의 값은 *반환 값*이다.
 - 함수 바디 안에 `return` 키워드를 사용하면 *함수를 즉시 종료하고 값을 반환한다.*
 ```javascript
@@ -403,6 +403,3 @@ const f3 = (a,b) => a + b
 > - [MDN web docs - call](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 > - [MDN web docs - apply](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 > - [MDN web docs - bind](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
-
-**Reference**
-> - [MDN web docs - ]()
