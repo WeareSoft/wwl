@@ -32,14 +32,9 @@
 - Effective Java 6개 Item 읽고 정리
 - Elastic Search 공부하고 정리[월,화]
 - 알고리즘 3개 풀고 정리하기
-<<<<<<< HEAD
     - https://github.com/NESOY/Algorithm/blob/master/src/Codility/MaxCounters.java
     - https://github.com/NESOY/Algorithm/blob/master/src/Codility/FrogRiverOne.java
     - https://github.com/NESOY/Algorithm/blob/master/src/Codility/MissingInteger.java
-=======
-    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/MissingInteger.java
-    - https://github.com/NESOY/Algorithm/blob/master/src/Codility/FrogRiverOne.java
->>>>>>> 5dfe42d45bcd151663d3341c468d1b8ce4f625b2
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기[매일]
 
