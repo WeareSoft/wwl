@@ -1,4 +1,14 @@
 # Delf
+## 2019-02-10
+- 이펙티브 자바 읽고 정리(추가)
+  - 아이템 22~24 추기
+- 코딜리티 문제풀기
+  - 최소 세 문제, 목표 네 문제
+- tech-interview 업로드
+  - 동기화와 비동기화
+  - https://github.com/WeareSoft/tech-interview/issues/25
+- devist 재시작
+
 ## 2019-02-03
 - 이펙티브 자바 읽고 정리하기
   - 아이템 17~21
