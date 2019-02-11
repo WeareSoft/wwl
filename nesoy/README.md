@@ -26,6 +26,12 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
+## 2019-02-17
+- Effective Java 6개 Item 읽고 정리
+- Elastic Search 공부하고 정리[월,화]
+- 알고리즘 3개 풀고 정리하기
+- 1개의 블로그 쓰기
+- 출근 길에 책읽기[매일]
 
 ## 2019-02-03
 - Edwith 강의 듣기
