@@ -32,6 +32,8 @@
 - 알고리즘 3개 풀고 정리하기
     - https://github.com/NESOY/Algorithm/blob/master/src/Codility/GenomicRangeQuery.java
 - 1개의 블로그 쓰기
+    - https://nesoy.github.io/articles/2019-02/RabbitMQ#
+    - https://nesoy.github.io/articles/2019-02/JUnit-Test-Ordering
 - 출근 길에 책읽기[매일]
 
 ## 2019-02-03
