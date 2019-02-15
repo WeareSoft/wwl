@@ -75,7 +75,7 @@
 - **10. 사각지대**
 - **11. 스트릭트 모드**
 
-#### [Chapter 8. 배열과 배열 처리]()
+#### [Chapter 8. 배열과 배열 처리](./contents/chapter08.md)
 - **1. 배열의 기초**
 - **2. 배열 요소 조작**
 - **3. 배열 검색**
@@ -213,20 +213,20 @@
 
 ## 스터디 일정
 #### 1주차(2019.01.13)
-- Chapter 1. 첫 번째 애플리케이션
-- Chapter 2. 자바스크립트 개발 도구
+- [Chapter 1. 첫 번째 애플리케이션](./contents/chapter01.md)
+- [Chapter 2. 자바스크립트 개발 도구](./contents/chapter02.md)
 
 #### 2주차(2019.01.20)
-- Chapter 3. 리터럴과 변수, 상수, 데이터 타입
+- [Chapter 3. 리터럴과 변수, 상수, 데이터 타입](./contents/chapter03.md)
 
 #### 3주차(2019.01.27)
-- Chapter 6. 함수
+- [Chapter 6. 함수](./contents/chapter06.md)
 
 #### 4주차(2019.02.03)
-- Chapter 7. 스코프
+- [Chapter 7. 스코프](./contents/chapter07.md)
 
 #### 5주차(2019.02.10)
-- Chapter 8. 배열과 배열 처리
+- [Chapter 8. 배열과 배열 처리]((./contents/chapter08.md))
 
 #### 6주차(2019.02.17)
 - Chapter 9. 객체와 객체지향 프로그래밍
