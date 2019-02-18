@@ -2,12 +2,21 @@
 
 ## 2019-02-17
 ### 러닝 자바스크립트 스터디 
+* Chapter9 정리해서 올리기
+* Chapter11, 12 읽기
+  
+### 개인 공부
+* 면접 대비 
+  * JavaScript Hoisting 정리하기
+
+## 2019-02-17
+### 러닝 자바스크립트 스터디 
 * Chapter8 정리해서 올리기
 * Chapter9, 11 읽기
   
 ### 개인 공부
 * 면접 대비 
-  * JavaScript Hoisting 정리하기
+  * ~~JavaScript Hoisting 정리하기~~
 
 ## 2019-02-10
 ### 러닝 자바스크립트 스터디 
