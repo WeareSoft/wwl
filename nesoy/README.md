@@ -26,6 +26,11 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
+## 2019-02-24
+- Spring 내부 동작 블로깅
+- 알고리즘 3개 풀고 정리하기
+- CV 작성하기
+
 ## 2019-02-17
 - Effective Java 6개 Item 읽고 정리
 - Elastic Search 공부하고 정리[월,화]
