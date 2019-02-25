@@ -26,10 +26,20 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
-## 2019-02-24
-- Spring 내부 동작 블로깅
+## 2019-03-03
+- Spring 내부 동작 블로깅 - PART 2
 - 알고리즘 3개 풀고 정리하기
-- CV 작성하기
+- 포트폴리오 - 작성하기
+- Snack - news API 분석 및 도메인 정의
+- Effective Java
+
+## 2019-02-24
+- ~~Spring 내부 동작 블로깅~~
+    - https://nesoy.github.io/articles/2019-02/Spring-request-lifecycle-part-1
+- ~~알고리즘 3개 풀고 정리하기~~
+    - https://github.com/NESOY/Algorithm/blob/78b43ccb5dc8dea20092d8bb4d9f9db7ff30cac0/src/Programmers/%EC%98%88%EC%82%B0.java
+    - https://github.com/NESOY/Algorithm/blob/master/src/Programmers/%EC%98%81%EC%96%B4%EB%81%9D%EB%A7%90%EC%9D%BD%EA%B8%B0.java
+- ~~CV 작성하기~~
 
 ## 2019-02-17
 - Effective Java 6개 Item 읽고 정리
