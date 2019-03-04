@@ -26,14 +26,21 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
-## 2019-03-03
+## 2019-03-10
+- ElasticSearch - 분석 스터디 자료 정리
+- Snack - API 개발
+- Effective Java
+- 알고리즘 3개 풀고 정리하기
+- 포트폴리오 - 작성하기
+
+## 2019-03-03 - 40%
 - Spring 내부 동작 블로깅 - PART 2
 - 알고리즘 3개 풀고 정리하기
 - 포트폴리오 - 작성하기
-- Snack - news API 분석 및 도메인 정의
-- Effective Java
+- ~~Snack - news API 분석 및 도메인 정의~~
+- ~~Effective Java~~
 
-## 2019-02-24
+## 2019-02-24 - 100%
 - ~~Spring 내부 동작 블로깅~~
     - https://nesoy.github.io/articles/2019-02/Spring-request-lifecycle-part-1
 - ~~알고리즘 3개 풀고 정리하기~~
