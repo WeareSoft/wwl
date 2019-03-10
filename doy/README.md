@@ -1,5 +1,18 @@
 # Doy
 
+## 2019-03-17
+### 러닝 자바스크립트 스터디 
+- 밀린 chapter 정리해서 올리기
+    - Chapter9 : 3.13(수)
+    - Chapter11 : 3.14(목)
+    - Chapter12 : 3.15(금)
+    - Chapter13 : 3.16(토)
+- Chapter20 읽기
+  
+### 개인 공부
+* 면접 대비 
+  * JavaScript Hoisting 정리하기
+
 ## 2019-03-10
 ### 러닝 자바스크립트 스터디 
 - 일정 재조정
@@ -8,7 +21,7 @@
   
 ### 개인 공부
 * 면접 대비 
-  * JavaScript Hoisting 정리하기
+  * ~~JavaScript Hoisting 정리하기~~
 
 ## 2019-03-03
 ### 러닝 자바스크립트 스터디 
