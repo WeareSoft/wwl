@@ -26,9 +26,16 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
-## 2019-03-10
-- ElasticSearch - 분석 스터디 자료 정리
+## 2019-03-17
 - Snack - API 개발
+    - https://github.com/snack-news/Snack-BE
+- Effective Java
+- && 준비하기
+## 2019-03-10 - 40%
+- ElasticSearch - 분석 스터디 자료 정리
+    - https://nesoy.github.io/articles/2019-03/ElasticSearch-Analysis
+- Snack - API 개발
+    - https://github.com/snack-news/Snack-BE
 - Effective Java
 - 알고리즘 3개 풀고 정리하기
 - 포트폴리오 - 작성하기
