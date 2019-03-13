@@ -95,7 +95,7 @@
 - **3. 셋**
 - **4. 위크셋**
 
-#### Chapter 11. 예외와 에러 처리
+#### Chapter 11. [예외와 에러 처리](./contents/chapter11.md)
 - **1. Error 객체**
 - **2. try/catch와 예외 처리**
 - **3. 에러 일으키기**
@@ -230,7 +230,7 @@
 
 #### 6주차(2019.02.17)
 - [Chapter 9. 객체와 객체지향 프로그래밍](./contents/chapter09.md)
-- Chapter 11. 예외와 에러 처리
+- [Chapter 11. 예외와 에러 처리](./contents/chapter11.md)
 
 #### 7주차(2019.02.24)
 - Chapter 12. 이터레이터와 제너레이터
