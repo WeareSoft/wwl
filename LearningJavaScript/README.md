@@ -95,14 +95,14 @@
 - **3. 셋**
 - **4. 위크셋**
 
-#### Chapter 11. [예외와 에러 처리](./contents/chapter11.md)
+#### [Chapter 11. 예외와 에러 처리](./contents/chapter11.md)
 - **1. Error 객체**
 - **2. try/catch와 예외 처리**
 - **3. 에러 일으키기**
 - **4. 예외 처리와 호출 스택**
 - **5. try...catch...finally**
 
-#### Chapter 12. 이터레이터와 제너레이터
+#### [Chapter 12. 이터레이터와 제너레이터](./contents/chapter12.md)
 - **1. 이터레이션 프로토콜**
 - **2. 제너레이터**
 
@@ -233,7 +233,7 @@
 - [Chapter 11. 예외와 에러 처리](./contents/chapter11.md)
 
 #### 7주차(2019.02.24)
-- Chapter 12. 이터레이터와 제너레이터
+- [Chapter 12. 이터레이터와 제너레이터](./contents/chapter12.md)
 
 #### 8주차(2019.03.03)
 - Chapter 13. 함수와 추상적 사고
