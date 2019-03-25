@@ -26,8 +26,13 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
-## 2019-03-24
-- Snack - API 개발
+## 2019-03-31
+- RESUME 준비
+- Snack API 개발
+- Write Blog!!!
+
+## 2019-03-24 - 30%
+- ~~Snack - API 개발~~
 - Effective JAVA
 - Write Blog
 
