@@ -51,6 +51,40 @@
   - Ex) 한 데이터가 파이프라인의 여러 단계를 통과할 때 이 데이터릐 각 단계에서의 값들에 동시에 접근하기는 어려운 경우 
   - 스트림 파이프라인은 일단 한 값을 다른 값에 매핑하고 나면 원래의 값은 잃는 구조 
 
+-   [Fluent API](https://zetawiki.com/wiki/%ED%94%8C%EB%A3%A8%EC%96%B8%ED%8A%B8_%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4,_%EB%A9%94%EC%86%8C%EB%93%9C_%EC%B2%B4%EC%9D%B4%EB%8B%9D)
+    -   메소드 체이닝을 지원하는 디자인 패턴
+    -   가독성 높은 객체지향 API 구현 가능
+
+```java
+class Person {
+	private String name;
+	private int age;
+
+	public Person setName(String name) {
+		this.name = name;
+		return this;
+	}
+
+	public Person setAge(int age) {
+		this.age = age;
+		return this;
+	}
+
+	public void introduce() {
+		System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+	}
+
+	public static void main(String[] args) {
+		Person person = new Person();
+		person.setName("Peter").setAge(21).introduce();
+		// Hello, my name is Peter and I am 21 years old.
+	}
+}
+```
+
+-   [Lazy Evaluation](https://knight76.tistory.com/entry/%ED%8E%8C-lazy-evaluation%EB%8A%90%EA%B8%8B%ED%95%9C-%EA%B3%84%EC%82%B0%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A2%8B%EC%9D%80-%EC%84%A4%EB%AA%85-%EA%B7%B8%EB%A6%BC-%EC%9E%90%EB%A3%8C)
+
+
 ---
 
 ### 스터디 요약 
