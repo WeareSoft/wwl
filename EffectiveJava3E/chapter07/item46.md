@@ -5,7 +5,8 @@
 ---
 
 ### 스터디 요약 
-- 
+- downstream의 역할 및 개념
+  - 참고: [Class Collectors 개념](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html)
 
 ---
 
