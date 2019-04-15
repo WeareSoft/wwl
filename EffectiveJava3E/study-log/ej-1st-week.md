@@ -27,4 +27,4 @@
 - 종단연산과 LazyEvaluation
 
 #### item 46
-- `Collectors.groupingBy()` 메서드의 downstream 매개변수에 대하여
+- `Collectors.groupingBy()` 메서드의 downstream 매개변수의 용어와 개념
