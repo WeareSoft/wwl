@@ -2,14 +2,16 @@
 ### 사전 조사
 - Java 동시성 프로그래밍
     - Thread, 동기화, wait/notify
+
 #### [wait / notify](https://programmers.co.kr/learn/courses/9/lessons/278)
 - wait와 notify는 동기화된 블록안에서 사용해야 한다.
 - wait를 만나게 되면 해당 쓰레드는 해당 객체의 모니터링 락에 대한 권한을 가지고 있다면 모니터링 락의 권한을 놓고 대기한다.
+
 ```java
   public class ThreadB extends Thread{
        // 해당 쓰레드가 실행되면 자기 자신의 모니터링 락을 획득
        // 5번 반복하면서 0.5초씩 쉬면서 total에 값을 누적
-       // 그후에 notify()메소드를 호출하여 wiat하고 있는 쓰레드를 깨움
+       // 그후에 notify()메소드를 호출하여 wait하고 있는 쓰레드를 깨움
         int total;
         @Override
         public void run(){
@@ -58,6 +60,12 @@ public class ThreadA {
 ```
 
 #### [Java 5 - Executor](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html)
+- Executor 인터페이스:
+    - 제공된 작업(Runnable 구현체)을 실행하는 객체가 구현해야 할 인터페이스.
+    - 이 인터페이스는 작업을 제공하는 코드와 작업을 실행하는 메커니즘의 사이의 커플링을 제거해준다.
+- ExecutorService 인터페이스:
+    - Executor의 라이프사이클을 관리할 수 있는 기능을 정의하고 있다.
+    - Runnable 뿐만 아니라 Callable을 작업으로 사용할 수 있는 메소드가 추가로 제공된다.
 - 쓰레드 풀을 사용
 - 무거운 쓰레드는 미리 할당 가능
 - 태스크와 쓰레드를 생성하고 관리하는 것을 분리
@@ -65,20 +73,26 @@ public class ThreadA {
 - 태스크 큐를 이용해 태스크를 관리
 - Executor Service를 더이상 필요 없으면 중지
 - Executor Service가 멈추면 모든 쓰레드도 중지
+- Advanced Point
+    - Callable과 Runnable의 차이는?
 - Reference
     - <http://hochulshin.com/java-multithreading-executor-basic/>
     - <https://gompangs.tistory.com/65>
+    - <https://javacan.tistory.com/entry/134>
 
 #### Java 7 - Fork Join
 - 어떻게 Job을 분할할것인가?
+    - [Spliterator를 사용.](https://doohyun.tistory.com/42)
 - 남는 Job은 어떻게 다른 사람에게 뺏을것인가?
+    - 각자 Job Queue를 활용하여 Push/Pop
 - Reference
     - <https://okky.kr/article/345720>
 
 #### Java 8 - parallelStream()
 - 병렬 스트림이란 각각의 스레드에서 처리할 수 있도록 스트림 요소를 여러 청크로 분할한 스트림이다.
+- 내부적으로 Fork-Join Pool 사용.
+- 1부터 N까지 더하는 프로그램.
 
-- 1부터 N까지 더하는 프로그램
 ```java
 public static long sequentialSum(long n){
     return Stream.iterate(1L, i-> i+1)
@@ -112,9 +126,6 @@ public static long sequentialSum(long n){
                 .reduce(0L, Long::sum)
 }
 ```
-
-
-#### Spliterator
 
 #### Cache Memory
 - <https://ssoonidev.tistory.com/35>
