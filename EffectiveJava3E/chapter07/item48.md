@@ -129,6 +129,10 @@ public static long sequentialSum(long n){
 
 #### Cache Memory
 - <https://ssoonidev.tistory.com/35>
+
+#### Recommend reference
+- [java8 병렬 스트림 효율적으로 사용하는 방법 - 데모버전](https://demoversion.tistory.com/34)
+- [[Java8 in action] Chap7. 병렬 데이터 처리와 성능 - YonghoChoi](https://yongho1037.tistory.com/705)
 ---
 
 ### 스터디 요약
