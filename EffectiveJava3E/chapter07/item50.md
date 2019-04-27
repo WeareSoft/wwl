@@ -35,7 +35,14 @@
   - 멀티스레딩 환경에서 원본 객체의 유효성 건사 후 복사본을 만드는 찰나의 순간에 다른 스레드가 원본 객체를 수정할 위험이 있는 것
 
 - 배열의 불변 뷰
-  - [Ref](https://www.baeldung.com/java-immutable-list)
+  - 배열을 private으로 만들고 그 복사본을 반환하는 public 메서드를 추가하는 방법 
+  
+```java
+private static final Thing[] PRIVATE_VALUE = { ... };
+public static final Thing[] values() {
+  return PRIVATE_VALUE.clone();
+}
+```
  
 ---
 
