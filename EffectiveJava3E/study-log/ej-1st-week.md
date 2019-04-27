@@ -1,7 +1,6 @@
 # [2019.04.14] Effective Java 3/E 스터디 진행
 참석자: Delf, Doy, Hee, Nesoy
 ## 주제
-
 - [**아이템 42.**](../chapter07/item42.md) 익명 클래스보다는 람다를 사용하라 (Hee)
 - [**아이템 43.**](../chapter07/item43.md) 람다보다는 메서드 참조를 사용하라 (Doy)
 - [**아이템 44.**](../chapter07/item44.md) 표준 함수형 인터페이스를 사용하라 (Delf, Nesoy)

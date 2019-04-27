@@ -16,7 +16,7 @@
     - 간단하게 표현할 방법이 있다면 전용 컬렉션을 구현하는 것을 고려하라.
   - 그냥 단순하게 "구현하기 쉬운" 쪽을 선택해도 괜찮다.
 #### 한계
-- 리스트(컬렉션)을 스트립으로 변환 어댑터를 사용할 때는 성능 감소와 코드가 지저분해지는 것을 감안해야 한다.
+- 리스트(컬렉션)을 스트림으로 변환 어댑터를 사용할 때는 성능 감소와 코드가 지저분해지는 것을 감안해야 한다.
 
 #### `Stream<E>` to `Iterable<E>` 어댑터
 1. 원본(코드 47-3)
@@ -48,7 +48,7 @@ public static <E> Iterable<E> iterableOf(Stream<E> stream) {
 순서상으로 따지자면 3 ➔ 2 ➔ 1이다.
 사실 3 ➔ 2 과정이 너무 뛰어넘은 듯 한데, 자바가 똑똑하게 타입추론을 잘 해줘서 그런 듯 하다. 다음 코드를 보면 이해가 더 빠를지도.
 ``` java
-Iterable<String> itr = () -> stream.iterator();
+Iterable<String> itr = () -> stream.iterator(); // 제네릭 타입이 String인 것은 그냥 예
 ```
 사실 그래도, 메서드(참조)가 갑자기 객체로 변한다는 괴리감은 잘 떨쳐지지가 않는다.
 
@@ -73,7 +73,8 @@ for(ProcessHAndle ph : IterableOf(ProcessHandle.allProcesses())) {
 ---
 
 ### 스터디 요약 
-- 
+- 메서드 참조와 자동 형변환에 대하여 [#](#streame-to-iterablee-어댑터)
+  - 어째서 Override에서 반환할 메서드 참조만을 넘겨주는 것으로 `Iterable<E>`로 자동 형변환에 대한 이슈가 있었음.
 
 ---
 
