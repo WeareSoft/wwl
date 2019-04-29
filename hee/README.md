@@ -3,6 +3,22 @@
 > - [2018년 목표 설정 모음](/hee/2018-goals.md)
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 
+## 2019-05-05
+### 이펙티브 자바 스터디 
+- Chapter8. [item52] ~ [item56]
+- Chapter9. [item57]
+    - [item52]()
+    - [item53]()
+
+### 개인 공부 
+- **공부 계획 세우기** (중요!!)
+- tech-interview
+  - [ ] Java Script 정리
+- 블로그
+  - [ ] Spring Hibernate
+  - [ ] Edwith 강의- DB 연결 웹 앱 마무리
+  - [ ] SQL 첫걸음 마무리 
+
 ## 2019-04-28
 ### 이펙티브 자바 스터디 
 - Chapter7. [item47] ~ [item48]
