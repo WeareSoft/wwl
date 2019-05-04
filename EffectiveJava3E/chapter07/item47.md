@@ -74,7 +74,7 @@ for(ProcessHAndle ph : IterableOf(ProcessHandle.allProcesses())) {
 
 ### 스터디 요약 
 - 메서드 참조와 자동 형변환에 대하여 [#](#streame-to-iterablee-어댑터)
-  - 어째서 Override에서 반환할 메서드 참조만을 넘겨주는 것으로 `Iterable<E>`로 자동 형변환에 대한 이슈가 있었음.
+  - 어째서 Override에서 반환할 메서드 참조만을 넘겨주는 것으로 `Iterable<E>`로 자동 형변환에 대한 이슈가 있었음
 
 ---
 
