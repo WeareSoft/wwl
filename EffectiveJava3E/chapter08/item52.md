@@ -49,6 +49,73 @@
     System.out.println(s1); // str
     System.out.println(s2); // [C@75412c2f
     ```
+---
+
+#### Callable
+- 모든 println은 void를 반환
+- Callable은 반환값이 존재
+
+```java
+@FunctionalInterface
+public interface Callable<V> {
+    /**
+     * Computes a result, or throws an exception if unable to do so.
+     *
+     * @return computed result
+     * @throws Exception if unable to compute a result
+     */
+    V call() throws Exception;
+}
+```
+
+
+#### 다중정의 해소(Resolution)
+- 적절한 다중정의 메서드를 찾는 알고리즘
+- // 이미지 추가 
+- 참조된 메서드(println)와 호출한 메서드(submit) 양쪽 다 다중정의되어, 다중정의 해소 알고리즘이 우리의 기대처럼 동작하지 않는다.
+- 다중정의된 메서드(혹은 생성자)들이 함수형 인터페이스를 인수로 받을 때, 비록 서로 다른 함수형 인터페이스라도 인수 위치가 같으면 혼란이 생긴다.
+    - 서로 다른 함수형 인터페이스라도 서로 근본적으로 다르지 않다.
+    - `Runnable`과 `Callable`
+
+```java
+@FunctionalInterface
+public interface Runnable {
+    /**
+     * When an object implementing interface <code>Runnable</code> is used
+     * to create a thread, starting the thread causes the object's
+     * <code>run</code> method to be called in that separately executing
+     * thread.
+     * <p>
+     * The general contract of the method <code>run</code> is that it may
+     * take any action whatsoever.
+     *
+     * @see     java.lang.Thread#run()
+     */
+    public abstract void run();
+}
+```
+```java
+// Callable 의 설명 참고 
+ * <p>The {@code Callable} interface is similar to {@link
+ * java.lang.Runnable}, in that both are designed for classes whose
+ * instances are potentially executed by another thread.  A
+ * {@code Runnable}, however, does not return a result and cannot
+ * throw a checked exception.
+```
+
+#### 어떤 다중정의 메서드가 불리는지 몰라도 기능이 같다면 신경쓰지 않아도 된다.
+- 더 특수한 다중 정의 메서드에서 더 일반적인 다중정의 메서드로 일을 넘긴다. (forward)
+- forward 예시
+
+```java
+// StringBuffer, StringBuilder, String, CharBuffer 등 
+public boolean contentEquals(StringBuffer sb) {
+    return contentEquals((CharSequence) sb); // 공통 인터페이스로 인수를 forward 
+}
+```
+
+#### 매개변수 수가 같을 때는 다중정의를 피한다.
+- 생성자의 경우, 헷갈릴 만한 매개변수는 형변환하여 정확한 다중정의 메서드가 선택되도록 한다.
 
 ---
 
