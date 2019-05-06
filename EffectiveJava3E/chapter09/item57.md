@@ -41,7 +41,7 @@ static int countOfIncluded(List list, String str){
   - 결국 **"루프 안에서 반복되는 변수 선언을 밖으로 빼는 것은 성능상에 아무런 이점이 없고 소스에서 변수의 유효범위만 늘어나게 한다."** 는 것이다.
 
 #### Recommend reference
-- [List와 반복문(loop), 그리고 변수 선언 위치에 대해서](https://hwan1402.tistory.com/48)
+- [List와 반복문(loop), 그리고 변수 선언 위치에 대해서 - 정상혁님](https://blog.benelog.net/1382604)
 
 ---
 
