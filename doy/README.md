@@ -1,10 +1,20 @@
 # Doy
+## 2019-05-12
+### 이펙티브 자바 스터디 
+- Chapter9. [item58] ~ [item63]
+    - [item59](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item59.md)
+    - [item61](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter08/item61.md)
+
+### 개인 공부 
+- 리액트
+  - 렌더링 과정
+
 ## 2019-05-05
 ### 이펙티브 자바 스터디 
 - Chapter8. [item52] ~ [item56]
 - Chapter9. [item57]
-    - [item55]()
-    - [item57]()
+    - [item55](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter08/item55.md)
+    - [item57](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item57.md)
 
 ### 개인 공부 
 - 일이 좀 많은 관계로 쉴게요 ...
