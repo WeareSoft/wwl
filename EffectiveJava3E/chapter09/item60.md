@@ -57,7 +57,7 @@
     - 열여덟 자리 초과면 BigDecimal
 
 ## Reference
-- [](http://gdthink.blogspot.com/2006/05/%ED%8E%8C-float%ED%98%95%EA%B3%BC-double%EC%9D%98-%ED%91%9C%ED%98%84-%EB%B2%94%EC%9C%84.html)
+- [float, double 자료형 차이](http://gdthink.blogspot.com/2006/05/%ED%8E%8C-float%ED%98%95%EA%B3%BC-double%EC%9D%98-%ED%91%9C%ED%98%84-%EB%B2%94%EC%9C%84.html)
 - http://sunychoi.github.io/java/2015/04/12/java-bigdecimal.html
 
 ---
