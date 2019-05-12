@@ -4,11 +4,13 @@
 - [tech-interview 내용](https://github.com/WeareSoft/tech-interview/blob/master/contents/java.md#string-stringbuilder-stringbuffer)
 
 ```java
-String a = "aa";
-String b = new String("bb");
+// 리터럴을 이용한 방식
+String a = "aa"; // string constant pool 영역에 존재
+// new 연산자를 이용
+String b = new String("bb"); // Heap 영역에 존재
 ```
 ```java
-a = a + b; // "aabb" - 새로운 String 인스턴스 생성 
+a = a + b; // "aabb" - 새로운 String 인스턴스 생성 (Heap 영역)
 ```
 
 - String 문자열 연산 
