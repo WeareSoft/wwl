@@ -2,6 +2,9 @@
 ### 사전 조사
 -
 
+## Reference
+- [ThreadLocal 사용법과 활용](https://javacan.tistory.com/entry/ThreadLocalUsage)
+
 ---
 
 ### 스터디 요약
