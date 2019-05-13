@@ -5,7 +5,7 @@
 
 ## 2019-05-19
 ### 이펙티브 자바 스터디 
-- Chapter9. [item58] ~ [item63]
+- Chapter9. [item66] ~ [item67]
     - [item66](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item66.md)
     - [item67](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item67.md)
 
