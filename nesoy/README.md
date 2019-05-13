@@ -26,6 +26,9 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
+## 2019-05-19
+- [블로그 작성하기 - Redux 정리하기]()
+
 ## 2019-05-12
 - [블로그 작성하기 - RDB 트랜잭션 격리단위](https://nesoy.github.io/articles/2019-05/Database-Transaction-isolation)
 
