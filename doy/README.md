@@ -1,4 +1,15 @@
 # Doy
+## 2019-05-19
+### 이펙티브 자바 스터디 
+- Chapter9. [item64] ~ [item68]
+- Chapter10. [item69]
+    - [item64](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item64.md)
+    - [item68](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter09/item68.md)
+
+### 개인 공부 
+- tech-interview
+  - 리액트 상태 관리
+
 ## 2019-05-12
 ### 이펙티브 자바 스터디 
 - Chapter9. [item58] ~ [item63]
