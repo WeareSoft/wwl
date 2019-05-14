@@ -1,7 +1,7 @@
 # [item 60] 정확한 답이 필요하다면 float와 double은 피하라.
 ### 사전 조사
 #### 기본 자료형 
-- float와 double
+- `float`와 `double`
     - 자바의 실수를 표현하기 위한 자료형
     - [이진 부동소수점](https://ko.wikipedia.org/wiki/%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90#32%EB%B9%84%ED%8A%B8_%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90%EC%84%9C%EC%9D%98_%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90_%EB%B0%A9%EC%8B%9D) 연산에 사용되며, 넓은 범위의 수를 빠르게 정밀한 **"근사치"** 로 계산하도록 설계되었다.
     - 즉, 금융 관련 계산과 같은 정확한 결과가 필요할 때는 사용하지 않도록 주의하자.
@@ -31,8 +31,8 @@
 - BigInteger, BigDecimal
     - 크기 제한 없음(무한대)
     - 일반적인 operator 연산 불가
-        - + : add()
-        - - : subtract()
+        - \+ : add()
+        - \- : subtract()
         - x : multiply()
         - / : divide()
         - % : mod()
