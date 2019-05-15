@@ -2,7 +2,7 @@
 ### 사전 조사
 - 자바 클래스 파일은 바이트 코드로 컴파일 되어 실행시간에 바이트 코드가 해석되어 실행된다는 것.
 - 이 바이트 코드에는 클래스에 대한 모든 정보를 포함
-#### 리플렉션이란?
+#### [리플렉션이란?](https://en.wikipedia.org/wiki/Reflection_(computer_programming))
 - 구체적인 클래스 타입을 알지 못해도, 컴파일된 바이트 코드를 통해 역으로 클래스 정보를 알아내어 클래스를 사용할 수 있는 기법.
 
 #### 왜 리플렉션인가?
@@ -22,6 +22,13 @@
 - Constructors
 - MethodsFields
 - Annotations
+
+#### 다른 언어는 비슷한 기능이 없을까?
+- [C# - Reflection](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/reflection)
+- [Python - Reflection](https://docs.python.org/3.6/c-api/reflection.html)
+
+
+> Java만이 제공하는 기능은 아님. Computer Language 관점으로 이해하는 것이 가장 BEST
 
 ## Reference
 - <https://hiddenviewer.tistory.com/114>
