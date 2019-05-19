@@ -39,7 +39,9 @@ public Dimension getSize(Dimension rv) {
 ---
 
 ### 스터디 요약
--
+- 컴포지션과 위임의 차이?
+  - 
+  
 ---
 
 > :leftwards_arrow_with_hook:[EffectiveJava3E](/EffectiveJava3E/README.md)
