@@ -76,7 +76,7 @@ a = a + b; // "aabb" - 새로운 String 인스턴스 생성 (Heap 영역)
 - https://www.slipp.net/questions/271
 - https://ijbgo.tistory.com/2
 - https://cjh5414.github.io/why-StringBuffer-and-StringBuilder-are-better-than-String/
-
+z
 ---
 
 ### 스터디 요약
