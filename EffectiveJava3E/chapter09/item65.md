@@ -22,10 +22,6 @@
   - **클래스 내부의 노출**
     - 클래스의 내부에는 객체지향 개념에 따라 은닉성을 적용한 멤버 변수나 메소드가 있을 수 있는데, Reflection API를 사용한다면 객체지향 개념에 따라 은닉된 멤버에도 접근할 수 있게 되므로 예기치 못한 부작용이 있을 수 있다. 기능이 오작동하거나 이식성이 떨어지거나 플랫폼을 업그레이드할 때의 영향에 따라 프로그램의 기능이 달라지는 추상화 기능의 오작동이 있을 수 있다.
 
-
-
-출처: https://rosalife.tistory.com/67 [Rosa Lee Life]
-
 #### 클래스에 대한 정보는 어떤 것이 있을까?
 - ClassName
 - Class Modifiers (public, private, synchronized 등)
@@ -40,8 +36,79 @@
 - [C# - Reflection](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/reflection)
 - [Python - Reflection](https://docs.python.org/3.6/c-api/reflection.html)
 
-
 > Java만이 제공하는 기능은 아님. Computer Language 관점으로 이해하는 것이 가장 BEST
+
+#### 리플렉션의 사용 예 - Annotation을 이용한 DI
+`DispatcherServlet`는 클라이언트의 요청의 URL에 따라 적절한 컨트롤러에게 작업을 위임하는 역할을 한다. 
+
+다음은 Annotation을 이용한 컨트롤러 매핑 작업의 예이다. 
+
+- `DispatcherServlet` 초기화 시, 클래스 스캔
+  - `DispatcherServlet`은 컨트롤러와 URL 대한 매핑 정보(들)를 가지고 있고, `initialize` 메서드를 통해 초기화한다. 이 때, `AnnotationHandlerMapping`는 해당 패키지 내의 **특정 어노테이션**이 달린 클래스를 찾아 인스턴스화 하여 저장한다.
+  ``` java
+  @WebServlet(name = "dispatcher", urlPatterns = "/", loadOnStartup = 1)
+  public class DispatcherServlet extends HttpServlet {
+      // ...(생략)
+      private List<HandlerMapping> mappings = Lists.newArrayList();
+
+      @Override
+      public void init() throws ServletException {
+        AnnotationHandlerMapping ahm = new AnnotationHandlerMapping("next.controller");
+        ahm.initialize();
+
+        mappings.add(ahm);
+        // ...(생략)
+      }
+      // ...(생략)
+  }
+  ```
+  - 아래에 보다시피 주어진 패키지 내의 `@Controller` 어노테이션이 달린 클래스를 스캔하여 인스턴스화한다.
+  - 그 클래스들 안의 `@RequestMapping` 어노테이션이 달린 메서드들을 스캔하여 컨트롤러(핸들러) 맵에 등록한다.
+  ``` java
+   public void initialize() {
+      ControllerScanner controllerScanner = new ControllerScanner(basePackage); // basePackage는 생성자에서 받은 스캔할 패키지 경로 문자열
+      Map<Class<?>, Object> controllers = controllerScanner.getControllers();
+      Set<Method> methods = getRequestMappingMethods(controllers.keySet());
+      for (Method method : methods) {
+          RequestMapping rm = method.getAnnotation(RequestMapping.class);
+          logger.debug("register handlerExecution : url is {}, method is {}", rm.value(), method);
+          handlerExecutions.put(createHandlerKey(rm), new HandlerExecution(controllers.get(method.getDeclaringClass()), method));
+      }
+
+      logger.info("Initialized AnnotationHandlerMapping!");
+  }
+  ```
+  `getControllers`메서드와 `getRequestMappingMethods`메서드의 코드를 자세히 보고싶다면 다음을 참고 
+    - [`ControllerScanner`#](https://github.com/Delf-Lee/jwp-basic/blob/step9-mvc-framework-completed/src/main/java/core/nmvc/ControllerScanner.java)
+    - [`AnnotationHandlerMapping`#](https://github.com/Delf-Lee/jwp-basic/blob/step9-mvc-framework-completed/src/main/java/core/nmvc/AnnotationHandlerMapping.java)
+- 이 방법이 없었더라면...
+  - 다음과 같은 과정을 거쳤어야 했을 것
+  - 만약 이런 상황에서 컨트롤러가 추가됐다면?
+  ``` java
+  void initMapping() {
+    mappings.put("/", new HomeController());
+    mappings.put("/users/form", new ForwardController("/user/form.jsp"));
+    mappings.put("/users", new ListUserController());
+    mappings.put("/users/create", new CreateUserController());
+    mappings.put("/users/login", new ForwardController("/user/login.jsp"));
+    mappings.put("/users/login", new LoginController());
+    mappings.put("/users/logout", new LogoutController());
+    mappings.put("/users/profile", new ProfileController());
+    mappings.put("/users/updateForm", new UpdateFormUserController());
+    mappings.put("/users/update", new UpdateUserController());
+    mappings.put("/qna/form", new ForwardController("/qna/form.jsp"));
+    mappings.put("/qna/create", new AddQuestionController());
+    mappings.put("/qna/delete", new DeleteQuestionController());
+    mappings.put("/qna/updateForm", new UpdateQuestionController());
+    mappings.put("/qna/show", new ShowController());
+    mappings.put("/api/qna/addAnswer", new AddAnswerController());
+    mappings.put("/api/qna/deleteAnswer", new DeleteAnswerController());
+    mappings.put("/api/qna/list", new ApiListQuestionController());
+
+    logger.info("Initialized Request Mapping!");
+  }
+  ```
+[원본 코드](https://github.com/Delf-Lee/jwp-basic/blob/step9-mvc-framework-completed/src/main/java/core/nmvc/DispatcherServlet.java)
 
 ## Reference
 - <https://hiddenviewer.tistory.com/114>
