@@ -1,4 +1,4 @@
-# [2019.05.12] Effective Java 3/E 스터디 진행
+# [2019.05.19] Effective Java 3/E 스터디 진행
 참석자: Delf, Doy, Hee, Nesoy
 ## 주제
 - [**아이템 64.**](../chapter09/item64.md) 객체는 인터페이스를 사용해 참조하라 
@@ -9,16 +9,15 @@
 - [**아이템 69.**](../chapter10/item69.md) 예외는 진짜 예외 상황에만 사용하라 
 
 ## 아이템 분담
-- Delf: 58, 62
-- Doy: 60, 61
-- Hee: 60, 63
-- Nesoy: 61, 62
+- Delf: 65, 69
+- Doy: 64, 68
+- Hee: 66, 67
+- Nesoy: 65, 69
 
 ## 주요 이슈
 
-#### item 58
-- `Iterable` 인터페이스와 `Iterator` 구현체에 대하여
-  - fail-fast 방식
+#### item 65
+- 리플렉션이 정확히 무엇이고 어디에 쓰이는지
 
-#### item 63
-- 
+### item 67
+- 컴포지션과 위임의 차이

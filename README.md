@@ -75,7 +75,7 @@
   - [2주차](/EffectiveJava3E/study-log/ej-week-2.md): 4/28
   - [3주차](/EffectiveJava3E/study-log/ej-week-3.md): 5/05 (어린이날)
   - [4주차](/EffectiveJava3E/study-log/ej-week-4.md): 5/12 (석가탄신일)
-  - 5주차: 5/19
+  - [5주차](/EffectiveJava3E/study-log/ej-week-5.md): 5/19
   - 6주차: 5/26
   - 7주차: 6/02
   - 8주차: 6/09
