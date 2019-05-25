@@ -4,13 +4,13 @@
 
 #### Error vs Exception
 - 오류(Error)
-    - 시스템에 비정상적인 상황이 생겼을 때 발생한다. 
-    - 이는 시스템 레벨에서 발생하기 때문에 심각한 수준의 오류이다. 
+    - 시스템에 비정상적인 상황이 생겼을 때 발생한다.
+    - 이는 시스템 레벨에서 발생하기 때문에 심각한 수준의 오류이다.
     - 따라서 개발자가 미리 예측하여 처리할 수 없기 때문에, 애플리케이션에서 오류에 대한 처리를 신경 쓰지 않아도 된다.
     - ex) `OutOfMemoryError`, `StackOverflowError`
 - 예외(Exception)
-    - 개발자가 구현한 로직에서 발생한다. 
-    - 즉, 예외는 발생할 상황을 미리 예측하여 처리할 수 있다. 
+    - 개발자가 구현한 로직에서 발생한다.
+    - 즉, 예외는 발생할 상황을 미리 예측하여 처리할 수 있다.
     - 즉, 예외는 개발자가 처리할 수 있기 때문에 예외를 구분하고 그에 따른 처리 방법을 명확히 알고 적용하는 것이 중요하다.
 
 #### 예외 클래스 구조
@@ -36,10 +36,10 @@
     - 예외 발생 시 트랜잭션을 roll-back 한다.
     - ex) `NullPointerException`, `IllegalArgumentException`, `IndexOutOfBoundException`
 - 트랜잭션의 roll-back 여부
-    - 기본적으로 **Checked Exception**은 예외가 발생하면 트랜잭션을 roll-back하지 않고 예외를 던져준다. 
+    - 기본적으로 **Checked Exception**은 예외가 발생하면 트랜잭션을 roll-back하지 않고 예외를 던져준다.
     - 하지만 **Unchecked Exception**은 예외 발생 시 트랜잭션을 roll-back한다는 점에서 차이가 있다.
-    - 트랜잭션의 전파방식 즉, 어떻게 묶어놓느냐에 따라서 **Checked Exception**이냐 **Unchecked Exception**이냐의 영향도가 크다. 
-    - roll-back이 되는 범위가 달라지기 때문에 개발자가 이를 인지하지 못하면, 실행결과가 맞지 않거나 예상치 못한 예외가 발생할 수 있다. 
+    - 트랜잭션의 전파방식 즉, 어떻게 묶어놓느냐에 따라서 **Checked Exception**이냐 **Unchecked Exception**이냐의 영향도가 크다.
+    - roll-back이 되는 범위가 달라지기 때문에 개발자가 이를 인지하지 못하면, 실행결과가 맞지 않거나 예상치 못한 예외가 발생할 수 있다.
     - 그러므로 이를 인지하고 트랜잭션을 적용시킬 때 전파방식(propagation behavior)과 롤백규칙 등을 적절히 사용하면 더욱 효율적인 애플리케이션을 구현할 수 있을 것이다.
 
 ## Reference
