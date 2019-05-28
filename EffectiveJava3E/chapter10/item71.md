@@ -23,4 +23,3 @@
 ---
 
 > :leftwards_arrow_with_hook:[EffectiveJava3E](/EffectiveJava3E/README.md)
-

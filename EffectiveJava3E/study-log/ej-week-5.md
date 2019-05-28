@@ -1,5 +1,5 @@
-# [2019.05.19] Effective Java 3/E 스터디 진행
-참석자: Delf, Doy, Hee, Nesoy
+# [2019.05.19] Effective Java 3/E 스터디 진행 - 5주차
+참석자: Delf, Doy, Hee
 ## 주제
 - [**아이템 64.**](../chapter09/item64.md) 객체는 인터페이스를 사용해 참조하라 
 - [**아이템 65.**](../chapter09/item65.md) 리플렉션보다는 인터페이스를 사용하라 

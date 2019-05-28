@@ -1,4 +1,4 @@
-# [2019.04.27] Effective Java 3/E 스터디 진행
+# [2019.04.27] Effective Java 3/E 스터디 진행 - 2주차
 참석자: Delf, Doy, Hee
 ## 주제
 - [**아이템 47.**](../chapter07/item47.md) 반환 타입으로는 스트림보다 컬렉션이 낫다 

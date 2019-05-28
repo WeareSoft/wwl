@@ -1,4 +1,4 @@
-# [2019.05.05] Effective Java 3/E 스터디 진행
+# [2019.05.05] Effective Java 3/E 스터디 진행 - 3주차
 참석자: Delf, Doy, Hee, Nesoy
 ## 주제.
 - [**아이템 52.**](../chapter08/item52.md) 다중정의는 신중히 사용하라 

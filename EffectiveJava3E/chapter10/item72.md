@@ -14,4 +14,15 @@
 `ArithmeticException`, `NumberFormatException`
 
 #### 주의
-`Exception`, `RuntimeException`, `Throwable`, `Error`는 직접 재사용하지 말자. 
+`Exception`, `RuntimeException`, `Throwable`, `Error`는 직접 재사용하지 말자.
+
+### 스터디 요약
+#### 이슈
+이이템 후반부에 이런 내용이 있다.
+> 표준 예외를 확장해도 좋다. 다만 예외도 직렬화가 가능하니 되도록 하지 않는게 좋다. (직렬화에는 많은 부담이 따르기 때문)
+
+- 직렬화를 한다함은 클래스내의 필드를 특정 데이터로 변환한다는 의미가 아닌가?
+- 그렇다면 이 예외 자체를 필드로 두는 일이 있다는 것인가?
+- 그렇다면 그런 상황이 흔할까?
+
+결론을 내지 못한 체 아직 미결된 문제이다.

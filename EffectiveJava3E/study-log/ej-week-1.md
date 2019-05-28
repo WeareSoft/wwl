@@ -1,4 +1,4 @@
-# [2019.04.14] Effective Java 3/E 스터디 진행
+# [2019.04.14] Effective Java 3/E 스터디 진행 - 1주차
 참석자: Delf, Doy, Hee, Nesoy
 ## 주제
 - [**아이템 42.**](../chapter07/item42.md) 익명 클래스보다는 람다를 사용하라 (Hee)
