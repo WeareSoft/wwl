@@ -15,11 +15,6 @@
 > 이 상황에 대한 해결책으로는 synchronized 블록을 사용할 수 있다. 이 블록은 한 시점에 오직 하나의 쓰레드만이 특정 코드 영역에 접근할 수 있도록 보장해준다. 또한 volatile 키워드처럼, <u>**이 블록 안에서 접근되는 모든 변수들은 메인 메모리로부터 읽어들여지고, 쓰레드의 실행이 이 블록을 벗어나면 블록 안에서 수정된 모든 변수들이 즉각 메인 메모리로 반영될 수 있도록 해준다**</u> - volatile 키워드가 선언되어 있든 없든.
 > 
 > [자바 메모리 모델 - 박철우 블로그](https://parkcheolu.tistory.com/14)
-#### 재진입
-> 자바의 고유 락은 재진입 가능하다. 재진입 가능하다는 것은 락의 획득이 호출 단위가 아닌 **스레드 단위**로 일어난다는 것을 의미한다. **이미 락을 획득한 스레드는 같은 락을 얻기 위해 대기할 필요 없다.** 이미 락을 갖고 있으므로 같은 락에 대한 synchronized 블록을 만났을 때 대기없이 통과한다.
->
-> [Java의 고유 락(intrinsic lock)에 대해](http://happinessoncode.com/2017/10/04/java-intrinsic-lock/#재진입-가능성-Reentrancy)
-
 
 ### Reference
 - [Java의 volatile 키워드에 대한 이해 - IT 세미 덕후](http://kwanseob.blogspot.com/2012/08/java-volatile.html)

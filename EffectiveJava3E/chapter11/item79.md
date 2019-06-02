@@ -24,6 +24,15 @@ If you would like to immediately block waiting for a task, you can use construct
     - <https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CopyOnWriteArrayList.html>
 
 
+#### 재진입
+> 자바의 고유 락은 재진입 가능하다. 재진입 가능하다는 것은 락의 획득이 호출 단위가 아닌 **스레드 단위**로 일어난다는 것을 의미한다. **이미 락을 획득한 스레드는 같은 락을 얻기 위해 대기할 필요 없다.** 이미 락을 갖고 있으므로 같은 락에 대한 synchronized 블록을 만났을 때 대기없이 통과한다.
+>
+> [Java의 고유 락(intrinsic lock)에 대해](http://happinessoncode.com/2017/10/04/java-intrinsic-lock/#재진입-가능성-Reentrancy)
+
+#### "불변식(invariant)이 깨지다."
+- https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science
+- https://dhsim86.github.io/java/2019/02/25/effective_java_08-post.html
+
 ## Reference
 
 
