@@ -30,8 +30,10 @@ If you would like to immediately block waiting for a task, you can use construct
 > [Java의 고유 락(intrinsic lock)에 대해](http://happinessoncode.com/2017/10/04/java-intrinsic-lock/#재진입-가능성-Reentrancy)
 
 #### "불변식(invariant)이 깨지다."
-- https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science
+어떤 객체를 불변으로 만들어도 임의적으로 불변을 깨트리는 것이 가능하다!
 - https://dhsim86.github.io/java/2019/02/25/effective_java_08-post.html
+
+
 
 ## Reference
 
