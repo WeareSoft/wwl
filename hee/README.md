@@ -3,6 +3,21 @@
 > - [2018년 목표 설정 모음](/hee/2018-goals.md)
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 
+## 2019-06-09
+### 이펙티브 자바 스터디 
+- Chapter11. [item82] ~ [item87]
+    - [item82](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter11/item85.md)
+    - [item87](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter11/item87.md)
+
+### 개인 공부 
+- 블로그 댓글 답변 달기
+- tech-interview
+  - [ ] Java Script 정리
+- 블로그
+  - [ ] Spring Hibernate
+  - [ ] Edwith 강의- DB 연결 웹 앱 마무리
+  - [ ] SQL 레벨업 50%
+
 ## 2019-06-02
 ### 이펙티브 자바 스터디 
 - Chapter10. [item76] ~ [item77]
