@@ -39,11 +39,47 @@
 - `void defaultWriteObject()`
     - 현재 Stream에 static,transient가 아닌 객체를 쓴다.
 
+---
+
+#### 기본 직렬화를 사용해도 좋은 경우
+1. 직접 설계한 직렬화가 기본 직렬화 형태와 거의 같은 결과가 나오는 경우
+2. 객체의 물리적 표현과 논리적 내용이 같은 경우
+    - 기본 직렬화 형태에 적합한 경우에도 불변식 보장과 보안을 위해 `readObject` 메서드를 제공해야할 때가 있다.
+    - Object를 반환하므로 형변환 필요 
+        ```java
+        // read and print an object and cast it as string
+        System.out.println("" + (String) ois.readObject());
+        // read and print an object and cast it as string
+        byte[] read = (byte[]) ois.readObject();
+        ```
+
+#### transient 한정자
+- 의미
+    - 해당 인스턴스 필드가 기본 직렬화 형태에 포함되지 않는다는 표시
+- 주의
+    - 클래스의 인스턴스 필드 모두가 transient라도 `defaultWriteObject` 메서드와 `defaultReadObject` 메서드를 호출해서 다음 릴리스에 필드 추가 시 호환될 수 있도록 한다. 
+    - defaultWriteObject 메서드 호출: 기본 직렬화를 수용하든 하지 않든 transient로 선언하지 않은 모든 인스턴스 필드가 직렬화된다.
+    - 따라서, transient 한정자를 선언해도 되는 필드에는 모두 붙여야 한다.
+    - Ex. 캐시된 해시 값처럼 다른 필드에서 유도되는 필드
+    - Ex. JVM을 실행할 때마다 값이 달라지는 필드 (네이티브 자료구조를 가리키는 long 필드) - UID?
+- 객체의 논리적 상태와 무관한 필드라고 확신할 때만 transient 한정자를 생략한다.
+- 기본 직렬화 사용 시 transient 필드들은 역직렬화할 때 기본값으로 초기화된다.
+
+#### UID
+- SUID(serialVersionUID) 
+    - SUID(serialVersionUID) 필수 값은 아니다.
+    - 호환 가능한 클래스는 SUID값이 고정되어 있다.
+    - SUID가 선언되어 있지 않으면 클래스의 기본 해쉬값을 사용한다. 
+    - 자바 직렬화 버전 serialVersionUID의 값은 개발 시 직접 관리해야 한다.
+
 
 ## Reference
 - [자바 직렬화, 그것이 알고싶다. 실무편](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
 - [직렬화(Serialization)](https://brunch.co.kr/@oemilk/181)
 - [[JAVA] 객체 직렬화 ObjectInputStream / ObjectOutputStream](https://hyeonstorage.tistory.com/252)
+- [readObject 메서드 사용법](https://www.tutorialspoint.com/java/io/objectinputstream_readobject.htm)
+- [자바 직렬화 serialVersionUID 참고](http://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
+
 
 ### 스터디 요약
 -
