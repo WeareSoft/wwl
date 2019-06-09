@@ -78,7 +78,7 @@
   - [5주차](/EffectiveJava3E/study-log/ej-week-5.md): 5/19
   - [6주차](/EffectiveJava3E/study-log/ej-week-6.md): 5/26
   - [7주차](/EffectiveJava3E/study-log/ej-week-7.md): 6/02
-  - 8주차: 6/09
+  - [8주차](/EffectiveJava3E/study-log/ej-week-8.md): 6/09
   - 9주차: 6/16
   - 10주차: 6/23
   - *-스터디 마무리 일정-*
