@@ -81,6 +81,7 @@ public class Worker extends Thread {
     ```
     - `Thread` 대신 `Runnable`사용
     `Worker` 인스턴스와 `Thread` 인스턴스의 락 간의 결합 관계를 없애준다. 단, 이는 앞에 비해 규모가 큰 리팩토링이다.
+    
 ## Reference
 - <https://www.dummies.com/programming/java/how-to-synchronize-methods-when-using-java-threads/>
 

@@ -1,3 +1,4 @@
+
 # [item 26] 로 타입은 사용하지 말라 
 클래스와 인터페이스 선언에 타입 매개변수(type patameter)가 쓰이면, 이를 **제네릭 클래스** 혹은 **제네렉 인터페이스**라 한다. 이 둘을 통틀어 **제네릭 타입**(generic type)이라고 한다.
 
@@ -132,116 +133,94 @@ static int numElementsInCommon(Set<?> s1, Set<?> s2) { ... }
 타입 토큰|type token|`String.class`|아이템 33
 
 ### 사전 조사
+- [Type Eraser in Java Doc](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)
+    - 호환성을 위해 존재
+    - Compile 시점에 진행하여 RunTime에는 Overhead가 존재하지 않음
+    - 그렇기 때문에 Instance of에는 Type 정보가 없어서 예외로 처리.
+
+#### Type Erase - linked list 예제
+```java
+public class Node<T> {
+
+    private T data;
+    private Node<T> next;
+
+    public Node(T data, Node<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public T getData() { return data; }
+    // ...
+}
+```
+
+- the type parameter T is unbounded, the Java compiler replaces it with Object:
+
+```java
+public class Node {
+
+    private Object data; // <-
+    private Node next;
+
+    public Node(Object data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public Object getData() { return data; }
+    // ...
+}
+```
+
+- the generic Node class uses a bounded type parameter:
+
+```java
+public class Node<T extends Comparable<T>> { // Bounded Type
+
+    private T data;
+    private Node<T> next;
+
+    public Node(T data, Node<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public T getData() { return data; }
+    // ...
+}
+```
+
+- The Java compiler replaces the bounded type parameter T with the first bound class, Comparable:
+
+```java
+public class Node {
+
+    private Comparable data; // <-
+    private Node next;
+
+    public Node(Comparable data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+
+    public Comparable getData() { return data; }
+    // ...
+}
+```
+
 #### 소거(erasure)
 - 소거
   - 컴파일 시 원소의 타입 정보를 지우며 런타임에는 알 수 없다
   - 결국 런타임에는 로 타입처럼 동작하나, 컴파일 타임에 타입 체킹을 한 셈
   - 제네릭이 없던 시절의 코드와 호환하기 위한 궁여지책
 
+## Reference
+- <https://docs.oracle.com/javase/tutorial/extra/generics/index.html>
+- <https://medium.com/@joongwon/java-java%EC%9D%98-generics-604b562530b3>
 
+### 스터디 요약
+-
+---
 
-
-
-
-- https://medium.com/@joongwon/java-java%EC%9D%98-generics-604b562530b3
-
-
-<!-- ## 2.5 Array
-It is instructive to compare the treatment of lists and arrays in Java, keeping in mind
-the Substitution Principle and the Get and Put Principle.
-In Java, array subtyping is covariant, meaning that type S[] is considered to be a subtype
-of T[] whenever S is a subtype of T. Consider the following code fragment, which allocates an array of integers, assigns it to an array of numbers, and then attempts to
-assign a double into the array:
-``` java
-Integer[] ints = new Integer[] {1,2,3};
-Number[] nums = ints;
-nums[2] = 3.14; // array store exception
-assert Arrays.toString(ints).equals("[1, 2, 3.14]"); // uh oh!
-```
-Something is wrong with this program, since it puts a double into an array of integers!
-Where is the problem? Since `Integer[]` is considered a subtype of Number[], according
-to the Substitution Principle the assignment on the second line must be legal. Instead,
-the problem is caught on the third line, and it is caught at run time. When an array is
-allocated (as on the first line), it is tagged with its reified type (a run-time representation
-of its component type, in this case, Integer), and every time an array is assigned into
-(as on the third line), an array store exception is raised if the reified type is not compatible with the assigned value (in this case, a double cannot be stored into an array of
-Integer).
-In contrast, the subtyping relation for generics is invariant, meaning that type `List<S>` is
-not considered to be a subtype of `List<T>`, except in the trivial case where S and T are
-identical. Here is a code fragment analogous to the preceding one, with lists replacing
-arrays:
-``` java
-List<Integer> ints = Arrays.asList(1,2,3);
-List<Number> nums = ints; // compile-time error
-nums.set(2, 3.14);
-assert ints.toString().equals("[1, 2, 3.14]"); // uh oh!
-```
-Since `List<Integer>` is not considered to be a subtype of List<Number>, the problem is detected on the second line, not the third, and it is detected at compile time, not runtime Wildcards reintroduce covariant subtyping for generics, in that type `List<S>` is considered to be a subtype of List<? extends T> when S is a subtype of T. Here is a third variant of the fragment:
-``` java
-List<Integer> ints = Arrays.asList(1,2,3);
-List<? extends Number> nums = ints;
-nums.set(2, 3.14); // compile-time error
-assert ints.toString().equals("[1, 2, 3.14]"); // uh oh!
-```
-As with arrays, the third line is in error, but, in contrast to arrays, the problem is detected
-at compile time, not run time. The assignment violates the Get and Put Principle, because you cannot put a value into a type declared with an extends wildcard.
-Wildcards also introduce *contravariant* subtyping for generics, in that type `List<S>` is
-considered to be a subtype of `List<? super T>` when S is a supertype of T (as opposed
-to a subtype). Arrays do not support contravariant subtyping. For instance, recall that
-the method count accepted a parameter of type Collection<? super Integer> and filled
-it with integers. There is no equivalent way to do this with an array, since Java does
-not permit you to write `(? super Integer)[]`.
-
-Detecting problems at compile time rather than at run time brings two advantages, one
-minor and one major. The minor advantage is that it is more efficient. The system does
-not need to carry around a description of the element type at run time, and the system
-does not need to check against this description every time an assignment into an array
-is performed. The major advantage is that a common family of errors is detected by the
-compiler. This improves every aspect of the program’s life cycle: coding, debugging,
-testing, and maintenance are all made easier, quicker, and less expensive.
-
-Apart from the fact that errors are caught earlier, there are many other reasons to prefer
-collection classes to arrays. Collections are far more flexible than arrays. The only operations supported on arrays are to get or set a component, and the representation is
-fixed. Collections support many additional operations, including testing for containment, adding and removing elements, comparing or combining two collections, and
-extracting a sublist of a list. Collections may be either lists (where order is significant
-and elements may be repeated) or sets (where order is not significant and elements may
-not be repeated), and a number of representations are available, including arrays, linked
-lists, trees, and hash tables. Finally, a comparison of the convenience classes Collec
-tions and Arrays shows that collections offer many operations not provided by arrays,
-including operations to rotate or shuffle a list, to find the maximum of a collection, and
-to make a collection unmodifiable or synchronized.
-
-Nonetheless, there are a few cases where arrays are preferred over collections. Arrays
-of primitive type are much more efficient since they don’t involve boxing; and assignments into such an array need not check for an array store exception, because arrays
-of primitive type do not have subtypes. And despite the check for array store exceptions,
-even arrays of reference type may be more efficient than collection classes with the
-current generation of compilers, so you may want to use arrays in crucial inner loops.
-As always, you should measure performance to justify such a design, especially since
-future compilers may optimize collection classes specially. Finally, in some cases arrays
-may be preferable for reasons of compatibility.
-
-To summarize, it is better to detect errors at compile time rather than run time, but
-Java arrays are forced to detect certain errors at run time by the decision to make array
-subtyping covariant. Was this a good decision? Before the advent of generics, it was
-absolutely necessary. For instance, look at the following methods, which are used to
-sort any array or to fill an array with a given value:
-``` java
-public static void sort(Object[] a);
-public static void fill(Object[] a, Object val);
-```
-Thanks to covariance, these methods can be used to sort or fill arrays of any reference
-type. Without covariance and without generics, there would be no way to declare
-methods that apply for all types. However, now that we have generics, covariant arrays
-are no longer necessary. Now we can give the methods the following signatures, directly
-stating that they work for all types:
-``` java
-public static <T> void sort(T[] a);
-public static <T> void fill(T[] a, T val);
-```
-
-In some sense, covariant arrays are an artifact of the lack of generics in earlier versions
-of Java. Once you have generics, covariant arrays are probably the wrong design choice,
-and the only reason for retaining them is backward compatibility.
-Sections Section 6.4–Section 6.8 discuss inconvenient interactions between generics
-and arrays. For many purposes, it may be sensible to consider arrays a deprecated
-type.We return to this point in Section 6.9. -->
+> :leftwards_arrow_with_hook:[EffectiveJava3E](/EffectiveJava3E/README.md)
