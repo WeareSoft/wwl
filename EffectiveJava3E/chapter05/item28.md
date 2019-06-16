@@ -76,6 +76,47 @@ String s = stringLists[0].get(0);                   // (5) List<String> 에는..
     - [[Naftalin07, 2.5]](https://pdfs.semanticscholar.org/8acb/1b38046030f6d8bf964991a5c26918f7c176.pdf?_ga=2.24918450.981992488.1560636958-2069674838.1560636958) - 22p
     - [[JLS 4.10]](https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.10)
 
+---
+
+- 배열과 제네릭타입(Ex. 리스트)의 차이
+    - 첫 번째. 공변(Covariant)과 불공변(Invariant)
+        - 배열은 공변이다.
+            - Sub가 Super의 하위 타입이라면 배열 Sub[]는 배열 Super[]의 하위 타입이 된다.
+        - 제네릭은 불공변이다.
+            - 서로 다른 타입 Type1, Type2가 있을 떄, List<Type1>은 List<Type2>ㅇ의 하위 타입도 아니고 상위 타입도 아니다.
+    - 두 번째. 배열은 실체화(Reify), 제네릭은 소거(Erasure)
+        - 배열은 실체화된다.
+            - 런타임에도 자신이 담기로 한 원소의 타입을 인지하고 확인한다.
+        - 제네릭은 타입 정보가 런타임에는 소거된다.
+            - 원소 타입을 컴파일타임에만 검사하며 런타임에는 알수조차 없다.
+- 배열은 제네릭 타입, 매개변수화 타입, 타입 매개변수로 사용할 수 없다.
+    - `new List<E>[]`, `new List<String>[]`, `new E[]`
+    - 컴파일할 때 제네릭 배열 생성 오류 발생
+- 제네릭 배열을 만들지 못하게 막은 이유?
+    - 타입 안전하지 않기 때문
+    - 허용한다면 => 컴파일러가 자동 생성한 형변환 코드에서 런타임에 ClassCastException이 발생할 수 있다.
+    - 제네릭 타입 취지: 런타임에 ClassCastException이 발생하는 것을 막아준다.
+- 제네릭 타입, 매개변수화 타입, 타입 매개변수: **실체화 불가 타입(non-reifiable type)**
+    - 실체화되지 않아서 런타임에는 컴파일타임보다 타입 전보를 적게 가지는 타입 
+
+- `ArrayStoreException`
+    - https://docs.oracle.com/javase/7/docs/api/java/lang/ArrayStoreException.html
+    - int형 배열에 String 객체를 넣으려는 것과 같이 배열에 대해 부적절한 데이터 저장 시 발생
+    - [예시 참고](http://blog.daum.net/_blog/BlogTypeView.do?blogid=07wRi&articleno=15862024&_bloghome_menu=recenttext)
+
+
+## Reference
+- https://docs.oracle.com/javase/7/docs/api/java/lang/ArrayStoreException.html
+- [ArrayStoreException 설명](https://dololak.tistory.com/52)
+
+### 스터디 요약
+-
+---
+
+> :leftwards_arrow_with_hook:[EffectiveJava3E](/EffectiveJava3E/README.md)
+
+
+
 
 <!-- ## 2.5 Array
 It is instructive to compare the treatment of lists and arrays in Java, keeping in mind
