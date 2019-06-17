@@ -3,6 +3,13 @@
 > - [2018년 목표 설정 모음](/hee/2018-goals.md)
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 
+## 2019-06-23
+### 이펙티브 자바 스터디
+- Chapter05. [item29] ~ [item33]
+- Chapter05. [item32] ~ [item33]
+    - [item32](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter05/item32.md)
+    - [item33](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter05/item33.md)
+    
 ## 2019-06-16
 ### 이펙티브 자바 스터디
 - Chapter12. [item88] ~ [item90]
