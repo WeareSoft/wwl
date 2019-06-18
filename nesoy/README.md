@@ -26,6 +26,9 @@
 - 토비 스프링 1 Chapter 읽고 정리
 - Springboot2 읽고 정리하기
 
+## 2019-06-23
+- [Snack Infra 구축하기](https://github.com/snack-news/Snack-BE/issues/19)
+
 ## 2019-06-16
 - [Snack Infra 구축하기](https://github.com/snack-news/Snack-BE/issues/19)
 
