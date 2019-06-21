@@ -1,4 +1,14 @@
 # Doy
+## 2019-06-23
+### 이펙티브 자바 스터디
+- Chapter05. [item29] ~ [item33]
+    - [item29](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter05/item29.md)
+    - [item30](https://github.com/WeareSoft/wwl/blob/master/EffectiveJava3E/chapter05/item30.md)
+### 개인 공부 
+- tech-interview
+  - [[JavaScript] Hoisting 정리](https://github.com/WeareSoft/tech-interview/issues/33)
+    - 그만 미루기 ..
+
 ## 2019-06-16
 ### 이펙티브 자바 스터디
 - Chapter12. [item88] ~ [item90]
