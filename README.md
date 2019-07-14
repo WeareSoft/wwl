@@ -64,40 +64,32 @@
 
 - [2018 3,4분기 회고 및 피드백 모음](/feedback/2018/2018-total-feedback.md)
 - [2019 1분기 일정](/feedback/2019/2019-1.md)
+- [2019 2분기 일정](/feedback/2019/2019-2.md)
 
-### 2019 2분기 스터디
+### 2019 3분기 스터디
 
 - **스터디 내용**
-    > - [EffectiveJava3E](/EffectiveJava3E/README.md)
+    > - [자바와 JUnit을 활용한 실용주의 단위 테스트](/JUnit/README.md)
 
 - **스터디 일정**
-  - [1주차](/EffectiveJava3E/study-log/ej-week-1.md): 4/14
-  - [2주차](/EffectiveJava3E/study-log/ej-week-2.md): 4/28
-  - [3주차](/EffectiveJava3E/study-log/ej-week-3.md): 5/05 (어린이날)
-  - [4주차](/EffectiveJava3E/study-log/ej-week-4.md): 5/12 (석가탄신일)
-  - [5주차](/EffectiveJava3E/study-log/ej-week-5.md): 5/19
-  - [6주차](/EffectiveJava3E/study-log/ej-week-6.md): 5/26
-  - [7주차](/EffectiveJava3E/study-log/ej-week-7.md): 6/02
-  - [8주차](/EffectiveJava3E/study-log/ej-week-8.md): 6/09
-  - [9주차](/EffectiveJava3E/study-log/ej-week-9.md): 6/16
-  - [10주차](/EffectiveJava3E/study-log/ej-week-10.md): 6/23
+  - [1주차](): 7/21
+  - [2주차](): 7/28
+  - [3주차](): 8/04
+  - [4주차](): 8/11
+  - [5주차](): 8/18
+  - [6주차](): 8/25
+  - [7주차](): 9/01
+  - [8주차](): 9/08
+  - [9주차](): 9/15 (추석 연휴)
+  - [10주차](): 9/22
+  - [11주차](): 9/29
   - *-스터디 마무리 일정-*
-  - 스터디 회고 및 회식: 6/28(금)
-  - 다음 시즌 스터디 규칙 및 계획 세우기: 6/30(일)
-  - 휴식: 7/07(일)
+  - 스터디 회고 및 회식: 10/04(금)
+  - 휴식: 10/06(일)
 
 - **스터디 벌금 정보**
-  - delf: 2,000원
-    - 10주차 10분 지각 (2000원)
-  - doy: 11,000원
-    - 1주차 20분 지각 (4000원)
-    - 1주차 스터디 미학습 (5000원)
-    - 7주차 스터디 미학습 chapter81. (1000원)
-    - 10주차 스터디 미학습 chapter31. (1000원)
-  - hee: 1,000원
-    - 7주차 스터디 미학습 chapter81. (1000원)
-  - nesoy: 15,000원
-    - 2주차 목표 미제출(5000원)
-    - 5주차 목표 미제출(5000원)
-    - 8주차 목표 미제출(5000원)
+  - delf: 0원
+  - doy: 0원
+  - hee: 0원
+  - nesoy: 0원
 
