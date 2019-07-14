@@ -1,4 +1,4 @@
-# [2019.06.09] Effective Java 3/E 스터디 진행 - 7주차
+# [2019.06.09] Effective Java 3/E 스터디 진행 - 8주차
 참석자: Delf, Doy, Nesoy
 ## 주제
 - [**아이템 82.**](../chapter11/item82.md) 스레드 안전성 수준을 문서화하라 
