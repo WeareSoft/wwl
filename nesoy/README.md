@@ -1,30 +1,20 @@
 # Nesoy
-## 1분기 목표(~2019. 03)
-#### 1분기 Feedback
-- 전체 달성률 %하기
-- 알고리즘 3개 풀고 정리하기
-    - 한번에 통과하는 연습하기
-    - 처음 준 예제 빠르게 구현
-    - 문제 다시 읽어 테스트 케이스 생각하기
-    - 중복 입력 Case
-    - Boundary Case
-    - Empty Case
-    - Medium Case : 평균값, 중앙값
-    - Large Case
-- 출근 길에 책읽기
-    - Page 기록하기 -> 독서량 측정하기
-
 #### 일주일 단위 WORK FLOW
-- Edwith 강의 듣기
-- Effective Java 6개 Item 읽고 정리
-- Elastic Search 공부하고 정리[월,화]
-- 알고리즘 3개 풀고 정리하기
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기[매일]
 
-##### 우선순위 낮춤(2019. 01. 25)
-- 토비 스프링 1 Chapter 읽고 정리
-- Springboot2 읽고 정리하기
+
+
+
+
+
+## 2019-07-21
+- Snack RDB 실환경 구성하기
+- 업무 지식 정리하기
+- 블로그 쓰기
+
+
+-------
 
 ## 2019-06-30
 - [Snack CI/ CD 구축하기](https://github.com/snack-news/Snack-BE/issues/19)
