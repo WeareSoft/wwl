@@ -7,9 +7,10 @@
 
 
 ## 2019-07-28
-- Snack Modeling 다시 진행하기
 - Study 책 읽기
 - 지난 번 작성하지못한 블로그 작성하기
+- ~~[Snack Modeling 다시 진행하기](https://github.com/snack-news/Snack-BE/issues/57)~~
+
 
 ## 2019-07-21
 - ~~Snack RDB 실환경 구성하기~~
