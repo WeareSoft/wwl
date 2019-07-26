@@ -10,4 +10,9 @@
 
 
 ## Junit Category 기능
+- 특정 테스트를 카테고리로 분류하여 테스트 가능하게 만드는 기능
 - <https://github.com/junit-team/junit4/wiki/Categories>
+
+
+## 무엇을 테스트할 것인가, 어떻게 테스트할 것인가 - SpringCamp 2019 - 발표자료
+- <https://www.slideshare.net/ssuser59a869/ksug-2019>
