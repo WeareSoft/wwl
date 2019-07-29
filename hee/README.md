@@ -4,6 +4,13 @@
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 
+## 2019-08-04
+### junit 스터디
+- Chapter06. Right-BICEP
+- Chapter07. 경계 조건: CORRECT 기억법
+### 개인 공부
+- Junit 블로그 작성
+- JPA 블로그 작성 
 
 ## 2019-07-28
 ### junit 스터디
