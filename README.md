@@ -75,9 +75,9 @@
   - 매주 지정한 분량만큼 공부해서 당일 이해한 내용과 추가 조사한 내용을 공유하며 의견을 나눈다.
   - 각자 집중적으로 공부할 분량을 지정하고, 그 부분에 대해서는 조금 더 심도 있게 조사하여 의견을 공유할 수 있도록 한다.
 - **일정**
-  - [1주차](./UnitTest/study-log/ut-week-1.md): 7/21
-  - [2주차](./UnitTest/study-log/ut-week-2.md): 7/28
-  - 3주차: 8/04
+  - [1주차](./UnitTest/study-log/ut-week-01.md): 7/21
+  - [2주차](./UnitTest/study-log/ut-week-02.md): 7/28
+  - [3주차](./UnitTest/study-log/ut-week-03.md): 8/04
   - 4주차: 8/11
   - 5주차: 8/18
   - 6주차: 8/25
