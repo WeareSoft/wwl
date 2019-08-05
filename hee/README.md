@@ -4,6 +4,14 @@
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 
+## 2019-08-11
+### junit 스터디
+- Chapter08. 깔끔한 코드로 리팩토링하기
+- Chapter09. 더 큰 설계 문제
+### 개인 공부
+- Junit 블로그 작성
+- JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
+
 ## 2019-08-04
 ### junit 스터디
 - Chapter06. Right-BICEP
