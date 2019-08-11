@@ -78,8 +78,8 @@
   - [1주차](./UnitTest/study-log/ut-week-01.md): 7/21
   - [2주차](./UnitTest/study-log/ut-week-02.md): 7/28
   - [3주차](./UnitTest/study-log/ut-week-03.md): 8/04
-  - 4주차: 8/11
-  - 5주차: 8/18
+  - [4주차](./UnitTest/study-log/ut-week-04.md): 8/11
+  - 5주차: 8/18 (임시 휴일 및 일정 재조정 계획)
   - 6주차: 8/25
   - 7주차: 9/01
   - 8주차: 9/08
