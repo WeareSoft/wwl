@@ -4,6 +4,14 @@
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 
+## 2019-08-18
+### junit 스터디
+- Chapter10. 목 객체 사용
+- Chapter11. 테스트 리팩토링
+### 개인 할 일
+- 호캉스.
+- JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
+
 ## 2019-08-11
 ### junit 스터디
 - Chapter08. 깔끔한 코드로 리팩토링하기
