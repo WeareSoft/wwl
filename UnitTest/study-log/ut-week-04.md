@@ -1,4 +1,4 @@
-# [2019.08.04] Unit Test 스터디 진행 - 3주차
+# [2019.08.11] Unit Test 스터디 진행 - 4주차
 참석자: Delf, Doy, Hee, Nesoy
 
 ## 주제
