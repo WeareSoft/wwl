@@ -1,5 +1,13 @@
 # Delf
 
+# 2019-08-25
+- snack-news
+    - QuerryDSL 추가
+- 블로그 포스트 작성
+- 단위테스트 이번주 분량 공부
+- 포트폴리오에 snack-news 추가 및 정리
+- 매일프로그래밍 구독 알고리즘 문제 풀기
+
 # 2019-08-18
 - snack-news
     - QuerryDSL 추가
