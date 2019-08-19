@@ -6,6 +6,12 @@
 
 ## 2019-08-18
 ### junit 스터디
+- 그대로
+### 개인 할 일
+- JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
+
+## 2019-08-18
+### junit 스터디
 - Chapter10. 목 객체 사용
 - Chapter11. 테스트 리팩토링
 ### 개인 할 일
