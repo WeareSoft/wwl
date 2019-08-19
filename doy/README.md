@@ -1,4 +1,11 @@
 # Doy
+## 2019-08-25
+### junit 스터디
+- Chapter10. 목 객체 사용
+- Chapter11. 테스트 리팩토링
+### 개인 공부
+- docker compose file
+
 ## 2019-08-18
 ### junit 스터디
 - Chapter10. 목 객체 사용
