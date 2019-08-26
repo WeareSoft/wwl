@@ -1,8 +1,15 @@
 # Doy
+## 2019-09-01
+### junit 스터디
+- Chapter13. 까다로운 테스트
+- Chapter14. 프로젝트에서 테스트
+### 개인 공부
+- docker
+- gcp
+
 ## 2019-08-25
 ### junit 스터디
-- Chapter10. 목 객체 사용
-- Chapter11. 테스트 리팩토링
+- Chapter12. 테스트 주도 개발
 ### 개인 공부
 - docker compose file
 
