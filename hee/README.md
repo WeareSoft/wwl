@@ -4,9 +4,17 @@
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 
-## 2019-08-18
+## 2019-09-01
 ### junit 스터디
-- 그대로
+- Chapter13. 까다로운 테스트
+- Chapter14. 프로젝트에서 테스트
+### 개인 할 일
+- JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
+- 우아한 세미나 후기 (멀티 모듈)
+
+## 2019-08-25
+### junit 스터디
+- 지난 주 Chapter + Chapter12. 테스트 주도 개발
 ### 개인 할 일
 - JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
 
