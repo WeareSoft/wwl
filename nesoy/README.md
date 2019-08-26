@@ -3,9 +3,17 @@
 - 1개의 블로그 쓰기
 - 출근 길에 책읽기[매일]
 
+## 2019-09-01
+- 여러가지 세미나 듣고 후기 정리하기
+    - if kakao
+    - 우아한 형제들
+- Spring Study 자료 정리하기
+- Snak issue 해결하기
+- Junit Test 책 읽기
+
 ## 2019-08-25
 - 블로그 쓰기
-- Intellij 관련 내용 정리하기
+- [Intellij 관련 내용 정리하기](https://nesoy.github.io/articles/2019-08/Intellij-Setting-Sync)
 
 ## 2019-08-18
 - ~~Snack https 적용하기~~
