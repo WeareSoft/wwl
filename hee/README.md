@@ -4,6 +4,13 @@
 > - [2019-1 목표 설정 모음](/hee/2019-1-goals.md)
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 
+## 2019-09-15
+### junit 스터디
+- [문자열 계산기](https://github.com/wwh-techcamp-2018/java-racingcar/tree/team1_pair1/src/main/java/calculator)를 이용한 테스트코드 구현 
+### 개인 할 일
+- JPA 블로그 작성 ([일정 참고](https://github.com/team-zunior/orm-jpa-basic))
+- 테스트 코드 공부하기 (테스트주도 개발로 배우는 객체 지향 설계와 실천 / TDD)
+
 ## 2019-09-08
 - 그대로. (지난 주 스터디 미참여)
 - 회복 기간 및 밀린 공부 학습하기 
