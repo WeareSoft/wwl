@@ -152,20 +152,16 @@
 - 11장 테스트 리팩토링
 - 12장 테스트 주도 개발
 
-#### 7주차(2019.09.01)
+#### 7주차(2019.09.01) - 휴무
 - ~~13장 까다로운 테스트~~
 - ~~14장 프로젝트에서 테스트~~
 
 #### 8주차(2019.09.08)
 - 13장 까다로운 테스트
 - 14장 프로젝트에서 테스트
-- [문자열 계산기](https://github.com/wwh-techcamp-2018/java-racingcar/tree/team1_pair1/src/main/java/calculator)를 이용한 테스트코드 구현 
 
 #### 9주차(2019.09.15)
-- [레이싱 카](https://github.com/wwh-techcamp-2018/java-racingcar/tree/team1_pair1/src/main/java/racing)를 이용한 테스트코드 구현 
+- [문자열 계산기](https://github.com/wwh-techcamp-2018/java-racingcar/tree/team1_pair1/src/main/java/calculator)를 이용한 테스트코드 구현 
 
 #### 10주차(2019.09.22)
-- [로또](https://github.com/wwh-techcamp-2018/java-lotto/tree/team1_pair1)를 이용한 테스트코드 구현 
-
-#### 11주차(2019.09.29)
-- [로또](https://github.com/wwh-techcamp-2018/java-lotto/tree/team1_pair1)를 이용한 테스트코드 구현 
+- [로또](https://github.com/wwh-techcamp-2018/java-lotto/tree/team1_pair1)를 이용한 테스트코드 구현
