@@ -1,4 +1,11 @@
 # Doy
+## 2019-09-22
+### junit 스터디
+- [로또](https://github.com/wwh-techcamp-2018/java-lotto/tree/team1_pair1)를 이용한 테스트코드 구현
+### 개인 공부
+- elstic search query
+  - match, bool, filter, term, query string
+
 ## 2019-09-15
 ### junit 스터디
 - [문자열 계산기](https://github.com/wwh-techcamp-2018/java-racingcar/tree/team1_pair1/src/main/java/calculator)를 이용한 테스트코드 구현 
