@@ -1,4 +1,12 @@
 # Doy
+## 2019-10-13
+### 오브젝트 스터디
+- 들어가며: 프로그래밍 패러다임
+- 1장 객체, 설계
+### 개인 할 일
+- elstic search bulk API
+- SpringBoot + Kotlin + JUnit5
+
 ## 2019-09-22
 ### junit 스터디
 - [로또](https://github.com/wwh-techcamp-2018/java-lotto/tree/team1_pair1)를 이용한 테스트코드 구현
