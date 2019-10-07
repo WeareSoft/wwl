@@ -1,5 +1,12 @@
 # Delf
 
+# 2019-10-13
+- snack-news
+  - invailid host header 문제 해결
+- snack-news로 포트폴리오 보강
+- 알고리즘 문제
+  - 매일프로그래밍 발, 두 문제
+
 # 2019-09-29
 - snack-news
   - admin 배포 및 api 수정
