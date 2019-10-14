@@ -1,5 +1,12 @@
 # Delf
 
+# 2019-10-21
+- snack-news
+  - spring security 적용
+- 알고리즘 문제
+  - 매일프로그래밍 발, 두 문제
+- 
+
 # 2019-10-13
 - snack-news
   - invailid host header 문제 해결
