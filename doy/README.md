@@ -1,6 +1,11 @@
 # Doy
 ## 2019-10-20
 ### 오브젝트 스터디
+- 3장 역할, 책임, 협력
+### 개인 할 일
+- elastic search setting
+
+### 오브젝트 스터디
 - 2장 객체지향 프로그래밍
 ### 개인 할 일
 - spring data elastic search
