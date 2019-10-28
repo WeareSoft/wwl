@@ -1,4 +1,12 @@
 # Doy
+## 2019-11-03
+### 오브젝트 스터디
+- 4장 설계 품질과 트레이드오프
+### 개인 할 일
+- elastic search
+    - cluster setting
+    - reindex/bulk batch
+
 ## 2019-10-20
 ### 오브젝트 스터디
 - 3장 역할, 책임, 협력
