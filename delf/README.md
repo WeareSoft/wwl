@@ -1,11 +1,17 @@
 # Delf
 
+# 2020-01-12
+- 로또 구현하기 (1/4) - [링크](https://github.com/WeareSoft/java-lotto)
+- 이력서 및 포트폴리오 보강
+- snak
+  - picks API 구현 및 이슈 해결
+
 # 2019-12-22
 - snack-news
 - 면접 준비
 - 코딩 테스트
 - 프로젝트 트러블 슈팅 블로그 작성
-- 
+
 # 2019-12-15
 - snack-news
   - advice 버그 해결 
