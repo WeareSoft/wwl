@@ -6,6 +6,12 @@
 > - [2019-3 목표 설정 모음](/hee/2019-3-goals.md)
 > - [2019-4 목표 설정 모음](/hee/2019-3-goals.md)
 
+## 2020-02-09
+### 개발 스터디
+- [로또 리팩토링 및 다른 사람 코드 확인](https://github.com/WeareSoft/java-lotto/tree/hee)
+- 테스트 코드 구현하기
+- [볼링 step1 구현하기](https://github.com/WeareSoft/java-bowling/tree/hee)
+
 ## 2020-02-02
 ### 개발 스터디
 - [로또 step1, step2 구현하기](https://github.com/WeareSoft/java-lotto/tree/hee)
