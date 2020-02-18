@@ -12,6 +12,10 @@
 - 테스트 코드 구현하기
 - [볼링 step1, step2 구현하기](https://github.com/WeareSoft/java-bowling/tree/hee)
 
+## 2020-02-16
+### 개발 스터디
+- 휴식
+
 ## 2020-02-09
 ### 개발 스터디
 - [로또 리팩토링 및 다른 사람 코드 확인](https://github.com/WeareSoft/java-lotto/tree/hee)
