@@ -3,6 +3,12 @@
 - 1개의 블로그 쓰기
 - 출근 길에 책 읽어보도록 노력하자.
 
+## 2020-02-23
+- 볼링 작성하기
+- Modern Java in Action 학습하기
+- Spark 완벽 가이드 학습하기
+- 사이드 프로젝트 - Spring Security 공부하기
+
 ## 2020-02-16
 - 볼링 작성하기
 - Modern Java in Action 학습하기
