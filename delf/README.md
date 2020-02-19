@@ -1,4 +1,5 @@
 # Delf
+
 # 2020-02-16
 - bolling
    - step2 스코어링 구현하기
@@ -9,6 +10,14 @@
    - news, picks 벌크 업로드 수정
    - JPA 최적화
 - 자소서
+
+# 2020-02-23
+- wwl
+  - 
+- snak
+  - JPA bulk (batch insert) 공부 및 구현
+  - slack web-hook, aws lambda로 snak 뉴스봇 조사 및 구현
+- 포트폴리오 수정
 - 알고리즘 (최소 두 문제)
 
 # 2020-02-09
