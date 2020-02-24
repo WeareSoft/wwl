@@ -1,4 +1,12 @@
 # Doy
+## 2020-03-01
+### OOP 스터디
+- 볼링
+  - Step2, 3 구현
+### 개인 할 일
+- shell script
+- mongoDB Index, Query Plans
+
 ## 2020-02-23
 ### OOP 스터디
 - 볼링
