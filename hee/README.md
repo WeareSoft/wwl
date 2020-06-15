@@ -5,73 +5,16 @@
 > - [2019-2 목표 설정 모음](/hee/2019-2-goals.md)
 > - [2019-3 목표 설정 모음](/hee/2019-3-goals.md)
 > - [2019-4 목표 설정 모음](/hee/2019-3-goals.md)
+> - [2020-1 목표 설정 모음](/hee/2020-1-goals.md)
 
-## 2020-03-01
-### 개발 스터디
-- [볼링 step2, step3 구현하기](https://github.com/WeareSoft/java-bowling/tree/hee)
-- 테스트 코드도 같이 구현하기
-
-## 2020-02-23
-### 개발 스터디
-- [로또 리팩토링 및 다른 사람 코드 확인](https://github.com/WeareSoft/java-lotto/tree/hee)
-- 테스트 코드 구현하기
-- [볼링 step1, step2 구현하기](https://github.com/WeareSoft/java-bowling/tree/hee)
-
-## 2020-02-16
-### 개발 스터디
-- 휴식
-
-## 2020-02-09
-### 개발 스터디
-- [로또 리팩토링 및 다른 사람 코드 확인](https://github.com/WeareSoft/java-lotto/tree/hee)
-- 테스트 코드 구현하기
-- [볼링 step1 구현하기](https://github.com/WeareSoft/java-bowling/tree/hee)
-
-## 2020-02-02
-### 개발 스터디
-- [로또 step1, step2 구현하기](https://github.com/WeareSoft/java-lotto/tree/hee)
-- 테스트 코드도 같이 구현하기
-
+## 2020-06-15
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 1. 스프링 시작하기
+  - CHAPTER 2. 웹 애플리케이션 개발하기
 ### 개인 할 일
-- 지난 주 그대로
-- 미루지 않기!
-
-## 2020-01-26
-### 개발 스터디
-- [로또 step1, step2 구현하기](https://github.com/WeareSoft/java-lotto/tree/hee)
-- 테스트 코드도 같이 구현하기
-
-### 개인 할 일
-- 알고리즘 
-  - leetcode 알고리즘 풀기
-- 자동차 경주 구현 완성
-  - 테스트 코드 완성 (junit5 정리)
-  - 심화 구현 및 리팩토링, 테스트 코드 완성
-
-## 2020-01-19
-### 개발 스터디
-- [로또 step2 구현하기](https://github.com/WeareSoft/java-lotto/tree/hee)
-- ~1/15(수) 로또 step1 마무리 하기, 리뷰 남기기 
-
-### 개인 할 일
-- 알고리즘 
-  - leetcode 알고리즘 풀기
-- 자동차 경주 구현 완성
-  - 테스트 코드 완성 (junit5 정리)
-  - 심화 구현 및 리팩토링, 테스트 코드 완성하기
-
-## 2020-01-12
-### 개발 스터디
-- [로또 step1 구현하기](https://github.com/WeareSoft/java-lotto/tree/hee)
-
-### 개인 할 일
-- 강의 
-  - Spring Rest Api 듣고 블로그 적기
-- 알고리즘 
-  - leetcode 알고리즘 풀기
-- 자동차 경주 구현 완성
-  - 테스트 코드 완성 (junit5 정리)
-  - 심화 구현 및 리팩토링, 테스트 코드 완성하기
+- interview 리스트업
+- TDD 볼링 STEP 2, 3 완성 목표
 
 ---
 
