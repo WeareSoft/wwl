@@ -1,5 +1,20 @@
 # Doy
 
+## 2020-06-22
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 1-2 정리
+    - DI 방법, 차이점
+    - @SpringBootApplication
+    - jar 실행 방법, 옵션
+      - gradle, maven 
+  - CHAPTER 3. 데이터로 작업하기
+### 개인 할 일
+- RealMySQL
+  - index
+  - query
+- 이력서
+
 ## 2020-06-15
 ### 스프링 스터디
 - 스프링 인 액션
