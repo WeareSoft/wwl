@@ -2,6 +2,16 @@
 ## 부트스트랩
 
 ## 어노테이션
+- @Retention
+  - 어노테이션의 Life Time입니다.
+- Class
+  - 바이트 코드 파일까지 어노테이션 정보를 유지한다.
+  - 하지만 리플렉션을 이용해서 어노테이션 정보를 얻을 수는 없다.
+- Runtime
+  - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
+- Source
+  - Compile 이후로 삭제되는 형태
+- <https://nesoy.github.io/articles/2018-04/Java-Annotation>
 
 ## `@Component` 하위 어노테이션의 의미와 역할
 ###  `@Compnent`란?
@@ -23,8 +33,40 @@
 또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
 ## `@WebMvcTest`
+- @Controller, @ControllerAdvice, @JsonComponent, Converter/GenericConverter, Filter, WebMvcConfigurer, HandlerMethodArgumentResolver beans들만 등록이 된 상태로 테스트가 진행된다.
+- 우리가 잘 알고 있는 @Component, @Service or @Repository beans들은 등록되지 않은 상태로 테스트가 진행된다.
+- 아래의 Configuration이 자동등록되는 것들이다.
+```
+org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
+org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration
+org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration
+org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration
+org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration
+org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration
+org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration
+org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration
+org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration
+org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration
+org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration
+```
+- [Reference](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/autoconfigure/web/servlet/WebMvcTest.html)
+- <https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#test-auto-configuration-slices>
 
-## 의존성을 주입(DI)하는 방법 
+## 의존성을 주입(DI)하는 방법
 #### 1. 생성자 주입(Constructor Injection)
 - 스프링 팀에서 권장하는 방식
 ```java
@@ -83,7 +125,7 @@ public class Example {
   - DI 컨테이너를 사용하지 않고서도 단위 테스트에서 인스턴스화할 수 있어야 한다.
 - 불변성(Immutability)
   - 필드 주입과 수정자 주입은 해당 필드를 final로 선언할 수 없다.
-  - 따라서 초기화 후에 빈 객체가 변경될 수 있지만 생성자 주입은 필드를 final로 선언할 수 있다. 
+  - 따라서 초기화 후에 빈 객체가 변경될 수 있지만 생성자 주입은 필드를 final로 선언할 수 있다.
 
 ## `@SpringBootApplication`
 - `@SpringBootConfiguration`, `@ComponentScan`, `@EnableAutoConfiguration` 3가지의 역할을 수행한다.
