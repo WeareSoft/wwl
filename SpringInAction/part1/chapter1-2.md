@@ -4,6 +4,23 @@
 ## 어노테이션
 
 ## `@Component` 하위 어노테이션의 의미와 역할
+###  `@Compnent`란?
+해당 클래스를 `스프링 컨테이너`에 등록하기 위해서 사용된다. 이렇게 등록된 컨테이너(혹은 빈)은 스프링 컨테이너 의해 적절하게 주입되며 관리된다.
+
+### `@Compnent`의 스테레오타입(Streotype) 어노테이션
+
+구조상 **하위 어노테이션**이라고 표현할 수 있는 `@Compnent`의 스테레오타입 어노테이션은 `@Controller`, `@Service`, `@Repository`가 있다. 어노테이션들은 모두 `@Compenet`를 구현하고 있다.
+
+[이미지](./resources/chapter1-2/component.jpg)
+
+사실 주기능상 큰 차이는 없다. 스프링 컨테이너에 해당 컴포넌트를 등록하는게 주된 목적이다. 때문에 각 어노테이션 대신 `@Compnent`를 사용해도 문제가 없기는 하다.
+
+### `@Controller`, `@Service`, `@Repository`의 차이
+위에서 언급했던대로 기능상 큰 차이는 없다. 다만, 적절한 의미의 어노테이션을 붙힘으로써 각 클래스들이 도구가 처리하는데 더 적합하도록 할 수 있고 관점에 더 연관성이 있게 한 수 있다. 예를 들어 이러한 스테레오타입 어노테이션은 포인트컷에 대한 이상적인 타겟을 만든다.
+
+이 장점이 드러나는게 `@Repository`인데, 해당 클래스(persistence 계층)에서 발생한 DB에 관련된 오류는 조금 더 적합하게 또는 구체적으로 변환되어 던져진다. 개발자는 이렇게 발생한 예외를 더 적절하게 처리할 수 있다.
+
+또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
 ## `@WebMvcTest`
 
@@ -17,7 +34,7 @@ public class Example {
     private final HelloService helloService;
 
     public Example(final HelloService helloService) {
-        this.helloService = helloService;
+        this.helloService = helloService; 
     }
 }
 ```
