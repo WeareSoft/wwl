@@ -161,6 +161,32 @@ public class Example {
     - 이러한 키값을 통하여 명시된 많은 클래스들이 AutoConfiguration의 대상이 된다.
 
 ## Spring MVC
+### 본래 의문을 가진 계기
+Spring MVC 라고 한다면 Spring MVC Pattern(패턴), 혹은 Spring MVC Model(모델), Spring MVC Architecture(구조) 정도였다.
+
+그렇다면 Spring MVC Framework는 무엇일까? 내가 알고있는 Spring Framework랑 동일한 수준의 개념인가? 라는 의문이 생겼다.
+
+### 결론
+딱히 그런건 아니다. Spring Framework에서 MVC 패턴을 지원하는 모듈이 존재하고 이를 이르러 Spring MVC Framework라고 표현하는 것. 작게 보면 그 안의 모듈도 프레임워크라고 할 수 있다.
+
+### MVC
+#### 무엇인가?
+Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스템에서 각 역할을 어떻게 나눌지에 대한 이슈가 있을텐데, MVC는 그 중에서도 일반화어 널리 쓰이는 패턴 중 하나이다.
+- Model
+    - 모델은 앱이 포함해야할 데이터가 무엇인지를 정의한다. 데이터의 상태가 변경되면 모델을 일반적으로 뷰에게 알리며(따라서 필요한대로 화면을 변경할 수 있다) 가끔 컨트롤러에게 알리기도 한다. (업데이트된 뷰를 제거하기 위해 다른 로직이 필요한 경우).
+- View
+    - 뷰는 앱의 데이터를 보여주는 방식을 정의한다.
+- Controller
+    - 컨트롤러는 앱의 사용자로부터의 입력에 대한 응답으로 모델 및/또는 뷰를 업데이트하는 로직을 포함한다. 단순히 데이터를 다른 형태로 나타내기 위해 뷰를 업데이트하고 싶을 수도 있다. 이런 경우에 컨트롤러는 모델을 업데이트할 필요 없이 바로 처리할 수 있다.
+
+#### 왜 쓰나?
+- 사용자가 보는 페이지, 데이터 처리, 그리고 이 2가지를 중간에서 제어하는 컨트롤, 이 3가지로 구성되는 하나의 애플리케이션을 만들면 각각 맡은바에만 집중을 할 수 있게 된다.
+​- 서로 분리되어 각자의 역할에 집중할 수 있게끔하여 개발을 하고 그렇게 애플리케이션을 만든다면, 유지보수성, 애플리케이션의 확장성, 그리고 유연성이 증가하고, 중복코딩이라는 문제점 또한 사라지게 되는 것이다.
+
+### Reference
+- https://developer.mozilla.org/ko/docs/Glossary/MVC
+- https://spring.io/projects/spring-framework
+- https://gmlwjd9405.github.io/2018/12/20/spring-mvc-framework.html
 
 ## gradle 키워드
 
