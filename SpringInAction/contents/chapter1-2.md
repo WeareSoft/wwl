@@ -19,18 +19,22 @@
 	- 구동, 시동
 	- 컴퓨터를 시작하는 과정(부팅 과정)
 
-## :heavy_check_mark: 어노테이션
-- @Retention
+## :heavy_check_mark: 어노테이션의 개념 및 Life Time 
+- 어노테이션 이란
+  - 클래스, 인터페이스, 함수, 매개변수, 속성, 생성자에 어떤 의미를 추가할 수 있는 기능이며, 자바 컴파일러가 컴파일 시에 처리한다.
+  - 즉, 소스 코드에 추가된 어노테이션 자체는 바이트 코드로 생성되지 않고 주석으로 처리되지만, 그것이 갖는 의미대로 컴파일러가 작업을 수행해 준다.
+
+### `@Retention`
   - 어노테이션의 Life Time입니다.
-- RetentionPolicy
-  - `@Retention(RetentionPolicy.RUNTIME)`
-  - Class
-    - 바이트 코드 파일까지 어노테이션 정보를 유지한다.
-    - 하지만 리플렉션을 이용해서 어노테이션 정보를 얻을 수는 없다.
-  - Runtime
-    - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
-  - Source
-    - Compile 이후로 삭제되는 형태
+  - RetentionPolicy
+    - `@Retention(RetentionPolicy.RUNTIME)`
+    - Class
+      - 바이트 코드 파일까지 어노테이션 정보를 유지한다.
+      - 하지만 리플렉션을 이용해서 어노테이션 정보를 얻을 수는 없다.
+    - Runtime
+      - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
+    - Source
+      - Compile 이후로 삭제되는 형태
 
 #### :link: Reference
 - https://nesoy.github.io/articles/2018-04/Java-Annotation
@@ -38,21 +42,20 @@
 
 ## :heavy_check_mark: `@Component` 하위 어노테이션의 의미와 역할
 ###  `@Compnent`란?
-해당 클래스를 `스프링 컨테이너`에 등록하기 위해서 사용된다. 이렇게 등록된 컨테이너(혹은 빈)은 스프링 컨테이너 의해 적절하게 주입되며 관리된다.
+- 해당 클래스를 `스프링 컨테이너`에 등록하기 위해서 사용된다. 이렇게 등록된 컨테이너(혹은 빈)은 스프링 컨테이너 의해 적절하게 주입되며 관리된다.
 
 ### `@Compnent`의 스테레오타입(Streotype) 어노테이션
-구조상 **하위 어노테이션**이라고 표현할 수 있는 `@Compnent`의 스테레오타입 어노테이션은 `@Controller`, `@Service`, `@Repository`가 있다. 어노테이션들은 모두 `@Compenet`를 구현하고 있다.
-![이미지](../images/component.jpg)
-사실 주기능상 큰 차이는 없다. 스프링 컨테이너에 해당 컴포넌트를 등록하는게 주된 목적이다. 때문에 각 어노테이션 대신 `@Compnent`를 사용해도 문제가 없기는 하다.
+- 구조상 **하위 어노테이션**이라고 표현할 수 있는 `@Compnent`의 스테레오타입 어노테이션은 `@Controller`, `@Service`, `@Repository`가 있다. 
+- 어노테이션들은 모두 `@Compenet`를 구현하고 있다.
+- ![이미지](../images/component.jpg)
+- 사실 주기능상 큰 차이는 없다. 스프링 컨테이너에 해당 컴포넌트를 등록하는게 주된 목적이다. 때문에 각 어노테이션 대신 `@Compnent`를 사용해도 문제가 없기는 하다.
 
 ### `@Controller`, `@Service`, `@Repository`의 차이
-위에서 언급했던대로 기능상 큰 차이는 없다. 다만, 적절한 의미의 어노테이션을 붙힘으로써 각 클래스들이 도구가 처리하는데 더 적합하도록 할 수 있고 관점에 더 연관성이 있게 한 수 있다. 예를 들어 이러한 스테레오타입 어노테이션은 포인트컷에 대한 이상적인 타겟을 만든다.
+- 위에서 언급했던대로 기능상 큰 차이는 없다. 다만, 적절한 의미의 어노테이션을 붙힘으로써 각 클래스들이 도구가 처리하는데 더 적합하도록 할 수 있고 관점에 더 연관성이 있게 한 수 있다. 예를 들어 이러한 스테레오타입 어노테이션은 포인트컷에 대한 이상적인 타겟을 만든다.
+- 이 장점이 드러나는게 `@Repository`인데, 해당 클래스(persistence 계층)에서 발생한 DB에 관련된 오류는 조금 더 적합하게 또는 구체적으로 변환되어 던져진다. 개발자는 이렇게 발생한 예외를 더 적절하게 처리할 수 있다.
+- 또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
-이 장점이 드러나는게 `@Repository`인데, 해당 클래스(persistence 계층)에서 발생한 DB에 관련된 오류는 조금 더 적합하게 또는 구체적으로 변환되어 던져진다. 개발자는 이렇게 발생한 예외를 더 적절하게 처리할 수 있다.
-
-또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
-
-#### :question: root context, service context 타입 별로 어디에 로드되는지
+#### :question: [@Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
 
 
 ## :heavy_check_mark: `@WebMvcTest`
@@ -156,16 +159,30 @@ public class Example {
 #### :question: 추가 장점
 
 
-## :heavy_check_mark: `@SpringBootApplication`
-- `@SpringBootConfiguration`, `@ComponentScan`, `@EnableAutoConfiguration` 3가지의 역할을 수행한다.
-- 내부적으로 2단계에 걸쳐서 빈을 등록한다.
+## :heavy_check_mark: `@SpringBootApplication`의 역할 
+- **자동-구성** 기능 
+  - Spring 은 자동으로 컴포넌트들을 구성할 수 있는 **자동-구성 기능**이 있다.
+  - 자동-구성은 자동 연결과 컴포넌트 검색이라는 스프링 기법을 기반으로 한다.
+1. **컴포넌트 검색(conponent scanning)**
+    - 자동으로 어플리케이션의 classpath에 지정된 컴포넌트를 찾은 후 Spring Application Context의 빈으로 생성할 수 있다.
+2. **자동 연결(autowiring)**
+    - 의존 관계가 있는 컴포넌트를 자동으로 다른 빈에 주입(연결)한다.
 
-#### `@ComponentScan`
+### `@SpringBootConfiguration`, `@ComponentScan`, `@EnableAutoConfiguration` 3가지의 역할을 수행한다.
+#### 1. `@SpringBootConfiguration`
+- 현재 클래스를 **구성 클래스**로 지정한다.
+- `@Configuraion` 의 특화된 형태이다.
+- 내부적으로 2단계에 걸쳐서 빈을 등록한다.
+  - 아래 어노테이션 내용 참고 
+
+#### 2. `@ComponentScan`
+- **컴포넌트 검색을 활성화**한다.
 - 현재 패키지 이하에서 `@Component` 어노테이션이 붙은 클래스를 찾아 빈으로 등록한다.
+  - 해당 클래스들을 찾아 Spring Application Context에 컴포넌트로 등록한다. 
 - `@Controller`, `@Configuration`의 내부를 보면 `@Component` 어노테이션이 붙어있다.
 
-#### `@EnableAutoConfiguration`
-- 스프링 부트 자동-구성을 활성화한다.
+#### 3. `@EnableAutoConfiguration`
+- 스프링 부트 **자동-구성을 활성화**한다.
 - 필요로 하는 컴포넌트들을 자동으로 구성하도록 스프링 부트에게 알려준다.
 - 기본적으로 설정되어 있는 빈들은 어디에 정의되어 있을까?
   - `External Library` > `spring-boot-autoconfigure`
@@ -175,24 +192,23 @@ public class Example {
     - 이러한 키값을 통하여 명시된 많은 클래스들이 AutoConfiguration의 대상이 된다.
 
 
-## :heavy_check_mark: Spring MVC
+## :heavy_check_mark: Spring MVC 개념 
 ### 본래 의문을 가진 계기
-Spring MVC 라고 한다면 Spring MVC Pattern(패턴), 혹은 Spring MVC Model(모델), Spring MVC Architecture(구조) 정도였다.
-
-그렇다면 Spring MVC Framework는 무엇일까? 내가 알고있는 Spring Framework랑 동일한 수준의 개념인가? 라는 의문이 생겼다.
+- Spring MVC 라고 한다면 Spring MVC Pattern(패턴), 혹은 Spring MVC Model(모델), Spring MVC Architecture(구조) 정도였다.
+- 그렇다면 Spring MVC Framework는 무엇일까? 내가 알고있는 Spring Framework랑 동일한 수준의 개념인가? 라는 의문이 생겼다.
 
 ### 결론
-딱히 그런건 아니다. Spring Framework에서 MVC 패턴을 지원하는 모듈이 존재하고 이를 이르러 Spring MVC Framework라고 표현하는 것. 작게 보면 그 안의 모듈도 프레임워크라고 할 수 있다.
+- 딱히 그런건 아니다. Spring Framework에서 MVC 패턴을 지원하는 모듈이 존재하고 이를 이르러 Spring MVC Framework라고 표현하는 것. 작게 보면 그 안의 모듈도 프레임워크라고 할 수 있다.
 
 ### MVC
 #### 무엇인가?
-Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스템에서 각 역할을 어떻게 나눌지에 대한 이슈가 있을텐데, MVC는 그 중에서도 일반화어 널리 쓰이는 패턴 중 하나이다.
-- Model
-    - 모델은 앱이 포함해야할 데이터가 무엇인지를 정의한다. 데이터의 상태가 변경되면 모델을 일반적으로 뷰에게 알리며(따라서 필요한대로 화면을 변경할 수 있다) 가끔 컨트롤러에게 알리기도 한다. (업데이트된 뷰를 제거하기 위해 다른 로직이 필요한 경우).
-- View
-    - 뷰는 앱의 데이터를 보여주는 방식을 정의한다.
-- Controller
-    - 컨트롤러는 앱의 사용자로부터의 입력에 대한 응답으로 모델 및/또는 뷰를 업데이트하는 로직을 포함한다. 단순히 데이터를 다른 형태로 나타내기 위해 뷰를 업데이트하고 싶을 수도 있다. 이런 경우에 컨트롤러는 모델을 업데이트할 필요 없이 바로 처리할 수 있다.
+- Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스템에서 각 역할을 어떻게 나눌지에 대한 이슈가 있을텐데, MVC는 그 중에서도 일반화어 널리 쓰이는 패턴 중 하나이다.
+  - Model
+      - 모델은 앱이 포함해야할 데이터가 무엇인지를 정의한다. 데이터의 상태가 변경되면 모델을 일반적으로 뷰에게 알리며(따라서 필요한대로 화면을 변경할 수 있다) 가끔 컨트롤러에게 알리기도 한다. (업데이트된 뷰를 제거하기 위해 다른 로직이 필요한 경우).
+  - View
+      - 뷰는 앱의 데이터를 보여주는 방식을 정의한다.
+  - Controller
+      - 컨트롤러는 앱의 사용자로부터의 입력에 대한 응답으로 모델 및/또는 뷰를 업데이트하는 로직을 포함한다. 단순히 데이터를 다른 형태로 나타내기 위해 뷰를 업데이트하고 싶을 수도 있다. 이런 경우에 컨트롤러는 모델을 업데이트할 필요 없이 바로 처리할 수 있다.
 
 #### 왜 쓰나?
 - 사용자가 보는 페이지, 데이터 처리, 그리고 이 2가지를 중간에서 제어하는 컨트롤, 이 3가지로 구성되는 하나의 애플리케이션을 만들면 각각 맡은바에만 집중을 할 수 있게 된다.
@@ -204,7 +220,7 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 - https://gmlwjd9405.github.io/2018/12/20/spring-mvc-framework.html
 
 
-## :heavy_check_mark: gradle 키워드
+## :heavy_check_mark: gradle dependencies 키워드
 ### build.gradle 기본 구조
 ```
 plugins {
@@ -295,7 +311,7 @@ dependencies {
     - final 또는 @NonNull 필드 값을 파라미터로 받는 생성자가 만들어지며, 
     - toStirng, equals, hashCode 메소드가 자동으로 생성된다. 
 
-#### :question: 언제 어떻게 생성되는지
+#### :question: [Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
 
 #### :link: Reference
 - https://www.daleseo.com/lombok-popular-annotations/
@@ -469,16 +485,17 @@ void hashcode_menu() {
 
 ## :heavy_check_mark: `@RequestMapping` 하위 어노테이션
 ### 의문을 가진 계기
-`@RequestMapping`의 하위 어노테이션을 보고 언젠가 한번 HTTP Method 중에서 `PUT`과 `DELETE`가 보안에 취약하다는 내용을 본적이 있고 그 진위여부 혹은 이유에 대해 의문이 생겼다.
-- https://okky.kr/article/395308?note=1244284
-- https://hello-nanam.tistory.com/75
+- `@RequestMapping`의 하위 어노테이션을 보고 언젠가 한번 HTTP Method 중에서 `PUT`과 `DELETE`가 보안에 취약하다는 내용을 본적이 있고 그 진위여부 혹은 이유에 대해 의문이 생겼다.
+  - https://okky.kr/article/395308?note=1244284
+  - https://hello-nanam.tistory.com/75
+- 예를들어 위와 같은 글들
 
-예를들어 위와 같은 글들
+- 단, client 에서 HTTP Method 중에서 제공하지 않는 
+어떤 HTTP 프록시는 임시적인 HTTP 메소드나 새로운 HTTP 메소드 (PATCH 같은) 를 지원하지 않는다. 그런 경우에 프로토콜 전체를 위반하는 방식으로 HTTP 메소드를 다른 HTTP 메소드로 “프록시” 하는 것이 가능하다.
 
 ### 결론
-보안상 PUT/DELETE를 사용하지 않는다는 말은 거짓이다.
-
-Java 언어로 된 Tomcat 서버가 있듯이 C++ 언어로 된 Micorsoft Internet Information Service (IIS)라는 서버가 있다. 그리고 WebDAV라는 프로토콜이 있는데 웹을 읽고 쓰기가 가능한 매개체로 만들어주는 HTTP의 확장된 프로토콜이다. IIS와 WebDAV 프로토콜을 같이 사용하게 될 때, 다수의 취약점이 발견되었는데 이 취약점들을 피하기 위해 임시방편으로 PUT과 DELETE 사용을 하지않게 한 것이 PUT, DELETE를 사용하면 보안상 취약하다라고 와전된 것이다.
+- 보안상 PUT/DELETE를 사용하지 않는다는 말은 거짓이다.
+  - Java 언어로 된 Tomcat 서버가 있듯이 C++ 언어로 된 Micorsoft Internet Information Service (IIS)라는 서버가 있다. 그리고 WebDAV라는 프로토콜이 있는데 웹을 읽고 쓰기가 가능한 매개체로 만들어주는 HTTP의 확장된 프로토콜이다. IIS와 WebDAV 프로토콜을 같이 사용하게 될 때, 다수의 취약점이 발견되었는데 이 취약점들을 피하기 위해 임시방편으로 PUT과 DELETE 사용을 하지않게 한 것이 PUT, DELETE를 사용하면 보안상 취약하다라고 와전된 것이다.
 
 ### WebDAV(Web-based Distributed Authoring and Versioning) 프로토콜
 - 웹 서버를 표준 네트워크 드라이브로 나타낼 수 있는 HTTP 프로토콜의 확장

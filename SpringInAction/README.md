@@ -2,7 +2,7 @@
 
 ## 목차
 ### PART 1 스프링 기초
-#### [CHAPTER 1. 스프링 시작하기](/../part1/chapter1-2.md)
+#### [CHAPTER 1. 스프링 시작하기]()
 - **1. 스프링이란**
 - **2. 스프링 애플리케이션 초기 설정하기**
 - **3. 스프링 애플리케이션 작성하기**
@@ -73,6 +73,9 @@
 ---
 
 ## 스터디 일정
+
+### :pushpin: [카테고리별 정리 내용](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/subject-link.md)
+
 #### [1주차(2020.06.21)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md)
 - CHAPTER 1. 스프링 시작하기
 - CHAPTER 2. 웹 애플리케이션 개발하기
