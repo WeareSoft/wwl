@@ -55,7 +55,7 @@
 - 이 장점이 드러나는게 `@Repository`인데, 해당 클래스(persistence 계층)에서 발생한 DB에 관련된 오류는 조금 더 적합하게 또는 구체적으로 변환되어 던져진다. 개발자는 이렇게 발생한 예외를 더 적절하게 처리할 수 있다.
 - 또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
-#### :question: [@Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
+#### :question: [@Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-%EC%8A%A4%ED%85%8C%EB%A0%88%EC%98%A4-%ED%83%80%EC%9E%85-%EA%B0%81%EA%B0%81-context-root%EC%99%80-service-root-%EC%A4%91-%EC%96%B4%EB%94%94%EC%97%90-%EB%A1%9C%EB%93%9C%EB%90%98%EB%8A%94%EC%A7%80)
 
 
 ## :heavy_check_mark: `@WebMvcTest`
@@ -311,7 +311,7 @@ dependencies {
     - final 또는 @NonNull 필드 값을 파라미터로 받는 생성자가 만들어지며, 
     - toStirng, equals, hashCode 메소드가 자동으로 생성된다. 
 
-#### :question: [Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
+#### :question: [Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-lombok-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%EC%9D%B4-%EB%82%B4%EB%B6%80%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%96%B8%EC%A0%9C-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%81%EC%9A%A9%EB%90%98%EB%8A%94%EC%A7%80)
 
 #### :link: Reference
 - https://www.daleseo.com/lombok-popular-annotations/
