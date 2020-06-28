@@ -19,18 +19,22 @@
 	- 구동, 시동
 	- 컴퓨터를 시작하는 과정(부팅 과정)
 
-## :heavy_check_mark: 어노테이션
-- @Retention
+## :heavy_check_mark: 어노테이션의 개념 및 Life Time 
+- 어노테이션 이란
+  - 클래스, 인터페이스, 함수, 매개변수, 속성, 생성자에 어떤 의미를 추가할 수 있는 기능이며, 자바 컴파일러가 컴파일 시에 처리한다.
+  - 즉, 소스 코드에 추가된 어노테이션 자체는 바이트 코드로 생성되지 않고 주석으로 처리되지만, 그것이 갖는 의미대로 컴파일러가 작업을 수행해 준다.
+
+### `@Retention`
   - 어노테이션의 Life Time입니다.
-- RetentionPolicy
-  - `@Retention(RetentionPolicy.RUNTIME)`
-  - Class
-    - 바이트 코드 파일까지 어노테이션 정보를 유지한다.
-    - 하지만 리플렉션을 이용해서 어노테이션 정보를 얻을 수는 없다.
-  - Runtime
-    - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
-  - Source
-    - Compile 이후로 삭제되는 형태
+  - RetentionPolicy
+    - `@Retention(RetentionPolicy.RUNTIME)`
+    - Class
+      - 바이트 코드 파일까지 어노테이션 정보를 유지한다.
+      - 하지만 리플렉션을 이용해서 어노테이션 정보를 얻을 수는 없다.
+    - Runtime
+      - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
+    - Source
+      - Compile 이후로 삭제되는 형태
 
 #### :link: Reference
 - https://nesoy.github.io/articles/2018-04/Java-Annotation
@@ -52,7 +56,7 @@
 
 또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
-#### :question: root context, service context 타입 별로 어디에 로드되는지
+#### :question: [@Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
 
 
 ## :heavy_check_mark: `@WebMvcTest`
@@ -156,7 +160,7 @@ public class Example {
 #### :question: 추가 장점
 
 
-## :heavy_check_mark: `@SpringBootApplication`
+## :heavy_check_mark: `@SpringBootApplication`의 역할 
 - `@SpringBootConfiguration`, `@ComponentScan`, `@EnableAutoConfiguration` 3가지의 역할을 수행한다.
 - 내부적으로 2단계에 걸쳐서 빈을 등록한다.
 
@@ -175,7 +179,7 @@ public class Example {
     - 이러한 키값을 통하여 명시된 많은 클래스들이 AutoConfiguration의 대상이 된다.
 
 
-## :heavy_check_mark: Spring MVC
+## :heavy_check_mark: Spring MVC 개념 
 ### 본래 의문을 가진 계기
 Spring MVC 라고 한다면 Spring MVC Pattern(패턴), 혹은 Spring MVC Model(모델), Spring MVC Architecture(구조) 정도였다.
 
@@ -204,7 +208,7 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 - https://gmlwjd9405.github.io/2018/12/20/spring-mvc-framework.html
 
 
-## :heavy_check_mark: gradle 키워드
+## :heavy_check_mark: gradle dependencies 키워드
 ### build.gradle 기본 구조
 ```
 plugins {
@@ -295,7 +299,7 @@ dependencies {
     - final 또는 @NonNull 필드 값을 파라미터로 받는 생성자가 만들어지며, 
     - toStirng, equals, hashCode 메소드가 자동으로 생성된다. 
 
-#### :question: 언제 어떻게 생성되는지
+#### :question: [Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
 
 #### :link: Reference
 - https://www.daleseo.com/lombok-popular-annotations/
