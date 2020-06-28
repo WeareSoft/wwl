@@ -40,7 +40,7 @@
 
 구조상 **하위 어노테이션**이라고 표현할 수 있는 `@Compnent`의 스테레오타입 어노테이션은 `@Controller`, `@Service`, `@Repository`가 있다. 어노테이션들은 모두 `@Compenet`를 구현하고 있다.
 
-![이미지](./resources/chapter1-2/component.jpg)
+![이미지](../images/component.jpg)
 
 사실 주기능상 큰 차이는 없다. 스프링 컨테이너에 해당 컴포넌트를 등록하는게 주된 목적이다. 때문에 각 어노테이션 대신 `@Compnent`를 사용해도 문제가 없기는 하다.
 

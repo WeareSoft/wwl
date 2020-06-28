@@ -73,7 +73,7 @@
 ---
 
 ## 스터디 일정
-#### [1주차(2020.06.21)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/part1/chapter1-2.md)
+#### [1주차(2020.06.21)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md)
 - CHAPTER 1. 스프링 시작하기
 - CHAPTER 2. 웹 애플리케이션 개발하기
 
