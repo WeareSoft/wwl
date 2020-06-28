@@ -38,7 +38,7 @@
 
 구조상 **하위 어노테이션**이라고 표현할 수 있는 `@Compnent`의 스테레오타입 어노테이션은 `@Controller`, `@Service`, `@Repository`가 있다. 어노테이션들은 모두 `@Compenet`를 구현하고 있다.
 
-[이미지](./resources/chapter1-2/component.jpg)
+![이미지](./resources/chapter1-2/component.jpg)
 
 사실 주기능상 큰 차이는 없다. 스프링 컨테이너에 해당 컴포넌트를 등록하는게 주된 목적이다. 때문에 각 어노테이션 대신 `@Compnent`를 사용해도 문제가 없기는 하다.
 
@@ -183,6 +183,8 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 - 사용자가 보는 페이지, 데이터 처리, 그리고 이 2가지를 중간에서 제어하는 컨트롤, 이 3가지로 구성되는 하나의 애플리케이션을 만들면 각각 맡은바에만 집중을 할 수 있게 된다.
 ​- 서로 분리되어 각자의 역할에 집중할 수 있게끔하여 개발을 하고 그렇게 애플리케이션을 만든다면, 유지보수성, 애플리케이션의 확장성, 그리고 유연성이 증가하고, 중복코딩이라는 문제점 또한 사라지게 되는 것이다.
 
+### 
+
 ### Reference
 - https://developer.mozilla.org/ko/docs/Glossary/MVC
 - https://spring.io/projects/spring-framework
@@ -325,6 +327,30 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 - maven
 
 ## `@RequestMapping` 하위 어노테이션
+### 의문을 가진 계기
+
+`@RequestMapping`의 하위 어노테이션을 보고 언젠가 한번 HTTP Method 중에서 `PUT`과 `DELETE`가 보안에 취약하다는 내용을 본적이 있고 그 진위여부 혹은 이유에 대해 의문이 생겼다.
+- https://okky.kr/article/395308?note=1244284
+- https://hello-nanam.tistory.com/75
+
+예를들어 위와 같은 글들
+
+### 결론
+보안상 PUT/DELETE를 사용하지 않는다는 말은 거짓이다.
+
+Java 언어로 된 Tomcat 서버가 있듯이 C++ 언어로 된 Micorsoft Internet Information Service (IIS)라는 서버가 있다. 그리고 WebDAV라는 프로토콜이 있는데 웹을 읽고 쓰기가 가능한 매개체로 만들어주는 HTTP의 확장된 프로토콜이다. IIS와 WebDAV 프로토콜을 같이 사용하게 될 때, 다수의 취약점이 발견되었는데 이 취약점들을 피하기 위해 임시방편으로 PUT과 DELETE 사용을 하지않게 한 것이 PUT, DELETE를 사용하면 보안상 취약하다라고 와전된 것이다.
+
+### WebDAV(Web-based Distributed Authoring and Versioning) 프로토콜
+- 웹 서버를 표준 네트워크 드라이브로 나타낼 수 있는 HTTP 프로토콜의 확장
+- FTP와 곧잘 비교되며, FTP보다는 느리지만 범용성이 높고 보안성도 좋다는 장점이 있다
+
+### 해당 취약점을 악용한 예
+- https://johyungen.tistory.com/350
+
+### Reference
+ - https://blog.naver.com/lascomco/221207930956
+ - https://blog.tophoon.com/2019/01/20/rest-api.html
+ - http://haah.kr/2017/05/22/rest-the-beginning/
 
 ## Redirect, Forward 차이
 
