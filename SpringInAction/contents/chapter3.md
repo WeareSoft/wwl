@@ -6,7 +6,7 @@
 - []()
 
 
-## :heavy_check_mark: 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지
+## :heavy_check_mark: @Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지
 
 #### :link: Reference
 - []()
