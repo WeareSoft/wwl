@@ -77,7 +77,7 @@
 - CHAPTER 1. 스프링 시작하기
 - CHAPTER 2. 웹 애플리케이션 개발하기
 
-#### 2주차(2020.06.28)
+#### [2주차(2020.06.28)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
 - CHAPTER 3. 데이터로 작업하기
 
 #### 3주차(2020.07.05)
