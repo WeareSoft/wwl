@@ -295,13 +295,119 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 
 
 ## :heavy_check_mark: `Equals`, `Hashcode` 재정의
-### Equals를 재정의 해야 하는 경우
-- 
+### Q1. Equals를 재정의 해야 하는 경우
+```java
+public class Menu {
+    private final String name;
+    private final int price;
 
-### Equals를 재정의하려거든 Hashcode도 재정의해야 하는 이유 
+    public Menu(final String name, final int price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+```
+```java
+@Test
+@DisplayName("같은 객체를 equals 비교")
+void equals() {
+    //given
+    Menu friedChicken = new Menu("후라이드치킨", 16_000);
+    Menu friedChicken2 = new Menu("후라이드치킨", 16_000);
+    //when & then
+    assertThat(friedChicken).isEqualTo(friedChicken2); // Assertion Failed
+}
+```
+- equals 메서드는 주소값이 다른 객체는 서로 다른 객체로 판단
+  ```java
+  public boolean equals(Object obj) {
+          return (this == obj);
+  }
+  ```
+  - Object 클래스에 정의된 equals()는 다음과 같다.
+  - @Override로 재정의 하지 않으면 그 클래스의 인스턴스는 오직 자기 자신과만 같게 된다.
+
+#### 언제 equlas를 재정의 해야 할까?
+- **논리적 동치성**을 확인해야 하는데 상위 클래스의 equals가 논리적 동치성을 비교하도록 재정의 되어있지 않을 때
+  - 주로 **값 클래스** : Integer, String처럼 값을 표현하는 클래스
+  - 두 값 객체를 equals로 비교한다는 것은 객체가 같은지가 아니라 **값이 같은지 알고 싶은 것이다.**
+  - 꼭 필요한 경우가 아니면 equals를 재정의하지 않는다. 
+- Map의 **키**나 Set의 **요소**로 해당 객체를 저장하여 사용할 때 
+  - equals가 논리적 동치성을 확인하도록 재정의 해두면, 그 인스턴스 값의 비교가 가능하고 Map의 key와 Set의 원소로 사용할 수 있다.
+  - equals()를 재정의하지 않으면 hashcode()가 만든 해시값을 이용해 객체가 저장된 버킷을 찾을 수는 있지만 해당 객체가 자신과 같은 객체인지 값을 비교할 수 없기 때문에 null을 리턴하게 되므로 원하는 객체를 찾을 수 없다. 
+- 참고 
+  - 값 클래스 중 equals를 재정의하지 않아도 되는 경우
+    - 인스턴스가 둘 이상 만들어지지 않음을 보장하는 클래스
+    - e.g. Enum
+  - 이런 클래스에서는 논리적으로 같은 인스턴스가 2개 이상 만들어지지 않는다.
+  - 따라서 논리적 동치성과 객체 식별성이 사실상 똑같은 의미가 되고, 이런 경우 Object의 equals가 논리적 동치성까지 확인해준다고 볼 수 있다.
+
+#### 어떤 기준으로 equals를 재정의 해야 할까?
+- equals는 일반 규약을 지켜 재정의하라
+- ***Equals 메서드 규약***
+  - (null이 아닌 모든 참조값 x,y,z에 대해)
+  - **반사성(reflexivity)** : x.equals(x)는 true
+  - **대칭성(symmetry)** : x.equals(y)가 true이면 y.equals(x)도 true
+  - **추이성(transitivity)** : x.equals(y)는 true이고 y.equals(z)는 true이면 x.equals(z)는 true
+  - **일관성(consistency)** : x.equals(y)를 반복해서 호출해도 항상 true 또는 false를 반환
+  - **null-아님** : x.equals(null)는 false
+
+### Q2. Equals를 재정의하려거든 Hashcode도 재정의해야 하는 이유 
+- equals 메소드
+  - 논리적 동치성(logical equality)를 비교해야할 때 재정의
+- hashCode 메소드
+  - 두 객체가 같은 객체인지, 동일성(identity)를 비교해야할 때 재정의
+  - 참조하는 메모리 주소가 같은지
+
+#### Hashcode도 재정의해야 하는 이유 
+```java
+Map<Menu,Integer> menus = new HashMap<>();
+menus.put(new Menu("치킨", 16_000), 10);
+menus.put(new Menu("감자튀김", 8_000), 2);
+menus.put(new Menu("콜라", 2_000), 7);
+ 
+Menu menu = new Menu("치킨", 16_000);
+int count = menus.get(menu);
+```
+```java
+@Test
+@DisplayName("같은 값 객체는 해시값이 같은지 체크")
+void hashcode_menu() {
+    //given
+    Map<Menu, Integer> menus = new HashMap<>();
+    menus.put(new Menu("치킨", 16_000), 10);
+    menus.put(new Menu("감자튀김", 8_000), 2);
+    menus.put(new Menu("콜라", 2_000), 7);
+    //when
+    Menu menu = new Menu("치킨", 16_000);
+    int count = menus.get(menu);
+    //then
+    assertThat(count).isEqualTo(10); // NullPointerException
+}
+```
+
+#### 언제 hashcode 재정의 해야 할까?
+- HashMap의 key 값으로 해당 객체를 사용할 경우 재정의
+  - why?
+    - hashcode()를 재정의 하지 않으면 같은 값 객체라도 해시값이 다를 수 있다. 
+    - 따라서 HashTable에서 해당 객체가 저장된 버킷을 찾을 수 없다.
+
+#### 어떤 기준으로 hashcode를 재정의 해야 할까?
+- ***HashCode 메서드 규약***
+  - equals 비교에 사용되는 정보가 변경되지 않았다면, 애플리케이션이 실행되는 동안 객체의 hashCode 메서드는 몇 번을 호출해도 항상 같은 값을 반환한다. 
+    - (단, 애플리케이션을 다시 실행하면 값은 바뀔 수 있다.)
+  - equals(Object)가 두 객체를 같다고 판단했으면, 두 객체의 hashCode 값은 항상 같다.
+  - 하지만 equals(Object)가 두 객체를 다르다고 판단했더라도, 두 객채의 hashCode 값은 같을 수 있다. (해시 충돌)
+    - 해시 테이블에서 해시 충돌이 발생하면 버킷에 LinkedList 형태로 객체를 추가한다.
+    - 단, 다른 객체에 대해서는 다른 값을 반환해야 해시 테이블의 성능이 좋아진다.
+    - 좋은 해시 함수라면 서로 다른 인스턴스에 대해 다른 hashCode를 반환한다.
+
+#### 결론 
+- equals()와 hashcode()는 항상 같이 재정의 한다.
+- 값 객체(Value Object)에는 equals()와 hashCode()를 재정의하자
 
 #### :link: Reference
-- https://www.daleseo.com/lombok-popular-annotations/
+- [Equals, Hashcode 재정의 참고](https://velog.io/@sonypark/Java-equals-hascode-%EB%A9%94%EC%84%9C%EB%93%9C%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%9E%AC%EC%A0%95%EC%9D%98%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C)
 
 
 ## :heavy_check_mark: slf4j 로깅 종류
