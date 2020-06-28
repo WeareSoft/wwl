@@ -1,5 +1,5 @@
-# CHAPTER 1. 스프링 시작하기 - CHAPTER 2. 웹 애플리케이션 개발하기
-## 부트스트랩
+# CHAPTER 1. 스프링 시작하기 - CHAPTER 2. 웹 애플리케이션 개발하기 
+## :heavy_check_mark: 부트스트랩
 - BIOS (Basic Input/Output System)
   - PC 부팅 과정 중 하드웨어와 관련된 작업을 담당
   - 전원이 켜짐과 동시에 프로세서가 가장 먼저 실행하는 코드
@@ -18,7 +18,7 @@
 	- 구동, 시동
 	- 컴퓨터를 시작하는 과정(부팅 과정)
 
-## 어노테이션
+## :heavy_check_mark: 어노테이션
 - @Retention
   - 어노테이션의 Life Time입니다.
 - Class
@@ -28,9 +28,11 @@
   - 바이트 코드 파일까지 어노테이션 정보를 유지하면서 리플렉션을 이용해서 런타임시에 어노테이션 정보를 얻을 수 있다.
 - Source
   - Compile 이후로 삭제되는 형태
-- <https://nesoy.github.io/articles/2018-04/Java-Annotation>
 
-## `@Component` 하위 어노테이션의 의미와 역할
+#### :link: Reference
+- https://nesoy.github.io/articles/2018-04/Java-Annotation
+
+## :heavy_check_mark: `@Component` 하위 어노테이션의 의미와 역할
 ###  `@Compnent`란?
 해당 클래스를 `스프링 컨테이너`에 등록하기 위해서 사용된다. 이렇게 등록된 컨테이너(혹은 빈)은 스프링 컨테이너 의해 적절하게 주입되며 관리된다.
 
@@ -49,7 +51,7 @@
 
 또한 스프링은 차기 릴리즈 버전에서 각 스테레오타입 어노테이션에 추가적인 의미가 생길 가능성도 있다고 말한다. 어떤 기능이 추가될지 모르니 각 역할 또는 의미에 맞게 사용하길 권장하는 것 같다.
 
-## `@WebMvcTest`
+## :heavy_check_mark: `@WebMvcTest`
 - @Controller, @ControllerAdvice, @JsonComponent, Converter/GenericConverter, Filter, WebMvcConfigurer, HandlerMethodArgumentResolver beans들만 등록이 된 상태로 테스트가 진행된다.
 - 우리가 잘 알고 있는 @Component, @Service or @Repository beans들은 등록되지 않은 상태로 테스트가 진행된다.
 - 아래의 Configuration이 자동등록되는 것들이다.
@@ -80,10 +82,12 @@ org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfigura
 org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration
 org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration
 ```
-- [Reference](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/autoconfigure/web/servlet/WebMvcTest.html)
-- <https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#test-auto-configuration-slices>
 
-## 의존성을 주입(DI)하는 방법
+#### :link: Reference
+- [Reference](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/autoconfigure/web/servlet/WebMvcTest.html)
+- https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#test-auto-configuration-slices
+
+## :heavy_check_mark: 의존성을 주입(DI)하는 방법
 #### 1. 생성자 주입(Constructor Injection)
 - 스프링 팀에서 권장하는 방식
 ```java
@@ -144,12 +148,14 @@ public class Example {
   - 필드 주입과 수정자 주입은 해당 필드를 final로 선언할 수 없다.
   - 따라서 초기화 후에 빈 객체가 변경될 수 있지만 생성자 주입은 필드를 final로 선언할 수 있다.
 
-## `@SpringBootApplication`
+## :heavy_check_mark: `@SpringBootApplication`
 - `@SpringBootConfiguration`, `@ComponentScan`, `@EnableAutoConfiguration` 3가지의 역할을 수행한다.
 - 내부적으로 2단계에 걸쳐서 빈을 등록한다.
+
 #### `@ComponentScan`
 - 현재 패키지 이하에서 `@Component` 어노테이션이 붙은 클래스를 찾아 빈으로 등록한다.
 - `@Controller`, `@Configuration`의 내부를 보면 `@Component` 어노테이션이 붙어있다.
+
 #### `@EnableAutoConfiguration`
 - 스프링 부트 자동-구성을 활성화한다.
 - 필요로 하는 컴포넌트들을 자동으로 구성하도록 스프링 부트에게 알려준다.
@@ -160,7 +166,7 @@ public class Example {
     - 또한 해당 클래스들은 상단에 `@Configuration`이라는 어노테이션을 가지고 있다.
     - 이러한 키값을 통하여 명시된 많은 클래스들이 AutoConfiguration의 대상이 된다.
 
-## Spring MVC
+## :heavy_check_mark: Spring MVC
 ### 본래 의문을 가진 계기
 Spring MVC 라고 한다면 Spring MVC Pattern(패턴), 혹은 Spring MVC Model(모델), Spring MVC Architecture(구조) 정도였다.
 
@@ -185,12 +191,12 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
 
 ### 
 
-### Reference
+#### :link: Reference
 - https://developer.mozilla.org/ko/docs/Glossary/MVC
 - https://spring.io/projects/spring-framework
 - https://gmlwjd9405.github.io/2018/12/20/spring-mvc-framework.html
 
-## gradle 키워드
+## :heavy_check_mark: gradle 키워드
 
 - build.gradle 기본 구조
   ```
@@ -270,63 +276,85 @@ Model, View, Controller의 약자로 디자인 패턴 중 하나. 어떤 시스�
   ```
 
 
-## `@RequiredContructor`, `@Data`
+## :heavy_check_mark: `@RequiredContructor`, `@Data`
+- `@NoArgsConstructor` 
+  - 파라미터가 없는 기본 생성자를 생성
+- `@AllArgsConstructor` 
+  - 모든 필드 값을 파라미터로 받는 생성자 생성
+- `@RequiredArgsConstructor` 
+  - final이나 @NonNull인 필드 값만 파라미터로 받는 생성자 생성 
+- `@Data`
+  - @Getter, @Setter, @RequiredArgsConstructor, @ToString, @EqualsAndHashCode을 한꺼번에 설정
+  - 클래스 레벨에서 @Data 어노테이션을 붙여주면, 
+    - 모든 필드를 대상으로 접근자와 설정자가 자동으로 생성되고, 
+    - final 또는 @NonNull 필드 값을 파라미터로 받는 생성자가 만들어지며, 
+    - toStirng, equals, hashCode 메소드가 자동으로 생성된다. 
 
-## `equals`, `hashCode` 재정의
+#### :link: Reference
+- https://www.daleseo.com/lombok-popular-annotations/
 
-## slf4j 로깅 종류
 
-- Logging이란?
-  - 정보 제공을 위한 기록인 Log를 생성하는 작업
-<br>
+## :heavy_check_mark: `Equals`, `Hashcode` 재정의
+### Equals를 재정의 해야 하는 경우
+- 
 
+### Equals를 재정의하려거든 Hashcode도 재정의해야 하는 이유 
+
+#### :link: Reference
+- https://www.daleseo.com/lombok-popular-annotations/
+
+
+## :heavy_check_mark: slf4j 로깅 종류
+### Logging이란?
+- 정보 제공을 위한 기록인 Log를 생성하는 작업
 - 대표적인 Logging 방법과 특징
-  - System.out.println();
-    - 가장 간단한 방법            
-    - 출력하는 로그의 양이나 로그 수준 지정 불가능            
-    - 로그 파일 저장 과정 불편            
-    - 낮은 성능            
-  - java.util.logging        
-	  - JDK 1.4부터 포함된 표준 로깅 API            
-    - 기본 기능만 필요할 경우 외부 라이브러리 추가 없이 로깅 가능 (기능 부족)            
-    - 다른 라이브러리에 비해 느린 속도            
-    - 로그 레벨 : SEVERE(심각), WARNING(경고), INFO(정보)           
-  - Apache Commons Logging
-    -  구성 추상 클래스            
-    -  Log : 기본 로거 인터페이스                
-    -   LogFactory : Log 객체를 생성하는 추상 클래스                
-    -   로그 레벨 : FATAL, ERROR, WARN, INFO, DEBUG, TRACE            
-  - Log4j (Log4j2)
-	  - 구성 컴포넌트
-	  - logger : 로그 기록
-	  - appender : 로그 기록 위치 지정(파일, 콘솔, DB ...)
-	  - layout : 로그 스타일 지정
-	  - 여러 종류의 appender 지원
-	  - 최적화된 퍼포먼스
-	  - 로그 레벨 : ALL, TRACE, DEBUG, INFO, WARN, ERROR, FATAL            
-  -   Logback
-	  - Log4j의 단점 개선
-	  - 스트링 부트 기본 로그 객체
-	  - 여러 종류의 appender 지원
-	  - 로그 레벨 : ERROR, WARN, INFO, DEBUG, TRACE
-<br>
+- System.out.println();
+  - 가장 간단한 방법            
+  - 출력하는 로그의 양이나 로그 수준 지정 불가능            
+  - 로그 파일 저장 과정 불편            
+  - 낮은 성능            
+- java.util.logging        
+  - JDK 1.4부터 포함된 표준 로깅 API            
+  - 기본 기능만 필요할 경우 외부 라이브러리 추가 없이 로깅 가능 (기능 부족)            
+  - 다른 라이브러리에 비해 느린 속도            
+  - 로그 레벨 : SEVERE(심각), WARNING(경고), INFO(정보)           
+- Apache Commons Logging
+  -  구성 추상 클래스            
+  -  Log : 기본 로거 인터페이스                
+  -   LogFactory : Log 객체를 생성하는 추상 클래스                
+  -   로그 레벨 : FATAL, ERROR, WARN, INFO, DEBUG, TRACE            
+- Log4j (Log4j2)
+  - 구성 컴포넌트
+  - logger : 로그 기록
+  - appender : 로그 기록 위치 지정(파일, 콘솔, DB ...)
+  - layout : 로그 스타일 지정
+  - 여러 종류의 appender 지원
+  - 최적화된 퍼포먼스
+  - 로그 레벨 : ALL, TRACE, DEBUG, INFO, WARN, ERROR, FATAL            
+-   Logback
+  - Log4j의 단점 개선
+  - 스트링 부트 기본 로그 객체
+  - 여러 종류의 appender 지원
+  - 로그 레벨 : ERROR, WARN, INFO, DEBUG, TRACE
 
-- SLF4J (Simple Logging Facade for Java)
-	- 다양한 로깅 프레임워크에 대한 추상화 (인터페이스)
-	- 로깅 프레임워크를 통일된 방식으로 사용할 수 있는 기능 제공
-	- slf4j-api.jar 의존성을 추가하여 API 활성화
-		- 인터페이스이기 때문에 단독으로 사용 불가능
-		- 반드시 로깅 프레임워크 구현체 필요
-	- 사용하는 로깅 프레임워크 종류에 따라 각각 바인딩용 jar 의존성 추가하여 SLF4J 인터페이스와 구현체 연결
+### SLF4J (Simple Logging Facade for Java)
+- 다양한 로깅 프레임워크에 대한 추상화 (인터페이스)
+- 로깅 프레임워크를 통일된 방식으로 사용할 수 있는 기능 제공
+- slf4j-api.jar 의존성을 추가하여 API 활성화
+  - 인터페이스이기 때문에 단독으로 사용 불가능
+  - 반드시 로깅 프레임워크 구현체 필요
+- 사용하는 로깅 프레임워크 종류에 따라 각각 바인딩용 jar 의존성 추가하여 SLF4J 인터페이스와 구현체 연결
 ![slf4j]('')
-	- slf4j 사용 시, 어떤 로깅 라이브러리를 사용해도 같은 방법으로 로깅 가능
-	- 추후 로깅 라이브러리 변경 시 애플리케이션 코드 변경 작업 불필요 (jar만 교체)
+- slf4j 사용 시, 어떤 로깅 라이브러리를 사용해도 같은 방법으로 로깅 가능
+- 추후 로깅 라이브러리 변경 시 애플리케이션 코드 변경 작업 불필요 (jar만 교체)
 
-## jar 실행 방법, 옵션
+
+## :heavy_check_mark: jar 실행 방법, 옵션
 - gradle
 - maven
 
-## `@RequestMapping` 하위 어노테이션
+
+## :heavy_check_mark: `@RequestMapping` 하위 어노테이션
 ### 의문을 가진 계기
 
 `@RequestMapping`의 하위 어노테이션을 보고 언젠가 한번 HTTP Method 중에서 `PUT`과 `DELETE`가 보안에 취약하다는 내용을 본적이 있고 그 진위여부 혹은 이유에 대해 의문이 생겼다.
@@ -347,16 +375,44 @@ Java 언어로 된 Tomcat 서버가 있듯이 C++ 언어로 된 Micorsoft Intern
 ### 해당 취약점을 악용한 예
 - https://johyungen.tistory.com/350
 
-### Reference
- - https://blog.naver.com/lascomco/221207930956
- - https://blog.tophoon.com/2019/01/20/rest-api.html
- - http://haah.kr/2017/05/22/rest-the-beginning/
+#### :link: Reference
+- https://blog.naver.com/lascomco/221207930956
+- https://blog.tophoon.com/2019/01/20/rest-api.html
+- http://haah.kr/2017/05/22/rest-the-beginning/
 
-## Redirect, Forward 차이
+## :heavy_check_mark: Redirect, Forward 차이
+### Redirect 과정 
+- Client가 Server에 Resource 요청
+- Server는 상태값 3XX와 함께 Redirect 주소[Location]를 같이 전송 
+- Client는 **새로운 주소값**으로 다시 Resource를 요청
+- Server는 새로운 Resource를 응답
 
-## DevTools JVM 클래스로더
+### Forward 과정 
+- Client가 Server에 Resource 요청
+- Server는 Web Container(Tomcat, Jboss등)에 의해 LoginServlet에서 HelloServlet로 forward 수행 
+- 이때 객체 정보는 Request Scope, Session Scope, Page Scope를 통해 전달
+- Server는 최종적으로 HelloServlet의 결과를 응답
+
+### 결론
+- URL의 변화여부가 필요하다면 **Redirect**를 사용
+  - Client에서 새로운 Location에 대해 요청을 하기 때문에 Web Container 내부에서 자원을 공유할 수 없다. 
+  - 자원을 공유하기 위해선 QueryString를 생성해야 한다.
+- 객체를 재사용하거나 공유해야한다면 **Forward**를 사용
+  - Client 입장에서는 한번의 요청으로 결과물을 받아볼 수 있다. 
+  - Forward는 Web Container의 내부에서 이동하기 때문에 request와 response 객체 공유 가능
+
+#### :link: Reference
+- https://nesoy.github.io/articles/2018-04/Redirect-Forward
+
+## :heavy_check_mark: DevTools JVM 클래스로더
+
+#### :link: Reference
+- 
 
 ---
+
+### :house: [SpringInAction Home](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
+
 
 ### Reference
 - https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection
