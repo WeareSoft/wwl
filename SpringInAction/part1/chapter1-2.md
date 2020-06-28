@@ -511,9 +511,17 @@ Java 언어로 된 Tomcat 서버가 있듯이 C++ 언어로 된 Micorsoft Intern
 - https://nesoy.github.io/articles/2018-04/Redirect-Forward
 
 ## :heavy_check_mark: DevTools JVM 클래스로더
+- base class loader
+	- 라이브러리들, 우리가 바꾸지 않는 의존성을 읽어들이는 class loader
+- restart class loader
+	- 애플리케이션을 읽어들이는 클래스 로더
+
 
 #### :link: Reference
-- 
+- <https://brunch.co.kr/@springboot/212>
+- <https://homoefficio.github.io/2018/10/13/Java-클래스로더-훑어보기/>
+- <https://docs.oracle.com/javase/9/docs/api/java/lang/ClassLoader.html>
+- <https://www.baeldung.com/java-classloaders>
 
 ---
 
