@@ -1,11 +1,10 @@
 # Nesoy
-#### 일주일 단위 WORK FLOW
-- 1개의 블로그 쓰기
-- 출근 길에 책 읽어보도록 노력하자.
+## 2020-07-05
+- Spring Action Chapter 3 질문 리스트 정리하기
 
 ## 2020-06-22
-- Spring Action Chapter 3 읽기
-- 질문 리스트 정리하기
+- ~~Spring Action Chapter 3 읽기~~
+- ~~질문 리스트 정리하기~~
 
 ## 2020-06-15
 - ~~Spring Action Chapter 1, 2 읽기~~
