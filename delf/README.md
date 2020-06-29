@@ -1,4 +1,17 @@
 # Delf
+# 2020-07-05
+- 스터디
+    - root context, service context
+    - 순환참조에 대하여
+    - 직렬화에 대하여
+    - JDBC connection
+    - checked exception 과 unchecked exception, throw와 throws의 차이
+- 블로그
+  - 스터디 주제 기반(2개)
+  - 면접용 질문(1개)
+- 알고리즘
+  - 2(+1)문제 풀고 정리
+
 # 2020-06-27
 - 스터디 
   - 챕터1 리스트업 정리 (화~금)
