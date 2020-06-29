@@ -1,6 +1,21 @@
 # Doy
 
-## 2020-06-22
+## 2020-07-05
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 3 정리
+    - @WebMvcTest와 @MockMvcTest 의 차이
+    - 테스트 관련 어노테이션의 개념과 종류 및 사용 예시 
+      - SpringBoot 
+      - Spring
+      - JUnit
+      - Mockito
+    - CGLIB와 Dynamic Proxy 의 개념 및 차이
+    - gradle, maven
+### 개인 할 일
+- 이력서 작성 기술 공부
+
+## 2020-06-28
 ### 스프링 스터디
 - 스프링 인 액션
   - CHAPTER 1-2 정리
@@ -15,7 +30,7 @@
   - query
 - 이력서
 
-## 2020-06-15
+## 2020-06-21
 ### 스프링 스터디
 - 스프링 인 액션
   - CHAPTER 1. 스프링 시작하기
