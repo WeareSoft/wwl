@@ -152,9 +152,22 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이 
+특징|Checked Exception|Unchecked Exception
+:---|:---|:---
+처리 여부|반드시 예외처리 해야함|예외처리 하지 않아도 됨
+트랜잭션 Rollback 여부|Rollback 안됨|Rollback 진행
+대표 Exception|`IOException`, `SQLException`|`NullPointException`, `IllegalArgumentException`
+
+
+### Unchecked Exception
+명시적인 예외 처리를 강제하지 않는 특징이 있기 때문에 Unchecked Exception이라 하며, `catch`로 잡거나 `throw`로 호출한 메서드로 예외를 던지지 않아도 상관 없다.
+
+### Checked Exception
+반드시 명시적으로 처리해야 하기 때문에 Checked Exception이라고 하며, `try` `catch`를 해서 에러를 잡든 `throws`를 통해서 호출한 메서드로 예외를 던져야 한다.
+
 
 #### :link: Reference
-- []()
+- [[Yun Blog] Checked Exception을 대하는 자세](https://cheese10yun.github.io/checked-exception/)
 
 
 ## :heavy_check_mark: throw와 throws의 차이
