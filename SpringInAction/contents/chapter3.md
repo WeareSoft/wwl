@@ -1,6 +1,5 @@
 # CHAPTER 3. 데이터로 작업하기
 
-<<<<<<< HEAD
 ## :heavy_check_mark: root context와 servlet context의 개념과 차이
  이 내용은 다음 항목과도 관련이 있다
 
@@ -37,12 +36,7 @@
 - https://www.moongchi.dev/?p=205
 - https://m.blog.naver.com/writer0713/220701612165
 - https://linked2ev.github.io/spring/2019/09/15/Spring-5-%EC%84%9C%EB%B8%94%EB%A6%BF%EA%B3%BC-%EC%8A%A4%ED%94%84%EB%A7%81%EC%97%90%EC%84%9C-Context(%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8)%EB%9E%80/
-=======
-## :heavy_check_mark: Context Root와 Service Root의 개념과 차이
 
-#### :link: Reference
-- []()
->>>>>>> f0c3d0ac79bcadfe839fd13f0f85cb76851b25d5
 
 
 ## :heavy_check_mark: @Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지
@@ -74,7 +68,6 @@
 - []()
 
 
-<<<<<<< HEAD
 ## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점 
 ### # 순환 참조
 두 모듈이 있을 때, 각 모듈이 서로에 대한 의존성을 갖고 참조하며 호출하는 것을 말한다. 또는 두 개 이상의 모듈에서 각 모듈의 참조가 계속 순환하는 것을 말한다.
@@ -116,9 +109,6 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 ### 항상 나쁜건 아니다?
 유용할 때도 있다고 한다. 하지만 대부분의 경우 안티패턴인건 사실. 궁금하다면 아래 링크를 참조
 - [[Stack Overflow]What's wrong with circular references?](https://stackoverflow.com/questions/1897537/why-are-circular-references-considered-harmful)
-=======
-## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점
->>>>>>> f0c3d0ac79bcadfe839fd13f0f85cb76851b25d5
 
 #### :link: Reference
 - https://medium.com/webeveloper/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-circular-reference-d01c6beee7e6
