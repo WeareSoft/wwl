@@ -1,5 +1,6 @@
 # CHAPTER 3. 데이터로 작업하기
 
+<<<<<<< HEAD
 ## :heavy_check_mark: root context와 servlet context의 개념과 차이
  이 내용은 다음 항목과도 관련이 있다
 
@@ -36,6 +37,12 @@
 - https://www.moongchi.dev/?p=205
 - https://m.blog.naver.com/writer0713/220701612165
 - https://linked2ev.github.io/spring/2019/09/15/Spring-5-%EC%84%9C%EB%B8%94%EB%A6%BF%EA%B3%BC-%EC%8A%A4%ED%94%84%EB%A7%81%EC%97%90%EC%84%9C-Context(%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8)%EB%9E%80/
+=======
+## :heavy_check_mark: Context Root와 Service Root의 개념과 차이
+
+#### :link: Reference
+- []()
+>>>>>>> f0c3d0ac79bcadfe839fd13f0f85cb76851b25d5
 
 
 ## :heavy_check_mark: @Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지
@@ -51,8 +58,8 @@
 - []()
 
 
-## :heavy_check_mark: 테스트 관련 어노테이션의 개념과 종류 및 사용 예시 
-### SpringBoot 
+## :heavy_check_mark: 테스트 관련 어노테이션의 개념과 종류 및 사용 예시
+### SpringBoot
 ### Spring
 ### JUnit
 ### Mockito
@@ -67,6 +74,7 @@
 - []()
 
 
+<<<<<<< HEAD
 ## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점 
 ### # 순환 참조
 두 모듈이 있을 때, 각 모듈이 서로에 대한 의존성을 갖고 참조하며 호출하는 것을 말한다. 또는 두 개 이상의 모듈에서 각 모듈의 참조가 계속 순환하는 것을 말한다.
@@ -108,6 +116,9 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 ### 항상 나쁜건 아니다?
 유용할 때도 있다고 한다. 하지만 대부분의 경우 안티패턴인건 사실. 궁금하다면 아래 링크를 참조
 - [[Stack Overflow]What's wrong with circular references?](https://stackoverflow.com/questions/1897537/why-are-circular-references-considered-harmful)
+=======
+## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점
+>>>>>>> f0c3d0ac79bcadfe839fd13f0f85cb76851b25d5
 
 #### :link: Reference
 - https://medium.com/webeveloper/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-circular-reference-d01c6beee7e6
@@ -145,11 +156,10 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - []()
 
 
-## :heavy_check_mark: Logback 설정 방법(e.g. 출력포맷) 및 장점 
+## :heavy_check_mark: Logback 설정 방법(e.g. 출력포맷) 및 장점
 
 #### :link: Reference
 - []()
-
 
 ## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이 
 특징|Checked Exception|Unchecked Exception
@@ -158,13 +168,11 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 트랜잭션 Rollback 여부|Rollback 안됨|Rollback 진행
 대표 Exception|`IOException`, `SQLException`|`NullPointException`, `IllegalArgumentException`
 
-
 ### Unchecked Exception
 명시적인 예외 처리를 강제하지 않는 특징이 있기 때문에 Unchecked Exception이라 하며, `catch`로 잡거나 `throw`로 호출한 메서드로 예외를 던지지 않아도 상관 없다.
 
 ### Checked Exception
 반드시 명시적으로 처리해야 하기 때문에 Checked Exception이라고 하며, `try` `catch`를 해서 에러를 잡든 `throws`를 통해서 호출한 메서드로 예외를 던져야 한다.
-
 
 #### :link: Reference
 - [[Yun Blog] Checked Exception을 대하는 자세](https://cheese10yun.github.io/checked-exception/)
@@ -208,25 +216,63 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: @GenerateValue Strategy 종류 및 차이
+- AUTO(default)
+    - JPA 구현체가 자동으로 생성 전략을 결정한다.
+- IDENTITY
+    - 기본키 생성을 데이터베이스에 위임한다. 예를 들어 MySQL의 경우 AUTO_INCREMENT를 사용하여 기본키를 생성한다.
+- SEQUENCE
+    - 데이터베이스의 특별한 오브젝트 시퀀스를 사용하여 기본키를 생성한다.
+- TABLE
+    - 데이터베이스에 키 생성 전용 테이블을 하나 만들고 이를 사용하여 기본키를 생성한다.
+
+- 추가적으로 Id의 타입에 따라 결정된다.
 
 #### :link: Reference
-- []()
+- <https://gmlwjd9405.github.io/2019/08/12/primary-key-mapping.html>
+- [하이버네이트 Auto Key 전략](https://www.popit.kr/%ED%95%98%EC%9D%B4%EB%B2%84%EB%84%A4%EC%9D%B4%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%90%EB%8F%99-%ED%82%A4-%EC%83%9D%EC%84%B1-%EC%A0%84%EB%9E%B5%EC%9D%84-%EA%B2%B0%EC%A0%95%ED%95%98/)
+- [GenerateValue 주의할점](https://semtax.tistory.com/94)
+- [Spring Boot Data JPA 2.0 에서 id Auto_increment 문제 해결](https://jojoldu.tistory.com/295)
 
 
-## :heavy_check_mark: @Prepersist 
-
+## :heavy_check_mark: @Prepersist
+- Entity Listener의 Call Back Option
+- @PrePersist
+    - manager persist 의해 처음 호출될 때 실행됩니다.
+- @PostPersist
+    - manager persist 에 의해 실행되고 불립니다.
+    - SQL INSERT 이후에 대응될 수 있습니다.
+- @PostLoad
+    - 로드 이후에 불립니다.
+    - SQL SELECT 이후에 대응될 수 있습니다.
+- @PreUpdate
+    - SQL UPDATE 이전에 불립니다.
+- @PostUpdate
+    - SQL UPDATE 이후에 불립니다.
+- @PreRemove
+    - SQL DELETE 이전에 불립니다.
+- @PostRemove
+    - SQL DELETE 이후에 불립니다.
 #### :link: Reference
-- []()
+- <https://gs.saro.me/dev?tn=514>
+- <https://github.com/snack-news/Snack-BE/blob/master/src/main/java/com/snack/news/domain/base/BaseTimeEntity.java>
+- <https://www.baeldung.com/jpa-entity-lifecycle-events>
 
 
 ## :heavy_check_mark: CrudRepository, JpaRepository 의 차이
-
+- CrudRepository
+    - 단순히 CRUD를 지원
+- JpaRepository
+    - CrudRepository를 상속받았다.
+    - 뿐만 아니라 PagingAndSortingRepository도 존재
+- PagingAndSortingRepository
+    - 무슨 역할일까?
 #### :link: Reference
-- []()
-
+- <https://docs.spring.io/spring-data/data-commons/docs/current/api/org/springframework/data/repository/CrudRepository.html>
+- <https://docs.spring.io/spring-data/data-commons/docs/current/api/org/springframework/data/repository/PagingAndSortingRepository.html>
+- <https://docs.spring.io/spring-data/data-jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html>
 
 ## :heavy_check_mark: 직렬화(Serialize) 란
-### UID 를 사용하는 이유 
+### UID 를 사용하는 이유
 
 #### :link: Reference
 - []()
