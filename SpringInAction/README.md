@@ -2,20 +2,20 @@
 
 ## 목차
 ### PART 1 스프링 기초
-#### [CHAPTER 1. 스프링 시작하기]()
+#### [CHAPTER 1. 스프링 시작하기](./contents/chapter1-2.md)
 - **1. 스프링이란**
 - **2. 스프링 애플리케이션 초기 설정하기**
 - **3. 스프링 애플리케이션 작성하기**
 - **4. 스프링 살펴보기**
 
-#### [CHAPTER 2. 웹 애플리케이션 개발하기]()
+#### [CHAPTER 2. 웹 애플리케이션 개발하기](./contents/chapter1-2.md)
 - **1. 정보 보여주기**
 - **2. 폼 제출 처리하기**
 - **3. 폼 입력 유효성 검사하기**
 - **4. 뷰 컨트롤러로 작업하기**
 - **5. 뷰 템플릿 라이브러리 선택하기**
 
-#### [CHAPTER 3. 데이터로 작업하기]()
+#### [CHAPTER 3. 데이터로 작업하기](./contents/chapter3.md)
 - **1. JDBC를 사용해서 데이터 읽고 쓰기**
 - **2. 스프링 데이터 JPA를 사용해서 데이터 저장하고 사용하기**
 
@@ -74,13 +74,13 @@
 
 ## 스터디 일정
 
-### :pushpin: [카테고리별 정리 내용](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/subject-link.md)
+### :pushpin: [카테고리별 정리 내용](./subject-link.md)
 
-#### [1주차(2020.06.21)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md)
+#### [1주차(2020.06.21)](./contents/chapter1-2.md)
 - CHAPTER 1. 스프링 시작하기
 - CHAPTER 2. 웹 애플리케이션 개발하기
 
-#### [2주차(2020.06.28)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md)
+#### [2주차(2020.06.28)](./contents/chapter3.md)
 - CHAPTER 3. 데이터로 작업하기
 
 #### 3주차(2020.07.05)
