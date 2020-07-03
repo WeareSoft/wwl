@@ -171,9 +171,52 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: throw와 throws의 차이
+### `throws`
+메서드명 뒤에 예외 클래스명와 함께 사용하는 키워드로 메서드에서 해당 예외가 발생할 수 있음을 명시한다. 또한 해당 예외를 상위 메서드에 전가한다.
+- 예) 
+    ``` java
+    public void someMethod() throws RuntimeException {
+        // 어떤 내용
+    }
+    ```
+개발자는 이 메서드 사용 시 예외를 적절하게 핸들링하는 작업을 추가할 수 있다. 만약 해당 예외가 checked exception이라면 반드시 예외처리를 해줘야한다.
+- 예) 
+    ``` java
+    public void handlingTryCatch() {
+        try {
+            someMethod();
+        } catch (Exception e) {
+            // 적절한 예외처리 작업
+        }
+    }
 
-#### :link: Reference
-- []()
+    public void passToUpper() throws RuntimeException { // 다시 상위로 전가
+        someMethod();
+    }
+    ```
+
+### `throw`
+실질적으로 예외를 발생시키(던지)는 키워드
+- 예)
+    ``` java
+    public void someMethod() {
+        // 어떤 내용
+        throw new RuntimeException();
+    }
+    ```
+요구사항에 맞지 않는 상황이 발생하거나 알고리즘적 오류가 발생했을 때 강제로 예외를 발생시킬 수 있다. 
+
+어떤 예외를 더 구체화시킬 때 사용하기도 한다. 예를들어 checked exception이 발생했을 때, 적절한 unchecked exception으로 변환해서 상위에 던져 처리하기도 한다.
+- 예)
+    ``` java
+    public void someMethod() {
+        try {
+            // 어떤 내용
+        } catch (SQLException e) { // 대표적 checked exception
+            throw new IllegalArgumentException("Invalid arguments");
+        }
+    }
+    ```
 
 
 ## :heavy_check_mark: Data Persistance, JDBC, JPA의 개념과 차이
