@@ -53,9 +53,11 @@
 
 
 ## :heavy_check_mark: Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지
-
+- Pluggable Annotation Processing API
+- <https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html>
+- <https://www.inflearn.com/course/the-java-code-manipulation/lecture/23435>
 #### :link: Reference
-- []()
+- <https://pluu.github.io/blog/android/2015/12/24/annotation-processing-api/>
 
 
 ## :heavy_check_mark: 상황에 따라 어떤 log level을 설정해야 하는지
