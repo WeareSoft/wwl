@@ -108,12 +108,12 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 ### 항상 나쁜건 아니다?
 유용할 때도 있다고 한다. 하지만 대부분의 경우 안티패턴인건 사실. 궁금하다면 아래 링크를 참조
-- [[Stack Overflow]What's wrong with circular references?](https://stackoverflow.com/questions/1897537/why-are-circular-references-considered-harmful)
+- [[Stack Overflow] Why are circular references considered harmful?](https://stackoverflow.com/questions/1897537/why-are-circular-references-considered-harmful)
 
 #### :link: Reference
-- https://medium.com/webeveloper/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-circular-reference-d01c6beee7e6
-- https://joycoding.wordpress.com/2016/02/05/%EC%88%9C%ED%99%98%EC%B0%B8%EC%A1%B0-%EB%81%8A%EC%9E%90-breaking-dependency-circle/
-- https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references
+- [[BAEKJungHo] 스프링 순환 참조(Circular Reference)](https://medium.com/webeveloper/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-circular-reference-d01c6beee7e6)
+- [[Hans] 순환참조 끊자.](https://joycoding.wordpress.com/2016/02/05/%EC%88%9C%ED%99%98%EC%B0%B8%EC%A1%B0-%EB%81%8A%EC%9E%90-breaking-dependency-circle/)
+- [[Stack Exchange] What's wrong with circular references?](https://softwareengineering.stackexchange.com/questions/11856/whats-wrong-with-circular-references)
 
 
 ## :heavy_check_mark: Gradle Dependency 키워드 적용 우선순위
@@ -156,9 +156,12 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 ## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이 
 특징|Checked Exception|Unchecked Exception
 :---|:---|:---
+확인 시점|Compile|Runtime
 처리 여부|반드시 예외처리 해야함|예외처리 하지 않아도 됨
 트랜잭션 Rollback 여부|Rollback 안됨|Rollback 진행
 대표 Exception|`IOException`, `SQLException`|`NullPointException`, `IllegalArgumentException`
+
+
 
 ### Unchecked Exception
 명시적인 예외 처리를 강제하지 않는 특징이 있기 때문에 Unchecked Exception이라 하며, `catch`로 잡거나 `throw`로 호출한 메서드로 예외를 던지지 않아도 상관 없다.
@@ -168,7 +171,7 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 #### :link: Reference
 - [[Yun Blog] Checked Exception을 대하는 자세](https://cheese10yun.github.io/checked-exception/)
-
+- [[우아한형제들] 응? 이게 왜 롤백되는거지?](https://woowabros.github.io/experience/2019/01/29/exception-in-transaction.html)
 
 ## :heavy_check_mark: throw와 throws의 차이
 ### `throws`
@@ -186,11 +189,11 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
         try {
             someMethod();
         } catch (Exception e) {
-            // 적절한 예외처리 작업
+            // (방법1) 적절한 예외처리 작업
         }
     }
 
-    public void passToUpper() throws RuntimeException { // 다시 상위로 전가
+    public void passToUpper() throws RuntimeException { // (방법2) 다시 상위로 전가
         someMethod();
     }
     ```
@@ -311,19 +314,21 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - nesoy 블로그 참조
     - https://nesoy.github.io/articles/2018-04/Java-Serialize
 
-### 직렬화가 왜 필요할까?
-아래 게시글 중 Jason Wang의 답변 참고
-- https://okky.kr/article/224715
 
-### UID 를 사용하는 이유
-- 임의의 객체를 역직렬화 할 때, 변환한 객체(클래스)와 변환되는 객체가 호환 가능함을 명시하는 용도
+### SUID(`serialVersionUID`) 를 사용하는 이유
+- 임의의 객체를 역직렬화 할 때, 변환한 객체(클래스)와 변환되는 객체가 호환 가능함을 명시 및 확인하는 용도
+- SUID가 다르다면 역직렬화 시 `java.io.InvalidClassException`예외가 발생한다.
+- SUID의 기본값은 해당 객체의 HashCode이다.
+    - 그래서 따로 관리해주지 않으면 클래스 맴버 변수의 추가, 삭제, (타입)변경 될 시 SUID는 변경되기 때문에 역직렬화가 제대로 이루어지지 않는다.
 - 자세한 내용은 아래를 참조
-    - https://woowabros.github.io/experience/2017/10/17/java-serialize2.html
+    - [[우아한형제들] 자바 직렬화, 그것이 알고싶다. 실무편](https://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
 
 #### :link: Reference
-- https://nesoy.github.io/articles/2018-04/Java-Serialize
-- https://okky.kr/article/224715
-- https://woowabros.github.io/experience/2017/10/17/java-serialize2.html
+- [[Nesoy Blog] Java의 직렬화(Serialize)란?](https://nesoy.github.io/articles/2018-04/Java-Serialize)
+- [[OKKY] 직렬화 하는 이유가?](https://okky.kr/article/224715?note=1095481)
+- [[우아한형제들] 자바 직렬화, 그것이 알고싶다. 훑어보기편](https://woowabros.github.io/experience/2017/10/17/java-serialize.html)
+- [[우아한형제들] 자바 직렬화, 그것이 알고싶다. 실무편](https://woowabros.github.io/experience/2017/10/17/java-serialize2.html)
+- [[OKKY] 직렬화 하는 이유가?](https://okky.kr/article/224715?note=1095481)
 
 
 
