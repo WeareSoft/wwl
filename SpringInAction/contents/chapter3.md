@@ -307,10 +307,23 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - <https://docs.spring.io/spring-data/data-jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html>
 
 ## :heavy_check_mark: 직렬화(Serialize) 란
+### 직렬화
+- nesoy 블로그 참조
+    - https://nesoy.github.io/articles/2018-04/Java-Serialize
+
+### 직렬화가 왜 필요할까?
+아래 게시글 중 Jason Wang의 답변 참고
+- https://okky.kr/article/224715
+
 ### UID 를 사용하는 이유
+- 임의의 객체를 역직렬화 할 때, 변환한 객체(클래스)와 변환되는 객체가 호환 가능함을 명시하는 용도
+- 자세한 내용은 아래를 참조
+    - https://woowabros.github.io/experience/2017/10/17/java-serialize2.html
 
 #### :link: Reference
-- []()
+- https://nesoy.github.io/articles/2018-04/Java-Serialize
+- https://okky.kr/article/224715
+- https://woowabros.github.io/experience/2017/10/17/java-serialize2.html
 
 
 
