@@ -68,7 +68,7 @@
 - []()
 
 
-## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점 
+## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점
 ### # 순환 참조
 두 모듈이 있을 때, 각 모듈이 서로에 대한 의존성을 갖고 참조하며 호출하는 것을 말한다. 또는 두 개 이상의 모듈에서 각 모듈의 참조가 계속 순환하는 것을 말한다.
 
@@ -87,7 +87,7 @@
 
 ### # 순환참조 해결방법
 #### 재설계
-사실상 재설계하는 것이 가장 바람직한 방법이다. 
+사실상 재설계하는 것이 가장 바람직한 방법이다.
 
 Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참조하고 있는가? 그리고 Class B가 A를 참조해야 하는 이유를 골돌히 생각해보자. 왜 참조하고 있는가?
 
@@ -130,10 +130,22 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 ## :heavy_check_mark: Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지
 - Pluggable Annotation Processing API
-- <https://docs.oracle.com/javase/8/docs/api/javax/annotation/processing/Processor.html>
-- <https://www.inflearn.com/course/the-java-code-manipulation/lecture/23435>
+    - Java 1.6에서 추가된, 컴파일 시 Annotation을 처리하기 위한 구조.
+- Lombok의 Annotation Processor
+    - <https://github.com/rzwitserloot/lombok/blob/0d7540db0cc0c9a2758799522925f09eddeb7420/src/launch/lombok/launch/AnnotationProcessor.java>
+- 내가 알고 있던 롬복에 대한 오해들..
+    - Lombok은 Runtime에 Byte코드를 조작할 줄 알았지만. 실제로는 Java의 Compiler API를 사용해서 생성하고 있었다.
+    - 그렇다면 왜 롬복은 좋지 않다고 주장하는 것일까? -> 컴파일 레벨을 지원하는데 말이다.
+        - 사용하는 개발 도구에서 Annotation Processor를 지원해야 한다.
+        - 가장 핵심인 문제점은.. 컴파일러에 의존적이다. 실제로 자바 스펙이 아니라 컴파일러 스펙이라 제공을 안할 수 있다.
+            - JDK버전을 올려도 동작안하는 자바 코드가 발생할 수 있다. (이게 무슨.. ㅋㅋㅋ)
+
 #### :link: Reference
 - <https://pluu.github.io/blog/android/2015/12/24/annotation-processing-api/>
+- <https://docs.oracle.com/en/java/javase/11/docs/api/java.compiler/javax/annotation/processing/package-summary.html>
+- <https://www.inflearn.com/course/the-java-code-manipulation/lecture/23435>
+- <https://stackoverflow.com/questions/4589184/what-are-the-risks-with-project-lombok>
+- <https://stackoverflow.com/questions/3852091/is-it-safe-to-use-project-lombok>
 
 
 ## :heavy_check_mark: 상황에 따라 어떤 log level을 설정해야 하는지
@@ -153,7 +165,7 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 #### :link: Reference
 - []()
 
-## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이 
+## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이
 특징|Checked Exception|Unchecked Exception
 :---|:---|:---
 처리 여부|반드시 예외처리 해야함|예외처리 하지 않아도 됨
@@ -195,10 +207,42 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: PreparedStatementCreator, KeyHolder 클래스란
+- PreparedStatementCreator
+    - Spring-Jdbc에서 제공하는 PreparedStatement을 생성하는 인터페이스를 가지고 있다.
+    - 사실 생성은 Connection에서 하는데 굳이.. PreparedStatementCreator을 만든 이유가 있을까?
+        - Factory에서는 PreparedStatement를 생성과 동시에 Value들을 Setting을 책임을 가지고 있다.
+        - Java Doc을 보면 Responsible이 명시되어있다.
+            - Implementations are responsible for providing SQL and any necessary parameters.
+    - 구현체
+        - PreparedStatementCreatorFactory의 내부 클래스 PreparedStatementCreatorImpl
+        - SimplePreparedStatementCreator
+- KeyHolder
+    - Interface for retrieving keys, typically used for auto-generated keys as potentially returned by JDBC insert statements.
+    - 키를 조회하기 위한 인터페이스로 주로 자동생성된 키를 돌려받기 위해 사용된다.
+    - 구현체
+        - GeneratedKeyHolder
+
 ### JDBC에서 update 수행 시 사용
+- 자바의 JDBC에서는 인터페이스만 정의한다.
+    - 실제로 Update 수행시 어떻게 동작하는지는 구현체에 따라 결정이 된다.
+    - Spring에서는 구현체를 조금 더 쉽게 다루기 위해 JDBCTemplate로 추상화하여 사용
+- PreparedStatement
+    - SQL의 정보를 담는 역할
+    - An object that represents a precompiled SQL statement.
+    - A SQL statement is precompiled and stored in a PreparedStatement object.
+    - This object can then be used to efficiently execute this statement multiple times.
+- Connection
+    - Session기반으로 구성된다.
+- 왜 PreparedStatement는 Connection에서 생성해야 할까?
+    - Connection당 하나의 Statement를 가지고 있어서 그런게 아닐까?
+    - 뭔가 찝찝한 답변 :(
+    - <https://stackoverflow.com/questions/964989/why-do-i-need-a-connection-to-create-preparedstatements>
 
 #### :link: Reference
-- []()
+- [KeyHolder Document](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/support/KeyHolder.html)
+- [PreparedStatementCreator Document](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/PreparedStatementCreator.html)
+- [PreparedStatement Document](https://docs.oracle.com/javase/8/docs/api/java/sql/PreparedStatement.html)
+- [Connection Document](https://docs.oracle.com/javase/8/docs/api/java/sql/Connection.html)
 
 
 ## :heavy_check_mark: @SessionAttribute, @ModelAttribute 개념 및 사용법
@@ -257,7 +301,8 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
     - CrudRepository를 상속받았다.
     - 뿐만 아니라 PagingAndSortingRepository도 존재
 - PagingAndSortingRepository
-    - 무슨 역할일까?
+    - Extension of CrudRepository to provide additional methods to retrieve entities using the pagination and sorting abstraction.
+    - Page, Iterable로 조회할 수 있는 인터페이스가 존재
 #### :link: Reference
 - <https://docs.spring.io/spring-data/data-commons/docs/current/api/org/springframework/data/repository/CrudRepository.html>
 - <https://docs.spring.io/spring-data/data-commons/docs/current/api/org/springframework/data/repository/PagingAndSortingRepository.html>
