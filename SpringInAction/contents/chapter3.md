@@ -63,10 +63,33 @@
 
 
 ## :heavy_check_mark: @SpringBootApplicationTest와 @WebMvcTest의 개념 및 차이
+### @SpringBootTest
+- 전체 응용 프로그램 컨텍스트를 시작한다.
+- Web Application의 Context와 설정을 모두 불러와 실제 웹 서버와 연결하여 **서버를 시작한다.**
+  - 모든 bean을 주입하기 때문에 속도가 느리다.
+- 클라이언트와 통합 환경에서 테스트(**통합 테스트**)하기 좋다.
+
+| 어노테이션	| 설명 |	Bean |
+@SpringBootTest	| 통합 테스트, 전체	Bean 전체
+@SpringBootTest| 	통합 테스트, 전체	Bean 전체
+@WebMvcTest	| 단위 테스트, Mvc 테스트	MVC 관련된 Bean
+@DataJpaTest| 	단위 테스트, Jpa 테스트| 	JPA 관련 Bean
+@RestClientTest	| 단위 테스트, Rest API 테스트	| 일부 Bean
+@JsonTest	| 단위 테스트, Json 테스트	| 일부 Bean
+
+### @WebMvcTest
+- 응용 프로그램의 controller layer 를 테스트(**contrller 테스트**) 하기 위한 것이다.
+- **서버를 전혀 시작하지 않고** 그 아래의 계층만 테스트하는 것이다.
+  - 그렇기 때문에 가볍고 빠르게 테스트 가능하다.
+- Controller layer를 테스트하고 모의 객체를 사용하기 때문에 나머지 필요한 bean을 직접 세팅해줘야 한다.
+
+### 기본 사용 예시 
+- 추가 필요.
 
 #### :link: Reference
-- []()
-
+- [공식 문서 - boot-features-testing-spring-boot-applications](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing-spring-boot-applications)
+- [https://spring.io/guides/gs/testing-web/](https://spring.io/guides/gs/testing-web/)
+- [https://cheese10yun.github.io/spring-boot-test/](https://cheese10yun.github.io/spring-boot-test/)
 
 ## :heavy_check_mark: 순환 참조의 개념, 예시, 문제점
 ### # 순환 참조
@@ -189,9 +212,43 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: Data Persistance, JDBC, JPA의 개념과 차이
+### 영속성(Persistence)
+- 데이터를 생성한 프로그램이 종료되더라도 사라지지 않는 데이터의 특성을 말한다.
+- 영속성을 갖지 않는 데이터는 단지 메모리에서만 존재하기 때문에 프로그램을 종료하면 모두 잃어버리게 된다. 때문에 파일 시스템, 관계형 테이터베이스 혹은 객체 데이터베이스 등을 활용하여 데이터를 영구하게 저장하여 영속성 부여한다.
+
+#### Persistence Layer
+- 프로그램의 아키텍처에서, 데이터에 영속성을 부여해주는 계층을 말한다.
+- JDBC를 이용하여 직접 구현할 수 있지만 Persistence framework를 이용한 개발이 많이 이루어진다.
+
+#### Persistence Framework
+- JDBC 프로그래밍의 복잡함이나 번거로움 없이 간단한 작업만으로 데이터베이스와 연동되는 시스템을 빠르게 개발할 수 있으며 안정적인 구동을 보장한다.
+- Persistence Framework는 SQL Mapper와 ORM으로 나눌 수 있다.
+  - Ex) JPA, Hibernate, Mybatis 등
+- **ORM vs SQL Mapper**
+  - ORM은 데이터베이스 객체를 자바 객체로 매핑함으로써 객체 간의 관계를 바탕으로 SQL을 자동으로 생성해주지만 SQL Mapper는 SQL을 명시해줘야 한다.
+  - ORM은 관계형 데이터베이스의 ‘관계’를 Object에 반영하자는 것이 목적이라면, SQL Mapper는 단순히 필드를 매핑시키는 것이 목적이라는 점에서 지향점의 차이가 있다.
+
+### JDBC(Java Database Connectivity)
+- JDBC는 DB에 접근할 수 있도록 Java에서 제공하는 API이다.
+  - 모든 Java의 Data Access 기술의 근간
+  - 즉, 모든 Persistence Framework는 내부적으로 JDBC API를 이용한다.
+- JDBC는 데이터베이스에서 자료를 쿼리하거나 업데이트하는 방법을 제공한다.
+
+### JPA(Java Persistent API)
+- 자바 ORM 기술에 대한 API 표준 명세로, Java에서 제공하는 API이다.
+  - 자바 플랫폼 SE와 자바 플랫폼 EE를 사용하는 응용프로그램에서 관계형 데이터베이스의 관리를 표현하는 자바 API이다.
+  - 즉, JPA는 ORM을 사용하기 위한 표준 인터페이스를 모아둔 것이다.
+  - 기존에 EJB에서 제공되던 엔터티 빈(Entity Bean)을 대체하는 기술이다.
+- JPA 구성 요소 (세 가지)
+    1. javax.persistance 패키지로 정의된 API 그 자체
+    2. JPQL(Java Persistence Query Language)
+    3. 객체/관계 메타데이터
+- 사용자가 원하는 JPA 구현체를 선택해서 사용할 수 있다.
+  - JPA의 대표적인 구현체로는 Hibernate, EclipseLink, DataNucleus, OpenJPA, TopLink Essentials 등이 있다.
+  - 이 구현체들을 ORM Framework라고 부른다.
 
 #### :link: Reference
-- []()
+- [https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html](https://gmlwjd9405.github.io/2018/12/25/difference-jdbc-jpa-mybatis.html)
 
 
 ## :heavy_check_mark: JDBC Connection이 어떻게 이루어지는지
@@ -201,9 +258,26 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: RowMapper, Jackson ObjectMapper, Gson 개념 및 차이
+### RowMapper 
+- SQL의 결과(record type)를 객체(object type)의 멤버 변수에 적절하게 할당하기 위한 매핑 수단을 말한다.
+- 개발자는 mapRow()라는 interface method를 정의하여 결과를 처리한다.
+  - 한 번만 사용하는 기능의 경우 RowMapper 인터페이스를 implements 하여 내부 익명 클래스로 작성하여 사용한다.
+- 코드가 중복되는 경우 RowMapper 구현 클래스를 별도로 구현하여 코드 중복을 제거할 수 있다.
+
+### Jackson ObjectMapper 
+- Jackson 라이브러리의 주요 액터 클래스로서 기본 POJO와의 JSON, 일반 JSON 트리 모델 (JsonNode) 간의 JSON 읽기 및 쓰기 기능 및 변환 수행 관련 기능을 제공한다.
+  - *"ObjectMapper는 기본 POJO(Plain Old Java Objects) 또는 범용 JSON Tree Model(JsonNode)에서 JSON을 읽고 쓰는 기능과 변환 수행을 위한 기능을 제공합니다. 또한 다양한 스타일의 JSON 컨텐츠와 함께 작동하고 다형성 및 객체 동일성과 같은 고급 객체 개념을 지원하도록 Customizing할 수 있습니다."*
+- 개발 환경이 빅데이터 처리와 같이 주로 **대용량 json 처리 환경**
+
+### Gson 란
+- 자바 오브젝트 <-> JSON 변환시켜주는 아주 간단하고 심플한 자바 라이브러리이다. (구글에서 만든 오픈 소스 라이브러리)
+- 마이크로 서비스와 분산 아키텍처 설정 등과 같이 **작은 용량의 많은 json 처리 환경**
 
 #### :link: Reference
-- []()
+- [https://www.baeldung.com/jackson-vs-gson](https://www.baeldung.com/jackson-vs-gson)
+- [라이브러리별 속도 비교](http://www.yunsobi.com/blog/entry/java-json-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B3%84-parser-%EC%86%8D%EB%8F%84-%EB%B9%84%EA%B5%90)
+- [https://djkeh.github.io/articles/The-fastest-way-to-parse-json-data-to-java-kor/](https://djkeh.github.io/articles/The-fastest-way-to-parse-json-data-to-java-kor/)
+- [https://gmlwjd9405.github.io/2018/12/19/jdbctemplate-usage.html](https://gmlwjd9405.github.io/2018/12/19/jdbctemplate-usage.html)
 
 
 ## :heavy_check_mark: PreparedStatementCreator, KeyHolder 클래스란
