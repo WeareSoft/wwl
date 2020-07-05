@@ -39,12 +39,26 @@
 
 
 
-## :heavy_check_mark: @Compnent의 스테레오 타입 각각 Context Root와 Service Root 중 어디에 로드되는지
+## :heavy_check_mark: @Component의 스테레오 타입 각각 root context와 servlet context 중 어디에 로드되는지
+#### @Component의 스테레오 타입
+- @Controller, @Service, @Repository
+  
+#### root context에서 로드되는 컴포넌트
+- @Service, @Repository
+- 웹 어플리케이션의 로직을 처리하는 서비스 레이어와 DB와 연결되는 레퍼지토리 레이어를 구성하는 빈 설정
 
+#### servlet context에서 로드되는 컴포넌트
+- @Controller
+- dispatcher-servlet이 사용하는 URL 관련 정보(@RequestMapping URL, 메소드 정보 등)를 담는 클래스는 servlet context에서 로드(스캔)되어야 함 (ex. Controller, Interceptor)
+- Controller의 매핑 설정(Handler Mapping), 요청 처리 후 뷰를 처리(view resolver)하는 빈 설정
+  
+#### 주의할 점
+- 두 context 설정에서 component scan을 통해 빈을 등록할 때 controller, service, repository가 각 컨텍스트에 맞게 등록이 되어있어야 함
+- 그렇지 않은 경우 빈이 양쪽 컨텍스트에 모두 등록되어 불필요한 빈 등록 과정이 발생할 수 있음
+  
 #### :link: Reference
-
-- []()
-
+- https://repacat.tistory.com/32
+- https://nice2049.tistory.com/entry/spring-rootContext-%EA%B7%B8%EB%A6%AC%EA%B3%A0-servletContext-%EB%8C%80%ED%95%B4%EC%84%9C
 
 ## :heavy_check_mark: @WebMvcTest와 @MockMvcTest 의 차이
 
@@ -137,21 +151,203 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: 상황에 따라 어떤 log level을 설정해야 하는지
+(자주 사용하는 로깅 프레임워크인 Log4j와 Logback 예시)
+#### Log4j의 로그 레벨
+- FATAL : 치명적인 오류 발생 시 (의도하지 않은 오류로 인해 애플리케이션이 종료되는 수준)
+- ERROR : 일반적인 오류 발생 시 (애플리케이션이 종료되지는 않지만 의도하지 않은 오류가 발생하는 수준)
+- WARN : 주의가 필요할 때
+- INFO : 일반 정보를 나타낼 때
+- DEBUG : 일반 정보를 상세히 나타낼 때
+- TRACE : 경로추적
+
+#### Logback의 로그 레벨
+- ERROR : 일반적인 오류 발생 시
+- WARN : 주의가 필요할 때
+- INFO : 일반 정보를 나타낼 때
+- DEBUG : 일반 정보를 상세히 나타낼 때
+- TRACE : 경로추적
+
+#### 로그 레벨 작성 기준
+- 개발자의 의도에 달려있음
+- 명확한 목적을 가지는 레벨은 ERROR와 INFO를 주로 사용
+- ERROR
+  - 의도하지 않은 오류를 명시적으로 표현
+  - 반드시 FATAL이 필요한 경우가 아니라면 ERROR 사용
+```
+    try {
+        User user = userService.findById(userId);
+        userRepository.save(user);
+    } catch (ConnectionException e) {
+        log.error(“데이터베이스 연결 실패");
+    }
+```
+
+- INFO
+  - 서비스의 목적을 성공적으로 달성했는지 확인할 때 사용
+  - 대략적인 통계로 활용 가능
+  - 만약 시나리오상 의도된 오류가 발생한다면 INFO 사용
+```
+    try {
+        User user = userService.findById(userId);
+        log.info(“유저 조회 성공");
+        return user.getStatus();
+    } catch (NonexistentUserException e) {
+        log.info(“해당 사용자가 존재하지 않습니다.”);
+        return UserStatus.NOT_REGISTERED;
+    }
+```
 
 #### :link: Reference
-- []()
+- https://goddaehee.tistory.com/45
+- https://blog.lulab.net/programmer/what-should-i-log-with-an-intention-method-and-level/
+
 
 
 ## :heavy_check_mark: @Slf4j 사용법 및 예시
+#### 사용법
+- 클래스에 @Slf4j 작성
+  - 작성 시 로거 객체 생성
+```
+    @Slf4j
+    public class LogEx {
+        ...
+    }
+    ↑위 코드는 아래 코드로 변환↓
+    public class LogEx {
+        private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(this.class);
 
+        ...
+    }
+```
+- class, Enum 단위에 사용 가능
+- 애플리케이션에 추가한 slf4j의 구현체 로거 사용
+#### 예시
+- Logback 사용 시
+```
+    @Slf4j
+    public class LogEx {
+        public void logExMethod() {
+            ...
+            log.error("오류 발생");
+            log.warn("경고 발생");
+            log.info("정보 확인 또는 성공");
+            log.debug("디버깅");
+            log.trace("경로 추적");
+            ...
+        }
+    }
+```
 #### :link: Reference
-- []()
+- https://projectlombok.org/api/lombok/extern/slf4j/Slf4j.html
 
 
 ## :heavy_check_mark: Logback 설정 방법(e.g. 출력포맷) 및 장점
+#### 스프링부트에서 설정 방법
+- 스프링부트는 Logback이 기본 로깅 프레임워크이기 때문에 별도로 추가할 라이브러리는 없음
+- 구현체는 spring-boot-starter-web 내 spring-boot-starter-logging에 있음
+- logback-spring.xml 파일에 작성
+  - 일반적으로 logback.xml에 작성하지만 스프링부트에서는 logback.xml로 작성 시 부트가 설정하기 전에 로그백 관련 설정이 되어버림
+- 로그레벨 지정 방법
+  1. application.properties 설정
+      - 루트 레벨 설정
+        ```
+        logging.level.root=info
+        ```
+      - 패키지별 레벨 설정
+        ```
+        logging.level.dami.test=info
+        logging.level.dami.test.web=debug
+        ```
+  2. logback-spring.xml 설정
+      - 로그 레벨 이름 대소문자 구분하지 않음
+      - 작성 방법은 하단 appender 설정 방법 항목에 작성
+- Appender 설정 방법
+  - Appender는 로그의 출력 포맷 및 로그 저장 위치(콘솔, 파일)를 설정 가능
+  - Appender 종류
+    - ConsoleAppender : 콘솔에 로그 메시지를 출력한다.
+    - FileAppender : 파일에 로그 메시지를 출력한다.
+    - RollingFileAppender : 로그의 크기가 지정한 용량 이상이 되면 다른 이름의 파일을 출력한다.
+    - DailyRollingFileAppender : 하루를 단위로 로그 메시지를 파일에 출력한다.
+    - SMTPAppender : 로그 메시지를 이메일로 보낸다.
+    - NTEventLogAppender : 윈도우의 이벤트 로그 시스템에 기록한다.
+  - 출력 포맷
+    - %d : 로그의 기록시간을 출력한다.
+    - %p : 로깅의 레벨을 출력한다.
+    - %F : 로깅이 발생한 프로그램의 파일명을 출력한다.
+    - %M : 로깅이 발생한 메소드의 이름을 출력한다.
+    - %l : 로깅이 발생한 호출지의 정보를 출력한다.
+    - %L : 로깅이 발생한 호출지의 라인수를 출력한다.
+    - %t : 로깅이 발생한 Thread명을 출력한다.
+    - %c : 로깅이 발생한 카테고리를 출력한다.
+    - %C : 로깅이 발생한 클래스명을 출력한다.
+    - %m : 로그 메시지를 출력한다.
+    - %n : 개행 문자를 출력한다.
+    - %% : %를 출력
+    - %r : 어플리케이션이 시작 이후부터 로깅이 발생한 시점까지의 시간을 출력한다.(ms)
+    - %x : 로깅이 발생한 Thread와 관련된 NDC(nested diagnostic context)를 출력한다.
+    - %X : 로깅이 발생한 Thread와 관련된 MDC(mapped diagnostic context)를 출력한다.
+- logback.spring.xml 작성 예시
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />    
+
+    <!-- 변수 지정 -->
+    <property name="LOG_DIR" value="/logs" />
+    <property name="LOG_PATH_NAME" value="${LOG_DIR}/data.log" />
+
+    <!-- FILE Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH_NAME}</file>
+        <!-- 일자별로 로그파일 적용하기 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH_NAME}.%d{yyyyMMdd}</fileNamePattern>
+            <maxHistory>60</maxHistory> <!-- 일자별 백업파일의 보관기간 -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5p] [%F]%M\(%L\) : %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Console Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <layout class="ch.qos.logback.classic.PatternLayout">
+        <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5p] [%F]%M\(%L\) : %m%n</pattern>
+      </layout>
+    </appender>
+
+    <!-- TRACE > DEBUG > INFO > WARN > ERROR, 대소문자 구분 안함 -->
+    <!-- profile 을 읽어서 appender 을 설정할수 있다.(phase별 파일을 안만들어도 되는 좋은 기능) -->
+    <springProfile name="local">
+      <root level="DEBUG">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+      </root>
+    </springProfile>
+    <springProfile name="real">
+      <root level="INFO">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+      </root>
+    </springProfile>
+</configuration>
+```
+     
+
+#### 장점
+- Log4j에 비해 10배 빠른 수행 및 메모리 효율성 상승
+- 서버 중지 없이 설정파일 변경 내용 적용 가능
+- 로그 기록하는 파일 서버 장애 발생 시 서버 중지 없이 장애 시점부터 로그 복구 가능
+- RollingFileAppender 사용 시 자동으로 로그파일 압축 (설정 변경해서 오래된 로그 압축 파일 삭제 가능)
+- 문서화 깔끔
+- 설정파일에 조건처리 가능(<if><then><else>) -> 여러 환경 타겟팅 가능
+
 
 #### :link: Reference
-- []()
+- https://goddaehee.tistory.com/45
+- http://logback.qos.ch/reasonsToSwitch.html
+
 
 ## :heavy_check_mark: Checked Exception과 Unchecked Exception의 차이 
 특징|Checked Exception|Unchecked Exception
@@ -202,9 +398,57 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: @SessionAttribute, @ModelAttribute 개념 및 사용법
+#### @SessionAttributes
+- @ModelAttribute 또는 Model 클래스의 addAttribute()를 사용했을 때, 세션이 만료되거나 sessionStatus로 세션이 제거되기 전까지는 모델에 넘긴 객체를 동일한 세션에서 계속 사용 가능
+- @ModelAttribute와 함께 사용해서 세션 객체에 넣고 빼는 작업을 숨겨주고 스프링 form 태그와 연동되어 폼에 값을 넣는 작업도 단순화 되는 장점
+- session scope에 저장
+
+#### @ModelAttribute
+- Model 클래스의 addAttribute() 메소드와 같은 기능
+- ex. @ModelAttribute(“key")
+- request scope에 저장
+
+#### 사용 예시
+- 등록 폼 페이지가 여러개인 경우 이전 폼, 다음 폼 화면 이동 시 세션 유지 가능
+
+#### 사용 방법
+- 클래스에 지정한 @SessoinAttributes에 작성한 이름과 컨트롤러 메소드가 생성한 Model명을 동일하게 맞추면 세션에 저장 가능
+- 메소드 인자에 @ModelAttribute가 있으면 세션에서 가져올 수 있음
+- 새 오브젝트 생성 전에 @SessoinAttributes에 지정한 이름과 @ModelAttribute에 지정한 이름이 동일하면 세션에 저장된 값 사용
+```
+@Controller
+@SessionAttributes("user")
+public class UserController{
+  // 수정 폼
+  @RequestMapping(value="/user/{uid}", method=RequestMethod.GET)
+  public String modifyForm(@PathVariable Long uid, ModelMap modelMap){
+
+    User user = userService.getUser(uid);
+    modelMap.addAttribute("user", user);
+
+    return "user/form"
+  }
+
+  // 수정
+  @RequestMapping(value="/user/{uid}", method=RequestMethod.POST)
+  public String modify(@PathVariable Long uid,@ModelAttribute User user){
+
+    userService.modify(user);
+
+    return "user/modifySuccess"
+  }
+}
+```
+#### 주의할 점
+- @SessionAttributes 사용 시 SessionStatus 클래스의 setComplete() 메소드를 호출하지 않을 경우 세션이 계속 남아있음
+- 사용자가 프로세스 중간에 이탈하면 세션에 저장한 객체가 그대로 남게 됨
+- 지정해준 클래스 내에서만 세션 사용 가능 (다른 컨트롤러, 인터셉터, 필터 등에서는 사용 불가)
+- 다른 컨트롤러, 인터셉터, 필터에서 사용하려면 s가 붙지 않은 @SessionAttribute를 사용
 
 #### :link: Reference
-- []()
+- https://offbyone.tistory.com/333
+- https://joont92.github.io/spring/@SessionAttributes,-SessionStatus/
+
 
 
 ## :heavy_check_mark: @GenerateValue Strategy 종류 및 차이
