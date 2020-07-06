@@ -1,5 +1,21 @@
 # Doy
 
+## 2020-07-12
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 4. 스프링 시큐리티
+  - 정리 못한 것 마무리
+    - @WebMvcTest와 @MockMvcTest 의 차이
+    - 테스트 관련 어노테이션의 개념과 종류 및 사용 예시
+    - CGLIB와 Dynamic Proxy 의 개념 및 차이
+    - gradle, maven
+    - Servlet, Servlet Context, Web Application Context
+### 개인 할 일
+- RealMySQL
+  - index
+  - query
+- JWP
+
 ## 2020-07-05
 ### 스프링 스터디
 - 스프링 인 액션
