@@ -653,10 +653,20 @@ public class UserController{
     - SQL DELETE 이전에 불립니다.
 - @PostRemove
     - SQL DELETE 이후에 불립니다.
+
+### `@Prepersist`를 상속한 클래스
+Entity 클래스 내부에서 `@PrePersist`, `@PreUpdate`, `@PostLoad` 등은 여러개 선언 될수 없다. (런타임 에러 발생)
+
+하지만 `@MappedSuperclass` 를 선언한 상위 클래스를 상속 받은 경우 하위 클래스에서 중복된 어노테이션을 사용할 수 있다.
+
+상위 클래스 `@PrePersist`, `@PreUpdate`, `@PostLoad` 존재 할 경우는 각각 호출 되며, 오버라이드 할 경우 상위 클래스는 호출 되지 않는다.
+
 #### :link: Reference
 - <https://gs.saro.me/dev?tn=514>
 - <https://github.com/snack-news/Snack-BE/blob/master/src/main/java/com/snack/news/domain/base/BaseTimeEntity.java>
 - <https://www.baeldung.com/jpa-entity-lifecycle-events>
+- http://blog.naver.com/goddes4/30188688186
+
 
 
 ## :heavy_check_mark: CrudRepository, JpaRepository 의 차이
