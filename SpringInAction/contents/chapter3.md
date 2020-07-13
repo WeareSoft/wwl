@@ -155,6 +155,9 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: Gradle Dependency 키워드 적용 우선순위
+#### 우선 순위
+
+
 
 #### :link: Reference
 - []()
@@ -283,6 +286,7 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - 구현체는 spring-boot-starter-web 내 spring-boot-starter-logging에 있음
 - logback-spring.xml 파일에 작성
   - 일반적으로 logback.xml에 작성하지만 스프링부트에서는 logback.xml로 작성 시 부트가 설정하기 전에 로그백 관련 설정이 되어버림
+  
 - 로그레벨 지정 방법
   1. application.properties 설정
       - 루트 레벨 설정
@@ -297,6 +301,7 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
   2. logback-spring.xml 설정
       - 로그 레벨 이름 대소문자 구분하지 않음
       - 작성 방법은 하단 appender 설정 방법 항목에 작성
+      
 - Appender 설정 방법
   - Appender는 로그의 출력 포맷 및 로그 저장 위치(콘솔, 파일)를 설정 가능
   - Appender 종류
@@ -322,7 +327,8 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
     - %r : 어플리케이션이 시작 이후부터 로깅이 발생한 시점까지의 시간을 출력한다.(ms)
     - %x : 로깅이 발생한 Thread와 관련된 NDC(nested diagnostic context)를 출력한다.
     - %X : 로깅이 발생한 Thread와 관련된 MDC(mapped diagnostic context)를 출력한다.
-- logback.spring.xml 작성 예시
+    
+- logback-spring.xml 작성 예시
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -562,14 +568,14 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - [Connection Document](https://docs.oracle.com/javase/8/docs/api/java/sql/Connection.html)
 
 
-## :heavy_check_mark: @SessionAttribute, @ModelAttribute 개념 및 사용법
+## :heavy_check_mark: @SessionAttributes, @ModelAttribute 개념 및 사용법
 #### @SessionAttributes
-- @ModelAttribute 또는 Model 클래스의 addAttribute()를 사용했을 때, 세션이 만료되거나 sessionStatus로 세션이 제거되기 전까지는 모델에 넘긴 객체를 동일한 세션에서 계속 사용 가능
+- Model 객체의 addAttribute()를 사용했을 때, 세션이 만료되거나 sessionStatus로 세션이 제거되기 전까지는 모델에 넘긴 객체를 동일한 세션에서 계속 사용 가능
 - @ModelAttribute와 함께 사용해서 세션 객체에 넣고 빼는 작업을 숨겨주고 스프링 form 태그와 연동되어 폼에 값을 넣는 작업도 단순화 되는 장점
 - session scope에 저장
 
 #### @ModelAttribute
-- Model 클래스의 addAttribute() 메소드와 같은 기능
+- Model 객체의 addAttribute() 메소드와 같은 기능
 - ex. @ModelAttribute(“key")
 - request scope에 저장
 
@@ -577,7 +583,7 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - 등록 폼 페이지가 여러개인 경우 이전 폼, 다음 폼 화면 이동 시 세션 유지 가능
 
 #### 사용 방법
-- 클래스에 지정한 @SessoinAttributes에 작성한 이름과 컨트롤러 메소드가 생성한 Model명을 동일하게 맞추면 세션에 저장 가능
+- 클래스에 지정한 @SessionAttributes에 작성한 이름과 Model에 저장한 attributeName을 동일하게 맞추면 세션에 저장 가능
 - 메소드 인자에 @ModelAttribute가 있으면 세션에서 가져올 수 있음
 - 새 오브젝트 생성 전에 @SessoinAttributes에 지정한 이름과 @ModelAttribute에 지정한 이름이 동일하면 세션에 저장된 값 사용
 ```
@@ -608,11 +614,13 @@ public class UserController{
 - @SessionAttributes 사용 시 SessionStatus 클래스의 setComplete() 메소드를 호출하지 않을 경우 세션이 계속 남아있음
 - 사용자가 프로세스 중간에 이탈하면 세션에 저장한 객체가 그대로 남게 됨
 - 지정해준 클래스 내에서만 세션 사용 가능 (다른 컨트롤러, 인터셉터, 필터 등에서는 사용 불가)
+- 해당 컨트롤러 안에서 다루는 특정 모델 객체를 세션에 넣고 공유
 - 다른 컨트롤러, 인터셉터, 필터에서 사용하려면 s가 붙지 않은 @SessionAttribute를 사용
 
 #### :link: Reference
 - https://offbyone.tistory.com/333
 - https://joont92.github.io/spring/@SessionAttributes,-SessionStatus/
+- https://sun-22.tistory.com/53
 
 
 
