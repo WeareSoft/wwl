@@ -1,4 +1,8 @@
 # Nesoy
+## 2020-07-19
+- Spring Action Chapter 4 읽기
+- JUnit5 정리하기
+
 ## 2020-07-12
 - Spring Action Chapter 4 읽기
 - JUnit5 정리하기
