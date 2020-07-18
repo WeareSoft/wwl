@@ -156,11 +156,18 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 ## :heavy_check_mark: Gradle Dependency 키워드 적용 우선순위
 #### 우선 순위
+- 별도로 명시된 키워드별 우선 순위는 없음
+- 기본적으로 작성 순서대로 라이브러리 적용
+- 버전 충돌 발생 시 가장 높은 버전 선택
+  - 필요하다면 Gradle이 지원해주는 충돌 해결 전략 추가해서 사용 가능 ([참고](https://docs.gradle.org/current/javadoc/org/gradle/api/artifacts/ResolutionStrategy.html#capabilitiesResolution))
+  - 만약 implementation, api(compile) 간 불필요한 의존성있을 경우 exclude로 제거 필요
+
 
 
 
 #### :link: Reference
-- []()
+- [Gradle 문서 (dependency resolution)](https://docs.gradle.org/current/userguide/dependency_resolution.html)
+- [Gradle 문서 (dependency management)](https://docs.gradle.org/current/userguide/dependency_management.html)
 
 
 ## :heavy_check_mark: CGLIB와 Dynamic Proxy 의 개념 및 차이
