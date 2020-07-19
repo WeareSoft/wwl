@@ -7,6 +7,21 @@
 > - [2019-4 목표 설정 모음](/hee/2019-3-goals.md)
 > - [2020-1 목표 설정 모음](/hee/2020-1-goals.md)
 
+## 2020-07-26 
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 5. 구성 속성 사용하기
+  - CHAPTER 4 추가 정리 
+    - hasRole 과 hasAuthority 의 차이 및 사용법
+    - Principal, Authentication, @AuthenticationPrincipal 의 개념 및 차이 
+    - SecurityContextHolder 란 
+### 개인 할 일
+- tech-interview 리스트업
+- TDD 리뷰 정리 및 리뷰 추가 반영
+- 과제 추가 리팩토링 
+- 개인 공부 시작
+  - 인프런 (스프링 부트 개념과 활용) 듣고 블로그 정리
+
 ## 2020-07-19
 ### 스프링 스터디
 - 스프링 인 액션
