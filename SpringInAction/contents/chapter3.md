@@ -575,8 +575,21 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 - [Connection Document](https://docs.oracle.com/javase/8/docs/api/java/sql/Connection.html)
 
 
-## :heavy_check_mark: @SessionAttributes, @ModelAttribute 개념 및 사용법
+## :heavy_check_mark: @SessionAttribute, @SessionAttributes, @ModelAttribute 개념 및 사용법
+#### @SessionAttribute
+- Spring 4.3 부터 지원
+- 모델 정보를 HttpSession에 저장
+- 메소드 인자로 넘겨주는 객체에 @SessionAttribute 작성 시 세션에 데이터 저장
+```
+public String example(Model model, @SessionAttribute LocalDateTime visitTime)
+```
+- HttpSession의 getAttribute()는 Object 객체를 반환하여 형변환이 필요하지만 @SessionAttribute는 형변환 불필요
+
 #### @SessionAttributes
+- Spring 2.5 부터 지원
+- 모델 정보를 HttpSession에 저장
+- 클래스 단위에 작성 (ex. @SessionAttributes("key"))
+- 메소드에서 생성한 model 객체의 addAttribute() 메소드에서 attribute name과 key가 동일하면 세션에 저장
 - Model 객체의 addAttribute()를 사용했을 때, 세션이 만료되거나 sessionStatus로 세션이 제거되기 전까지는 모델에 넘긴 객체를 동일한 세션에서 계속 사용 가능
 - @ModelAttribute와 함께 사용해서 세션 객체에 넣고 빼는 작업을 숨겨주고 스프링 form 태그와 연동되어 폼에 값을 넣는 작업도 단순화 되는 장점
 - session scope에 저장
