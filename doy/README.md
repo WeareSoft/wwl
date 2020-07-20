@@ -1,5 +1,20 @@
 # Doy
 
+## 2020-07-26 
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 5. 구성 속성 사용하기
+  - 정리 못한 것 마무리
+    - @WebMvcTest와 @MockMvcTest 의 차이
+    - 테스트 관련 어노테이션의 개념과 종류 및 사용 예시
+    - CGLIB와 Dynamic Proxy 의 개념 및 차이
+    - gradle, maven
+    - Servlet, Servlet Context, Web Application Context
+    - 단방향, 양방향 암호화 (동일한 raw String password 에 대한 양방향 암호화 결과값은 항상 동일한가?)
+    - @Bean, @Component 의 차이
+### 개인 할 일
+- Spring Integration
+
 ## 2020-07-19
 ### 휴식
 - 제주도 놀다올게용 ㅎㅎ
