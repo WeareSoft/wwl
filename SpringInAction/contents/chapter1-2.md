@@ -479,9 +479,67 @@ void hashcode_menu() {
 
 
 ## :heavy_check_mark: jar 실행 방법, 옵션
-- gradle
-- maven
+- jar 파일 만들기
+  - maven
+    - `pom.xml`
+      - maven-jar-plugin
+      - configuration
+        - file name
+        - main class
+        - output directory
+    - `mvn clean package`
+      - clean
+        - 빌드를 통해 생성된 target 디렉터리 삭제
+      - package
+        - target 디렉터리 하위에 jar, war 등의 압축파일 생성
+    - target 디렉터리에 jar 파일 생성
+  - gradle
+    - `build.gradle`
+      - jar Artifact 이름 지정
+        ```java
+        jar {
+          baseName = 'java-test'
+          version = '0.1.0'
+        }
+        ```
+    - `./gradlew build`
+    - `./build/libs` 에 jar 파일 생성
+- jar 파일 실행
+  - `java <options> -jar file.jar <argument>`
+    - `options`
+      - 옵션
+    - `file.jar`
+      - 호출될 jar파일 이름
+    - `argument`
+      - main함수에 파라미터로 보낼 문자열
+  - options
+    - `-classpath (-cp)`
+      - 참조할 클래스 파일 패스 지정
+        - jar파일, zip파일, 클래스파일의 디렉터리 위치 기술
+        - 각 클래스파일 패스는 콜론(:)을 통해서, 분리시켜 기술
+    - `-D <property name>=<property value>`
+      - 시스템의 property 값 설정
+        - `java -Dspring.prifiles.active=prod`
+    - `-verbose`
+      - 자바 프로그램 실행되어지는 정보 출력
+    - `-verbose:class`
+      - 로딩되어지는 각 클래스들의 정보 출력
+    - `-verbose:gc`
+      - garbage collection 이벤트 출력
+    - `-verbose:jni`
+      - native 함수들과 다른 자바 native 인터페이스 사용에 대한 정보 출력
+    - `-version`
+      - 현재 JVM의 버젼 정보 출력
+    - `-Xms`, `-Xmx` 
+      - JVM이 사용가능한 최대 메모리 사이즈 변경
+        - JVM이 자바 프로그램을 구동하기 위해 초기설정된 메모리 사이즈는 64M이다.
+        - `java -Xms <초기힙사이즈> -Xmx <최대힙사이즈>`
 
+#### :link: Reference
+- [[Maven]실행가능한 jar파일 만들기](https://kamang-it.tistory.com/entry/Maven%EC%8B%A4%ED%96%89%EA%B0%80%EB%8A%A5%ED%95%9C-jar%ED%8C%8C%EC%9D%BC-%EB%A7%8C%EB%93%A4%EA%B8%B05)
+- [maven을 이용해 executable jar(실행가능한 jar) 만들기](https://loustler.io/languages/etc/executable_jar_using_maven/)
+- [[Gradle] Gradle 간단히 사용하기](https://joochang.tistory.com/80)
+- [Java 실행 옵션 정리](https://yang1650.tistory.com/197)
 
 ## :heavy_check_mark: `@RequestMapping` 하위 어노테이션
 ### 의문을 가진 계기
