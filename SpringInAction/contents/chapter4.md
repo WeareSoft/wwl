@@ -44,37 +44,43 @@
 
 ## :heavy_check_mark: LDAP 이란 
 ### LDAP 의 개념
-TCP/IP 위에서 디렉터리 서비스를 조회하고 수정하는 응용 프로토콜이다.
-
-> 디렉토리 서비스는 디렉토리 서비스 안에 관리되고 있는, 이름이 있는 객체에 대한 정보를 가지고 있는 데이터베이스를 말하는 디렉토리 그 자체와 혼동하면 안 된다. X.500 분배 디렉토리 서비스 모델의 경우, 하나 이상의 이름 공간 (객체의 트리)들이 디렉토리 서비스를 만드는 데에 쓰인다. 디렉토리 서비스는 하나 이상의 디렉토리 이름 공간 속에 포함된 자료에 접근할 수 있는 인터페이스를 제공한다. 디렉토리 서비스 인터페이스는 중심/공통 권한으로 동작하며 디렉토리 데이터를 관리하는 시스템 자원을 안전하게 인증할 수 있게 해 준다.
-
-디렉터리는 논리, 계급 방식 속에서 조직화된, 비슷한 특성을 가진 객체들의 모임이다. 가장 일반적인 예로는 전화 번호부(telephone directory)가 있는데 가나다 순의 일련의 이름을 가지고 있고, 이름마다 전화 번호와 주소가 포함되어 있다. 이러한 기본 설계 때문에 LDAP는 인증을 위한 다른 서비스에 의해 자주 사용된다.
+TCP/IP 위에서 디렉토리 서비스를 조회하고 수정하는 응용 프로토콜이다.
+- 디렉토리
+    - 파일 시스템(X), 데이터의 집합(O)
+- 디렉토리 서비스
+    - 디렉토리를 관리하고 리소스에 접근하는 응용 프로그램
+    - 데이터베이스와 유사하지만 복잡한 트랜잭션이나 롤백은 지원하지 않는다
+    - 데이터베이스보다 읽기에 더 최적화 되어있다
+- LDAP
+    - 디렉토리 서비스와 디렉토리 사이의 통신을 위한 프로토콜
 
 ### *.ldif 설정 파일 사용법
+ LDAP Data Interchange Format의 약자
 - CN (Common Name): KilDong Hong, SaRang Lee 와 같은 일반적인 이름들 
 - SN (SirName): 우리나라 성에 해당한다
 - OU (Organiztion Unit): 그룹에 해당  
 - DC (Domain Component): 도메인에 대한 요소
 - DN (Distinguished Name): 위의 엔트리 및 기타 여러가지 엔트리들이 모여 특정한 한 사용자(혹은 물체)를 구분할 수 있는 고유의 이름
+- 참고
+    - https://docs.oracle.com/cd/E19957-01/805-5964/6j5kig7p0/index.html
+    - https://osankkk.tistory.com/entry/LDAP-%EC%A0%95%EB%A6%AC
 
 
-### LDAP의 장단점 
-- 장점
-    - LDAP을 사용하면 응용 프로그램별 데이터베이스를 대체하여 정보를 통합할 수 있다(관리할 개별 데이터베이스 수가 감소)
-    - LDAP을 사용하면 여러 이름 지정 서비스에서 데이터를 공유할 수 있다
-    - LDAP은 중앙 데이터 저장소를 제공한다
-    - LDAP을 사용하면 마스터와 복제본 간에 데이터를 더 자주 동기화할 수 있다
-    - LDAP은 다중 플랫폼 및 다중 공급업체와 호환된다
+### LDAP의 장단점
+- 중앙집중적이다
+- 데이터베이스와 유사하지만 복잡한 트랜잭션이나 롤백은 지원하지 않는다
+    - 하지만 가용성과 신뢰성을 개선하기 위해 쉽게 복제 가능
+- 데이터베이스보다 읽기에 더 최적화 되어있다
+    - 읽기에 대해서는 더 빠른 응답속도
 
-- 제한사항
-    - LDAP 서버는 현재 자체 클라이언트가 될 수 없다
-    - LDAP 이름 지정 서비스 설정과 관리는 더 복잡하며 신중한 계획이 필요하다
-    - 동일한 클라이언트 시스템에서 NIS 클라이언트와 고유 LDAP 클라이언트를 함께 사용할 수 없다
 #### :link: Reference
 - https://medium.com/happyprogrammer-in-jeju/ldap-%ED%94%84%ED%86%A0%ED%86%A0%EC%BD%9C-%EB%A7%9B%EB%B3%B4%EA%B8%B0-15b53c6a6f26
 - https://ldap.or.kr/ldap-%EC%9D%B4%EB%9E%80/
 - https://osankkk.tistory.com/entry/LDAP-%EC%A0%95%EB%A6%AC
 - https://docs.oracle.com/cd/E37933_01/html/E36690/overview-9.html
+- https://wiki.gentoo.org/wiki/Centralized_authentication_using_OpenLDAP/ko
+- https://docs.oracle.com/cd/E19957-01/805-5964/6j5kig7p0/index.html
+- https://osankkk.tistory.com/entry/LDAP-%EC%A0%95%EB%A6%AC
 
 
 ## :heavy_check_mark: @Bean, @Component 의 차이 
