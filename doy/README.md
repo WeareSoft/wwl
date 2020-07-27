@@ -1,6 +1,25 @@
 # Doy
 
-## 2020-07-26 
+## 2020-08-02
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 6. REST 서비스 생성하기
+  - 정리 못한 것 마무리
+    - 테스트 관련 어노테이션 사용 예시
+    - 동일한 raw string password에 대한 양방향 암호화 결과값은 항상 동일한가?
+  - CHAPTER 5 정리
+    - tomcat JDBC connection pool
+      - hikari
+      - commonDBCP2
+### 개인 할 일
+- Spring Integration
+- 개인 공부 시작
+  - tech-interview
+  - leetcode 알고리즘 2문제 
+    - Tree - [https://leetcode.com/problems/merge-two-binary-trees/](https://leetcode.com/problems/merge-two-binary-trees/)
+    - Array - [https://leetcode.com/problems/shortest-unsorted-continuous-subarray/](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/)
+
+## 2020-07-26
 ### 스프링 스터디
 - 스프링 인 액션
   - CHAPTER 5. 구성 속성 사용하기
