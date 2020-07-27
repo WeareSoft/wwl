@@ -10,6 +10,27 @@
 ## 2020-07-26 
 ### 스프링 스터디
 - 스프링 인 액션
+  - CHAPTER 6. REST 서비스 생성하기
+  - CHAPTER 7. REST 서비스 사용하기 
+  - CHAPTER 4 추가 정리 
+    - 인증 과정 전체 설명 + 그림 추가 
+    - SecurityContextHolder 란 
+  - CHAPTER 5 정리 
+    - DB connection pool 이란 (어떤 layer 에서 관리)
+### 개인 할 일
+- tech-interview 리스트업
+- TDD 리뷰 정리 및 리뷰 추가 반영
+  - dami 코드 리뷰 진행 
+- 사전 과제 추가 리팩토링 
+- 개인 공부 시작
+  - 인프런 (스프링 부트 개념과 활용) 듣고 블로그 정리
+  - leetcode 알고리즘 2문제 
+    - Tree - [https://leetcode.com/problems/merge-two-binary-trees/](https://leetcode.com/problems/merge-two-binary-trees/)
+    - Array - [https://leetcode.com/problems/shortest-unsorted-continuous-subarray/](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/)
+
+## 2020-07-26 
+### 스프링 스터디
+- 스프링 인 액션
   - CHAPTER 5. 구성 속성 사용하기
   - CHAPTER 4 추가 정리 
     - hasRole 과 hasAuthority 의 차이 및 사용법
