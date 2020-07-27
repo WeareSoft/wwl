@@ -37,8 +37,6 @@
 - https://m.blog.naver.com/writer0713/220701612165
 - https://linked2ev.github.io/spring/2019/09/15/Spring-5-%EC%84%9C%EB%B8%94%EB%A6%BF%EA%B3%BC-%EC%8A%A4%ED%94%84%EB%A7%81%EC%97%90%EC%84%9C-Context(%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8)%EB%9E%80/
 
-
-
 ## :heavy_check_mark: @Component의 스테레오 타입 각각 root context와 servlet context 중 어디에 로드되는지
 #### @Component의 스테레오 타입
 - @Controller, @Service, @Repository
@@ -60,19 +58,118 @@
 - https://repacat.tistory.com/32
 - https://nice2049.tistory.com/entry/spring-rootContext-%EA%B7%B8%EB%A6%AC%EA%B3%A0-servletContext-%EB%8C%80%ED%95%B4%EC%84%9C
 
-## :heavy_check_mark: @WebMvcTest와 @MockMvcTest 의 차이
+## :heavy_check_mark: `@WebMvcTest`, `MockMvc`
+- `@WebMvcTest`
+  - 컨트롤러가 예상대로 동작하는지 테스트하는데 사용
+  - 스캔 대상
+    - `@Controller`
+    - `@ControllerAdvice`
+    - `@JsonComponent`
+    - `Filter`
+    - `WebMvcConfigurer and HandlerMethodArgumentResolver`
+  - `MockMvc`를 자동으로 지원해 별도의 HTTP 서버 없이 컨트롤러 테스트를 진행할 수 있다.
+- `MockMvc`
+  - 웹 애플리케이션을 애플리케이션 서버에 배포하지 않고도 스프링 MVC의 동작을 재현할 수 있는 클래스
+  - 요청 데이터 설정
+    - `MockMvcRequestBuilders`
+      메서드명 | 설명 
+      --- | --- |
+      param / params  | 요청 파라미터 설정
+      header / headers | 요청 헤더 설정, contentType이나 accept와 같은 특정 헤더를 설정할 수 있는 메서드도 제공
+      cookie | 쿠키 설정
+      content | 요청 본문 설정
+      requestAttr | 요청 스코프에 객체 설정
+      sessionAttr | 세션 스코프에 객체 설정
+  - 실행 결과 검증
+    - `ResultMatcher`
+      메서드명 | 설명 
+      --- | ---
+      status | HTTP 상태 코드 검증
+      header | 응답 헤더의 상태 검증
+      cookie | 쿠키 상태 검증
+      content | 응답 본문 내용 검증, jsonPath나 xpath와 같은 특정 콘텐츠를 위한 메서드도 제공
+      view | 컨트롤러가 반환한 뷰 이름 검증
+      forwardedUrl | 이동 대상 경로 검증, 패턴으로 검증할 때는 forwardedUrlPattern 메서드 사용
+      redirectedUrl | 리다이렉트 대상의 경로 또는 URL을 검증, 패턴으로 검증할 때는 redirectedUrlPattern 메서드 사용
+      model | 스프링 MVC 모델 상태 검증
+      request | 서블릿 3.부터 지원되는 비동기 처리의 상태나 요청 스코프의 상태, 세션 스코프의 상태를 검증
+  - 실행 결과 출력
+    - `MockMvcResultHandlers`
+      메서드명 | 설명 
+      --- | ---
+      log | 실행 결과를 디버깅 레벨에서 로그로 출력
+      print | 실행 결과를 임의의 출력 대상에 출력한다. 출력 대상을 지정하지 않으면 기본적으로 표준 출력(System.out.)이 출력 대상이 된다.
+- 사용법
+  ```java
+  @RunWith(SpringRunner.class)
+  @WebMvcTest(HomeController.class)
+  public class WebMvcTest {
+
+      @Autowired
+      private MockMvc mvc;
+
+      @Test
+      public void helloTest throws Exception {
+          this.mvc.perform(get("/hello").accept(MediaType.TEXT_PLAIN)) // /hello 라는 url로 text/plain 타입 요청
+                  .andExpect(status().isOk()) // status 200
+                  .andExpect(content().string("Hello World"));  // response body에 "Hello World" 가 있는지 검증
+      }
+  }
+  ```
+  ```java
+  @RequestMapping(value="/job/{idx}")
+  @ResponseBody
+  public Job getJob(@PathVariable long idx) {
+      return this.postService.getJob(idx);
+  }
+  
+  @Test
+  public void test_json결과비교() throws Exception {
+    final Job job = new Job("job", LocalDateTime.now(), new ArrayList<>());
+
+    given(this.postService.getJob(1)) // getJob 메소드에 인자값 1이 입력될 경우
+            .willReturn(job); // job 객체 리턴, given 이용 시 service 구현체 없어도 테스트 가능
+
+    mvc.perform(get("/job/1").accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.content").value("job")) // content 속성 값 비교
+            .andDo(MockMvcResultHandlers.print()); // test 응답 결과에 대한 모든 내용 출력
+  }
+  ```
 
 #### :link: Reference
-- []()
+- [SpringBoot 1.4.0 Test 적용하기](https://jojoldu.tistory.com/34)
+- [[스프링/Spring] MockMvc 테스트](https://ktko.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81Spring-MockMvc-%ED%85%8C%EC%8A%A4%ED%8A%B8)
 
 
 ## :heavy_check_mark: 테스트 관련 어노테이션의 개념과 종류 및 사용 예시
-### SpringBoot
-### Spring
+### @SpringBootTest
+- 스프링에서 spring-boot-starter-test 제공
+  - 아래 라이브러리가 포함되어 있다.
+    - `JUnit 5 (including the vintage engine for backward compatibility with JUnit 4)`: The de-facto standard for unit testing Java applications.
+    - `Spring Test & Spring Boot Test`: Utilities and integration test support for Spring Boot applications.
+    - `AssertJ`: A fluent assertion library.
+    - `Hamcrest`: A library of matcher objects (also known as constraints or predicates).
+    - `Mockito`: A Java mocking framework.
+    - `JSONassert`: An assertion library for JSON.
+    - `JsonPath`: XPath for JSON.
+- 통합 테스트를 제공하는 기본적인 스프링 부트 테스트 어노테이션이다.
+- 스프링부트 어플리케이션 테스트에 필요한 대부분의 의존성을 제공한다.
+
 ### JUnit
+- 단위 테스트(Unit Test)를 지원해주는 프레임워크
+- 단정(assert) 메서드로 테스트 케이스의 수행 결과를 판별
+  - `assertEquals(예상값, 실제값)`
+- JUnit4 이후부터는 테스트를 지원 어노테이션을 제공
+  - `@Test`, `@Before`, `@After`
+- `@Test` 어노테이션을 단 메서드가 호출할 때 마다 새로운 인스턴스를 생성하여 독립적인 테스트가 이루어지게 한다.
+
 ### Mockito
+- 단위 테스트(Unit Test)를 위한 Java mocking 프레임워크
 
 #### :link: Reference
+- [mockito 사용법](https://jdm.kr/blog/222)
+- [Spring Boot Test](https://meetup.toast.com/posts/124)
 - []()
 
 
@@ -86,7 +183,6 @@
 어노테이션	| 설명 |	Bean
 --- | --- | ---
 @SpringBootTest	| 통합 테스트 | 전체	Bean 전체
-@SpringBootTest| 	통합 테스트 | 전체	Bean 전체
 @WebMvcTest	| 단위 테스트, Mvc 테스트	| MVC 관련된 Bean
 @DataJpaTest| 	단위 테스트, Jpa 테스트 | JPA 관련 Bean
 @RestClientTest	| 단위 테스트, Rest API 테스트	| 일부 Bean
@@ -171,10 +267,68 @@ Class A가 B를 참조해야 하는 이유를 골똘히 생각해보자. 왜 참
 
 
 ## :heavy_check_mark: CGLIB와 Dynamic Proxy 의 개념 및 차이
+- Spring AOP는 2가지 타입의 proxy를 제공한다.
+  - JDK Dynamic Proxy와 CGLib Proxy이다.
+  - Spring AOP의 `ProxyFactoryBean`이 proxy를 생성하는데, 경우에 따라 이 둘 중 하나를 선택해서 사용하는 방식이다.
+- 프록시 패턴
+  - 기존 코드에 변경을 가하지 않으면서 기능을 추가할 수 있는 프록시 기술을 구현하기 위한 방법
+  - 동일한 인터페이스를 가진 구현 클래스는 Client에서 사용할때 다형성을 활용하여 동일한 인터페이스에 다른 기능을 정의하여 사용할 수 있는 것
+- Dynamic Proxy
+  - 인터페이스 기반의 proxy
+    - 모든 target class가 인터페이스를 구현하고 있어야 한다.
+  - 리플렉션을 사용해 target class의 메서드를 invoke한다.
+    - target class의 모든 메서드가 Advice되지 않을지라도, 일단 invoke하고 이후에 Advice되는 메서드인지 아닌지를 판단한다.
+    - 따라서, 성능이 저하된다.
+  - ```java
+      BookService bookService = (BookService) Proxy.newProxyInstance(BookService.class.getClassLoader(), new Class[]{BookService.class}, 
+        new InvocationHandler() {
+            BookService bookService = new DefaultBookService();
+            @Override
+            public Object invoke(Object proxy, Method, method, Object[] args) throws Throwable {
+                if (method.getName().equals("rent")) {
+                    System.out.println("aaaa");
+                    Object invoke = method.invoke(bookService, args);
+                    System.out.println("bbbb");
+                    return invoke;
+                }
+
+                return method.invoke(bookService, args);
+            }
+        });
+    ```
+- CGlib
+  - 인터페이스의 유무와 상관 없이 적용될 수 있다.
+  - bytecode를 사용해 target class의 method를 호출한다.
+    - 한 번의 메서드 호출 후에는 생성된 bytecode를 재사용할 수 있어 실행 속도가 향상된다.
+  - 스프링, 하이버네이트에 내장
+  - final 클래스나 메서드에는 사용할 수 없다.
+  -  ```java
+      MethodInterceptor handler = new MethodInterceptor() {
+        BookService bookService = new DefaultBookService();
+        @Override
+        public Object intercept(Object interceptor, Method, method, Object[] args, MethodProxy methodProxy) throws Throwable {
+                if (method.getName().equals("rent")) {
+                    System.out.println("aaaa");
+                    Object invoke = method.invoke(bookService, args);
+                    System.out.println("bbbb");
+                    return invoke;
+                }
+
+                return method.invoke(bookService, args);
+            }
+        });
+
+      BookService bookService = (BookService) Enhancer.create(BookService.class, handler);
+    ```
+- Spring AOP의 `ProxyFactoryBean`의 proxy 사용
+  - `ProxyFactoryBean`은 interface의 유무로 proxy를 자동으로 설정한다.
+    - 인터페이스를 하나 이상 구현하고 있는 class라면 Dynamic Proxy를 생성
+    - 반대로 인터페이스를 구현하고 있지 않는 class라면 CGLib proxy를 생성
+  - 명시적으로 특정 proxy를 사용하도록 선언할 수도 있다.
 
 #### :link: Reference
-- []()
-
+- [Dynamic Proxy와 CGlib의 차이점](https://yeti.tistory.com/225)
+- [JDK Dynamic Proxy vs CGLib Proxy](https://dreamchaser3.tistory.com/9)
 
 ## :heavy_check_mark: Lombok 어노테이션이 내부적으로 언제 어떻게 적용되는지
 - Pluggable Annotation Processing API
