@@ -1,6 +1,10 @@
 # Nesoy
+## 2020-08-02
+- JUnit5 준비하기
+- Spring in Action 책 읽기
+
 ## 2020-07-26
-- JUnit5 준비하기 
+- JUnit5 준비하기
 ## 2020-07-19
 - Spring Action Chapter 4 읽기
 - JUnit5 정리하기
