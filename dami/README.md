@@ -1,5 +1,14 @@
 # Dami
 
+## 2020-08-09
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 6, 7 예습
+  - CHAPTER 5 정리
+    - 스프링 부트에서 logback.xml, logback-spring.xml 차이
+### 개인 할 일
+- Nextstep 자동차 경주
+
 ## 2020-08-02
 ### 스프링 스터디
 - 스프링 인 액션
