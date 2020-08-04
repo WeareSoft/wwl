@@ -11,11 +11,17 @@
 - [@SessionAttribute, @ModelAttribute 개념 및 사용법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-sessionattribute-modelattribute-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95)
 - [@GenerateValue Strategy 종류 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-generatevalue-strategy-%EC%A2%85%EB%A5%98-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 - [@Prepersist](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-prepersist)
+- [@Bean, @Component 의 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-bean-component-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
 
 ## Spring 
 - [Spring MVC의 개념](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-spring-mvc-%EA%B0%9C%EB%85%90)
 - [의존성을 주입(DI)하는 방법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-%EC%9D%98%EC%A1%B4%EC%84%B1%EC%9D%84-%EC%A3%BC%EC%9E%85di%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 - [Context Root와 Service Root의 개념과 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-context-root%EC%99%80-service-root%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B0%A8%EC%9D%B4)
+
+### Spring security
+- [hasRole 과 hasAuthority 의 차이 및 사용법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#chapter-4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0)
+- [스프링 시큐리티와 인터셉터, 필터](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EC%99%80-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0-%ED%95%84%ED%84%B0)
+- [`Principal`, `Authentication`, `@AuthenticationPrincipal` 의 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-principal-authentication-authenticationprincipal-%EC%9D%98-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 
 ## JDBC, JPA
 - [Data Persistance, JDBC, JPA의 개념과 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-data-persistance-jdbc-jpa%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B0%A8%EC%9D%B4)
@@ -54,13 +60,18 @@
 ### Network 
 - [Redirect, Forward 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-redirect-forward-%EC%B0%A8%EC%9D%B4)
 - [CGLIB와 Dynamic Proxy 의 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-cglib%EC%99%80-dynamic-proxy-%EC%9D%98-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
+- [LDAP 이란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-ldap-%EC%9D%B4%EB%9E%80)
 
 ### Data
 - [RowMapper, Jackson ObjectMapper, Gson 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-rowmapper-jackson-objectmapper-gson-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 - [직렬화(Serialize) 란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-%EC%A7%81%EB%A0%AC%ED%99%94serialize-%EB%9E%80)
 
+### Security
+- [암호화 알고리즘의 종류 및 장단점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#chapter-4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0)
+
 ### Etc
 - [순환 참조의 개념, 예시, 문제점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0%EC%9D%98-%EA%B0%9C%EB%85%90-%EC%98%88%EC%8B%9C-%EB%AC%B8%EC%A0%9C%EC%A0%90)
+- [경로 `/**` 표시의 의미](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-%EA%B2%BD%EB%A1%9C--%ED%91%9C%EC%8B%9C%EC%9D%98-%EC%9D%98%EB%AF%B8)
 
 
 
