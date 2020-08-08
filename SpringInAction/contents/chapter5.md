@@ -10,8 +10,24 @@
 - []()
 
 
-## :heavy_check_mark: 명령행 인자로 애플레케이션 실행 방법 
+## :heavy_check_mark: 명령행 인자로 애플리케이션 실행 방법 
 <!-- + 기본적인 속성, 옵션들 정리 --> 
+- 사용법
+  - 클래스 실행 : ```java [옵션] <기본 클래스> [args...]```
+  - jar 실행 : ```java [옵션] -jar <jar 파일> [args...]>```
+  - 모듈의 기본 클래스 실행 : ```java [옵션] -m <모듈>[/<기본 클래스>] [args...]```
+  - 옵션의 종류
+    - -cp or -classpath or --class-path <디렉토리 및 zip/jar 파일의 클래스 검색 경로>
+      - 응용 프로그램 클래스 및 자원의 클래스패스 설정
+      - 클래스 파일을 검색하기 위한 디렉토리, JAR, ZIP 파일을 : 으로 구분하여 입력
+      - 예) ```-cp .:./subdir:./ex.jar```
+    - -D<이름>=<값>
+      - 시스템 속성을 설정
+      - 예) ```-Dspring.profiles.active=dev```
+    - -agentlib:<libname>=\[<options>]
+      - 원시 에이전트 라이브러리를 로드 (추가 옵션은 -agentlib:jdwp=help)
+      - 예) ```-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:1044```
+    
 #### :link: Reference
 - []()
 
