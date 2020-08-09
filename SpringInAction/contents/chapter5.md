@@ -91,12 +91,77 @@
 
 ## :heavy_check_mark: HTTPS란
 <!-- (p173) -->
+### HTTP (Hypertext Transfer Protocol)
+- 인터넷 상에서 **텍스트 정보**를 주고 받기위한 프로토콜
+- 클라이언트와 서버 사이에 이루어지는 요청/응답 프로토콜
+- 암호화되지 않은 방법으로 데이터를 전송한다. (악의적인 감청, 데이터 변조의 가능성)
+
+### HTTPS (Hypertext Transfer Protocol **Over Secure Socket Layer**)
+- 보안이 강화된 HTTP
+- 모든 HTTP 요청과 응답 데이터는 네트워크로 보내지기 전에 암호화된다
+- HTTPS는 HTTP의 하부에 SSL과 같은 보안계층을 제공함으로써 동작한다
+
+### SSL (Secure Socket Layer)
+- HTTPS에서 보안을 위해 사용되는 프로토콜
+  - 네스케이프에 의해서 SSL이 발명되었고, 이것이 점차 폭넓게 사용되다가 표준화 기구인 IETF의 관리로 변경되면서 TLS(Transport Layer Security Protocol)라는 이름으로 바뀌었다
+  - TLS 1.0은 SSL 3.0을 계승했지만 TLS라는 이름보다 SSL이라는 이름이 훨씬 많이 사용된다
+- Certificate Authority(CA)라 불리는 서드 파티로부터 서버와 클라이언트의 인증을 하는데 사용된다
+
+![](/images/http_https.png)
+
+### SSL 인증서
+- SSL 인증서는 클라이언트와 서버간의 통신을 제3자가 보증해주는 전자화된 문서
+- 클라이언트가 서버에 접속한 직후에 서버는 클라이언트에게 이 인증서 정보를 전달하게 된다
+- 클라이언트는 이 인증서 정보가 신뢰할 수 있는 것인지를 검증 한다
+
 ### 통신 과정
+#### 서버(웹)에서 HTTPS 통신 방식을 제공하기 위한 과정
+- 1: HTTPS 통신 방식을 위해 CA(Certificate Authority)로부터 인증서를 구입하게 된다.이 때 웹은 서비스의  도메인과 서버 공개키 정보를 제출한다
+  - (CA는 민간기업이지만 아무나 운영할 수 없고 신뢰성이 검증된 기업만 CA를 운영할 수 있음)
+- 2: CA는 서비스의 정보를 비공개키를 이용하여 암호화한다
+- 3, 4: 웹은 CA로부터 암호화된 SSL 인증서를 제공받는다
+
+#### 브라우저가 HTTPS 통신을 하는 과정
+- 5: 브라우저는 서버와 데이터를 주고 받기 전, 가장 먼저 웹으로부터 SSL 인증서를 받게  된다
+   - (브라우저는 내부적으로 CA의 리스트를 파악하고 있으며 CA의  공개키에 대한 정보도 대부분 알고 있다)
+- 6 브라우저는 웹 서버로부터 받은 인증서를 CA의 공개키를 이용해 복호화한다
+- 7: 성공한다면 인증서가 CA의 비공개키에 의해 암호화된 것을 의미하며, 이 사이트는 신뢰할  수 있다는 것으로 생각하면 된다
+  - 복호화에 실패한다면 신뢰할 수 없는 사이트로 간주한다
+- 이 일련의 과정을 SSL 핸드쉐이크라고 하며, 그 과정은...
+  - [쉬운 설명](https://wayhome25.github.io/cs/2018/03/11/ssl-https/)
+  - [세세한 설명](https://12bme.tistory.com/80)
+  - [위키](https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake)
+
+#### SSL 동작방법
+- 공개키 암호 방식은 알고리즘 계산방식이 느린 경향이 있다
+- 따라서 SSL은 암호화된 데이터를 전송하기 위해서 공개키와 대칭키 암호화 방식을 혼합하여 사용한다
+- 안전한 의사소통 채널을 수립할 때는 공개키 암호를 사용하고, 이렇게 만들어진 안전한 채널을 통해서 임시의 무작위 대칭키를 생성 및 교환한다. 해당 대칭키는 나머지 데이터 암호화에 활용한다
+
+
+> - 실제 데이터 암호화 방식: 대칭키
+> - 상기 대칭키를 서로 공유하기 위한 암호화 방식: 공개키
+
 ### keystore
-### SSL
+- keytool
+  - Java SDK와 함께 배포되며 bin 디렉토리에 있는 보안 관련 프로그램
+  - Java Key Store(JKS) 생성 및 관리
+  - 공개키(public key), 개인키(private key)를 생성할 수 있으며 인증서 발급이 가능
+- keystore
+  - 키를 저장하는 파일(데이터베이스)
+- 관련 용어(참고용)
+  - JSSE (Java Secure Socket Extension)
+  - KeyStore와 TrustStore
 
 #### :link: Reference
-- []()
+- HTTPS
+  - https://shxrecord.tistory.com/168
+  - https://jeong-pro.tistory.com/89
+  - https://12bme.tistory.com/80
+  - https://wayhome25.github.io/cs/2018/03/11/ssl-https/
+  - https://zero-gravity.tistory.com/199
+- keystore
+  - https://www.lesstif.com/java/java-keytool-keystore-20775436.html
+  - http://btsweet.blogspot.com/2014/06/tls-ssl.html
 
 ## :heavy_check_mark: `logback.xml`과 `logback-spring.xml`의 차이
 - 스프링 부트 애플리케이션에서는 logback.xml이나 logback-spring.xml 파일을 프로젝트 클래스패스에 추가하여 로깅 설정 가능
