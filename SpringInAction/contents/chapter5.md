@@ -85,9 +85,60 @@
 
 ## :heavy_check_mark: 톰캣의 JDBC 커넥션 풀, `HikariCP`, `Commons DBCP2`의 개념과 차이
 <!-- (p171) -->
+- 데이터베이스와 애플리케이션을 효율적으로 연결하기 위해, 동시 접속자가 가질 수 있는 Connection을 하나로 모아놓고 관리한다.
+- 라이브러리로 Apache의 Commons DBCP와 Tomcat-JDBC, BoneCP, HikariCP 등이 있다.
+### tomcat jdbc pool
+- Tomcat 6 까지는 DBCP 를 Connection Pool 라이브러리로 쓰다가  7부터 Tomcat-JDBC로 변경 
+  > The JDBC Connection Pool `org.apache.tomcat.jdbc.pool` is a replacement or an alternative to the Apache Commons DBCP connection pool.
+### Commons DBCP2
+![](../images/common-dbcp.png)
+- 저장 구조
+  - Commons DBCP는 `PoolableConnection` 타입의 커넥션을 생성하고 생성한 커넥션에 `ConnectionEventListener`를 등록한다.
+    - `ConnectionEventListener`에는 애플리케이션이 사용한 커넥션을 풀로 반환하기 위해 JDBC 드라이버가 호출할 수 있는 콜백 메서드가 있다.
+  - 이렇게 생성된 커넥션은 commons-pool의 `addObject()` 메서드로 커넥션 풀에 추가된다. 
+    - 이때 commons-pool은 내부적으로 현재 시간을 담고 있는 타임스탬프와 추가된 커넥션의 레퍼런스를 한 쌍으로 하는 `ObjectTimestampPair`라는 자료구조를 생성한다.
+    - LIFO(last in first out) 형태의 `CursorableLinkedList`로 관리한다.
+- 커넥션 개수 관련 속성
+  - initialSize
+    - BasicDataSource 클래스 생성 후 최초로 `getConnection()` 메서드를 호출할 때 커넥션 풀에 채워 넣을 커넥션 개수
+  - maxActive
+    - 동시에 사용할 수 있는 최대 커넥션 개수 (기본값: 8)
+  - maxIdle
+    - 커넥션 풀에 반납할 때 최대로 유지될 수 있는 커넥션 개수 (기본값: 8)
+  - minIdle
+    - 최소한으로 유지할 커넥션 개수 (기본값: 0)
+  - maxConnLifetimeMillis
+    - 커넥션의 최대 라이프타임을 지정
+### HikariCP
+- 스프링부트 2.0부터 기본 JDBC connection pool
+- 커넥션 개수 관련 속성
+  - connectionTimeout
+    - pool에서 커넥션을 얻어오기 전까지 기다리는 최대 시간
+    - 허용 가능한 wait time을 초과하면 SQLException을 던짐
+    - 최소값은 250ms (기본값: 30000(30s))
+  - idleTimeout
+    - pool에 일을 하지 않는 커넥션을 유지하는 시간
+    - 최소값은 10000ms (기본값: 600000(10minutes))
+  - maxLifetime
+    - 커넥션 풀에서 살아있을 수 있는 커넥션의 최대 수명시간 (기본값: 1800000(30minutes))
+    - 사용중인 커넥션은 maxLifetime에 상관없이 제거 되지 않음
+  - minimumIdle
+    - 아무런 일을 하지않아도 적어도 이 옵션에 설정 값 size로 커넥션들을 유지 (기본값: same as maximumPoolSize)
+  - maximumPoolSize
+    - pool에 유지시킬 수 있는 최대 커넥션 수 (기본값: 10)
+### 성능
+![](../images/connection-pool.png)
+- HikariCP
+  - Bytecode-level engineering
+  - Intelligent use of the Collections framework
+    - *ArrayList<Statement>*, custom class *FastList*
 
 #### :link: Reference
-- []()
+- [Apache Tomcat 7](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)
+- [Commons DBCP 이해하기](https://d2.naver.com/helloworld/5102792)
+- [HikariCP 뜯어보기 1편](https://brunch.co.kr/@jehovah/24)
+- [HikariCP 뜯어보기 2편](https://brunch.co.kr/@jehovah/25)
+- [Introduction to HikariCP](https://www.baeldung.com/hikaricp)
 
 ## :heavy_check_mark: HTTPS란
 <!-- (p173) -->
