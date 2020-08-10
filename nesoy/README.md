@@ -1,4 +1,10 @@
 # Nesoy
+
+## 2020-08-16
+- JUnit5 준비하기
+- Spring in Action 책 읽기
+- k8s 읽기
+
 ## 2020-08-09
 - JUnit5 준비하기
 - Spring in Action 책 읽기
