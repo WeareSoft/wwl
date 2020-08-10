@@ -7,6 +7,25 @@
 > - [2019-4 목표 설정 모음](/hee/2019-3-goals.md)
 > - [2020-1 목표 설정 모음](/hee/2020-1-goals.md)
 
+## 2020-08-16
+### 스프링 스터디
+- 스프링 인 액션
+  - CHAPTER 8. 비동기 메시지 전송하기
+  - CHAPTER 6 정리 
+    - ParameterizedTypeReference, super type token
+### 개인 할 일
+- 휴식!! 
+- 못했던 것 마저 처리 
+  - tech-interview 리스트업
+  - TDD 리뷰 정리 및 리뷰 추가 반영
+  - 개인 공부 시작
+    - 인프런 (스프링 부트 개념과 활용) 듣고 블로그 정리
+    - leetcode 알고리즘 2문제 
+      - Tree - [https://leetcode.com/problems/merge-two-binary-trees/](https://leetcode.com/problems/merge-two-binary-trees/)
+      - Array - [https://leetcode.com/problems/shortest-unsorted-continuous-subarray/](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/)
+
+- 공부 계획 세우기 
+
 ## 2020-08-09
 - 7/26일 목표와 동일
 - 공부 계획 세우기 
