@@ -23,7 +23,11 @@
 - [스프링 시큐리티와 인터셉터, 필터](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EC%99%80-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0-%ED%95%84%ED%84%B0)
 - [`Principal`, `Authentication`, `@AuthenticationPrincipal` 의 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-principal-authentication-authenticationprincipal-%EC%9D%98-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 
-## JDBC, JPA
+## DB
+- [DB connection pool (DBCP) 이란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-db-connection-pool-dbcp-%EC%9D%B4%EB%9E%80)
+- [톰캣의 JDBC 커넥션 풀, HikariCP, Commons DBCP2의 개념과 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-%ED%86%B0%EC%BA%A3%EC%9D%98-jdbc-%EC%BB%A4%EB%84%A5%EC%85%98-%ED%92%80-hikaricp-commons-dbcp2%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B0%A8%EC%9D%B4)
+
+### JDBC, JPA
 - [Data Persistance, JDBC, JPA의 개념과 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-data-persistance-jdbc-jpa%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B0%A8%EC%9D%B4)
 - [JDBC Connection이 어떻게 이루어지는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-jdbc-connection%EC%9D%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9D%B4%EB%A3%A8%EC%96%B4%EC%A7%80%EB%8A%94%EC%A7%80)
 - [CrudRepository, JpaRepository 의 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-crudrepository-jparepository-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
@@ -34,6 +38,7 @@
 - [@Slf4j 사용법 및 예시](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-slf4j-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%8B%9C)
 - [Logback 설정 방법(e.g. 출력포맷) 및 장점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-logback-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95eg-%EC%B6%9C%EB%A0%A5%ED%8F%AC%EB%A7%B7-%EB%B0%8F-%EC%9E%A5%EC%A0%90)
 - [상황에 따라 어떤 log level을 설정해야 하는지](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-%EC%83%81%ED%99%A9%EC%97%90-%EB%94%B0%EB%9D%BC-%EC%96%B4%EB%96%A4-log-level%EC%9D%84-%EC%84%A4%EC%A0%95%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EC%A7%80)
+- [logback.xml과 logback-spring.xml의 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-logbackxml%EA%B3%BC-logback-springxml%EC%9D%98-%EC%B0%A8%EC%9D%B4)
 
 ## Exception
 - [Checked Exception과 Unchecked Exception의 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-checked-exception%EA%B3%BC-unchecked-exception%EC%9D%98-%EC%B0%A8%EC%9D%B4)
@@ -53,14 +58,17 @@
 ## CS
 ### Java
 - [Equals, Hashcode 재정의](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-equals-hashcode-%EC%9E%AC%EC%A0%95%EC%9D%98)
+- [명령행 인자로 애플리케이션 실행 방법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-%EB%AA%85%EB%A0%B9%ED%96%89-%EC%9D%B8%EC%9E%90%EB%A1%9C-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)
 
 ### OS
 - [부트스트랩이란 (OS 개념)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%9D%B4%EB%9E%80-OS-%EA%B0%9C%EB%85%90)
+- [원천속성의 차이 및 우선순위](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-%EC%9B%90%EC%B2%9C%EC%86%8D%EC%84%B1%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EB%B0%8F-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84)
 
 ### Network 
 - [Redirect, Forward 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-redirect-forward-%EC%B0%A8%EC%9D%B4)
 - [CGLIB와 Dynamic Proxy 의 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-cglib%EC%99%80-dynamic-proxy-%EC%9D%98-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 - [LDAP 이란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-ldap-%EC%9D%B4%EB%9E%80)
+- [HTTPS란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-https%EB%9E%80)
 
 ### Data
 - [RowMapper, Jackson ObjectMapper, Gson 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-rowmapper-jackson-objectmapper-gson-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
