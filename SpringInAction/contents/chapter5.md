@@ -50,10 +50,6 @@
 - <https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/>
 - <https://kingbbode.tistory.com/39>
 
-### Content 1
-<!-- JVM 시스템 속성을 .yml에서 할 수 있는지 여부와 그 예시 -->
-<!-- 질문 자체를 이해못함 -->
-
 ### JVM 시스템 속성 사용 예시
 #### JVM System Property 간단한 사용방법
 - JUnit5에서 사용하는 Condition관련 테스트에서 활용이 가능하다.
@@ -88,14 +84,14 @@
 - 데이터베이스와 애플리케이션을 효율적으로 연결하기 위해, 동시 접속자가 가질 수 있는 Connection을 하나로 모아놓고 관리한다.
 - 라이브러리로 Apache의 Commons DBCP와 Tomcat-JDBC, BoneCP, HikariCP 등이 있다.
 ### tomcat jdbc pool
-- Tomcat 6 까지는 DBCP 를 Connection Pool 라이브러리로 쓰다가  7부터 Tomcat-JDBC로 변경 
+- Tomcat 6 까지는 DBCP 를 Connection Pool 라이브러리로 쓰다가  7부터 Tomcat-JDBC로 변경
   > The JDBC Connection Pool `org.apache.tomcat.jdbc.pool` is a replacement or an alternative to the Apache Commons DBCP connection pool.
 ### Commons DBCP2
 ![](../images/common-dbcp.png)
 - 저장 구조
   - Commons DBCP는 `PoolableConnection` 타입의 커넥션을 생성하고 생성한 커넥션에 `ConnectionEventListener`를 등록한다.
     - `ConnectionEventListener`에는 애플리케이션이 사용한 커넥션을 풀로 반환하기 위해 JDBC 드라이버가 호출할 수 있는 콜백 메서드가 있다.
-  - 이렇게 생성된 커넥션은 commons-pool의 `addObject()` 메서드로 커넥션 풀에 추가된다. 
+  - 이렇게 생성된 커넥션은 commons-pool의 `addObject()` 메서드로 커넥션 풀에 추가된다.
     - 이때 commons-pool은 내부적으로 현재 시간을 담고 있는 타임스탬프와 추가된 커넥션의 레퍼런스를 한 쌍으로 하는 `ObjectTimestampPair`라는 자료구조를 생성한다.
     - LIFO(last in first out) 형태의 `CursorableLinkedList`로 관리한다.
 - 커넥션 개수 관련 속성
@@ -225,7 +221,7 @@
 - [4.6 Custom Log Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-custom-log-configuration)
 
 
-## :heavy_check_mark: DB connection pool (DBCP) 이란 
+## :heavy_check_mark: DB connection pool (DBCP) 이란
 #### 웹 어플리케이션을 지탱하는 WAS에서 DB 서버에 접근을 시작하고 데이터를 가져오기까지의 단계
 1. DB 서버 접속을 위해 JDBC 드라이버를 로드한다.
 2. DB 접속 정보와 DriverManager.getConnection() Method를 통해 DB Connection 객체를 얻는다.
@@ -233,13 +229,13 @@
 4. executeQuery를 수행하여 그 결과로 ResultSet 객체를 받아서 데이터를 처리한다.
 5. 처리가 완료되면 처리에 사용된 리소스들을 close하여 반환한다.
 
-- 웹 애플리케이션은 HTTP 요청에 따라 Thread를 생성하게 되고 대부분의 비지니스 로직은 DB 서버로 부터 데이터를 얻게 된다. 
+- 웹 애플리케이션은 HTTP 요청에 따라 Thread를 생성하게 되고 대부분의 비지니스 로직은 DB 서버로 부터 데이터를 얻게 된다.
 - 만약 위와 같이 모든 요청에 대해 DB접속을 위한 Driver를 로드하고 Connection 객체를 생성하여 연결한다면 물리적으로 DB 서버에 지속적으로 접근해야 될 것이다.
 - 이러한 상황에서 DB Connection 객체를 생성하는 부분에 대한 비용과 대기 시간을 줄이고, 네트워크 연결에 대한 부담을 줄일수 있는 방법이 있는데 바로, DBCP(Database Connection Pool)를 이용하면 이러한 문제를 해결할 수가 있다.
 
 ### DBCP(Database Connection Pool)
 - Connection Pool은 DB와 미리 connection을 해놓은 객체들을 pool에 저장해두었다가, 클라이언트 요청이 오면 커넥션을 빌려주고, 볼일이 끝나면 다시 커넥션을 반납받아 pool에 저장하는 방식을 말한다.
-- HTTP 요청에 매번 위의 1-5의 단계를 거치치 않기 위한 방법이다. 
+- HTTP 요청에 매번 위의 1-5의 단계를 거치치 않기 위한 방법이다.
   - Connection ~ Close 까지의 반복 작업이 비효율적
 - Connection Pool을 이용하면 다수의 HTTP 요청에 대한 Thread를 효율적으로 처리할 수 있게 된다.
 
