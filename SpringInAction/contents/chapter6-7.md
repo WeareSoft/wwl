@@ -55,14 +55,22 @@
 - [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
 
 ## :heavy_check_mark: CORS, `@CrossOrigin`
-### Content 1
-- content
+### CORS (Cross-Origin Resource sharing)
+- HTTP 헤더를 추가해 내 도메인(origin)에서 다른 도메인에 있는 리소스에 접근 가능하게 하고, 다른 리소스에서 내 도메인의 리소스에 접근하지 못하게 제한
+- SOP (Same Origin Policy)와 반대 개념
 
-### Content 2
-- content
+### 스프링 @CrossOrigin
+- 스프링 제공 어노테이션
+- CORS를 스프링을 통해 설정 가능
+- 클래스, 메서드 단위 작성 가능
+- 어노테이션 작성 시 모든 도메인의 모든 요청방식을 허용함을 의미
+- 특정 도메인 허용 시 콤마(,)로 구분하여 여러개 작성 가능
+- ex. 모든 도메인 : ```@CrossOrigin(origins = "*")```
+- ex. 특정 도메인 : ```@CrossOrigin(origins = "https://www.naver.com/, https://www.daum.net/")```
+
 
 #### :link: Reference
-- [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
+- [[spring] CORS 정책과 spring의 cors 설정](https://m.blog.naver.com/PostView.nhn?blogId=writer0713&logNo=220922066642&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
 
 ## :heavy_check_mark: consumes, produces attribute
@@ -141,15 +149,76 @@
 
 ## :heavy_check_mark: `@Transactional`
 <!-- @Transactional 속성, 전파에 대해서 -->
-### Content 1
-- content
+### 스프링의 트랜잭션 처리
+- 주로 어노테이션 방식으로 @Transactional을 선언하여 사용
+- 클래스, 메서드 단위에 어노테이션 작성 시, 트랜잭션 기능이 적용된 프록시 객체 생성
+- 프록시 객체는 @Transactional이 선언된 메서드가 호출되면 PlatformTransactionManager를 사용하여 트랜잭션을 시작하고 커밋 또는 롤백 수행
 
-### Content 2
-- content
-
+### @Transactional 속성
+- 다수의 트랜잭션 동시 실행 시, 발생하는 문제
+  1. Dirty Read
+     - 트랜잭션A가 변경 사항 적용 후 아직 커밋하지 않은 상태에서 트랜잭션B가 해당 값을 읽었을때, A가 롤백된다면 B는 값을 잘못 읽은 것
+  2. Non-Repeatable Read
+     - 트랜잭션A가 같은 값을 두 번 조회할 예정인데 A가 한 번 조회 후 다시 조회하기 전에 트랜잭션B가 값을 변경한 경우, A 조회 결과 불일치
+  3. Phantom Read
+     - 트랜잭션A가 일정 범위의 값들을 두 번 조회할 예정인데 A가 한 번 조회 후 다시 조회하기 전에 트랜잭션B가 값을 추가/변경할 경우, A 조회 결과 불일치
+  
+  <br>
+  
+- 위와 같은 데이터 불일치 문제를 방지할 수 있는 속성
+  - **isolation**
+    - 트랜잭션에서 다른 사용자의 데이터 접근 허용 수준
+    - DEFAULT
+      - 기본 격리 수준(DB의 기본 설정 적용)
+    - READ_UNCOMMITTED
+      - 아직 커밋되지 않은 데이터 읽기를 허용
+    - READ_COMMITTED
+      - 트랜잭션 커밋이 확정된 데이터 읽기를 허용
+    - REPEATABLE_READ
+      - 트랜잭션 커밋 전까지 SELECT문이 사용하는 모든 데이터에 lock이 걸려서 다른 사용자는 해당 데이터 수정 불가능
+    - SERIALIZABLE
+      - 트랜잭션 커밋 전까지 SELECT문이 사용하는 모든 데이터에 lock이 걸려서 다른 사용자는 해당 데이터 수정/입력 불가능
+      - 데이터의 일관성을 위해 MVCC(Multi Version Concurrency Control) 미사용
+    - ex. ```@Tranasctional(isolation=Isolation.REPEATABLE_READ)```
+  - **propagation**
+    - 트랜잭션 동작 중 다른 트랜잭션 호출 시 전파 허용 수준
+    - REQUIRED
+      - 기본 속성
+      - 부모 트랜잭션 내에서 실행하며 부모 트랜잭션이 없을 경우 새 트랜잭션 생성
+    - SUPPORTS
+      - 부모 트랜잭션 내에서 실행하며 부모 트랜잭션이 없을 경우 트랜잭션 없이 수행
+    - REQUIRES_NEW
+      - 부모 트랜잭션 무시하고 무조건 새 트랜잭션 생성
+    - MANDATORY
+      - 부모 트랜잭션 내에서 실행하며 부모 트랜잭션이 없을 경우 예외 발생
+      - 독립적으로 진행하면 안되는 트랜잭션인 경우 사용
+    - NOT_SUPPORTED
+      - 트랜잭션 미사용
+      - 부모 트랜잭션 있을 경우 잠시 보류
+    - NEVER
+      - 트랜잭션 미사용
+      - 부모 트랜잭션도 없어야하여 있을 경우 예외 발생
+    - NESTED
+      - 부모 트랜잭션 있을 경우 중첩된 트랜잭션 생성
+      - 중첩 트랜잭션 : 부모 트랜잭션의 커밋과 롤백은 전파되지만 자신의 커밋과 롤백은 부모에게 전파되지 않음
+    - ex. ```@Transactional(propagation=PROPAGATION.REQUIRED)```
+  - **readOnly**
+    - 트랜잭션을 읽기 전용으로 설정
+    - ex. ```@Transactional(readOnly=true)```
+  - **rollback-for, rollbackFor, rollbackForClassName**
+    - 선언적 트랜잭션은 런타임 예외 발생 시 롤백 수행
+    - 예외가 발생하지 않거나 체크 예외 발생 시 커밋 수행
+    - 체크 예외를 롤백하기 위해 사용하는 속성
+    - ```@Transactional(rollbackFor=NoSuchMemberException.class)```
+    - 반대 : noRollbackFor
+  - **timeout**
+    - 지정 시간 내에 메소드 수행이 완료되지 않은 경우 롤백 수행
+    - 기본 값 : -1 (no timeout)
+    - ex. ```@Transactional(timeout=10)```
+    
 #### :link: Reference
-- [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
-
+- [[Spring] Transactional 정리 및 예제](https://goddaehee.tistory.com/167)
+- [[Spring] @Transactional 사용시 주의해야할 점](https://mommoo.tistory.com/92)
 
 ## :heavy_check_mark: REST vs GraphQL
 <!-- GraphQL에 대해서 자세히 -->
