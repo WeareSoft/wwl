@@ -723,17 +723,125 @@ public class RestRunner implements ApplicationRunner {
     - [SUNGBUM PARK - Sync VS Async, Blocking VS Non-Blocking](https://velog.io/@codemcd/Sync-VS-Async-Blocking-VS-Non-Blocking-sak6d01fhx)
     - [victolee - 동기(synchronous)와 비동기(asynchronous) / 블로킹(blocking)과 논블로킹(non-blocking)](https://victorydntmd.tistory.com/8)
 
-## :heavy_check_mark: `ParameterizedTypeReference`
-<!-- (super type token)
-참고: effective java -->
-### Content 1
-- content
 
-### Content 2
-- content
+## :heavy_check_mark: `ParameterizedTypeReference`
+### 클래스 리터럴과 타입 토큰
+- 클래스 리터럴(Class Literal)
+	- String.class, Integer.class 등을 말하며, String.class의 타입은 `Class<String>`, Integer.class의 타입은 `Class<Integer>`다.
+- 타입 토큰(Type Token)
+	- 쉽게 말해 **타입을 나타내는 토큰** 이며, 클래스 리터럴이 타입 토큰으로서 사용된다.
+	- myMethod(Class<?> class) 와 같은 메서드는 타입 토큰을 인자로 받는 메서드이며, method(String.class)로 호출하면, String.class라는 클래스 리터럴을 타입 토큰 파라미터로 myMethod에 전달한다.
+	- **Q.** 타입 토큰은 어디에 쓰나?
+		- **A.** 타입 토큰은 타입 안전성이 필요한 곳에 사용된다.
+		- e.g. ObjectMapper
+		- `MyLittleTelevision mlt = objectMapper.readValue(jsonString, MyLittleTelevision.class);`
+
+### 수퍼 타입 토큰
+```java
+// 아래와 같은 List<String>.class라는 클래스 리터럴은 언어에서 지원해주지 않으므로 사용 불가 !!
+typeSafeMap.put(List<String>.class, Arrays.asList("a", "b", "c")); // 사용 불가 
+```
+- 위처럼 `List<String>.class`라는 클래스 리터럴이 존재할 수 없다는 한계를 뛰어넘을 수 있게 해주는 묘수
+	- 수퍼 타입 토큰은 상속과 Reflection을 기발하게 조합해서 `List<String>.class` 같은, 원래는 사용할 수 없는 클래스 리터럴을 타입 토큰으로 사용하는 것과 같은 효과를 낼 수 있다.
+- `List<String>.class`도 타입을 구할 수만 있다면 타입 안전성을 확보할 수 있다는 것은 마찬가지다. 
+	- 다만, `Class<String>`와는 달리 `Class<List<String>>`라는 타입은 `List<String>.class` 같은 클래스 리터럴로 쉽게 구할 수 없다는 점이 다르다. 
+	- 하지만! 어떻게든 `Class<List<String>>`라는 타입을 구할 수 있다면, 우리는 타입 안전성을 확보할 수 있다.
+
+### Class.getGenericSuperclass(), ParameterizedType.getActualTypeArguments(), TypeReference/TypeSafeMap
+- 위의 순서를 통해 `List<String>.class` 같은 Collection 클래스 리터럴 타입을 구해 타입 안정성을 확보할 수 있다.
+- 정리하려 했지만 too much 여서 아래 첫 번째 reference 를 보는 것이 더 빠를 듯..! (아래는 간단하게만 소개)
+
+#### [public Type getGenericSuperclass()](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getGenericSuperclass--)
+- 바로 위의 수퍼 클래스의 타입을 반환하며,
+- 바로 위의 수퍼 클래스가 [ParameterizedType](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/ParameterizedType.html)이면, **실제 타입 파라미터들을 반영한 타입을 반환**해야 한다.
+```java
+Type typeOfGenericSuperclass = sub.getClass().getGenericSuperclass();
+// ~~~$1Super<java.util.List<java.lang.String>> 라고 나온다!!
+System.out.println(typeOfGenericSuperclass);
+```
+
+#### [ParameterizedType의 getActualTypeArguments](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/ParameterizedType.html)
+- 실제 타입 파라미터의 정보를 구할 수 있다. 
+```java
+// 수퍼 클래스가 ParameterizedType 이므로 ParameterizedType으로 캐스팅 가능
+// ParameterizedType의 getActualTypeArguments()으로 실제 타입 파라미터의 정보를 구한다!!
+Type actualType = ((ParameterizedType) typeOfGenericSuperclass).getActualTypeArguments()[0];
+// java.util.List<java.lang.String>가 나온다!!
+System.out.println(actualType);
+```
+
+#### TypeReference (Custom Class)
+- `TypeReference<T>`가 가진 정보가 TypeSafeMap의 키로 사용
+- `Super<T>`를 `TypeReference<T>`로 바꾸는 것을 먼저하는 이유는 `TypeReference<T>`가 가진 정보가 TypeSafeMap의 키로 사용될 것이기 때문
+```java
+public abstract class TypeReference<T> {
+
+    private Type type;
+
+    protected TypeReference() {
+        Type superClassType = getClass().getGenericSuperclass();
+        if (!(superClassType instanceof ParameterizedType)) {  // sanity check
+            throw new IllegalArgumentException("TypeReference는 항상 실제 타입 파라미터 정보와 함께 생성되어야 합니다.");
+        }
+        this.type = ((ParameterizedType)superClassType).getActualTypeArguments()[0];
+    }
+
+    public Type getType() {
+        return type;
+    }
+}
+```
+
+#### TypeSafeMap (Custom Class)
+- TypeSafeMap은 Class<?>보다 더 일반화된 java.lang.reflect.Type을 key로 받는다.
+```java
+public class TypeSafeMap {
+            
+	//  private Map<Class<?>, Object> map = new HashMap<>();
+    private Map<Type, Object> map = new HashMap<>();  // key로 사용되던 Class<?> 대신 Type으로 변경
+
+    public <T> void put(Class<T> k, T v) {
+        map.put(k, v);
+    }
+   
+    public <T> T get(Class<T> k) {
+        return k.cast(map.get(k));
+    }  
+}
+```
+
+### Spring의 ParameterizedTypeReference
+- Spring 이 제공해주는 수퍼 타입 토큰 기법이다. (실무에서 사용!)
+```java
+import org.springframework.core.ParameterizedTypeReference;
+
+public static void main(String[] args) throws Exception {
+    ParameterizedTypeReference<?> typeRef = new ParameterizedTypeReference<List<Map<Set<Integer>, String>>>() {};
+    System.out.println(typeRef.getType()); // java.util.List<java.util.Map<java.util.Set<java.lang.Integer>, java.lang.String>>
+}
+```
+
+- e.g. RestTemplate에서 ResponseBody에 있는 정보를 객체로 컨버팅할 때 이용
+```java
+List<String> responseEntity = restTemplate.exchange(url, HttpMethod.POST, httpEntity,
+        new ParameterizedTypeReference<List<String>>(){}).getBody();
+```
+```java
+ResponseEntity<List<Employee>> responseEntity = restTemplate.exchange(BASE_URL + "/employees", HttpMethod.GET, null,  new ParameterizedTypeReference<List<Employee>>(){});
+```
+
+### 정리
+1. 타입 안전성을 확보하려면 타입 정보가 필요하다.
+2. 일반적인 클래스의 타입 정보는 String.class, Integer.class와 같은 클래스 리터럴로 쉽게 구할 수 있다.
+3. `List<String>.class` 같은 클래스 리터럴은 언어에서 지원해주지 않으므로 사용할 수 없다.
+4. 수퍼 타입 토큰 기법을 사용하면 클래스 리터럴로 쉽게 구할 수 없는, `List<String>` 형태의 타입 정보를 구할 수 있다.
+5. 따라서 `List<String>.class`라는 클래스 리터럴을 쓸 수 없더라도, `List<String>`라는 타입을 쓸 수 있어서 타입 안전성을 확보할 수 있다.
+6. 수퍼 타입 토큰 기법은 Spring이 **[ParameterizedTypeReference](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/core/ParameterizedTypeReference.html)** 를 통해 제공해주고 있으므로 써주자.
+
 
 #### :link: Reference
-- [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
+- [HomoEfficio - 클래스 리터럴, 타입 토큰, 수퍼 타입 토큰](https://homoefficio.github.io/2016/11/30/%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%A6%AC%ED%84%B0%EB%9F%B4-%ED%83%80%EC%9E%85-%ED%86%A0%ED%81%B0-%EC%88%98%ED%8D%BC-%ED%83%80%EC%9E%85-%ED%86%A0%ED%81%B0/)
+- [https://yangbongsoo.gitbook.io/study/super_type_token](https://yangbongsoo.gitbook.io/study/super_type_token)
 
 
 ---
