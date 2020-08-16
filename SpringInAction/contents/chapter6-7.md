@@ -138,6 +138,45 @@
 - [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
 
 ## :heavy_check_mark: `@ResponseStatus`
+서블릿 에러 핸들링 방법 중 하나이다.
+
+이 방법은 간단하고 직관적이지만
+- 해당 컨트롤러에서만 사용할 수 있고, 각 컨트롤러마다 설정을 해줘야 한다는 것
+- 공통적으로 사용할 `CustomException` 클래스가 필요에 의해 지속적으로 늘어날 가능성이 있다는 것
+
+등의 단점이 존재한다.
+
+### 예제 코드
+``` java
+@RequestMapping(value = "/home", method = RequestMethod.GET)
+public String throwCustomStatusException1(Locale locale, Model model) throws CustomException {
+
+  logger.info("This will throw a CustomException");
+
+  boolean throwException = true;
+
+  if (throwException) {
+    throw new CustomStatusException("This is CustomException");
+  }
+
+  return "home";
+}
+```
+``` java
+@RequestMapping(value = "/about", method = RequestMethod.GET)
+public String throwCustomStatusException2(Locale locale, Model model) throws CustomException {
+
+  logger.info("This will throw a CustomException");
+
+  boolean throwException = true;
+
+  if (throwException) {
+    throw new CustomStatusException("This is CustomException");
+  }
+
+  return "about";
+}
+```
 ### Content 1
 - content
 
@@ -417,14 +456,272 @@
 - [GraphQL vs. REST](https://www.apollographql.com/blog/graphql-vs-rest-5d425123e34b/)
 
 ## :heavy_check_mark: `Webclient`, `RestTemplate` 사용법, 차이점, 설정, 주의할 점
-### Content 1
-- content
+### 차이
+- `Webclient`
+  - spring-webflux 모듈에 포함
+  - Non-Blocking I/O 기반의 Asynchronous API
+  - Reactive Streams 기반 API
+- `RestTemplate`
+  - spring-web 모듈에 포함
+  - Blocking I/O 기반의 Synchronous API
+  - deprecated 예정 (`AsyncRestTemplate`은 이미 deprecated됨)
 
-### Content 2
-- content
+### `Webclient` 설정 및 사용 방법
+- 의존성
+  ``` gradle
+  dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-webflux'
+    compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
+  }
+  ```
+- 사용 방법 1: static factory 를 통해 `WebClient` 생성
+  - 가장 간단한 방법
+  ``` java
+    WebClient.create();
+    WebClient.create(String baseUrl);
+  ```
+- 사용 방법2: Builder 클래스를 통해 bean으로 등록 후 사용
+  - 여러가지 설정 가능
+    - 모든 호출에 대한 기본 Header / Cookie 값 설정
+    - filter 를 통한 Request/Response 처리
+    - Http 메시지 Reader/Writer 조작
+    - Http Client Library 설정 등
+  - [bean 등록 예제 코드](https://gist.github.com/Odysseymoon/8e8fb35ad1123e81e1ec365015a3e98b#file-webclientconfig-java)
+
+### `mutate()`
+- 기존 설정값을 상속해서 사용할 수 있는 함수
+- `builder()` 를 다시 생성하여 추가적인 옵션을 설정하여 재사용이 가능 
+  - @Bean 으로 등록한 `WebClient`는 각 Component 에서 의존주입하여 `mutate()`를 통해 사용 하는 것을 권장
+``` java
+WebClient a = WebClient.builder()
+                       .baseUrl("https://some.com")
+                       .build();
+WebClient b = a.mutate()
+               .defaultHeader("user-agent", "WebClient")
+               .build();
+WebClient c = b.mutate()
+               .defaultHeader(HttpHeaders.AUTHORIZATION, token)
+               .build();
+```
+``` java
+@Service
+@RequiredArgsConstructor
+public class SomeService implements SomeInterface {
+
+    private final WebClient webClient;
+    public Mono<SomeData> getSomething() {
+  
+    return webClient.mutate()
+                    .build()
+                    .get()
+                    .uri("/resource")
+                    .retrieve()
+                    .bodyToMono(SomeData.class);
+    }
+}
+```
+#### `retrieve()` vs `exchange()`
+- HTTP 호출 결과를 가져오는 방법으로 `retrieve()` 와 `exchange()` 가 존재
+  - retrieve: 바로 ResponseBody를 처리 할 수 있고
+  - exchange: 세세한 컨트롤이 가능합니다. 
+- Spring에서는 exchange 를 이용하게 되면 Response 컨텐츠에 대한 모든 처리를 직접 하면서 발생할 수 있는 memory leak 가능성 때문에 가급적 retrieve 를 사용하기를 권고하고 있습니다.
+
+- retrieve
+  ``` java
+  Mono<Person> result = webClient.get()
+                                .uri("/persons/{id}", id)
+                                .accept(MediaType.APPLICATION_JSON) 
+                                .retrieve() 
+                                .bodyToMono(Person.class);
+  ```
+- exchange
+  ``` java
+  Mono<Person> result = webClient.get()
+                                .uri("/persons/{id}", id)
+                                .accept(MediaType.APPLICATION_JSON)
+                                .exchange()
+                                .flatMap(response -> 
+                                  response.bodyToMono(Person.class));
+  ```
+
+### 응답 처리
+- HTTP 응답 코드가 4xx 또는 5xx로 내려올 경우 WebClient 에서는 WebClientResponseException이 발생
+- 이 때 각 상태코드에 따라 임의의 처리를 하거나 Exception 을 랩핑하고 싶을 때는 `onStatus()` 함수를 사용
+
+``` java
+webClient.mutate()
+         .baseUrl("https://some.com")
+         .build()
+         .get()
+         .uri("/resource")
+         .accept(MediaType.APPLICATION_JSON)
+         .retrieve()
+         .onStatus(status -> status.is4xxClientError() 
+                          || status.is5xxServerError()
+             , clientResponse ->
+                           clientResponse.bodyToMono(String.class)
+                           .map(body -> new RuntimeException(body)))
+         .bodyToMono(SomeData.class)
+```
+
+### `RestTemplate`와 `Webclient` 차이 예제 코드
+#### SampleController
+``` java
+@RestController
+public class SampleController {
+
+    @GetMapping("/hello")
+    public String hello() throws InterruptedException {
+        Thread.sleep(5000l);
+        return "hello";
+    }
+
+    @GetMapping("/world")
+    public String world() throws InterruptedException {
+        Thread.sleep(3000l);
+        return "world";
+    }
+}
+```
+
+#### GET
+- uri() 를 통해 호출 리소스 정보를 전달
+- Query 파라미터가 존재한다면 다음과 같이 변수를 추가
+``` java
+public Mono<SomeData> getData(Integer id, String accessToken) {
+    return
+        webClient.mutate()
+                 .baseUrl("https://some.com/api")
+                 .build()
+                 .get()
+                 .uri("/resource?id={ID}", id) // here
+                 .accept(MediaType.APPLICATION_JSON)
+                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken)
+                 .retrieve()
+                 .bodyToMono(SomeData.class)
+        ;
+}
+```
+
+#### POST
+- 폼 데이터 전송
+  ``` java
+  webClient.mutate()
+          .baseUrl("https://some.com/api")
+          .build()
+          .post()
+          .uri("/login")
+          .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+          .accept(MediaType.APPLICATION_JSON)
+          .body(BodyInserters.fromFormData("id", idValue)
+                              .with("pwd", pwdValue) // here
+          )
+          .retrieve()
+          .bodyToMono(SomeData.class);
+  ```
+- JSON body 데이터 전송
+  ``` java
+  webClient.mutate()
+          .baseUrl("https://some.com/api")
+          .build()
+          .post()
+          .uri("/login")
+          .contentType(MediaType.APPLICATION_JSON)
+          .accept(MediaType.APPLICATION_JSON)
+          .bodyValue(loginInfo) // here
+          .retrieve()
+          .bodyToMono(SomeData.class);
+  ```
+
+#### `RestTemplate`을 이용한 호출과 시간 측정
+``` java
+@Component
+public class RestRunner implements ApplicationRunner {
+
+    @Autowired
+    RestTemplateBuilder restTemplateBuilder;
+
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        RestTemplate restTemplate = restTemplateBuilder.build();
+
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+
+        // TODO /hello
+        String helloResult = restTemplate.getForObject("http://localhost:8080/hello", String.class);
+        System.out.println(helloResult);
+
+        // TODO /world
+        String worldResult = restTemplate.getForObject("http://localhost:8080/world", String.class);
+        System.out.println(worldResult);
+
+        stopWatch.stop();
+        System.out.println(stopWatch.prettyPrint());
+    }
+}
+```
+
+#### `Webclient`을 이용한 호출과 시간 측정
+``` java
+@Component
+public class RestRunner implements ApplicationRunner {
+
+    @Autowired
+    WebClient.Builder builder;
+
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        WebClient webClient = builder.build();
+
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+
+        Mono<String> helloMono = webClient.get().uri("http://localhost:8080/hello") 
+                .retrieve()
+                .bodyToMono(String.class);
+
+        helloMono.subscribe(s -> {
+            System.out.println(s);
+
+            if(stopWatch.isRunning()) {
+                stopWatch.stop();
+            }
+
+            System.out.println(stopWatch.prettyPrint());
+            stopWatch.start();
+        });
+
+        Mono<String> worldMono = webClient.get().uri("http://localhost:8080/world")
+                .retrieve()
+                .bodyToMono(String.class);
+
+        worldMono.subscribe(s -> {
+            System.out.println(s);
+
+            if(stopWatch.isRunning()) {
+                stopWatch.stop();
+            }
+
+            System.out.println(stopWatch.prettyPrint());
+            stopWatch.start();
+        });
+    }
+}
+```
+
 
 #### :link: Reference
-- [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
+- WebClient & RestTemplate
+    - [juneyr.dev - RestTemplate 말고 WebClient](https://juneyr.dev/2019-02-12/resttemplate-vs-webclient)
+    - [달빛방랑 - Spring WebClient 사용법](https://medium.com/@odysseymoon/spring-webclient-%EC%82%AC%EC%9A%A9%EB%B2%95-5f92d295edc0)
+    - [프리라이프의 기술 블로그 - RestTemplate과 WebClient](https://freedeveloper.tistory.com/114)
+- Reactive Stream
+    - [Reactive Streams 란?](https://jongmin92.github.io/2019/11/05/Java/reactive-1/)
+    - [박철우의 블로그 - 스프링 웹플럭스 레퍼런스 (Web on Reactive Stack)](https://parkcheolu.tistory.com/134)
+- 기타
+    - [SUNGBUM PARK - Sync VS Async, Blocking VS Non-Blocking](https://velog.io/@codemcd/Sync-VS-Async-Blocking-VS-Non-Blocking-sak6d01fhx)
+    - [victolee - 동기(synchronous)와 비동기(asynchronous) / 블로킹(blocking)과 논블로킹(non-blocking)](https://victorydntmd.tistory.com/8)
 
 ## :heavy_check_mark: `ParameterizedTypeReference`
 <!-- (super type token)
