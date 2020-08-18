@@ -100,6 +100,7 @@ public String throwCustomStatusException1(Locale locale, Model model) throws Cus
   return "home";
 }
 ```
+
 ``` java
 @RequestMapping(value = "/about", method = RequestMethod.GET)
 public String throwCustomStatusException2(Locale locale, Model model) throws CustomException {
@@ -115,14 +116,19 @@ public String throwCustomStatusException2(Locale locale, Model model) throws Cus
   return "about";
 }
 ```
-### Content 1
-- content
 
-### Content 2
-- content
+``` java
+import org.springframework.http.HttpStatus;
+ import org.springframework.web.bind.annotation.ResponseStatus;
+ 
+ @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "No such Order") // 404
+ public class CustomStatusException extends RuntimeException {
+    // ...
+ }
+```
 
 #### :link: Reference
-- [](https://github.com/WeareSoft/wwl/tree/master/SpringInAction)
+- [FreeLife의 저장소 - [spring] 서블릿 에러 핸들링 - 2 (CustomException과 @ResponseStatus) ](https://javafactory.tistory.com/1555)
 
 ## :heavy_check_mark: `@Transactional`
 <!-- @Transactional 속성, 전파에 대해서 -->
