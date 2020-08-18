@@ -12,6 +12,10 @@
 - [@GenerateValue Strategy 종류 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-generatevalue-strategy-%EC%A2%85%EB%A5%98-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
 - [@Prepersist](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-prepersist)
 - [@Bean, @Component 의 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-bean-component-%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+- [CORS, `@CrossOrigin`](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-responseentity)
+- [`@Transactional`](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-transactional)
+- [`@ResponseStatus`](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-responsestatus)
+- [consumes, produces attribute](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-consumes-produces-attribute)
 
 ## Spring 
 - [Spring MVC의 개념](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-spring-mvc-%EA%B0%9C%EB%85%90)
@@ -22,6 +26,9 @@
 - [hasRole 과 hasAuthority 의 차이 및 사용법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#chapter-4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0)
 - [스프링 시큐리티와 인터셉터, 필터](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0%EC%99%80-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0-%ED%95%84%ED%84%B0)
 - [`Principal`, `Authentication`, `@AuthenticationPrincipal` 의 개념 및 차이](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#heavy_check_mark-principal-authentication-authenticationprincipal-%EC%9D%98-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%B0%A8%EC%9D%B4)
+
+### Spring web
+- [`Webclient`, `RestTemplate` 사용법, 차이점, 설정, 주의할 점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-webclient-resttemplate-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%84%A4%EC%A0%95-%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%A0%90)
 
 ## DB
 - [DB connection pool (DBCP) 이란](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-db-connection-pool-dbcp-%EC%9D%B4%EB%9E%80)
@@ -59,6 +66,7 @@
 ### Java
 - [Equals, Hashcode 재정의](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-equals-hashcode-%EC%9E%AC%EC%A0%95%EC%9D%98)
 - [명령행 인자로 애플리케이션 실행 방법](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter5.md#heavy_check_mark-%EB%AA%85%EB%A0%B9%ED%96%89-%EC%9D%B8%EC%9E%90%EB%A1%9C-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)
+- [`ParameterizedTypeReference`](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-parameterizedtypereference)
 
 ### OS
 - [부트스트랩이란 (OS 개념)](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter1-2.md#heavy_check_mark-%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9%EC%9D%B4%EB%9E%80-OS-%EA%B0%9C%EB%85%90)
@@ -76,6 +84,9 @@
 
 ### Security
 - [암호화 알고리즘의 종류 및 장단점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter4.md#chapter-4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0)
+
+### Web
+- [REST vs GraphQL](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter6-7.md#heavy_check_mark-rest-vs-graphql)
 
 ### Etc
 - [순환 참조의 개념, 예시, 문제점](https://github.com/WeareSoft/wwl/blob/master/SpringInAction/contents/chapter3.md#heavy_check_mark-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0%EC%9D%98-%EA%B0%9C%EB%85%90-%EC%98%88%EC%8B%9C-%EB%AC%B8%EC%A0%9C%EC%A0%90)
