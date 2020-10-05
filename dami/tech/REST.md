@@ -147,4 +147,5 @@
 ### 참고
 - [[Network] REST란? REST API란? RESTful이란?](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
 - [REST API 제대로 알고 사용하기](https://meetup.toast.com/posts/92)
+- [RESTful에 대해서 설명해주세요.(REST, RESTful, RESTful API 개념 정리)](https://jeong-pro.tistory.com/180)
 - [RESTful API 설계 가이드](http://disq.us/p/2c4zvpt)
