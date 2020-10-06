@@ -22,7 +22,7 @@
 ---
 
 ## 1. Data Structure
-:arrow_forward: [답변 내용](/contents/datastructure.md)
+:arrow_forward: [답변 내용](./contents/datastructure.md)
 - [ ] Array
 - [ ] LinkedList
 - [ ] HashTable
@@ -36,7 +36,7 @@
 - [ ] B+ Tree
 
 ## 2. Network
-:arrow_forward: [답변 내용](/contents/network.md)
+:arrow_forward: [답변 내용](./contents/network.md)
 - [ ] OSI 7계층
 - [ ] TCP/IP의 개념
 - [ ] TCP와 UDP
@@ -57,7 +57,7 @@
 - [ ] Frame, Packet, Segment, Datagram
 
 ## 3. Operating System
-:arrow_forward: [답변 내용](/contents/os.md)
+:arrow_forward: [답변 내용](./contents/os.md)
 - [X] 프로세스와 스레드의 차이(Process vs Thread)
 - [ ] 멀티 프로세스 대신 멀티 스레드를 사용하는 이유
 - [ ] Thread-safe
@@ -76,7 +76,7 @@
 - [ ] Swapping
 
 ## 4. Database
-:arrow_forward: [답변 내용](/contents/db.md)
+:arrow_forward: [답변 내용](./contents/db.md)
 - [ ] 데이터베이스 풀
 - [ ] 정규화(1차 2차 3차 BCNF)
 - [ ] 트랜잭션(Transaction) 이란
@@ -95,7 +95,7 @@
 - [ ] java JDBC
 
 ## 5. Design Pattern
-:arrow_forward: [답변 내용](/contents/designpattern.md)
+:arrow_forward: [답변 내용](./contents/designpattern.md)
 - [ ] 디자인 패턴의 개념과 종류
 - [ ] Singleton 패턴
 - [ ] Strategy 패턴
@@ -105,7 +105,7 @@
 
 ## 6. Algorithm 
 ### :pushpin: [관련 링크](https://github.com/WeareSoft/algorithm-study)
-:arrow_forward: [답변 내용](/contents/algorithm.md)
+:arrow_forward: [답변 내용](./contents/algorithm.md)
 - [ ] BigO
 - [ ] DFS와 BFS의 차이
 - [ ] Fibonacci에서의 세 가지(Recursion, Dynamic Programming, 반복) 방식에 대한 시간복잡도와 공간복잡도 차이
@@ -115,7 +115,7 @@
 - [ ] Prim MST 알고리즘
 
 ## 7. Java
-:arrow_forward: [답변 내용](/contents/java.md)
+:arrow_forward: [답변 내용](./contents/java.md)
 - [ ] java 프로그래밍이란
 - [ ] Java SE와 Java EE 애플리케이션 차이
 - [ ] java와 c/c++의 차이점
@@ -150,7 +150,7 @@
 - [ ] java의 리플렉션(Reflection) 이란
 
 ## 8. JavaScript
-:arrow_forward: [답변 내용](/contents/javascript.md)
+:arrow_forward: [답변 내용](./contents/javascript.md)
 - [ ] JavaScript Event Loop
 - [ ] 함수 선언식과 함수 표현식
 - [ ] 화살표 함수(Arrow Function)
@@ -165,7 +165,7 @@
 - [ ] Async/Await
 
 ## 9. Spring
-:arrow_forward: [답변 내용](/contents/spring.md)
+:arrow_forward: [답변 내용](./contents/spring.md)
 - [ ] 스프링 프레임워크란
 - [ ] Spring, Spring MVC, Spring Boot의 차이
 - [ ] Container란
@@ -178,7 +178,7 @@
 - [ ] Spring JDBC를 이용한 데이터 접근
 
 ## 10. Security 
-:arrow_forward: [답변 내용](/contents/security.md)
+:arrow_forward: [답변 내용](./contents/security.md)
 - [ ] 대칭키와 비대칭키 차이
 - [ ] 패스워드 암호화 방법 
 - [ ] SQL Injection 공격 
@@ -186,7 +186,7 @@
 - [ ] XSS 공격 
 
 ## 11. ETC
-:arrow_forward: [답변 내용](/contents/etc.md)
+:arrow_forward: [답변 내용](./contents/etc.md)
 - [ ] TDD란
 - [ ] 웹 브라우저에서 서버로 어떤 페이지를 요청하면 일어나는 일련의 과정을 설명
   * Ex. url에 'www.naver.com' 을 입력했다. 일어나는 현상에 대해 아는대로 설명하라.
