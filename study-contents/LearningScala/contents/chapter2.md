@@ -10,7 +10,7 @@
 
 ---
 
-### :house: [LearningScala Home](https://github.com/WeareSoft/wwl/tree/master/LearningScala)
+### :house: [LearningScala Home](https://github.com/WeareSoft/wwl/tree/master/study-contents/LearningScala)
 
 
 ### Reference
