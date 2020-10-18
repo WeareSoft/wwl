@@ -1,17 +1,36 @@
 # Dami
 
-## 2020-10-11
+## 2020-10-25
 ### 알고리즘 문제풀이
 - [공통] 프로그래머스 Lv2
-  - 문자열 압축
-  - 삼각 달팽이
-- leetcode easy 2, medium 3
+  - 조이스틱
+  - 소수찾기
+- leetcode
+  - easy 1
+  - medium 5
 ### CS 개념 정리
-- OS Context Switching
-- JAVA Reflection
-- JAVA 동기화 / 비동기화
-- Spring AOP
-- DataStructure HashTable
+- Java Stream
+- Garbage Collection
+- Spring IoC
+- 싱글톤 패턴(+멀티쓰레드 환경)
+- TCP, UDP
+### NextStep Bowling
+- STEP2까지 리뷰 재요청
+
+## 2020-10-18
+### 알고리즘 문제풀이
+- [공통] 프로그래머스 Lv2
+  - ~~문자열 압축~~
+  - ~~삼각 달팽이~~
+- leetcode 
+  - easy 2 ( [X] [ ] )
+  - medium 3 ( [ ] [ ] [ ] )
+### CS 개념 정리
+- ~~OS Context Switching~~
+- ~~JAVA Reflection~~
+- ~~JAVA 동기화 / 비동기화~~
+- ~~Spring AOP~~
+- ~~DataStructure HashTable~~
 ### NextStep Bowling
 - STEP3까지 구현
 
