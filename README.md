@@ -51,13 +51,13 @@
 ### 2020 4분기 스터디
 - **주제**
   - hee: `스칼라`
-    > - 스터디 선정 도서: [러닝 스칼라](/LearningScala/README.md)
+    > - [Learning Scala](/study-contents/LearningScala/README.md)
   - doy: `코틀린`
-    > - 스터디 선정 도서: [코틀린 인 액션](/KotlinInAction/README.md)
+    > - [Kotlin In Action](/study-contents/KotlinInAction/README.md)
   - delf, dami: `알고리즘`, `기술 면접`
-    > - [tech-interview](https://github.com/WeareSoft/tech-interview): 일주일에 5개씩 업로드 
-    > - [algorithm](https://github.com/WeareSoft/algorithm-study): 일주일에 3개 풀이 공유 
-    > - delf: 일주일 6커밋, dami: 일주일 5커밋 목표
+    > - [Tech Interview](https://github.com/WeareSoft/tech-interview): 일주일에 5개씩 업로드 
+    > - [Algorithm Study](https://github.com/WeareSoft/algorithm-study): 일주일에 3개 풀이 공유 
+    > - [delf](https://github.com/Delf-Lee): 일주일 6커밋, [dami](https://github.com/mongzza): 일주일 5커밋 목표
 
 - **목표**
   - 공통: 각자가 정한 일정 및 목표에 맞게 스터디를 활용한다. 
@@ -69,9 +69,9 @@
       - 미수행 시, 벌금 **5000원**
   - delf, dami: 
     - tech-interview: 각자가 조사한 내용 공유 및 점검 
-    - algorithm: 공통 문제 풀이법 공유 및 좋은 풀이법 조사 
+    - algorithm-study: 공통 문제 풀이법 공유 및 좋은 풀이법 조사 
     - 벌금 
-      - tech-interview, algorithm 미수행 개수당 벌금 **2000원**
+      - tech-interview, algorithm-study 미수행 시, 벌금 **2000원** (1개 당)
       - 1일 1커밋 미수행 시, 벌금 **5000원**
 
 - **진행**
