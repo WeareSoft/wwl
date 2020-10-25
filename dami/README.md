@@ -1,19 +1,32 @@
 # Dami
 
+## 2020-11-01
+### 알고리즘 문제풀이
+- [공통] NHN 기출문제 3
+- leetcode medium 5
+#### CS 개념 정리
+- TCP, UDP 헤더 분석
+- 블로킹과 논블로킹
+- ORM
+- HTTP와 HTTPS의 동작 과정
+- 함수형 프로그래밍
+#### 스프링
+- 스프링 부트와 AWS로 혼자 구현하는 웹서비스 chapter 5장 완료
+
 ## 2020-10-25
 ### 알고리즘 문제풀이
 - [공통] 프로그래머스 Lv2
   - 조이스틱
-  - 소수찾기
+  - ~~소수찾기~~
 - leetcode
-  - easy 1
-  - medium 5
+  - easy 1 ( [ ] )
+  - medium 5 ( [X] [X] [ ] [ ] [ ] )
 ### CS 개념 정리
-- Java Stream
-- Garbage Collection
-- Spring IoC
-- 싱글톤 패턴(+멀티쓰레드 환경)
-- TCP, UDP
+- ~~Java Stream~~
+- ~~Garbage Collection~~
+- ~~Spring IoC~~
+- ~~싱글톤 패턴~~
+- ~~TCP, UDP~~
 ### NextStep Bowling
 - STEP2까지 리뷰 재요청
 
