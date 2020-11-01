@@ -1,15 +1,28 @@
 # Dami
 
-## 2020-11-01
+## 2020-11-08
 ### 알고리즘 문제풀이
-- [공통] NHN 기출문제 3
+- [공통] 코딩테스트 기출문제 1, 프로그래머스 lv2 타겟 넘버
 - leetcode medium 5
 #### CS 개념 정리
-- TCP, UDP 헤더 분석
-- 블로킹과 논블로킹
-- ORM
-- HTTP와 HTTPS의 동작 과정
-- 함수형 프로그래밍
+- Spring Filter, Interceptor
+- 레디스, 맴캐시드
+- Java8의 default GC
+- CVS, SVN, Git
+- Lambda
+#### 스프링
+- 스프링 부트와 AWS로 혼자 구현하는 웹서비스 6장 AWS 설정
+
+## 2020-11-01
+### 알고리즘 문제풀이
+- [공통] ~~NHN 기출문제 3~~ ( [X] [X] [X] )
+- leetcode medium 5 ( [X] [X] [X] [ ] [ ] )
+#### CS 개념 정리
+- ~~TCP, UDP 헤더 분석~~
+- ~~블로킹과 논블로킹~~
+- ~~ORM~~
+- ~~HTTP와 HTTPS의 동작 과정~~
+- ~~함수형 프로그래밍~~
 #### 스프링
 - 스프링 부트와 AWS로 혼자 구현하는 웹서비스 chapter 5장 완료
 
