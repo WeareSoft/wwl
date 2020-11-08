@@ -1,15 +1,29 @@
 # Dami
 
+## 2020-11-15
+### 알고리즘 문제풀이
+- [공통] 코딩테스트 기출문제 1, 프로그래머스 lv3 정수삼각형
+- leetcode medium 5 (그리디, DP 위주)
+
+#### CS 개념 정리
+- Greedy Algorithm (탐욕법)
+- DB 파티셔닝(샤딩과의 차이점)
+- Spring Bean 생명 주기
+- 서버가 여러대일 때 세션 관리 방법
+- Mock
+#### 스프링
+- 스프링 부트와 AWS로 혼자 구현하는 웹서비스 6장 AWS 설정
+
 ## 2020-11-08
 ### 알고리즘 문제풀이
-- [공통] 코딩테스트 기출문제 1, 프로그래머스 lv2 타겟 넘버
-- leetcode medium 5
+- [공통] ~~코딩테스트 기출문제 1, 프로그래머스 lv2 타겟 넘버~~
+- ~~leetcode medium 5 => 코딩 테스트 기출 대체~~
 #### CS 개념 정리
-- Spring Filter, Interceptor
-- 레디스, 맴캐시드
-- Java8의 default GC
-- CVS, SVN, Git
-- Lambda
+- ~~Spring Filter, Interceptor~~
+- ~~레디스, 맴캐시드~~
+- ~~Java8의 default GC~~
+- ~~CVS, SVN, Git~~
+- ~~Lambda~~
 #### 스프링
 - 스프링 부트와 AWS로 혼자 구현하는 웹서비스 6장 AWS 설정
 
