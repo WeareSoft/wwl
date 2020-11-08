@@ -37,26 +37,25 @@
 
 #### 3주차(2020.11.01)
 - [CHAPTER 4. 함수](./contents/chapter4.md)
-- [CHAPTER 5. 일급 함수](./contents/chapter5.md)
-- [CHAPTER 6. 보편적인 컬렉션](./contents/chapter6.md)
 
 #### 4주차(2020.11.08)
-- [CHAPTER 7. 그 외의 컬렉션](./contents/chapter7.md)
-- [CHAPTER 8. 클래스](./contents/chapter8.md)
+- [CHAPTER 5. 일급 함수](./contents/chapter5.md)
 
 #### 5주차(2020.11.15)
-- [CHAPTER 9. 객체, 케이스 클래스, 트레이트](./contents/chapter9.md)
-- [CHAPTER 10. 고급 타입 특징](./contents/chapter10.md)
-
+- [CHAPTER 6. 보편적인 컬렉션](./contents/chapter6.md)
 
 #### 6주차(2020.11.22)
-- Akka 코딩 공작소 예정 
+- [CHAPTER 7. 그 외의 컬렉션](./contents/chapter7.md)
 
 #### 7주차(2020.11.29)
+- [CHAPTER 8. 클래스](./contents/chapter8.md)
 
 #### 8주차(2020.12.06)
+- [CHAPTER 9. 객체, 케이스 클래스, 트레이트](./contents/chapter9.md)
 
 #### 9주차(2020.12.13)
+- [CHAPTER 10. 고급 타입 특징](./contents/chapter10.md)
 
 #### 10주차(2020.12.20)
+- Akka 코딩 공작소 예정 
 
