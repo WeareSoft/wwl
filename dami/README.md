@@ -1,23 +1,50 @@
 # Dami
 
-## 2021-01-31
+## 2021-02-14
 ### 알고리즘 문제풀이
-- [공통] 프로그래머스 lv3 등굣길, 해커랭크 New Year Chaos, Minimum Swaps 2
+- [공통] 프로그래머스 lv3 자물쇠와 열쇠, 해커랭크 Sherlock and Anagrams, Frequency Queries
 - 프로그래머스 lv2 후보키
-- 프로그래머스 MySQL 3 ~ 4
+
+### JAVA 스터디
+- 13주차(차주까지 나눠서 진행)
+  - 스트림 (Stream) / 버퍼 (Buffer) / 채널 (Channel) 기반의 I/O
+  - InputStream과 OutputStream
+  - Byte와 Character 스트림
+  - 표준 스트림 (System.in, System.out, System.err)
+  - 파일 읽고 쓰기
+
+### 인프런 강의
+- 더 개발자, 인터뷰
+  - 큐 1, 2
+- 스프링 핵심 기술
+  - 섹션 5
+- 더 개발자, 코드 조작
+  - 섹션 3 - 3강까지
+
+### 독서
+- 이펙티브 자바 1장, 2장 - 아이템 3
+
+### 기타
+- Redis, RabbitMQ 사용한 Spring Boot 프로젝트 실습
+
+## 2021-02-07
+### 알고리즘 문제풀이
+- [공통] ~~프로그래머스 lv3 등굣길, 해커랭크 New Year Chaos, Minimum Swaps 2~~
+- 프로그래머스 lv2 후보키
+- ~~프로그래머스 MySQL 3 ~ 4~~
 - Leetcode medium 2
 
 ### JAVA 스터디
 - 12주차
-  - 애노테이션 정의하는 방법
-  - @retention
-  - @target
-  - @documented
-  - 애노테이션 프로세서
+  - ~~애노테이션 정의하는 방법~~
+  - ~~@Retention~~
+  - ~~@Target~~
+  - ~~@Documented~~
+  - ~~애노테이션 프로세서~~
 
 ### 인프런 강의
 - 더 개발자, 인터뷰
-  - 스택 2, 3-1, 3-2
+  - ~~스택 2, 3-1, 3-2, 4~~
   - 코딩 인터뷰 미션 과제
 
 ### 독서
