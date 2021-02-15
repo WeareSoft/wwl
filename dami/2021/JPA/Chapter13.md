@@ -3,7 +3,7 @@
 
 ## 트랜잭션 범위의 영속성 컨텍스트
 
-![transaction](../image/transaction-persistence.jpg)
+![transaction](../../image/transaction-persistence.jpg)
 
 - 스프링 컨테이너의 기본 전략
   - 트랜잭션 범위의 영속성 컨텍스트 전략이 기본
@@ -105,7 +105,7 @@ private Member member;
             - 단, 코드량이 상당히 증가하는 단점
         - **스프링 OSIV**
 
-          ![spring-osiv](../image/spring-osiv.jpg)
+          ![spring-osiv](../../image/spring-osiv.jpg)
 
           - 비즈니스 계층에서만 트랜잭션을 유지하는 방식
           - spirng-orm.jar가 제공

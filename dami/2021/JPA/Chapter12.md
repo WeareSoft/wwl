@@ -11,7 +11,7 @@
 
 ## 스프링 데이터 프로젝트
 
-![spring data](../image/spring-data.jpg)
+![spring data](../../image/spring-data.jpg)
 
 - 다양한 데이터 저장소에 대한 접근을 추상화
 - 스프링 데이터 JPA는 스프링 데이터의 하위 프로젝트이며 JPA에 특화된 기능 제공
@@ -25,7 +25,7 @@
   - ```MemberRepository extends JpaRepository<Member, Long>```
 - 인터페이스 계층구조
 
-  ![spring data](../image/spring-data-structure.jpeg)
+  ![spring data](../../image/spring-data-structure.jpeg)
 
   - 주요 메소드
     - S : 엔티티와 자식 타입 / T : 엔티티 / ID : 엔티티의 식별자 타입

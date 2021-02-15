@@ -86,7 +86,7 @@ public class Board {
 **엔티티를 수정할 때마다 버전이 하나씩 자동으로 증가**<br />
 엔티티를 수정할 때 조회 시점 버전과 수정 시점 버전이 다르면 예외 발생
 
-![jpa-version](../image/jpa-version.jpeg)
+![jpa-version](../../image/jpa-version.jpeg)
 
 #### 버전 정보 비교 방법
 JPA가 버전 정보를 비교하는 방법은 엔티티 수정 후 영속성 컨텍스트를 종료하면 UPDATE 쿼리를 실행할 때 다음 방법으로 버전 확인
@@ -147,7 +147,7 @@ JPA가 제공하는 기능. 락 옵션 없이 ```@Version```만 있어도 낙관
 - 동작 : 트랜잭션 커밋할 때 버전 정보를 조회(SELECT 쿼리)해서 현재 엔티티의 버전과 같은지 검증. 다르면 예외 발생.
 - 이점 : DIRTY READ와 NON-REPEATABLE READ 방지
 
-![jpa-version-optimistic](../image/jpa-version-optimistic.jpeg)
+![jpa-version-optimistic](../../image/jpa-version-optimistic.jpeg)
 
 #### OPTIMISTIC_FORCE_INCREMENT
 낙관적 락을 사용하면서 버전 정보를 강제로 증가
@@ -158,7 +158,7 @@ JPA가 제공하는 기능. 락 옵션 없이 ```@Version```만 있어도 낙관
 - 동작 : 엔티티를 수정하지 않아도 트랜잭션 커밋할 때 UPDATE 쿼리로 버전 정보 강제 증가. 데이터베이스 버전이 엔티티 버전과 다르면 예외 발생. 또한, 엔티티 수정하면 수정 버전이 UPDATE되어 총 2번의 버전 증가 발생 가능
 - 이점 : 강제 버전 증가를 통해 논리적 단위의 엔티티 묶음 버전 관리 가능
 
-![jpa-version-opti-force](../image/jpa-version-opti-force.png)
+![jpa-version-opti-force](../../image/jpa-version-opti-force.png)
 
 ### JPA 비관적 락
 데이터베이스 트랜잭션 락 매커니즘에 의존하는 방법<br />
@@ -205,7 +205,7 @@ javax.persistence.lock.timeout=10000
 
 - 1차 캐시 구조 및 특징 (2차 캐시 미적용)
 
-![1st cache](../image/1st-cache.png)
+![1st cache](../../image/1st-cache.png)
 
   - 영속성 컨텍스트 내부에 존재
   - 엔티티 매니저로 조회하거나 변경하는 모든 엔티티 저장
@@ -218,7 +218,7 @@ javax.persistence.lock.timeout=10000
 
 - 2차 캐시 구조 및 특징
 
-![2nd cache](../image/2nd-cache.png)
+![2nd cache](../../image/2nd-cache.png)
 
   - JPA에서는 2차 캐시를 공유 캐시로 지칭 (애플리케이션에서 공유하는 캐시)
   - 애플리케이션을 종료할 때까지 캐시 유지

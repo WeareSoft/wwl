@@ -1,31 +1,51 @@
 # Dami
 
-## 2021-02-14
+## 2021-02-21
 ### 알고리즘 문제풀이
-- [공통] 프로그래머스 lv3 자물쇠와 열쇠, 해커랭크 Sherlock and Anagrams, Frequency Queries
-- 프로그래머스 lv2 후보키
+- [공통] 프로그래머스 lv3 셔틀버스, 해커랭크 - Fraudulent Activity Notifications, Sorting: Comparator
 
 ### JAVA 스터디
-- 13주차(차주까지 나눠서 진행)
-  - 스트림 (Stream) / 버퍼 (Buffer) / 채널 (Channel) 기반의 I/O
-  - InputStream과 OutputStream
+- 13주차(전 주 이어서 진행)
+  - 버퍼 (Buffer) / 채널 (Channel) 기반의 I/O
   - Byte와 Character 스트림
   - 표준 스트림 (System.in, System.out, System.err)
   - 파일 읽고 쓰기
 
 ### 인프런 강의
 - 더 개발자, 인터뷰
-  - 큐 1, 2
+  - 큐 3, 4
 - 스프링 핵심 기술
-  - 섹션 5
+  - 섹션 4
 - 더 개발자, 코드 조작
-  - 섹션 3 - 3강까지
+  - 섹션 3
 
 ### 독서
 - 이펙티브 자바 1장, 2장 - 아이템 3
 
+
+## 2021-02-14
+### 알고리즘 문제풀이
+- [공통] ~~프로그래머스 lv3 자물쇠와 열쇠~~, ~~해커랭크 Sherlock and Anagrams, Frequency Queries => 코딜리티로 대체~~
+- 프로그래머스 lv2 후보키
+
+### JAVA 스터디
+- 13주차(차주까지 나눠서 진행)
+  - ~~스트림 (Stream)~~ / 버퍼 (Buffer) / 채널 (Channel) 기반의 I/O
+  - ~~InputStream과 OutputStream~~
+  - Byte와 Character 스트림
+  - 표준 스트림 (System.in, System.out, System.err)
+  - 파일 읽고 쓰기
+
+### 인프런 강의
+- 더 개발자, 인터뷰
+  - ~~큐 1, 2~~
+- 스프링 핵심 기술
+  - ~~섹션 5~~
+- 더 개발자, 코드 조작
+  - ~~섹션 3 - 3강까지~~
+
 ### 기타
-- Redis, RabbitMQ 사용한 Spring Boot 프로젝트 실습
+- ~~Redis, RabbitMQ 사용한 Spring Boot 프로젝트 실습~~
 
 ## 2021-02-07
 ### 알고리즘 문제풀이

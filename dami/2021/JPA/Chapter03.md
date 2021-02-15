@@ -23,7 +23,7 @@
 
 ## 엔티티의 생명주기
 
-![persist](../image/jpa-persist.jpeg)
+![persist](../../image/jpa-persist.jpeg)
 
 - 엔티티의 4가지 상태
     1. 비영속
@@ -47,7 +47,7 @@
 
 ## 영속성 컨텍스트의 특징
 
-![context](../image/persistance-context.png)
+![context](../../image/persistance-context.png)
 
 - 영속 상태는 식별자 값이 필수
   - 영속성 컨텍스트는 엔티티를 식별자 값(@Id)으로 구분하기 때문
