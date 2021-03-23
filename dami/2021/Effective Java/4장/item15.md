@@ -60,21 +60,30 @@
 - **```public``` 클래스의 인스턴스 필드는 가급적 ```public``` 외 제한자 사용**
   - ```public```으로 선언 시 불변식을 보장할 수 없고, 외부에서 함부로 접근하여 값 변경 가능(스레드 안전하지 않음)
   - 또한, 필드 수정 시 락 획득 같은 다른 작업 수행 불가능
-  - 한 가지 예외는 상수처럼 사용하기 위해 ```public static final```로 지정하는 경우 ```public``` 가능
-    - 반드시 기본 타입이나 불변 객체를 참조하게 할 것
+  - 한 가지 예외는 **상수처럼 사용하기 위해 ```public static final```로 지정하는 경우 ```public``` 가능**
+    - **단, 반드시 기본 타입이나 불변 객체를 참조**하게 할 것
     - 클래스에 해당 제한자로 지정된 배열 필드를 두거나 필드를 반환하는 메소드 제공은 금지
     ```JAVA
+    // Thing 요소 자체는 수정 가능하므로 불변이 아님
     public static final Thing[] VALUES = { . . . };
     ```
-      - ```Thing``` 요소 자체는 수정 가능하므로 불변이 아님
     ```JAVA
-    // 해결책 1 (불변 리스트 추가)
+    // 해결책 1 (private으로 바꾸고 불변 리스트 추가)
     private static final Thing[] PRIVATE_VALUES = { . . . };
     public static final List<Thing> VALUES = Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
 
-    // 해결책 2 (방어적 복사)
+    // 해결책 2 (private으로 바꾸고 방어적 복사)
     private static final Thing[] PRIVATE_VALUES = { . . . };
     public static final Thing[] values() {
       return PRIVATE_VALUES.clone();
     }
     ```
+
+## 자바 9에서 추가된 접근 제한 수준
+**모듈 시스템** 개념이 도입되며 두 가지 암묵적인 접근 수준 추가
+- 패키지가 클래스의 묶음이듯, 모듈은 패키지의 묶음 (모듈 > 패키지 > 클래스)
+- 모듈 내 패키지 중 공개(export)할 것을 ```module-info.java```에 선언하며, ```protected```나 ```public``` 타입/멤버일지라도, 모듈이 패키지를 공개 처리 하지 않았다면 모듈의 외부에서는 접근 불가능
+- 따라서 추가된 두 가지 암묵적 접근 수준이란, 모듈 내에서만 사용 가능한 ```protected```, ```public``` 제한자인 것
+- 다만 모듈의 장점을 누리려면 해야 할 일이 많고 사용하기 다소 까다롭기 때문에 꼭 필요한 경우가 아니라면 당분간은 사용 자제
+
+대표적으로 사용된 예가 JDK 자체. 자바 라이브러리가 공개하지 않은 패키지들은 모두 해당 모듈 외부에서는 절대로 접근 불가
